@@ -58,8 +58,8 @@ bool HelloWorld::init()
     auto closeItem = createMenuItem("closeNormal.png", "closeSelected.png", CC_CALLBACK_1(HelloWorld::menuCloseCallback, this), visibleSize.width, visibleSize.height);
 
     //模式选项按钮
-    auto intoPracticeMode = createMenuItem("praticeNormal.png", "practiceSelected.png", CC_CALLBACK_1(HelloWorld::menuPracticeCallback, this), visibleSize.width * 0.618, visibleSize.height * 0.618);  //开始游戏（练习模式）
-    auto intoBattleMode = createMenuItem("battleNormal.png", "battleSelected.png", CC_CALLBACK_1(HelloWorld::menuBattleCallback, this), visibleSize.width * 0.618, visibleSize.height * 0.618 - intoPracticeMode->getContentSize().height); //开始游戏（战斗模式？）
+    auto intoPracticeMode = createMenuItem("praticeNormal.png", "practiceSelected.png", CC_CALLBACK_1(HelloWorld::menuPracticeCallback, this), visibleSize.width * 0.618f, visibleSize.height * 0.618f);  //开始游戏（练习模式）
+    auto intoBattleMode = createMenuItem("battleNormal.png", "battleSelected.png", CC_CALLBACK_1(HelloWorld::menuBattleCallback, this), visibleSize.width * 0.618f, visibleSize.height * 0.618f - intoPracticeMode->getContentSize().height); //开始游戏（战斗模式？）
 
     //设置菜单选项按钮
     auto setItem = createMenuItem("setNormal.png", "setSelected.png", CC_CALLBACK_1(HelloWorld::menuSetCallback, this), visibleSize.width - closeItem->getContentSize().width, visibleSize.height);

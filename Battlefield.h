@@ -66,7 +66,7 @@ public:
 
 private:
 	//”¢–€≥ÿ
-	cocos2d::Vector<Hero> pool;
+	cocos2d::Vector<Hero*> pool;
 };
 
 //∆Â≈Ã

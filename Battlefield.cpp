@@ -30,7 +30,7 @@ bool Battlefield::init()
 
     //备战席位
     preparation = Preparation::createLayer();  //创建后立即渲染
-    
+    addChild(preparation);
 
     //棋盘
 
