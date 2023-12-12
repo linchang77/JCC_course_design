@@ -47,7 +47,7 @@ public:
 	//模式选择器是单例的
 	static ModeSelector* getInstance();
 	bool setMode(const Mode mode, cocos2d::Scene* scene);
-	Mode getMode();
+	Mode getMode(); 
 
 private:
 	Mode mode;
