@@ -19,8 +19,11 @@ public:
 	//实现create方法
 	CREATE_FUNC(Setting);
 
-	//菜单创建处理
-	cocos2d::MenuItemImage* createMenuItem(const std::string& normalImage, const std::string& selectedImage, const cocos2d::ccMenuCallback& callback, float x, float y);
+	//菜单按钮创建处理
+	cocos2d::MenuItemImage* createMenuItem(const std::string& normalImage, const std::string& selectedImage, const cocos2d::ccMenuCallback& callback, const float x, const float y, const float anchorX = 0.5f, const float anchorY = 0.5f);
+	
+	//标签创建处理
+	cocos2d::Label* createLabel(const std::string& text, const std::string& font, const float fontSize, const float x, const float y, const float anchorX = 0.5f, const float anchorY = 0.5f);
 
 private:
 	//Scene* self;																	//单例

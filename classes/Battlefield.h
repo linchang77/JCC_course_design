@@ -30,8 +30,8 @@ public:
 	//实现create方法
 	CREATE_FUNC(Battlefield);
 
-	//菜单创建处理
-	cocos2d::MenuItemImage* createMenuItem(const std::string& normalImage, const std::string& selectedImage, const cocos2d::ccMenuCallback& callback, float x, float y);
+	//菜单按钮创建处理
+	cocos2d::MenuItemImage* createMenuItem(const std::string& normalImage, const std::string& selectedImage, const cocos2d::ccMenuCallback& callback, const float x, const float y, const float anchorX = 0.5f, const float anchorY = 0.5f);
 
 private:
 	cocos2d::Size visibleSize = cocos2d::Director::getInstance()->getVisibleSize(); //屏幕尺寸
@@ -50,7 +50,7 @@ public:
 	Mode getMode();
 
 private:
-	static Mode mode;
+	Mode mode;
 	cocos2d::Scene* scene;
 };
 
@@ -97,8 +97,7 @@ public:
 
 private:
 	const std::string seat = "preparationSeat.png";	//单个席位图片
-	int size;										//备战席尺寸
-	const int MaxSize = 9;							//备战席最大尺寸
+	const int size = 9;								//备战席尺寸
 };
 
 #endif // !BATTLEFIELD_H

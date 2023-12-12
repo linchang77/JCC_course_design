@@ -19,23 +19,24 @@ bool Battlefield::init()
         return false;
 
 	//返回开始界面
-    auto returnItem = createMenuItem("battlefieldToStartNormal.png", "battlefieldToStartSelected.png", CC_CALLBACK_1(menuReturnCallback, this), visibleSize.width, visibleSize.height);
+    auto returnItem = createMenuItem("battlefieldToStartNormal.png", "battlefieldToStartSelected.png", CC_CALLBACK_1(Battlefield::menuReturnCallback, this), visibleSize.width, visibleSize.height, 1.0f, 1.0f);
 
     //进入设置
-    auto setItem = createMenuItem("setNormal.png", "setSelected.png", CC_CALLBACK_1(menuSetCallback, this), visibleSize.width - returnItem->getContentSize().width, visibleSize.height);
+    auto setItem = createMenuItem("setNormal.png", "setSelected.png", CC_CALLBACK_1(Battlefield::menuSetCallback, this), visibleSize.width - returnItem->getContentSize().width, visibleSize.height, 1.0f, 1.0f);
 
     //商店
     store = Store::create();    //创建但暂不渲染
-    auto storeItem = createMenuItem("storeNormal.png", "storeSelected.png", CC_CALLBACK_1(menuStoreCallback, this), visibleSize.width, 0);
+    auto storeItem = createMenuItem("storeNormal.png", "storeSelected.png", CC_CALLBACK_1(Battlefield::menuStoreCallback, this), visibleSize.width, 0.0f, 1.0f, 0.0f);
 
     //备战席位
     preparation = Preparation::createLayer();  //创建后立即渲染
-    addChild(preparation);
+    addChild(preparation, 1);
 
     //棋盘
 
     auto menu = Menu::create(returnItem, setItem, storeItem, NULL);
-    addChild(menu);
+    menu->setPosition(Vec2::ZERO);
+    addChild(menu, 1);
 
     //战场大背景
     auto sprite = Sprite::create("battlefield.png");
@@ -62,7 +63,7 @@ void Battlefield::menuReturnCallback(Ref* pSender)
 void Battlefield::menuSetCallback(Ref* pSender)
 {
     //设置界面应否做成单例？
-    static auto setting = Setting::createScene();
+    auto setting = Setting::createScene();
     Director::getInstance()->pushScene(setting);
 }
 
@@ -72,14 +73,17 @@ void Battlefield::menuStoreCallback(Ref* pSender)
     store->setPosition(visibleSize.width - store->getContentSize().width / 2, visibleSize.height - store->getContentSize().height / 2);
 }
 
-MenuItemImage* Battlefield::createMenuItem(const std::string& normalImage, const std::string& selectedImage, const ccMenuCallback& callback, float x, float y)
+MenuItemImage* Battlefield::createMenuItem(const std::string& normalImage, const std::string& selectedImage, const ccMenuCallback& callback, const float x, const float y, const float anchorX, const float anchorY)
 {
     auto item = MenuItemImage::create(normalImage, selectedImage, callback);
 
     if (item == nullptr || item->getContentSize().width <= 0 || item->getContentSize().height <= 0)
         problemLoading("'" + normalImage + "' and '" + selectedImage);
     else
-        item->setPosition(origin.x + x - item->getContentSize().width / 2, origin.y + y - item->getContentSize().height / 2);
+    {
+        item->setAnchorPoint({ anchorX, anchorY });
+        item->setPosition(origin.x + x, origin.y + y);
+    }
 
     return item;
 }
@@ -127,7 +131,10 @@ Layer* Board::createLayer()
 
 bool Board::init()
 {
+    if (!Layer::init())
+        return false;
 
+    return true;
 }
 
 Layer* Preparation::createLayer()
@@ -140,9 +147,6 @@ bool Preparation::init()
     if (!Layer::init())
         return false;
 
-    //计算备战席尺寸（待完善）
-    size = MaxSize;
-
     //渲染席位
     for (int i = 0; i < size; i++)
     {
@@ -151,8 +155,12 @@ bool Preparation::init()
             problemLoading(this->seat);
         else
         {
-            seat->setPosition(seat->getContentSize().height / 2, seat->getContentSize().width * (0.5f + i));
-            addChild(seat);
+            //先调整图片尺寸以适应屏幕大小
+            seat->setScale(Director::getInstance()->getVisibleSize().width / size / seat->getContentSize().width);
+            seat->setPosition(seat->getContentSize().width * seat->getScale() * (0.5f + i), seat->getContentSize().height * seat->getScale() / 2);
+            addChild(seat);                                                                                        
         }
     }
+
+    return true;
 }

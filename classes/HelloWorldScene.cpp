@@ -55,14 +55,14 @@ bool HelloWorld::init()
     //    you may modify it.
 
     // add a "close" icon to exit the progress. it's an autorelease object
-    auto closeItem = createMenuItem("closeNormal.png", "closeSelected.png", CC_CALLBACK_1(HelloWorld::menuCloseCallback, this), visibleSize.width, visibleSize.height);
+    auto closeItem = createMenuItem("closeNormal.png", "closeSelected.png", CC_CALLBACK_1(HelloWorld::menuCloseCallback, this), visibleSize.width, visibleSize.height, 1.0f, 1.0f);
 
     //模式选项按钮
-    auto intoPracticeMode = createMenuItem("praticeNormal.png", "practiceSelected.png", CC_CALLBACK_1(HelloWorld::menuPracticeCallback, this), visibleSize.width * 0.618f, visibleSize.height * 0.618f);  //开始游戏（练习模式）
+    auto intoPracticeMode = createMenuItem("practiceNormal.png", "practiceSelected.png", CC_CALLBACK_1(HelloWorld::menuPracticeCallback, this), visibleSize.width * 0.618f, visibleSize.height * 0.618f);  //开始游戏（练习模式）
     auto intoBattleMode = createMenuItem("battleNormal.png", "battleSelected.png", CC_CALLBACK_1(HelloWorld::menuBattleCallback, this), visibleSize.width * 0.618f, visibleSize.height * 0.618f - intoPracticeMode->getContentSize().height); //开始游戏（战斗模式？）
 
     //设置菜单选项按钮
-    auto setItem = createMenuItem("setNormal.png", "setSelected.png", CC_CALLBACK_1(HelloWorld::menuSetCallback, this), visibleSize.width - closeItem->getContentSize().width, visibleSize.height);
+    auto setItem = createMenuItem("setNormal.png", "setSelected.png", CC_CALLBACK_1(HelloWorld::menuSetCallback, this), visibleSize.width - closeItem->getContentSize().width, visibleSize.height, 1.0f, 1.0f);
 
     // create menu, it's an autorelease object
     auto menu = Menu::create(closeItem, intoPracticeMode, intoBattleMode, setItem, NULL);
@@ -137,18 +137,21 @@ void HelloWorld::menuBattleCallback(Ref* pSender)
 
 void HelloWorld::menuSetCallback(Ref* pSender)
 {
-    static auto setting = Setting::createScene();
+    auto setting = Setting::createScene();
     Director::getInstance()->pushScene(setting);
 }
 
-MenuItemImage* HelloWorld::createMenuItem(const std::string& normalImage, const std::string& selectedImage, const ccMenuCallback& callback, float x, float y)
+MenuItemImage* HelloWorld::createMenuItem(const std::string& normalImage, const std::string& selectedImage, const ccMenuCallback& callback, const float x, const float y, const float anchorX, const float anchorY)
 {
     auto item = MenuItemImage::create(normalImage, selectedImage, callback);
 
     if (item == nullptr || item->getContentSize().width <= 0 || item->getContentSize().height <= 0)
         problemLoading("'" + normalImage + "' and '" + selectedImage);
     else
-        item->setPosition(origin.x + x - item->getContentSize().width / 2, origin.y + y - item->getContentSize().height / 2);
+    {
+        item->setAnchorPoint({ anchorX, anchorY });
+        item->setPosition(origin.x + x, origin.y + y);
+    }
 
     return item;
 }

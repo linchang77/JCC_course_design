@@ -41,7 +41,7 @@ public:
     void menuSetCallback(cocos2d::Ref* pSender);
 
     //菜单创建处理
-    cocos2d::MenuItemImage* createMenuItem(const std::string& normalImage, const std::string& selectedImage, const cocos2d::ccMenuCallback& callback, float x, float y);
+    cocos2d::MenuItemImage* createMenuItem(const std::string& normalImage, const std::string& selectedImage, const cocos2d::ccMenuCallback& callback, const float x, const float y, const float anchorX = 0.5f, const float anchorY = 0.5f);
     
     // implement the "static create()" method manually
     CREATE_FUNC(HelloWorld);
