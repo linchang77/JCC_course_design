@@ -36,8 +36,13 @@ Scene* HelloWorld::createScene()
 // Print useful error message instead of segfaulting when files are not there.
 static void problemLoading(const std::string filename)
 {
+<<<<<<< HEAD
     log("Error while loading: %s\n", filename.data());
     log("Depending on how you compiled you might have to add 'Resources/' in front of filenames in HelloWorldScene.cpp\n");
+=======
+    printf("Error while loading: %s\n", filename);
+    printf("Depending on how you compiled you might have to add 'Resources/' in front of filenames in HelloWorldScene.cpp\n");
+>>>>>>> 42ecac6567186336236054f09ece5dfd68a503d2
 }
 
 // on "init" you need to initialize your instance
@@ -55,6 +60,7 @@ bool HelloWorld::init()
     //    you may modify it.
 
     // add a "close" icon to exit the progress. it's an autorelease object
+<<<<<<< HEAD
     auto closeItem = createMenuItem("closeNormal.png", "closeSelected.png", CC_CALLBACK_1(HelloWorld::menuCloseCallback, this), visibleSize.width, visibleSize.height, 1.0f, 1.0f);
 
     //模式选项按钮
@@ -63,6 +69,16 @@ bool HelloWorld::init()
 
     //设置菜单选项按钮
     auto setItem = createMenuItem("setNormal.png", "setSelected.png", CC_CALLBACK_1(HelloWorld::menuSetCallback, this), visibleSize.width - closeItem->getContentSize().width, visibleSize.height, 1.0f, 1.0f);
+=======
+    auto closeItem = createMenuItem("closeNormal.png", "closeSelected.png", CC_CALLBACK_1(menuCloseCallback, this), visibleSize.width, visibleSize.height);
+
+    //模式选项
+    auto intoPracticeMode = createMenuItem("PraticeNormal.png", "PracticeSelected.png", CC_CALLBACK_1(menuPracticeCallback, this), visibleSize.width * 0.618, visibleSize.height * 0.618);
+    auto intoBattleMode = createMenuItem("BattleNormal.png", "BattleSelected.png", CC_CALLBACK_1(menuBattleCallback, this), visibleSize.width * 0.618, visibleSize.height * 0.618 - intoPracticeMode->getContentSize().height);
+
+    //设置菜单选项
+    auto setItem = createMenuItem("setNormal.png", "setSelected.png", CC_CALLBACK_1(menuSetCallback, this), visibleSize.width - closeItem->getContentSize().width, visibleSize.height);
+>>>>>>> 42ecac6567186336236054f09ece5dfd68a503d2
 
     // create menu, it's an autorelease object
     auto menu = Menu::create(closeItem, intoPracticeMode, intoBattleMode, setItem, NULL);
@@ -137,17 +153,26 @@ void HelloWorld::menuBattleCallback(Ref* pSender)
 
 void HelloWorld::menuSetCallback(Ref* pSender)
 {
+<<<<<<< HEAD
     auto setting = Setting::createScene();
     Director::getInstance()->pushScene(setting);
 }
 
 MenuItemImage* HelloWorld::createMenuItem(const std::string& normalImage, const std::string& selectedImage, const ccMenuCallback& callback, const float x, const float y, const float anchorX, const float anchorY)
+=======
+    static auto setting = Setting::createScene();
+    Director::getInstance()->pushScene(setting);
+}
+
+MenuItemImage* HelloWorld::createMenuItem(const std::string& normalImage, const std::string& selectedImage, const ccMenuCallback& callback, float x, float y)
+>>>>>>> 42ecac6567186336236054f09ece5dfd68a503d2
 {
     auto item = MenuItemImage::create(normalImage, selectedImage, callback);
 
     if (item == nullptr || item->getContentSize().width <= 0 || item->getContentSize().height <= 0)
         problemLoading("'" + normalImage + "' and '" + selectedImage);
     else
+<<<<<<< HEAD
     {
         item->setAnchorPoint({ anchorX, anchorY });
         item->setPosition(origin.x + x, origin.y + y);
@@ -156,3 +181,9 @@ MenuItemImage* HelloWorld::createMenuItem(const std::string& normalImage, const 
     return item;
 }
 
+=======
+        item->setPosition(origin.x + x - item->getContentSize().width / 2, origin.y + y - item->getContentSize().height / 2);
+
+    return item;
+}
+>>>>>>> 42ecac6567186336236054f09ece5dfd68a503d2
