@@ -25,7 +25,7 @@ bool Battlefield::init()
     auto setItem = createMenuItem("setNormal.png", "setSelected.png", CC_CALLBACK_1(Battlefield::menuSetCallback, this), visibleSize.width - returnItem->getContentSize().width, visibleSize.height, 1.0f, 1.0f);
 
     //商店
-    store = Store::create();    //创建但暂不渲染
+    store = Store::createLayer();    //创建但暂不渲染
     auto storeItem = createMenuItem("storeNormal.png", "storeSelected.png", CC_CALLBACK_1(Battlefield::menuStoreCallback, this), visibleSize.width, 0.0f, 1.0f, 0.0f);
 
     //备战席位
@@ -163,4 +163,71 @@ bool Preparation::init()
     }
 
     return true;
+}
+
+Layer* Store::createLayer()
+{
+    return Store::create();
+}
+
+bool Store::init()
+{
+    if (!Layer::init())
+        return false;
+
+    displayment = Store::randomDisplay();       //当前商店内容（英雄数据）
+
+    for (Vector<Hero*>::iterator p = displayment.begin(); p != displayment.end(); p++)
+    {
+        auto images = (*p)->getImages();         //获取图像集
+        auto item = createMenuItem(images.imageInStoreNormal, images.imageInStoreSelected, CC_CALLBACK_1(Store::purchaseCallback, this), 0.0f, 0.0f, 0.0f, 1.0f);   //先放到左上角
+        item->setName("good" + std::to_string(p - displayment.begin() + 1));
+        item->setPositionX((p - displayment.begin()) * item->getContentSize().width);   //生成后再调整位置
+        addChild(item);
+    }
+
+    return true;
+}
+
+Vector<Hero*> Store::randomDisplay()
+{
+    Vector<Hero*> result;
+    const int grade = LittleHero::getInstance()->getGrade();
+    
+    for (int i = 0; i < size; i++)
+    {
+        float sampleCost = random(0.0f, 100.0f);    //随机数模拟抽样（按费抽取）
+        int j, total;
+        for (j = 0, total = 0; j < MAX_COST && (total += possibilityTable[grade][j]) < sampleCost; j++)
+            ;
+        //跳出循环时，j即抽取到的费用下标
+        int sampleHero = random(0, int(pool[j].size() - 1));  //随机数模拟抽样（按英雄抽取）
+        result.pushBack(pool[j].at(sampleHero));
+    }
+
+    return result;
+}
+
+void Store::purchaseCallback(Ref* pSender)
+{
+    const float pos = dynamic_cast<MenuItem*>(pSender)->convertToWorldSpace({ 0.0f, 1.0f }).x;    //获取被点中item在世界坐标系的横坐标
+    const int good = pos / getChildByName("good1")->getContentSize().width;
+
+    //good就是玩家购买的棋子在商店中的顺序（从左到右是0~4），后面的操作请棋子设计者实现
+    log("您购买了英雄%s", displayment.at(good)->getName().data());
+}
+
+MenuItemImage* Store::createMenuItem(const std::string& normalImage, const std::string& selectedImage, const ccMenuCallback& callback, const float x, const float y, const float anchorX, const float anchorY)
+{
+    auto item = MenuItemImage::create(normalImage, selectedImage, callback);
+
+    if (item == nullptr || item->getContentSize().width <= 0 || item->getContentSize().height <= 0)
+        problemLoading("'" + normalImage + "' and '" + selectedImage);
+    else
+    {
+        item->setAnchorPoint({ anchorX, anchorY });
+        item->setPosition(x, y);
+    }
+
+    return item;
 }

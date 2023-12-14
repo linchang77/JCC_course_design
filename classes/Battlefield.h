@@ -36,7 +36,7 @@ public:
 private:
 	cocos2d::Size visibleSize = cocos2d::Director::getInstance()->getVisibleSize(); //屏幕尺寸
 	cocos2d::Vec2 origin = cocos2d::Director::getInstance()->getVisibleOrigin();    //坐标原点
-	cocos2d::Menu* store = nullptr;													//商店（与给定战场相绑定）
+	cocos2d::Layer* store = nullptr;												//商店（与给定战场相绑定）
 	cocos2d::Layer* preparation = nullptr;											//备战席（与给定战场相绑定）
 };
 
@@ -55,18 +55,30 @@ private:
 };
 
 //商店界面
-class Store : public cocos2d::Menu
+class Store : public cocos2d::Layer
 {
 public:
+	static cocos2d::Layer* createLayer();
+
+	virtual bool init();
+
 	//随机显示英雄
-	void randomDisplay();
+	static cocos2d::Vector<Hero*> randomDisplay();
+
+	//购买回调
+	void purchaseCallback(cocos2d::Ref* pSender);	//这个只是样例名称，请棋子设计者自行命名并实现
 
 	//实现create方法
 	CREATE_FUNC(Store);
 
+	//菜单按钮创建处理
+	static cocos2d::MenuItemImage* createMenuItem(const std::string& normalImage, const std::string& selectedImage, const cocos2d::ccMenuCallback& callback, const float x, const float y, const float anchorX = 0.5f, const float anchorY = 0.5f);
+
 private:
-	//英雄池
-	cocos2d::Vector<Hero*> pool;
+	static cocos2d::Vector<Hero*> pool[MAX_COST];			//英雄池
+	static const int size = 5;								//商品个数
+	cocos2d::Vector<Hero*> displayment;						//当前商店内容
+	static const int possibilityTable[MAX_GRADE][MAX_COST];	//概率表
 };
 
 //棋盘
