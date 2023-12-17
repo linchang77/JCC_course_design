@@ -62,8 +62,18 @@ public:
 
 	virtual bool init();
 
+	//向英雄池增删英雄
+	static bool addHero(Hero* newHero);
+	static bool removeHero(Hero* toBeRemoved);
+
 	//随机显示英雄
 	static cocos2d::Vector<Hero*> randomDisplay();
+
+	//返回当前池中指定价格棋子数目
+	static int countHeroByCost(const int cost);
+
+	//获取当前池中第i个n费棋子
+	static Hero* getHeroByCost(const int cost, const int i);
 
 	//购买回调
 	void purchaseCallback(cocos2d::Ref* pSender);	//这个只是样例名称，请棋子设计者自行命名并实现
@@ -75,10 +85,20 @@ public:
 	static cocos2d::MenuItemImage* createMenuItem(const std::string& normalImage, const std::string& selectedImage, const cocos2d::ccMenuCallback& callback, const float x, const float y, const float anchorX = 0.5f, const float anchorY = 0.5f);
 
 private:
-	static cocos2d::Vector<Hero*> pool[MAX_COST];			//英雄池
-	static const int size = 5;								//商品个数
-	cocos2d::Vector<Hero*> displayment;						//当前商店内容
-	static const int possibilityTable[MAX_GRADE][MAX_COST];	//概率表
+	static cocos2d::Vector<Hero*> pool;								//英雄池（应该是启动游戏时就进行初始化的）
+	static const int size = 5;										//商品个数
+	cocos2d::Vector<Hero*> displayment;								//当前商店内容
+	constexpr static int possibilityTable[MAX_GRADE][MAX_COST] = {	//概率表
+		{100, 0, 0, 0, 0},
+		{75, 25, 0, 0, 0},
+		{55, 30, 15, 0, 0},
+		{45, 33, 20, 2, 0},
+		{30, 40, 25, 5, 0},
+		{19, 35, 35, 10, 1},
+		{18, 25, 36, 18, 3},
+		{10, 20, 25, 35, 10},
+		{5, 10, 20, 40, 25}
+	};
 };
 
 //棋盘
