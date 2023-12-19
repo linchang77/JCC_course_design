@@ -5,7 +5,8 @@
 
 #include "cocos2d.h"
 #include "Heroes.h"
-
+#include "Map.h"
+#include "Littlehero.h"
 //模式选项
 enum Mode { Practice, Battle };
 
