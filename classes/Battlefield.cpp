@@ -221,10 +221,10 @@ Vector<Hero*> Store::randomDisplay()
     {
         float sampleCost = random(0.0f, 100.0f);    //随机数模拟抽样（按费抽取）
         int j, total;
-        for (j = total = 0; j < MAX_COST && (total += possibilityTable[grade][j]) < sampleCost; j++)
+        for (j = total = 0; j < MAX_COST && (total += possibilityTable[grade - 1][j]) < sampleCost; j++)
             ;
         //跳出循环时，j即抽取到的费用下标，j+1即抽取到的费用
-        log("抽取到%d费棋子", j + 1);
+        log("get cost %d", j + 1);
         int sampleHero = random(1, countHeroByCost(j + 1));     //随机数模拟抽样（按英雄抽取）
         result.pushBack(getHeroByCost(j + 1, sampleHero));      //抽取结果放入结果序列中
     }
@@ -246,16 +246,20 @@ int Store::countHeroByCost(const int cost)
 Hero* Store::getHeroByCost(const int cost, const int i)
 {
     int count = 0;
+    Hero* copy = nullptr;   //返回拷贝
 
     for (Vector<Hero*>::iterator p = pool.begin(); p != pool.end(); p++)
     {
         if ((*p)->getCost() == cost)
             count++;
         if (count == i)
-            return *p;
+        {
+            copy = Hero::copy(*p);
+            break;
+        }
     }
 
-    return nullptr;
+    return copy;
 }
 
 void Store::purchaseCallback(Ref* pSender)

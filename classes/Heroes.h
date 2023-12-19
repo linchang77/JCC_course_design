@@ -34,6 +34,7 @@ class Hero : public cocos2d::Node
 public:
 	HeroImages getImages() const;		//获取英雄图像信息
 	int getCost() const;				//获取价格
+	static Hero* copy(Hero* templt);	//拷贝
 	//其它东西请棋子设计者自行实现
 
 	CREATE_FUNC(Hero);

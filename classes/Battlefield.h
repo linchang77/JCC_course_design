@@ -72,9 +72,9 @@ public:
 	//返回当前池中指定价格棋子数目
 	static int countHeroByCost(const int cost);
 
-	//获取当前池中第i个n费棋子
+	//获取当前池中第i个n费棋子的拷贝
 	static Hero* getHeroByCost(const int cost, const int i);
-
+	
 	//购买回调
 	void purchaseCallback(cocos2d::Ref* pSender);	//这个只是样例名称，请棋子设计者自行命名并实现
 

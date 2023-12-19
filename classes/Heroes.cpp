@@ -39,6 +39,22 @@ int Hero::getCost() const
 	return cost;
 }
 
+Hero* Hero::copy(Hero* templt)
+{
+    Hero* cpy = new (std::nothrow) Hero;
+    CCASSERT(cpy, "FATAL: Not enough memory");
+
+    cpy->body = templt->body ? Sprite::createWithSpriteFrame(templt->body->getSpriteFrame()) : nullptr;  //使用模板英雄的精灵指针创建新的精灵指针
+    cpy->imageOnField = templt->imageOnField;
+    cpy->imageInStoreNormal = templt->imageInStoreNormal;
+    cpy->imageInStoreSelected = templt->imageInStoreSelected;
+    cpy->cost = templt->cost;
+    cpy->name = templt->name;
+    //棋子类如果要添加数据成员，一定记得在这里也加上赋值语句（如果涉及到类，最好创建全新备份）
+
+    return cpy;
+}
+
 bool Example::init()
 {
     if (!Node::init())
