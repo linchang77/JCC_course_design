@@ -80,6 +80,10 @@ public:
 	//购买回调
 	void purchaseCallback(cocos2d::Ref* pSender);	//这个只是样例名称，请棋子设计者自行命名并实现
 
+	//返回/反转商店当前启闭状态
+	bool getStatus();
+	void reverseStatus();
+
 	//实现create方法
 	CREATE_FUNC(Store);
 
@@ -101,6 +105,10 @@ private:
 		{10, 20, 25, 35, 10},
 		{5, 10, 20, 40, 25}
 	};
+	bool on = false;	//商店当前启闭状态
+	cocos2d::Menu* menu;	//背景
+	cocos2d::Size visibleSize = cocos2d::Director::getInstance()->getVisibleSize(); //屏幕尺寸
+	cocos2d::Vec2 origin = cocos2d::Director::getInstance()->getVisibleOrigin();    //坐标原点
 };
 
 //棋盘

@@ -10,16 +10,17 @@
 #define MAX_COST 5		//英雄最大价格
 
 //小小英雄
-class LittleHero : public cocos2d::Node
+class LittleHero
 {
 public:
 	//单例？
 	static LittleHero* getInstance();
 
-	//返回等级
-	int getGrade() const;
+	//返回精灵
+	cocos2d::Sprite* getSprite();
 
-	CREATE_FUNC(LittleHero);
+	//返回等级
+	int getGrade();
 
 private:
 	cocos2d::Sprite* body;		//精灵指针
@@ -32,15 +33,17 @@ struct HeroImages;
 class Hero : public cocos2d::Node
 {
 public:
-	HeroImages getImages() const;		//获取英雄图像信息
-	int getCost() const;				//获取价格
+	virtual bool init();				//初始化
+	HeroImages getImages();				//获取英雄图像信息
+	int getCost();						//获取价格
+	virtual void getSpriteReady();		//生成精灵
 	static Hero* copy(Hero* templt);	//拷贝
 	//其它东西请棋子设计者自行实现
 
 	CREATE_FUNC(Hero);
 
 protected:
-	cocos2d::Sprite* body = nullptr;	//精灵指针
+	cocos2d::Sprite* body;				//精灵指针
 	std::string imageOnField;			//战场形象（多个，暂时只开一个，后面可能要改成Vector）
 	std::string imageInStoreNormal;		//商店形象（正常）
 	std::string imageInStoreSelected;	//商店形象（被选中）
