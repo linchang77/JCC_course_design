@@ -159,11 +159,18 @@ bool Preparation::init()
             //先调整图片尺寸以适应屏幕大小
             seat->setScale(Director::getInstance()->getVisibleSize().width / size / seat->getContentSize().width);
             seat->setPosition(seat->getContentSize().width * seat->getScale() * (0.5f + i), seat->getContentSize().height * seat->getScale() / 2);
-            addChild(seat);                                                                                        
+            addChild(seat);
         }
     }
 
     return true;
+}
+
+void Preparation::placeHero(Hero* hero)
+{
+    hero->setPosition(getChildByTag(occupied)->getPosition());
+    getParent()->addChild(hero);
+    occupied++;     //已占用席位计数器自增
 }
 
 bool Store::init()
@@ -186,7 +193,7 @@ bool Store::init()
 }
 
 //英雄池初始化
-Vector<Hero*> Store::pool = { Hero::create() };
+Vector<Hero*> Store::pool = { Example::create() };
 
 bool Store::addHero(Hero* newHero)
 {
@@ -264,7 +271,7 @@ void Store::purchaseCallback(Ref* pSender)
     const int good = static_cast<int>(pos / getChildByName("good1")->getContentSize().width);
 
     //good就是玩家购买的棋子在商店中的顺序（从左到右是0~4），后面的操作请棋子设计者实现
-    log("您购买了英雄%s", displayment.at(good)->getName().data());
+    log("you've purchased hero %s", displayment.at(good)->getName().data());
 }
 
 MenuItemImage* Store::createMenuItem(const std::string& normalImage, const std::string& selectedImage, const ccMenuCallback& callback, const float x, const float y, const float anchorX, const float anchorY)

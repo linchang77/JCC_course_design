@@ -122,12 +122,15 @@ class Preparation : public cocos2d::Layer
 public:
 	virtual bool init();
 
+	void placeHero(Hero* hero);
+
 	//实现create方法
 	CREATE_FUNC(Preparation);
 
 private:
 	const std::string seat = "preparationSeat.png";	//单个席位图片
 	const int size = 9;								//备战席尺寸
+	int occupied = 0;								//已占用席位数
 };
 
 #endif // !BATTLEFIELD_H
