@@ -27,6 +27,10 @@ public:
 	void menuSetCallback(cocos2d::Ref* pSender);
 	void menuStoreCallback(cocos2d::Ref* pSender);
 
+	//返回图层
+	Store* getCurrentStore();
+	Preparation* getCurrentPreparation();
+
 	//实现create方法
 	CREATE_FUNC(Battlefield);
 
@@ -36,8 +40,8 @@ public:
 private:
 	cocos2d::Size visibleSize = cocos2d::Director::getInstance()->getVisibleSize(); //屏幕尺寸
 	cocos2d::Vec2 origin = cocos2d::Director::getInstance()->getVisibleOrigin();    //坐标原点
-	cocos2d::Layer* store = nullptr;												//商店（与给定战场相绑定）
-	cocos2d::Layer* preparation = nullptr;											//备战席（与给定战场相绑定）
+	Store* store = nullptr;															//商店（与给定战场相绑定）
+	Preparation* preparation = nullptr;												//备战席（与给定战场相绑定）
 };
 
 //模式选择器，与具体的战斗场景相绑定
@@ -58,8 +62,6 @@ private:
 class Store : public cocos2d::Layer
 {
 public:
-	static cocos2d::Layer* createLayer();
-
 	virtual bool init();
 
 	//向英雄池增删英雄
@@ -105,8 +107,6 @@ private:
 class Board : public cocos2d::Layer
 {
 public:
-	static cocos2d::Layer* createLayer();
-
 	virtual bool init();
 
 	//实现create方法
@@ -120,8 +120,6 @@ private:
 class Preparation : public cocos2d::Layer
 {
 public:
-	static cocos2d::Layer* createLayer();
-
 	virtual bool init();
 
 	//实现create方法

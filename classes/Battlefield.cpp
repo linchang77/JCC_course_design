@@ -25,11 +25,11 @@ bool Battlefield::init()
     auto setItem = createMenuItem("setNormal.png", "setSelected.png", CC_CALLBACK_1(Battlefield::menuSetCallback, this), visibleSize.width - returnItem->getContentSize().width, visibleSize.height, 1.0f, 1.0f);
 
     //商店
-    store = Store::createLayer();    //创建但暂不渲染
+    store = Store::create();    //创建但暂不渲染
     auto storeItem = createMenuItem("storeNormal.png", "storeSelected.png", CC_CALLBACK_1(Battlefield::menuStoreCallback, this), visibleSize.width, 0.0f, 1.0f, 0.0f);
 
     //备战席位
-    preparation = Preparation::createLayer();  //创建后立即渲染
+    preparation = Preparation::create();  //创建后立即渲染
     addChild(preparation, 1);
 
     //棋盘
@@ -53,6 +53,16 @@ bool Battlefield::init()
         this->addChild(sprite, 0);
     }
     return true;
+}
+
+Store* Battlefield::getCurrentStore()
+{
+    return store;
+}
+
+Preparation* Battlefield::getCurrentPreparation()
+{
+    return preparation;
 }
 
 void Battlefield::menuReturnCallback(Ref* pSender)
@@ -124,22 +134,12 @@ Mode ModeSelector::getMode()
     return mode;
 }
 
-Layer* Board::createLayer()
-{
-    return Board::create();
-}
-
 bool Board::init()
 {
     if (!Layer::init())
         return false;
 
     return true;
-}
-
-Layer* Preparation::createLayer()
-{
-    return Preparation::create();
 }
 
 bool Preparation::init()
@@ -155,6 +155,7 @@ bool Preparation::init()
             problemLoading(this->seat);
         else
         {
+            seat->setTag(i);    //用序号作标签，便于取定第i号备战席的位置
             //先调整图片尺寸以适应屏幕大小
             seat->setScale(Director::getInstance()->getVisibleSize().width / size / seat->getContentSize().width);
             seat->setPosition(seat->getContentSize().width * seat->getScale() * (0.5f + i), seat->getContentSize().height * seat->getScale() / 2);
@@ -163,11 +164,6 @@ bool Preparation::init()
     }
 
     return true;
-}
-
-Layer* Store::createLayer()
-{
-    return Store::create();
 }
 
 bool Store::init()
@@ -190,7 +186,7 @@ bool Store::init()
 }
 
 //英雄池初始化
-Vector<Hero*> Store::pool = { Example::create() };
+Vector<Hero*> Store::pool = { Hero::create() };
 
 bool Store::addHero(Hero* newHero)
 {
