@@ -244,7 +244,6 @@ bool Littlehero::onRightMouseDown(EventMouse* event)
 /*按钮创建函数
 *后四个参数是设置x，y坐标，设置x，y锚点
 */
->>>>>>> CJ
 MenuItemImage* Littlehero::createMenuItem(const std::string& normalImage, const std::string& selectedImage, const ccMenuCallback& callback, const float x, const float y, const float anchorX, const float anchorY)
 {
     auto item = MenuItemImage::create(normalImage, selectedImage, callback);
