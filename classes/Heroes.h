@@ -48,6 +48,15 @@ public:
 	HeroImages getImages();							//获取英雄图像信息
 	int getCost();									//获取价格
 	static Hero* copy(Hero* templt);    //
+	float getMaxhp() { return maxhp; }    //获取英雄最大血量
+	float getRealhp() { return realhp; }    //获取实时血量
+	float getMaxmp() { return maxmp; }    //获取英雄最大蓝量
+	float getRealmp() { return realmp; }    //获取实时蓝量
+	float getRange() { return range; }    //获取攻击距离
+	float getFrequency() { return frequency; }    //获取攻击频率
+	bool getIsmove() { return ismove; }    //判断是否在移动
+	bool getIsdead() { return isdead; }    //判断是否死亡
+	float getAttackCounter() { return attackCounter; }    //获取用于判断攻击的计数器
 	CREATE_FUNC(Hero);
 
 protected:
@@ -72,7 +81,7 @@ protected:
 	float movespeed;    //移动速度
 	bool ismove;    //判断是否在移动
 	bool isdead;    //判断是否死亡（调用Death函数后判断为死亡，写战斗的需要在一轮战斗结束后将所有英雄数值回复，死亡情况改为false）
-	int counter = 0;    //计数器
+	float attackCounter = 0;    //用于判断攻击的计数器
 };
 
 struct HeroPosition
