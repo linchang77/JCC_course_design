@@ -24,9 +24,14 @@ public:
 	void set_IDs();//显示玩家们的ID
 	void set_HP_Bar();//显示血条
 	void set_avatar();//显示头像
+	void update_Hp(int hp);//更新血量
+	void update_exp(int exp);//更新经验值
+	cocos2d::MenuItemImage* createMenuItem(const std::string& normalImage, const std::string& selectedImage, const cocos2d::ccMenuCallback& callback, 
+		                                   const float x, const float y, const float anchorX = 0.5f, const float anchorY = 0.5f);
 	cocos2d::Layer* get_heroslayer() { return heroslayer; }
 	std::string ID = "";//小小英雄的ID
 private:
+	int Explevel[6] = {};//经验条，记录每个等级的经验值
 	int Hp = 100;//血量
 	Label* Hplabel;//显示血量的标签
 	int gold = 0;//金币
@@ -36,13 +41,16 @@ private:
 	Label* Explabel;//显示经验的标签
 	int status = PREPARE;//小小英雄的状态
 	Sprite avatar;//玩家的头像
-	Vector<Hero*> fightheros;//
  	Vector<Hero*> Preparation_Position[9];//备战席
 	int chequers = 0;//备战席上棋子的数量
 	//void addche(Chequer * che);//添加棋子到备战席
 	cocos2d::Layer* heroslayer;//选手图层
 	cocos2d::Size visibleSize = cocos2d::Director::getInstance()->getVisibleSize();  //屏幕尺寸
 	cocos2d::Vec2 origin = cocos2d::Director::getInstance()->getVisibleOrigin();     //坐标原点
+	/*
+	*需要上传的数据
+	*/
+	Vector<Hero*> fightheros;//场上对战的棋子
 };
 /****************************************************************************
 名称：小小英雄控制器类

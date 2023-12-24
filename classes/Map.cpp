@@ -20,9 +20,9 @@ bool MapData::init()
     listener->onTouchEnded = CC_CALLBACK_2(MapData::onTouchEnded, this);
     _eventDispatcher->addEventListenerWithSceneGraphPriority(listener, this);//将监听器加入到场景图优先级中，使其能够接收触摸事件。
     //加入小小英雄
-    auto Gros = Sprite::create("grossini.png");
+    auto Gros = Sprite::create("littlehero1.png");
     Gros->runAction(JumpTo::create(4, Vec2(300, 48), 100, 4));
-    this->addChild(Gros, 0, "Gros");
+    this->addChild(Gros, 0, "littlehero1");
 	return true;
 }
 bool MapData::onTouchBegan(Touch* touch, Event* event)
@@ -34,7 +34,7 @@ void MapData::onTouchEnded(Touch* touch, Event* event)
 {
     auto location = touch->getLocation();
 
-    auto s = this->getChildByName("Gros");//获取小小英雄的锚点坐标
+    auto s = this->getChildByName("littlehero1");//获取小小英雄的结点指针
     s->stopAllActions();
    
     float o = location.x - s->getPosition().x;
