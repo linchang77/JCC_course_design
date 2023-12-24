@@ -44,6 +44,7 @@ bool LHcontroler::init()
 void Littlehero::init_layer()
 {
     heroslayer = Layer::create();//创建图层
+    //auto setItem = createMenuItem("setNormal.png", "setSelected.png", CC_CALLBACK_1(LittleHero::menuSetCallback, this), visibleSize.width - closeItem->getContentSize().width, visibleSize.height, 1.0f, 1.0f);
     set_threelabel();
     set_IDs();
     //set_avatar();
@@ -74,6 +75,16 @@ void Littlehero::set_IDs()
         heroslayer->addChild(IDlabel, 0, "IDlabel"+ heros.at(i)->ID);
     }
 }
+void Littlehero::update_Hp(int hp)
+{
+    Hp -= hp;
+}
+void Littlehero::update_exp(int exp)
+{
+    Exp = Exp + exp;
+    //判断是否要升级
+
+}
 void Littlehero::set_HP_Bar()//显示血条
 {
 
@@ -81,4 +92,18 @@ void Littlehero::set_HP_Bar()//显示血条
 void Littlehero::set_avatar()//显示头像
 {
 
+}
+MenuItemImage* Littlehero::createMenuItem(const std::string& normalImage, const std::string& selectedImage, const ccMenuCallback& callback, const float x, const float y, const float anchorX, const float anchorY)
+{
+    auto item = MenuItemImage::create(normalImage, selectedImage, callback);
+
+    if (item == nullptr || item->getContentSize().width <= 0 || item->getContentSize().height <= 0)
+        problemLoading("'" + normalImage + "' and '" + selectedImage);
+    else
+    {
+        item->setAnchorPoint({ anchorX, anchorY });
+        item->setPosition(origin.x + x, origin.y + y);
+    }
+
+    return item;
 }

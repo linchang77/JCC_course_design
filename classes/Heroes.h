@@ -8,16 +8,12 @@
 #define MAX_GRADE 9		//小小英雄最高等级
 #define NUM_HEROES 3	//英雄数量
 #define MAX_COST 5		//英雄最大价格
-<<<<<<< HEAD
-
-=======
 struct HeroPosition
 	//英雄战斗位置坐标
 {
 	int x;    //横坐标
 	int y;    //纵坐标
 };
->>>>>>> CJ
 //小小英雄
 class LittleHero : public cocos2d::Sprite
 {
@@ -75,16 +71,7 @@ private:
 	cocos2d::Sprite* mp;    //蓝条
 };
 
-<<<<<<< HEAD
-struct HeroPosition
-	//英雄战斗位置坐标
-{
-	int x;    //横坐标
-	int y;    //纵坐标
-};
-=======
 
->>>>>>> CJ
 
 
 
