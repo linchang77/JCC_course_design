@@ -128,7 +128,7 @@ MenuItemImage* Setting::setParameter(const ParameterType type, const std::string
 }
 
 //模式选择器的单例对象
-SettingParameters* s_SharedSettingParameters = nullptr;
+static SettingParameters* s_SharedSettingParameters = nullptr;
 
 SettingParameters* SettingParameters::getInstance()
 {

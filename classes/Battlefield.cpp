@@ -1,6 +1,10 @@
 #include "Battlefield.h"
 #include "Setting.h"
+#include "httpTransmission.h"
 USING_NS_CC;
+using namespace network;
+
+float Battlefield::prepareDuration = 30.0f;
 
 Scene* Battlefield::createScene()
 {
@@ -41,27 +45,40 @@ bool Battlefield::init()
 
     //战场大背景
     auto map = MapData::create();
-//添加人物信息图层
-auto controler = LHcontroler::getInstance()->heros.at(0);
-auto herolayer=controler->get_heroslayer();//初始化一下
-if (map == nullptr)
-{
-    problemLoading("'battlefield.png'");
-}
-else if (herolayer==nullptr)
-{
-    problemLoading("herolayer is nullptr");
-}
-else
-{
-    // position the sprite on the center of the screen
-    //sprite->setPosition(Vec2(visibleSize.width / 2 + origin.x, visibleSize.height / 2 + origin.y));
+	//添加人物信息图层
+	auto controler = LHcontroler::getInstance()->heros.at(0);
+	auto herolayer = controler->get_heroslayer();//初始化一下
+	if (map == nullptr)
+	{
+		problemLoading("'battlefield.png'");
+	}
+	else if (herolayer == nullptr)
+	{
+		problemLoading("herolayer is nullptr");
+	}
+	else
+	{
+		// position the sprite on the center of the screen
+		//sprite->setPosition(Vec2(visibleSize.width / 2 + origin.x, visibleSize.height / 2 + origin.y));
 
-    // add the sprite as a child to this layer
-    this->addChild(map, 0,"map");
-    this->addChild(herolayer, 2, "herolayer");
-}
+		// add the sprite as a child to this layer
+		this->addChild(map, 0, "map");
+		this->addChild(herolayer, 2, "herolayer");
+	}
+
+    //备战阶段开始，启用单次调度器计时
+    scheduleOnce(CC_CALLBACK_1(Battlefield::dataExchange, this), prepareDuration, "dataExchange");
+
     return true;
+}
+
+void Battlefield::dataExchange(float dt)
+{
+    auto transmission = httpTransmission::getInstance();
+
+    transmission->upload(this);
+    transmission->download(this);
+    //执行到这里，敌方棋子数据会存进小小英雄类的对应vector中
 }
 
 Store* Battlefield::getCurrentStore()
@@ -76,6 +93,9 @@ Preparation* Battlefield::getCurrentPreparation()
 
 void Battlefield::menuReturnCallback(Ref* pSender)
 {
+    auto heroeslayer = LHcontroler::getInstance()->heros.at(0)->get_heroslayer();
+    heroeslayer->retain();
+    heroeslayer->removeFromParent();
     Director::getInstance()->popScene();
 }
 
@@ -93,7 +113,7 @@ void Battlefield::menuStoreCallback(Ref* pSender)
         addChild(store, 2);
         store->setPosition(origin.x, origin.y);
     }
-    else        //关闭商店
+    else                        //关闭商店
     {
         store->retain();
         removeChild(store, false);
@@ -101,6 +121,38 @@ void Battlefield::menuStoreCallback(Ref* pSender)
 
     store->reverseStatus();
     log("The store is %s now.", store->getStatus() ? "on" : "off");
+}
+
+void Battlefield::heroesCallback(HttpClient* client, HttpResponse* response)
+{
+    if (!response->isSucceed())
+    {
+        log("error msg: %s", response->getErrorBuffer());
+        return;
+    }
+
+    //服务器端回复内容
+    std::vector<char>* buffer = response->getResponseData();
+    long statusCode = response->getResponseCode();
+
+    //设置敌方棋子表
+    *(LHcontroler::getInstance()->heros.at(0)->get_E_F()) = httpTransmission::getInstance()->stringToHeroData(buffer->data());
+}
+
+void Battlefield::hpCallback(HttpClient* client, HttpResponse* response)
+{
+    if (!response->isSucceed())
+    {
+        log("error msg: %s", response->getErrorBuffer());
+        return;
+    }
+
+    //服务器端回复内容
+    std::vector<char>* buffer = response->getResponseData();
+    long statusCode = response->getResponseCode();
+
+    //设置敌方血量
+    LHcontroler::getInstance()->heros.at(0)->setEnemyHp(std::stoi(buffer->data()));
 }
 
 MenuItemImage* Battlefield::createMenuItem(const std::string& normalImage, const std::string& selectedImage, const ccMenuCallback& callback, const float x, const float y, const float anchorX, const float anchorY)
@@ -119,7 +171,7 @@ MenuItemImage* Battlefield::createMenuItem(const std::string& normalImage, const
 }
 
 //模式选择器的单例对象
-ModeSelector* s_SharedModeSelector = nullptr;
+static ModeSelector* s_SharedModeSelector = nullptr;
 
 ModeSelector* ModeSelector::getInstance()
 {
@@ -243,13 +295,13 @@ bool Store::removeHero(Hero* toBeRemoved)
 Vector<Hero*> Store::randomDisplay()
 {
     Vector<Hero*> result;
-    const int grade = LittleHero::getInstance()->getGrade();
+    const int level = LHcontroler::getInstance()->heros.at(0)->getLevel();
     
     for (int i = 0; i < size; i++)
     {
         float sampleCost = random(0.0f, 100.0f);    //随机数模拟抽样（按费抽取）
         int j, total;
-        for (j = total = 0; j < MAX_COST && (total += possibilityTable[grade - 1][j]) < sampleCost; j++)
+        for (j = total = 0; j < MAX_COST && (total += possibilityTable[level - 1][j]) < sampleCost; j++)
             ;
         //跳出循环时，j即抽取到的费用下标，j+1即抽取到的费用
         log("get cost %d", j + 1);

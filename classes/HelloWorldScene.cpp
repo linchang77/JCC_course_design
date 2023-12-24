@@ -25,7 +25,6 @@
 #include "HelloWorldScene.h"
 #include "Setting.h"
 #include "Battlefield.h"
-
 USING_NS_CC;
 
 Scene* HelloWorld::createScene()
@@ -91,10 +90,10 @@ bool HelloWorld::init()
     }
 
     // add "HelloWorld" splash screen"
-    auto sprite = Sprite::create("Start.png");
+    auto sprite = Sprite::create("StartUI.png");
     if (sprite == nullptr)
     {
-        problemLoading("'Start.png'");
+        problemLoading("StartUI.png");
     }
     else
     {
@@ -104,7 +103,6 @@ bool HelloWorld::init()
         // add the sprite as a child to this layer
         this->addChild(sprite, 0);
     }
-
     return true;
 }
 
@@ -118,6 +116,8 @@ void HelloWorld::menuCloseCallback(Ref* pSender)
 
     //EventCustom customEndEvent("game_scene_close_event");
     //_eventDispatcher->dispatchEvent(&customEndEvent);
+
+
 }
 
 void HelloWorld::menuPracticeCallback(Ref* pSender)

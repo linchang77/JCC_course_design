@@ -4,6 +4,7 @@
 #define BATTLEFIELD_H
 
 #include "cocos2d.h"
+#include "network/HttpClient.h"
 #include "Heroes.h"
 #include "Map.h"
 #include "Littlehero.h"
@@ -29,6 +30,13 @@ public:
 	void menuSetCallback(cocos2d::Ref* pSender);
 	void menuStoreCallback(cocos2d::Ref* pSender);
 
+	//http回调
+	void heroesCallback(cocos2d::network::HttpClient* sender, cocos2d::network::HttpResponse* response);
+	void hpCallback(cocos2d::network::HttpClient* sender, cocos2d::network::HttpResponse* response);
+
+	//服务端数据交互
+	void dataExchange(float dt);
+
 	//返回图层
 	Store* getCurrentStore();
 	Preparation* getCurrentPreparation();
@@ -44,6 +52,7 @@ private:
 	cocos2d::Vec2 origin = cocos2d::Director::getInstance()->getVisibleOrigin();    //坐标原点
 	Store* store = nullptr;															//商店（与给定战场相绑定）
 	Preparation* preparation = nullptr;												//备战席（与给定战场相绑定）
+	static float prepareDuration;
 };
 
 //模式选择器，与具体的战斗场景相绑定
