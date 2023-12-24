@@ -4,7 +4,7 @@
 USING_NS_CC;
 using namespace network;
 
-float Battlefield::prepareDuration = 30.0f;
+float Battlefield::prepareDuration = 1.0f;
 
 Scene* Battlefield::createScene()
 {
@@ -76,9 +76,16 @@ void Battlefield::dataExchange(float dt)
 {
     auto transmission = httpTransmission::getInstance();
 
-    transmission->upload(this);
+    //transmission->upload(this);
     transmission->download(this);
     //执行到这里，敌方棋子数据会存进小小英雄类的对应vector中
+
+    //下面是调试用代码
+    auto littlehero = LHcontroler::getInstance()->heros.at(0);
+    Vector<Hero*> enemyFightingHeroes = littlehero->getEnemyFightingHeroes();
+    for (Vector<Hero*>::iterator p = enemyFightingHeroes.begin(); p != enemyFightingHeroes.end(); p++)
+        addChild(*p);
+    log("enemy's current Hp: %d", littlehero->getEnemyHp());
 }
 
 Store* Battlefield::getCurrentStore()
@@ -125,27 +132,43 @@ void Battlefield::menuStoreCallback(Ref* pSender)
 
 void Battlefield::heroesCallback(HttpClient* client, HttpResponse* response)
 {
+    if (response == nullptr)
+    {
+        log("no response");
+        return;
+    }
+
+    /*
     if (!response->isSucceed())
     {
         log("error msg: %s", response->getErrorBuffer());
         return;
     }
+    */
 
     //服务器端回复内容
     std::vector<char>* buffer = response->getResponseData();
     long statusCode = response->getResponseCode();
 
     //设置敌方棋子表
-    *(LHcontroler::getInstance()->heros.at(0)->get_E_F()) = httpTransmission::getInstance()->stringToHeroData(buffer->data());
+    LHcontroler::getInstance()->heros.at(0)->setEnemyFightingHeroes(httpTransmission::getInstance()->stringToHeroData(buffer->data()));
 }
 
 void Battlefield::hpCallback(HttpClient* client, HttpResponse* response)
 {
+    if (response == nullptr)
+    {
+        log("no response");
+        return;
+    }
+
+    /*
     if (!response->isSucceed())
     {
         log("error msg: %s", response->getErrorBuffer());
         return;
     }
+    */
 
     //服务器端回复内容
     std::vector<char>* buffer = response->getResponseData();

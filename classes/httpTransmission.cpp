@@ -60,20 +60,26 @@ void httpTransmission::download(Battlefield* battlefield)
     if (littlehero == nullptr)
         log("littlehero is null.");
     else
-    {
-        auto request = new HttpRequest;
+    { 
         //获取敌方棋子表
-        request->setUrl("GameServer.org\\aboutHeroes");
-        request->setRequestType(HttpRequest::Type::GET);
-        request->setResponseCallback(CC_CALLBACK_2(Battlefield::heroesCallback, battlefield));
-        HttpClient::getInstance()->send(request);
+        {
+            auto request = new HttpRequest;
+            request->setUrl("file:///D:/SeniorGameProj/TerminalProj/enemyHeroes.txt");
+            request->setRequestType(HttpRequest::Type::GET);
+            request->setResponseCallback(CC_CALLBACK_2(Battlefield::heroesCallback, battlefield));
+            HttpClient::getInstance()->send(request);
+            request->release();
+        }
+
         //获取敌方血量
-        request->setUrl("GameServer.org\\aboutLittleHero");
-        request->setRequestType(HttpRequest::Type::GET);
-        request->setResponseCallback(CC_CALLBACK_2(Battlefield::hpCallback, battlefield));
-        HttpClient::getInstance()->send(request);
-        //清除请求
-        request->release();
+        {
+            auto request = new HttpRequest;
+            request->setUrl("file:///D:/SeniorGameProj/TerminalProj/Hp.txt");
+            request->setRequestType(HttpRequest::Type::GET);
+            request->setResponseCallback(CC_CALLBACK_2(Battlefield::hpCallback, battlefield));
+            HttpClient::getInstance()->send(request);
+            request->release();
+        }
     }
 }
 
@@ -90,21 +96,21 @@ std::string httpTransmission::heroDataToString(Vector<Hero*> herodata)
         file += ' ';
         file += std::to_string((*p)->getPositionY());
         file += ' ';
-        file += '\n';
+        file += '/';    //不同棋子的数据之间用斜杠分隔
     }
-    file += '0';    //文件以单个0结尾
+    file += "-1 ";    //文件以-1结尾
 
     return file;
 }
 
 Vector<Hero*> httpTransmission::stringToHeroData(std::string file)
 {
-    std::string::iterator p = file.begin();
+    std::string::iterator p;
     Vector<Hero*> heroData;
 
-    while (p != file.end())
+    for (p = file.begin(); p != file.end(); p++)
     {
-        for (int i = 0; *p != '\n'; i++, p++)  //一行数据循环
+        for (int i = 0; *p != '/'; i++, p++)  //一行数据循环
         {
             std::string current;    //单个数据
             while (*p != ' ')
@@ -114,10 +120,11 @@ Vector<Hero*> httpTransmission::stringToHeroData(std::string file)
                 case 0:
                 {
                     int id = std::stoi(current);
-                    if (id)
+                    if (id != -1)
                     {
                         auto hero = Hero::createExactHero(static_cast<HeroType>(id));
                         heroData.pushBack(hero);
+                        break;
                     }
                     else
                         return heroData;    //一行以0开头表示结束

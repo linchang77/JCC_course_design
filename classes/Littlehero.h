@@ -30,11 +30,13 @@ public:
 	cocos2d::MenuItemImage* createMenuItem(const std::string& normalImage, const std::string& selectedImage, const cocos2d::ccMenuCallback& callback, 
 		                                   const float x, const float y, const float anchorX = 0.5f, const float anchorY = 0.5f);
 	cocos2d::Layer* get_heroslayer() { return heroslayer; }
-	Vector<Hero*>* get_E_F() { return &Enemy_fightheros; }
+	Vector<Hero*> getEnemyFightingHeroes() { return Enemy_fightheros; }
 	std::string ID = "";//小小英雄的ID
 	int getLevel() { return level; }
 	int getHp() { return Hp; }
+	int getEnemyHp() { return EnemyHp; }
 	void setEnemyHp(int Hp) { EnemyHp = Hp; }
+	void setEnemyFightingHeroes(Vector<Hero*> vec) { Enemy_fightheros = vec; }
 private:
 	int Explevel[6] = {};//经验条，记录每个等级的经验值
 	int Hp = 100;//血量
