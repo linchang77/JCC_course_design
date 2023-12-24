@@ -63,5 +63,9 @@ bool Hero::init()
 
 bool Example::init()
 {
+<<<<<<< HEAD
     
+=======
+    return true;
+>>>>>>> CJ
 }
