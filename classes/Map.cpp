@@ -10,19 +10,16 @@ bool MapData::init()
     auto visibleSize = Director::getInstance()->getVisibleSize();
     Vec2 origin = Director::getInstance()->getVisibleOrigin();
     //产生地图
-	background = Sprite::create("JCC.png");
-    background->setContentSize(Size(Vec2(visibleSize.width, visibleSize.height)));
-    background->setAnchorPoint(Vec2(0, 0));
-	this->addChild(background);
-    //产生监听器
-    auto listener = EventListenerTouchOneByOne::create();
-    listener->onTouchBegan = CC_CALLBACK_2(MapData::onTouchBegan, this);
-    listener->onTouchEnded = CC_CALLBACK_2(MapData::onTouchEnded, this);
-    _eventDispatcher->addEventListenerWithSceneGraphPriority(listener, this);//将监听器加入到场景图优先级中，使其能够接收触摸事件。
-    //加入小小英雄
-    auto Gros = Sprite::create("littlehero1.png");
-    Gros->runAction(JumpTo::create(4, Vec2(300, 48), 100, 4));
-    this->addChild(Gros, 0, "littlehero1");
+	Background = Sprite::create("JCC.png");
+    Mapline = Sprite::create("maplines.png");
+    Background->setContentSize(Size(Vec2(visibleSize.width, visibleSize.height)));
+    Background->setAnchorPoint(Vec2(0, 0));
+    Mapline->setContentSize(Size(Vec2(visibleSize.width, visibleSize.height)));
+    Mapline->setAnchorPoint(Vec2(0, 0));
+    /*刚开始时Mapline完全透明，只有拖动时才是不透明*/
+    Mapline->setOpacity(0);
+	this->addChild(Background);
+    this->addChild(Mapline);
 	return true;
 }
 bool MapData::onTouchBegan(Touch* touch, Event* event)
