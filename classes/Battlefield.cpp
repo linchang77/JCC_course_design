@@ -40,19 +40,27 @@ bool Battlefield::init()
     addChild(menu, 1);
 
     //战场大背景
-    auto sprite = Sprite::create("battlefield.png");
-    if (sprite == nullptr)
-    {
-        problemLoading("'battlefield.png'");
-    }
-    else
-    {
-        // position the sprite on the center of the screen
-        sprite->setPosition(Vec2(visibleSize.width / 2 + origin.x, visibleSize.height / 2 + origin.y));
+    auto map = MapData::create();
+//添加人物信息图层
+auto controler = LHcontroler::getInstance()->heros.at(0);
+auto herolayer=controler->get_heroslayer();//初始化一下
+if (map == nullptr)
+{
+    problemLoading("'battlefield.png'");
+}
+else if (herolayer==nullptr)
+{
+    problemLoading("herolayer is nullptr");
+}
+else
+{
+    // position the sprite on the center of the screen
+    //sprite->setPosition(Vec2(visibleSize.width / 2 + origin.x, visibleSize.height / 2 + origin.y));
 
-        // add the sprite as a child to this layer
-        this->addChild(sprite, 0);
-    }
+    // add the sprite as a child to this layer
+    this->addChild(map, 0,"map");
+    this->addChild(herolayer, 2, "herolayer");
+}
     return true;
 }
 
