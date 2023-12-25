@@ -40,9 +40,10 @@ bool Battlefield::init()
     addChild(menu, 1);
 
     //战场大背景
-    auto map = MapData::create();
-    //添加人物信息图层
     auto controler = LHcontroler::getInstance()->heros.at(0);
+    
+    //添加人物信息图层
+    auto map = controler->get_My_Map();
     auto herolayer=controler->get_heroslayer();//初始化一下
     if (map == nullptr)
     {
