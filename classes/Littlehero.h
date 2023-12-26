@@ -48,6 +48,7 @@ public:
 	/*
 	 *小小英雄的金币相关函数
 	 */
+	int get_gold() { return Gold; }
 	void update_gold();//每回合更新金币
 	void update_gold(int num);//更新金币
 	void showInterest();//显示利息图标
@@ -89,7 +90,7 @@ private:
 	/*血量*****/int Hp = 100;//血量
 	Label* Hplabel;//显示血量的标签
 	int EnemyHp;
-	/*金币*****/int Gold = 0;//金币
+	/*金币*****/int Gold = 100;//金币
 	Label* Goldlabel;//金币数量标签
 
 	/*状态*****/int status = PREPARE;//小小英雄的状态

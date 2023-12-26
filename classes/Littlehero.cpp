@@ -204,9 +204,9 @@ void Littlehero::update_gold()//每回合更新金币
 }
 void Littlehero::update_gold(int num)//更新金币
 {
-    Gold = Gold + num;
+    Gold -= num;
     Goldlabel->setString(StringUtils::toString(Gold));
-   showInterest();
+    showInterest();
 }
 void Littlehero::showInterest()//显示利息的图标
 {

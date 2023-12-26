@@ -345,13 +345,20 @@ Hero* Store::getHeroByCost(const int cost, const int i)
 
 void Store::purchaseCallback(Ref* pSender)
 {
-    MenuItem* chosenItem = dynamic_cast<MenuItem*>(pSender);    //被选中的商品按钮
+    auto littlehero = LHcontroler::getInstance()->getMyLittleHero();
+
+    if (!littlehero->get_gold())
+    {
+
+    }
+    MenuItem* chosenItem = dynamic_cast<MenuItem*>(pSender);                //被选中的商品按钮
     const float pos = chosenItem->convertToWorldSpace({ 0.0f, 1.0f }).x;    //获取被点中item在世界坐标系的横坐标
     const int good = chosenItem->getName().back() - '0' - 1;
 
     //good就是玩家购买的棋子在商店中的顺序（从左到右是0~4），后面的操作请棋子设计者实现
     static_cast<Battlefield*>(Director::getInstance()->getRunningScene())->getCurrentPreparation()->placeHero(displayment.at(good));    //将棋子渲染到备战席上
     chosenItem->removeFromParent();     //该项商品按钮从商店移除（现在只是简单的remove，若需要更复杂的效果请自行实现）
+    littlehero->update_gold(displayment.at(0)->getCost());
     log("you've purchased hero %s", displayment.at(good)->getName().data());
 }
 
@@ -362,6 +369,9 @@ void Store::refreshCallback(Ref* pSender)
 
     //清除菜单内容
     menu->removeAllChildren();
+
+    //更新金币数量
+    LHcontroler::getInstance()->getMyLittleHero()->update_gold(2);
 
     //重新渲染商品按钮
     for (Vector<Hero*>::iterator p = displayment.begin(); p != displayment.end(); p++)

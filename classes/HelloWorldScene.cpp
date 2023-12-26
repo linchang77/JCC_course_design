@@ -81,6 +81,7 @@ bool HelloWorld::init()
 
     // add "HelloWorld" splash screen"
     auto sprite = creator->createSprite("StartUI.png", visibleSize.width / 2, visibleSize.height / 2);
+    sprite->setContentSize(Size(1600.0f, 948.0f));
     addChild(sprite, 0);
 
     return true;
