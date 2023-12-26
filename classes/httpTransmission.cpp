@@ -18,7 +18,7 @@ httpTransmission* httpTransmission::getInstance()
 
 void httpTransmission::upload(Battlefield* battlefield)
 {
-    auto littlehero = LHcontroler::getInstance()->heros.at(0);
+    auto littlehero = LHcontroler::getInstance()->getMyLittleHero();
     
     //传送棋子数据
     {
@@ -55,7 +55,7 @@ void httpTransmission::upload(Battlefield* battlefield)
 
 void httpTransmission::download(Battlefield* battlefield)
 {
-    auto littlehero = LHcontroler::getInstance()->heros.at(0);
+    auto littlehero = LHcontroler::getInstance()->getMyLittleHero();
 
     if (littlehero == nullptr)
         log("littlehero is null.");

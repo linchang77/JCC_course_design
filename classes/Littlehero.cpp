@@ -2,15 +2,12 @@
 #include "cocos2d.h"
 #include"Heroes.h"
 #include"Littlehero.h"
+#include "GeneralCreator.h"
 #define LHNUM 6      //最大小小英雄数量
 #define M_LEVEL 6    //最大等级
 #define Winning_Streak_Rewards 1//连胜或者连败奖励
 #define Gold_Per_Turn  5//每回合固定金币
 USING_NS_CC;
-static void problemLoading(const std::string filename)
-{
-    log("打开文件%s不成功！", filename);
-}
 static LHcontroler* s_Sharedcontroler = nullptr;
 static int mynumber=0;
 int LHcontroler::get_mynumber()
@@ -26,6 +23,12 @@ LHcontroler* LHcontroler::getInstance()
         s_Sharedcontroler->init();
     }
     return s_Sharedcontroler;
+}
+void LHcontroler::clearInstance()
+{
+    if (s_Sharedcontroler)
+        delete s_Sharedcontroler;
+    s_Sharedcontroler = nullptr;
 }
 //小小英雄的初始化
 bool Littlehero::init()
@@ -56,8 +59,6 @@ void Littlehero::init_layer()
     set_Messagelabel();
     //放置人口的图标
     set_PopulationLabel();
-    //放置商店
-    set_Shop();
     //显示血条
     set_HP_Bar();
     //放置三个标签
@@ -82,6 +83,7 @@ void Littlehero::init_MyMap()
 /*设置经验等级血量ID头像标签的函数*/
 void Littlehero::set_threelabel()
 {
+    auto visibleSize = Director::getInstance()->getVisibleSize();
     Hplabel = Label::createWithTTF(  "Your Hp:"+StringUtils::toString(Hp), "fonts/Marker Felt.ttf", 24);
     Explabel = Label::createWithTTF("Your Exp:" + StringUtils::toString(Exp) + "/" + StringUtils::toString(Level== M_LEVEL ? 0:Explevel[Level]), "fonts/Marker Felt.ttf", 24);
     Levellabel = Label::createWithTTF("Your Level:" + StringUtils::toString(Level), "fonts/Marker Felt.ttf", 24);
@@ -105,7 +107,8 @@ void Littlehero::add_Littlehero()//加入小小英雄
 void Littlehero::set_ExpButton()//放置购买经验的按钮
 {
     //放置增加经验的按钮
-    auto BuyexpItem = createMenuItem("herolayer/BuylvlButton.png", "herolayer/BuylvlButton.png", CC_CALLBACK_0(Littlehero::Buy_exp, this), 48, 948 - 926, 0, 0, BuyexpButtonSize.x);
+    auto BuyexpItem = GCreator::getInstance()->createMenuItem("herolayer/BuylvlButton.png", "herolayer/BuylvlButton.png", CC_CALLBACK_0(Littlehero::Buy_exp, this), 48, 948 - 926, 0, 0);
+    BuyexpItem->setScale(BuyexpButtonSize.x / BuyexpItem->getContentSize().width);
     auto menu = Menu::create(BuyexpItem, NULL);
     menu->setPosition(Vec2::ZERO);
     heroslayer->addChild(menu, 1, "Buyexpitem");
@@ -113,7 +116,8 @@ void Littlehero::set_ExpButton()//放置购买经验的按钮
 void Littlehero::set_Gold()   //放置金币标签,和图标
 {
     Goldlabel = Label::createWithTTF(StringUtils::toString(Gold), "fonts/Marker Felt.ttf", 24);
-    Goldimage = createSprite("herolayer/gold.png", 0, 0);
+    Goldimage = GCreator::getInstance()->createSprite("herolayer/gold.png", 0, 0, 0, 0);
+    Goldimage->setContentSize(Size(1600.0f, 948.0f));
     Goldlabel->setAnchorPoint(Vec2(0, 1));
     Goldlabel->setPosition(GoldLabelPosition);
     heroslayer->addChild(Goldlabel, 0, "Goldlabel");
@@ -124,22 +128,17 @@ void Littlehero::set_PopulationLabel()//放置人口的图标
     /*设置人口标签和图标*/
 
     auto PopulationLabel = Label::createWithTTF(StringUtils::toString(chequers) + "/" + StringUtils::toString(Level), "fonts/Marker Felt.ttf", 48);
-    Population = createSprite("herolayer/Population.png", 0, 0);
+    Population = GCreator::getInstance()->createSprite("herolayer/Population.png", 0, 0, 0, 0);
+    Population->setContentSize(Size(1600.0f, 948.0f));
     Population->setOpacity(0);
     PopulationLabel->setOpacity(0);
     PopulationLabel->setPosition(PopulationLabelPosition);
     heroslayer->addChild(Population, 1, "Goldimage");
     heroslayer->addChild(PopulationLabel, 1, "PopulationLabel");
 }
-void Littlehero::set_Shop()//放置商店
-{
-    /*添加商店背景*/
-    Shopbackground = createSprite("herolayer/Shopbackground.png", 0, 0);
-    Shopbackground->setOpacity(200);
-    heroslayer->addChild(Shopbackground, -1, "Shopbackground");
-}
 void Littlehero::set_IDs()
 {
+    auto visibleSize = Director::getInstance()->getVisibleSize();
     auto heros = LHcontroler::getInstance()->heros;
     for (int i = 0; i < M_LEVEL; i++)
     {
@@ -151,7 +150,8 @@ void Littlehero::set_IDs()
 }
 void Littlehero::set_avatar()//显示头像
 {
-    avatarimage = createSprite("herolayer/Avatar.png", 0, 0);
+    avatarimage = GCreator::getInstance()->createSprite("herolayer/Avatar.png", 0, 0, 0, 0);
+    avatarimage->setContentSize(Size(1600.0f, 948.f));
     heroslayer->addChild(avatarimage, 0, "avatarimage");
 }
 //显示消息提示标签
@@ -229,7 +229,8 @@ void Littlehero::showInterest()//显示利息的图标
         node->removeFromParent();
     if (interest > 0)
     {
-       Sprite* newnode = createSprite("herolayer/Interest" + StringUtils::toString(interest) + ".png", 0, 0);
+       Sprite* newnode = GCreator::getInstance()->createSprite("herolayer/Interest" + StringUtils::toString(interest) + ".png", 0, 0, 0, 0);
+       newnode->setContentSize(Size(1600.0f, 948.0f));
         heroslayer->addChild(newnode, 0, "Interest");
     }
    
@@ -331,6 +332,7 @@ bool Littlehero::onRightMouseDown(EventMouse* event)
 /*————————————————————————————————————*/
 /*下面是实现小小英雄移动的函数*/
 /*————————————————————————————————————*/
+<<<<<<< HEAD
 /*按钮创建函数
 *后四个参数是设置x，y坐标，设置x，y锚点
 */
@@ -413,3 +415,6 @@ Vec2 Littlehero::getmidposition(int x)
     vec2.y = (PreparationsSizeY[1] + PreparationsSizeY[0]) / 2;
     return vec2;
 }
+=======
+
+>>>>>>> LQS

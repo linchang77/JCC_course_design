@@ -1,5 +1,6 @@
 #include "Battlefield.h"
 #include "Setting.h"
+#include "GeneralCreator.h"
 #include "httpTransmission.h"
 USING_NS_CC;
 using namespace network;
@@ -11,31 +12,26 @@ Scene* Battlefield::createScene()
     return Battlefield::create();
 }
 
-//调试：文件打开失败时的信息输出
-static void problemLoading(const std::string filename)
-{
-    log("打开文件%s不成功！", filename);
-}
-
 bool Battlefield::init()
 {
     if (!Scene::init())
         return false;
 
+    auto visibleSize = Director::getInstance()->getVisibleSize();
+
 	//返回开始界面
-    auto returnItem = createMenuItem("battlefieldToStartNormal.png", "battlefieldToStartSelected.png", CC_CALLBACK_1(Battlefield::menuReturnCallback, this), visibleSize.width, visibleSize.height, 1.0f, 1.0f);
+    auto returnItem = GCreator::getInstance()->createMenuItem("battlefieldToStartNormal.png", "battlefieldToStartSelected.png", CC_CALLBACK_1(Battlefield::menuReturnCallback, this), visibleSize.width, visibleSize.height, 1.0f, 1.0f);
 
     //进入设置
-    auto setItem = createMenuItem("setNormal.png", "setSelected.png", CC_CALLBACK_1(Battlefield::menuSetCallback, this), visibleSize.width - returnItem->getContentSize().width, visibleSize.height, 1.0f, 1.0f);
+    auto setItem = GCreator::getInstance()->createMenuItem("setNormal.png", "setSelected.png", CC_CALLBACK_1(Battlefield::menuSetCallback, this), visibleSize.width - returnItem->getContentSize().width, visibleSize.height, 1.0f, 1.0f);
 
     //商店
     store = Store::create();    //创建但暂不渲染
     store->retain();
-    auto storeItem = createMenuItem("storeNormal.png", "storeSelected.png", CC_CALLBACK_1(Battlefield::menuStoreCallback, this), visibleSize.width, 0.0f, 1.0f, 0.0f);
+    auto storeItem = GCreator::getInstance()->createMenuItem("storeNormal.png", "storeSelected.png", CC_CALLBACK_1(Battlefield::menuStoreCallback, this), visibleSize.width, 0.0f, 1.0f, 0.0f);
 
     //备战席位
-    preparation = Preparation::create();  //创建后立即渲染
-    addChild(preparation, 1);
+    preparation = Preparation::create();
 
     //棋盘
 
@@ -45,18 +41,19 @@ bool Battlefield::init()
 
     //战场大背景
 	//添加人物信息图层
-	auto controler = LHcontroler::getInstance()->heros.at(0);
+	auto controler = LHcontroler::getInstance()->getMyLittleHero();
 	auto herolayer = controler->get_heroslayer();//初始化一下
 
     //添加战场图层
     auto map = controler->get_MyMap();
+
 	if (map == nullptr)
 	{
-		problemLoading("'battlefield.png'");
+		GCreator::problemLoading("'battlefield.png'");
 	}
 	else if (herolayer == nullptr)
 	{
-		problemLoading("herolayer is nullptr");
+		GCreator::problemLoading("herolayer is nullptr");
 	}
 	else
 	{
@@ -80,10 +77,9 @@ void Battlefield::dataExchange(float dt)
 
     //transmission->upload(this);
    // transmission->download(this);
-    //执行到这里，敌方棋子数据会存进小小英雄类的对应vector中
 
     //下面是调试用代码
-    auto littlehero = LHcontroler::getInstance()->heros.at(0);
+    auto littlehero = LHcontroler::getInstance()->getMyLittleHero();
     Vector<Hero*> enemyFightingHeroes = littlehero->getEnemyFightingHeroes();
     for (Vector<Hero*>::iterator p = enemyFightingHeroes.begin(); p != enemyFightingHeroes.end(); p++)
         addChild(*p);
@@ -102,9 +98,6 @@ Preparation* Battlefield::getCurrentPreparation()
 
 void Battlefield::menuReturnCallback(Ref* pSender)
 {
-    auto heroeslayer = LHcontroler::getInstance()->heros.at(0)->get_heroslayer();
-    heroeslayer->retain();
-    heroeslayer->removeFromParent();
     Director::getInstance()->popScene();
 }
 
@@ -119,8 +112,8 @@ void Battlefield::menuStoreCallback(Ref* pSender)
 {
     if (!store->getStatus())    //打开商店
     {
-        addChild(store, 2);
-        store->setPosition(origin.x, origin.y);
+        addChild(store, 1);
+        store->setPosition(Vec2::ZERO);
     }
     else                        //关闭商店
     {
@@ -153,7 +146,7 @@ void Battlefield::heroesCallback(HttpClient* client, HttpResponse* response)
     long statusCode = response->getResponseCode();
 
     //设置敌方棋子表
-    LHcontroler::getInstance()->heros.at(0)->setEnemyFightingHeroes(httpTransmission::getInstance()->stringToHeroData(buffer->data()));
+    LHcontroler::getInstance()->getMyLittleHero()->setEnemyFightingHeroes(httpTransmission::getInstance()->stringToHeroData(buffer->data()));
 }
 
 void Battlefield::hpCallback(HttpClient* client, HttpResponse* response)
@@ -177,22 +170,7 @@ void Battlefield::hpCallback(HttpClient* client, HttpResponse* response)
     long statusCode = response->getResponseCode();
 
     //设置敌方血量
-    LHcontroler::getInstance()->heros.at(0)->setEnemyHp(std::stoi(buffer->data()));
-}
-
-MenuItemImage* Battlefield::createMenuItem(const std::string& normalImage, const std::string& selectedImage, const ccMenuCallback& callback, const float x, const float y, const float anchorX, const float anchorY)
-{
-    auto item = MenuItemImage::create(normalImage, selectedImage, callback);
-
-    if (item == nullptr || item->getContentSize().width <= 0 || item->getContentSize().height <= 0)
-        problemLoading("'" + normalImage + "' and '" + selectedImage);
-    else
-    {
-        item->setAnchorPoint({ anchorX, anchorY });
-        item->setPosition(origin.x + x, origin.y + y);
-    }
-
-    return item;
+    LHcontroler::getInstance()->getMyLittleHero()->setEnemyHp(std::stoi(buffer->data()));
 }
 
 //模式选择器的单例对象
@@ -231,43 +209,23 @@ Mode ModeSelector::getMode()
     return mode;
 }
 
-bool Board::init()
+Preparation* Preparation::create()
 {
-    if (!Layer::init())
-        return false;
+    Preparation* preparation = new (std::nothrow) Preparation;
 
-    return true;
-}
-
-bool Preparation::init()
-{
-    if (!Layer::init())
-        return false;
-
-    //渲染席位
-    for (int i = 0; i < size; i++)
-    {
-        auto seat = Sprite::create(this->seat);
-        if (seat == nullptr)
-            problemLoading(this->seat);
-        else
-        {
-            seat->setTag(i);    //用序号作标签，便于取定第i号备战席的位置
-            //先调整图片尺寸以适应屏幕大小
-            seat->setScale(Director::getInstance()->getVisibleSize().width / size / seat->getContentSize().width);
-            seat->setPosition(seat->getContentSize().width * seat->getScale() * (0.5f + i), seat->getContentSize().height * seat->getScale() / 2);
-            addChild(seat);
-        }
-    }
-
-    return true;
+    CCASSERT(preparation, "not enough memory.");
+    return preparation;
 }
 
 void Preparation::placeHero(Hero* hero)
 {
-    hero->setPosition(getChildByTag(occupied)->getPosition());
-    getParent()->addChild(hero, 2);
-    occupied++;     //已占用席位计数器自增
+    hero->setPosition(startingPoint.x + (occupied++) * seatWidth, startingPoint.y);
+    auto heroesLayer = LHcontroler::getInstance()->getMyLittleHero()->get_heroslayer();
+    heroesLayer->addChild(hero, 2);
+
+    //备战席满，禁用商店按钮
+    if (occupied == size)
+        static_cast<Battlefield*>(Director::getInstance()->getRunningScene())->getCurrentStore()->menuDisabled();
 }
 
 bool Store::init()
@@ -275,22 +233,41 @@ bool Store::init()
     if (!Layer::init())
         return false;
 
+    auto visibleSize = Director::getInstance()->getVisibleSize();
+
+    /*添加商店背景*/
+    background = GCreator::getInstance()->createSprite("herolayer/Shopbackground.png", 0.0f, 0.0f, 0.0f, 0.0f);
+    background->setContentSize(Size(1600.0f, 948.0f));
+    background->setOpacity(200);
+    background->setPosition(Vec2::ZERO);
+    addChild(background, 1);
+
     displayment = Store::randomDisplay();       //当前商店内容（英雄数据）
 
     Vector<MenuItem*> items;   //当前商店内容（显示按钮）
 
+    //商品按钮
     for (Vector<Hero*>::iterator p = displayment.begin(); p != displayment.end(); p++)
     {
         auto images = (*p)->getImages();         //获取图像集
-        auto item = createMenuItem(images.imageInStoreNormal, images.imageInStoreSelected, CC_CALLBACK_1(Store::purchaseCallback, this), 0.0f, visibleSize.height, 0.0f, 1.0f);   //先放到左上角
+        auto item = GCreator::getInstance()->createMenuItem(images.imageInStoreNormal, images.imageInStoreSelected, CC_CALLBACK_1(Store::purchaseCallback, this), 0.0f, 0.0, 0.0f, 0.0f);   //先放到左下角
         item->setName("good" + std::to_string(p - displayment.begin() + 1));
         item->setPositionX((p - displayment.begin()) * item->getContentSize().width);   //生成后再调整位置
         items.pushBack(item);
     }
 
+    //菜单创建
     menu = Menu::createWithArray(items);
-    menu->setPosition(origin.x, origin.y);
+    menu->setPosition(Vec2::ZERO);
     addChild(menu, 2);
+
+    //刷新按钮
+    auto refreshItem = GCreator::getInstance()->createMenuItem("refreshNormal.png", "refreshSelected.png", CC_CALLBACK_1(Store::refreshCallback, this), visibleSize.width, 0.0f, 1.0f, 0.0f);    //先放到右下角
+    refreshItem->setPositionY(refreshItem->getContentSize().height);
+    refresh = Menu::createWithItem(refreshItem);
+    refresh->setPosition(Vec2::ZERO);
+    addChild(refresh, 2);
+    
     return true;
 }
 
@@ -320,7 +297,7 @@ bool Store::removeHero(Hero* toBeRemoved)
 Vector<Hero*> Store::randomDisplay()
 {
     Vector<Hero*> result;
-    const int level = LHcontroler::getInstance()->heros.at(0)->getLevel();
+    const int level = LHcontroler::getInstance()->getMyLittleHero()->getLevel();
     
     for (int i = 0; i < size; i++)
     {
@@ -379,6 +356,25 @@ void Store::purchaseCallback(Ref* pSender)
     log("you've purchased hero %s", displayment.at(good)->getName().data());
 }
 
+void Store::refreshCallback(Ref* pSender)
+{
+    //重新随机生成商品
+    displayment = randomDisplay();
+
+    //清除菜单内容
+    menu->removeAllChildren();
+
+    //重新渲染商品按钮
+    for (Vector<Hero*>::iterator p = displayment.begin(); p != displayment.end(); p++)
+    {
+        auto images = (*p)->getImages();         //获取图像集
+        auto item = GCreator::getInstance()->createMenuItem(images.imageInStoreNormal, images.imageInStoreSelected, CC_CALLBACK_1(Store::purchaseCallback, this), 0.0f, 0.0f, 0.0f, 0.0f);   //先放到坐下角
+        item->setName("good" + std::to_string(p - displayment.begin() + 1));
+        item->setPositionX((p - displayment.begin()) * item->getContentSize().width);   //生成后再调整位置
+        menu->addChild(item);
+    }
+}
+
 bool Store::getStatus()
 {
     return on;
@@ -389,17 +385,8 @@ void Store::reverseStatus()
     on = !on;
 }
 
-MenuItemImage* Store::createMenuItem(const std::string& normalImage, const std::string& selectedImage, const ccMenuCallback& callback, const float x, const float y, const float anchorX, const float anchorY)
+void Store::menuDisabled()
 {
-    auto item = MenuItemImage::create(normalImage, selectedImage, callback);
-
-    if (item == nullptr || item->getContentSize().width <= 0 || item->getContentSize().height <= 0)
-        problemLoading("'" + normalImage + "' and '" + selectedImage);
-    else
-    {
-        item->setAnchorPoint({ anchorX, anchorY });
-        item->setPosition(x, y);
-    }
-
-    return item;
+    menu->setEnabled(false);
+    refresh->setEnabled(false);
 }
