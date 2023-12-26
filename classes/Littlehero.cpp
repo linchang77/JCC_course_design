@@ -320,3 +320,53 @@ bool Littlehero::onRightMouseDown(EventMouse* event)
 /*ÏÂÃæÊÇÊµÏÖÐ¡Ð¡Ó¢ÐÛÒÆ¶¯µÄº¯Êý*/
 /*¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª*/
 
+
+/*¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª*/
+/*ÏÂÃæÊÇµØÍ¼Ïà¹ØµÄº¯Êý*/
+/*¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª*/
+Vec2 Littlehero::getmidposition(int x, int y)
+{
+    Vec2 vec2;
+    vec2.x = (MapSizeX[x] + MapSizeX[x + 1]) / 2;
+    vec2.y = (MapSizeY[y] + MapSizeY[y + 1]) / 2;
+    return vec2;
+}
+Vec2 Littlehero::getmidposition(Vec2 location)
+{
+    if ((location.x >= MapSizeX[0] && location.x <= MapSizeX[4] && location.y >= MapSizeY[0] && location.y <= MapSizeY[4]))
+    {
+        int i = 0;
+        while (location.x > MapSizeX[i])
+        {
+            i++;
+        }
+        int j = 0;
+        while (location.y > MapSizeY[j])
+        {
+            j++;
+        }
+        return  getmidposition(i - 1, j - 1);
+    }
+    else if(location.x >= PreparationsSizeX[0] && location.x <= PreparationsSizeX[9] && location.y >= PreparationsSizeY[0] && location.y <= PreparationsSizeY[1])
+    {
+        int i = 0;
+        while (location.x > PreparationsSizeX[i])
+        {
+            i++;
+        }
+        return  getmidposition(i-1);
+    }
+    else
+    {
+        Messagelabel->setString("You can only place the chess on the left half of the square or on the Preparation Seat.");
+        return Lastposition;
+    }
+}
+Vec2 Littlehero::getmidposition(int x)
+{
+    Vec2 vec2;
+    vec2.x = (PreparationsSizeX[x] + PreparationsSizeX[x + 1]) / 2;
+    vec2.y = (PreparationsSizeY[1] + PreparationsSizeY[0]) / 2;
+    return vec2;
+}
+
