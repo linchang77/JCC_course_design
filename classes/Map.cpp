@@ -10,6 +10,7 @@ bool MapData::init()
     auto visibleSize = Director::getInstance()->getVisibleSize();
     Vec2 origin = Director::getInstance()->getVisibleOrigin();
     //产生地图
+<<<<<<< HEAD
 	background = Sprite::create("JCC.png");
     background->setContentSize(Size(Vec2(visibleSize.width, visibleSize.height)));
     background->setAnchorPoint(Vec2(0, 0));
@@ -50,6 +51,20 @@ void MapData::onTouchEnded(Touch* touch, Event* event)
     }
     //s->runAction(RotateTo::create(1, at));
 }
+=======
+	Background = Sprite::create("JCC.png");
+    Mapline = Sprite::create("maplines.png");
+    Background->setContentSize(Size(Vec2(visibleSize.width, visibleSize.height)));
+    Background->setAnchorPoint(Vec2(0, 0));
+    Mapline->setContentSize(Size(Vec2(visibleSize.width, visibleSize.height)));
+    Mapline->setAnchorPoint(Vec2(0, 0));
+    /*刚开始时Mapline完全透明，只有拖动时才是不透明*/
+    Mapline->setOpacity(0);
+	this->addChild(Background);
+    this->addChild(Mapline);
+	return true;
+}
+>>>>>>> fe9a47d7f1bacf24689cf0bd658d31ab7491d327
 void MapData::putchequer(Node* che,int x,int y)
 {
     che->setPosition(mapposition(x,y));
