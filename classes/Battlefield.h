@@ -4,7 +4,10 @@
 #define BATTLEFIELD_H
 
 #include "cocos2d.h"
+#include "network/HttpClient.h"
 #include "Heroes.h"
+#include "Map.h"
+#include "Littlehero.h"
 
 //模式选项
 enum Mode { Practice, Battle };
@@ -27,17 +30,29 @@ public:
 	void menuSetCallback(cocos2d::Ref* pSender);
 	void menuStoreCallback(cocos2d::Ref* pSender);
 
+	//http回调
+	void heroesCallback(cocos2d::network::HttpClient* sender, cocos2d::network::HttpResponse* response);
+	void hpCallback(cocos2d::network::HttpClient* sender, cocos2d::network::HttpResponse* response);
+
+	//服务端数据交互
+	void dataExchange(float dt);
+
+	//返回图层
+	Store* getCurrentStore();
+	Preparation* getCurrentPreparation();
+
 	//实现create方法
 	CREATE_FUNC(Battlefield);
 
-	//菜单创建处理
-	cocos2d::MenuItemImage* createMenuItem(const std::string& normalImage, const std::string& selectedImage, const cocos2d::ccMenuCallback& callback, float x, float y);
+	//菜单按钮创建处理
+	cocos2d::MenuItemImage* createMenuItem(const std::string& normalImage, const std::string& selectedImage, const cocos2d::ccMenuCallback& callback, const float x, const float y, const float anchorX = 0.5f, const float anchorY = 0.5f);
 
 private:
 	cocos2d::Size visibleSize = cocos2d::Director::getInstance()->getVisibleSize(); //屏幕尺寸
 	cocos2d::Vec2 origin = cocos2d::Director::getInstance()->getVisibleOrigin();    //坐标原点
-	cocos2d::Menu* store = nullptr;													//商店（与给定战场相绑定）
-	cocos2d::Layer* preparation = nullptr;											//备战席（与给定战场相绑定）
+	Store* store = nullptr;															//商店（与给定战场相绑定）
+	Preparation* preparation = nullptr;												//备战席（与给定战场相绑定）
+	static float prepareDuration;
 };
 
 //模式选择器，与具体的战斗场景相绑定
@@ -47,34 +62,70 @@ public:
 	//模式选择器是单例的
 	static ModeSelector* getInstance();
 	bool setMode(const Mode mode, cocos2d::Scene* scene);
-	Mode getMode();
+	Mode getMode(); 
 
 private:
-	static Mode mode;
+	Mode mode;
 	cocos2d::Scene* scene;
 };
 
 //商店界面
-class Store : public cocos2d::Menu
+class Store : public cocos2d::Layer
 {
 public:
+	virtual bool init();
+
+	//向英雄池增删英雄
+	static bool addHero(Hero* newHero);
+	static bool removeHero(Hero* toBeRemoved);
+
 	//随机显示英雄
-	void randomDisplay();
+	static cocos2d::Vector<Hero*> randomDisplay();
+
+	//返回当前池中指定价格棋子数目
+	static int countHeroByCost(const int cost);
+
+	//获取当前池中第i个n费棋子的拷贝
+	static Hero* getHeroByCost(const int cost, const int i);
+	
+	//购买回调
+	void purchaseCallback(cocos2d::Ref* pSender);	//这个只是样例名称，请棋子设计者自行命名并实现
+
+	//返回/反转商店当前启闭状态
+	bool getStatus();
+	void reverseStatus();
 
 	//实现create方法
 	CREATE_FUNC(Store);
 
+	//菜单按钮创建处理
+	static cocos2d::MenuItemImage* createMenuItem(const std::string& normalImage, const std::string& selectedImage, const cocos2d::ccMenuCallback& callback, const float x, const float y, const float anchorX = 0.5f, const float anchorY = 0.5f);
+
 private:
-	//英雄池
-	cocos2d::Vector<Hero> pool;
+	static cocos2d::Vector<Hero*> pool;								//英雄池（应该是启动游戏时就进行初始化的）
+	static const int size = 5;										//商品个数
+	cocos2d::Vector<Hero*> displayment;								//当前商店内容
+	constexpr static int possibilityTable[MAX_GRADE][MAX_COST] = {	//概率表
+		{100, 0, 0, 0, 0},
+		{75, 25, 0, 0, 0},
+		{55, 30, 15, 0, 0},
+		{45, 33, 20, 2, 0},
+		{30, 40, 25, 5, 0},
+		{19, 35, 35, 10, 1},
+		{18, 25, 36, 18, 3},
+		{10, 20, 25, 35, 10},
+		{5, 10, 20, 40, 25}
+	};
+	bool on = false;	//商店当前启闭状态
+	cocos2d::Menu* menu;	//背景
+	cocos2d::Size visibleSize = cocos2d::Director::getInstance()->getVisibleSize(); //屏幕尺寸
+	cocos2d::Vec2 origin = cocos2d::Director::getInstance()->getVisibleOrigin();    //坐标原点
 };
 
 //棋盘
 class Board : public cocos2d::Layer
 {
 public:
-	static cocos2d::Layer* createLayer();
-
 	virtual bool init();
 
 	//实现create方法
@@ -88,17 +139,17 @@ private:
 class Preparation : public cocos2d::Layer
 {
 public:
-	static cocos2d::Layer* createLayer();
-
 	virtual bool init();
+
+	void placeHero(Hero* hero);
 
 	//实现create方法
 	CREATE_FUNC(Preparation);
 
 private:
 	const std::string seat = "preparationSeat.png";	//单个席位图片
-	int size;										//备战席尺寸
-	const int MaxSize = 9;							//备战席最大尺寸
+	const int size = 9;								//备战席尺寸
+	int occupied = 0;								//已占用席位数
 };
 
 #endif // !BATTLEFIELD_H
