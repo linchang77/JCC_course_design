@@ -22,31 +22,6 @@ bool MapData::init()
     this->addChild(Mapline);
 	return true;
 }
-bool MapData::onTouchBegan(Touch* touch, Event* event)
-{
-    return true;
-}
-
-void MapData::onTouchEnded(Touch* touch, Event* event)
-{
-    auto location = touch->getLocation();
-
-    auto s = this->getChildByName("littlehero1");//获取小小英雄的结点指针
-    s->stopAllActions();
-   
-    float o = location.x - s->getPosition().x;
-    float a = location.y - s->getPosition().y;
-    float at = (float)CC_RADIANS_TO_DEGREES(atanf(o / a));
-     s->runAction(MoveTo::create(1, Vec2(location.x, location.y)));
-    if (a < 0)
-    {
-        if (o < 0)
-            at = 180 + fabs(at);
-        else
-            at = 180 - fabs(at);
-    }
-    //s->runAction(RotateTo::create(1, at));
-}
 void MapData::putchequer(Node* che,int x,int y)
 {
     che->setPosition(mapposition(x,y));

@@ -7,6 +7,12 @@
 #include "Heroes.h"
 #include "Map.h"
 #define LHNUM 6
+/*部分图片的尺寸*/
+#define BuyexpButtonSize cocos2d::Vec2(211, 77)
+#define RefreshButtonSize cocos2d::Vec2(211, 77)
+/*部分标签的位置*/           
+#define GoldLabelPosition cocos2d::Vec2(694,209)
+#define PopulationLabelPosition cocos2d::Vec2(755,948-252)
 USING_NS_CC;
 /****************************************************************************
 名称：小小英雄类
@@ -15,18 +21,25 @@ USING_NS_CC;
  ****************************************************************************/
 class Littlehero : public cocos2d::Node
 {
+	
 public:
+	friend class httpTransmission;
 	/*初始化函数*/
 	CREATE_FUNC(Littlehero);
 	virtual bool init();//重写init函数
 	void init_layer();//初始化选手图层
 	void init_MyMap();//初始化地图图层
-	void set_threelabel();//显示血量，经验和等级的标签
+	void set_threelabel();//放置血量，经验和等级的标签
+	void set_ExpButton();//放置购买经验的按钮
+	void set_Gold();   //放置金币标签,和图标
+	void set_PopulationLabel();//放置人口的图标
+	void set_Shop();//放置商店
+	void set_HP_Bar();//显示血条
+	void add_Littlehero();//加入小小英雄
 	/*
 	*小小英雄的血量相关函数
 	*/
 	void deleteHp(int n) { Hp -= n; }//小小英雄扣血
-	void set_HP_Bar();//显示血条
 	void update_Hp(int hp);//更新血量
 	/*
 	*小小英雄的经验相关函数
@@ -39,6 +52,7 @@ public:
      */
 	void update_gold();//每回合更新金币
 	void update_gold(int num);//更新金币
+	void showInterest();//显示利息图标
 	/*
 	*小小英雄的ID头像相关函数
 	*/
@@ -56,18 +70,23 @@ public:
 
 	void addhero(Hero * hero);//添加棋子到备战席
 	/*
-	*获取类内部成员的函数
+	*类内部成员的操作函数
 	*/
-	Vector<Hero*> GetEnemyFightingHeroes() {	return Enemy_fightheros;}
+	Vector<Hero*> getEnemyFightingHeroes() { return Enemy_fightheros; }
+	void setEnemyHp(int Hp) { EnemyHp = Hp; }
 	void setEnemyFightingHeroes(Vector<Hero*> vec) { Enemy_fightheros = vec; }
 	cocos2d::Layer* get_heroslayer() { return heroslayer; }
-	MapData* get_MyMap() { return My_Map; }
-	int getHp() { return Hp; }
-
-	cocos2d::MenuItemImage* createMenuItem(const std::string& normalImage, const std::string& selectedImage, const cocos2d::ccMenuCallback& callback, 
-		                                   const float x, const float y, const float anchorX = 0.5f, const float anchorY = 0.5f);
-	
 	std::string ID = "";//小小英雄的ID
+	int getHp() { return Hp; }
+	int getLevel() { return Level; }
+	int getEnemyHp() { return EnemyHp; }
+	MapData* get_MyMap() { return My_Map; }
+
+	cocos2d::MenuItemImage* createMenuItem(const std::string& normalImage, const std::string& selectedImage, const cocos2d::ccMenuCallback& callback, const float x, const float y,
+		                                   const float anchorX = 0.5f, const float anchorY = 0.5f, const float contentsizex = 1600);
+	cocos2d::Sprite* createSprite(const std::string& SpriteImage,const float x, const float y, const float anchorX = 0, 
+		                          const float anchorY = 0,const float contentsizex= 1600, const float contentsizey=948 );
+	
 private:
 	/*小小英雄数据*/
 	/*ID*******/  
@@ -80,13 +99,18 @@ private:
 	            Label* Hplabel;//显示血量的标签
 				int EnemyHp;
 	/*金币*****/int Gold = 0;//金币
-	            Label* Goldlabel;
+	            Label* Goldlabel;//金币数量标签
+				
 	/*状态*****/int status = PREPARE;//小小英雄的状态
 	            int VICTORY = 0;//记录连败或者连胜次数
 				bool isDragging;//记录是否在拖动图片
-	/*图像类***/Sprite *avatar;//玩家的头像
-	            Sprite* YourLittleHreo;//小小英雄
-				Sprite* Movinghero;//正在移动的英雄
+	/*图像类***/Sprite* YourLittleHreo;//小小英雄
+	            Sprite* Movinghero;//正在移动的英雄
+	            Sprite* Goldimage;//金币图标
+	            Sprite* Population;//人口图标
+	            Sprite* avatarimage;//头像图标
+				Sprite* Shopbackground;
+	            
 	/*战斗类***/Vector<Hero*> Preparation_Position[9];//备战席
 	            int chequers = 0;//备战席上棋子的数量
 				Hero* Map[6][6];//地图上的棋子位置

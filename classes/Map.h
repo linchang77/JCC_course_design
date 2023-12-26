@@ -22,8 +22,6 @@ public:
 	CREATE_FUNC(MapData);//创造一个MapData图层，计划是搞一个6x6的格子图
 	//void onEnter();
 	virtual bool init();//重写init函数
-	bool onTouchBegan(cocos2d::Touch* touch, cocos2d::Event* event);//小小英雄的回调函数
-	void onTouchEnded(cocos2d::Touch* touch, cocos2d::Event* event);
 	void putchequer(Node* che, int x, int j);//将棋子放到第x列，y行
 	Vec2 mapposition(int x, int y);//根据格子的坐标转换出锚点在map图层上的坐标
 	void setmaplines(int n) { Mapline->setOpacity(n); }//设置地图格子的透明度

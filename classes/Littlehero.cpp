@@ -48,16 +48,16 @@ bool LHcontroler::init()
 void Littlehero::init_layer()
 {
     heroslayer = Layer::create();//创建图层
-    //放置增加经验的按钮
-    auto BuyexpItem = createMenuItem("closeNormal.png", "closeSelected.png", CC_CALLBACK_0(Littlehero::Buy_exp, this), visibleSize.width * 0.618f, visibleSize.height * 0.618f);
-    auto menu = Menu::create(BuyexpItem, NULL);
-    menu->setPosition(Vec2::ZERO);
-    heroslayer->addChild(menu, 1);
-    //放置金币标签
-    Goldlabel = Label::createWithTTF("Your Gold:" + StringUtils::toString(Gold), "fonts/Marker Felt.ttf", 24);
-    Goldlabel->setAnchorPoint(Vec2(0, 1));
-    Goldlabel->setPosition(Vec2(5, visibleSize.height - 3 * Goldlabel->getContentSize().height));
-    heroslayer->addChild(Goldlabel, 0, "Goldlabel");
+    //放置购买经验的按钮
+    set_ExpButton();
+    //放置金币标签,和图标
+    set_Gold();  
+    //放置人口的图标
+    set_PopulationLabel();
+    //放置商店
+    set_Shop();
+    //显示血条
+    set_HP_Bar();
     //放置三个标签
     set_threelabel();
     //在右侧显示选手ID
@@ -65,18 +65,18 @@ void Littlehero::init_layer()
     //在右侧显示选手头像
     set_avatar();
     //加入小小英雄
-    YourLittleHreo = Sprite::create("littlehero1.png");
-    YourLittleHreo->runAction(JumpTo::create(4, Vec2(300, 48), 100, 4));
-    YourLittleHreo->setAnchorPoint(Vec2(0.5, 0.5));
-    heroslayer->addChild(YourLittleHreo, 0, "littlehero");
+    add_Littlehero();
     /*创建监听器*/
     initMouseListeners();
 }
 void Littlehero::init_MyMap()
 {
     My_Map = MapData::create();
+    My_Map->retain();
     return;
 }
+/*下面是初始化选手图层相关的函数*/
+/*————————————————————————————————————*/
 /*设置经验等级血量ID头像标签的函数*/
 void Littlehero::set_threelabel()
 {
@@ -93,6 +93,49 @@ void Littlehero::set_threelabel()
     heroslayer->addChild(Explabel, 0, "Hplabel");
     heroslayer->addChild(Levellabel, 0, "Levellabel"); 
 }
+void Littlehero::add_Littlehero()//加入小小英雄
+{
+    YourLittleHreo = Sprite::create("littlehero1.png");
+    YourLittleHreo->setPosition(Vec2(280, 960 - 560));
+    YourLittleHreo->setAnchorPoint(Vec2(0.5, 0.5));
+    heroslayer->addChild(YourLittleHreo, 0, "littlehero");
+}
+void Littlehero::set_ExpButton()//放置购买经验的按钮
+{
+    //放置增加经验的按钮
+    auto BuyexpItem = createMenuItem("herolayer/BuylvlButton.png", "herolayer/BuylvlButton.png", CC_CALLBACK_0(Littlehero::Buy_exp, this), 48, 948 - 926, 0, 0, BuyexpButtonSize.x);
+    auto menu = Menu::create(BuyexpItem, NULL);
+    menu->setPosition(Vec2::ZERO);
+    heroslayer->addChild(menu, 1, "Buyexpitem");
+}
+void Littlehero::set_Gold()   //放置金币标签,和图标
+{
+    Goldlabel = Label::createWithTTF(StringUtils::toString(Gold), "fonts/Marker Felt.ttf", 24);
+    Goldimage = createSprite("herolayer/gold.png", 0, 0);
+    Goldlabel->setAnchorPoint(Vec2(0, 1));
+    Goldlabel->setPosition(GoldLabelPosition);
+    heroslayer->addChild(Goldlabel, 0, "Goldlabel");
+    heroslayer->addChild(Goldimage, 0, "Goldimage");
+}
+void Littlehero::set_PopulationLabel()//放置人口的图标
+{
+    /*设置人口标签和图标*/
+
+    auto PopulationLabel = Label::createWithTTF(StringUtils::toString(chequers) + "/" + StringUtils::toString(Level), "fonts/Marker Felt.ttf", 48);
+    Population = createSprite("herolayer/Population.png", 0, 0);
+    Population->setOpacity(0);
+    PopulationLabel->setOpacity(0);
+    PopulationLabel->setPosition(PopulationLabelPosition);
+    heroslayer->addChild(Population, 1, "Goldimage");
+    heroslayer->addChild(PopulationLabel, 1, "PopulationLabel");
+}
+void Littlehero::set_Shop()//放置商店
+{
+    /*添加商店背景*/
+    Shopbackground = createSprite("herolayer/Shopbackground.png", 0, 0);
+    Shopbackground->setOpacity(200);
+    heroslayer->addChild(Shopbackground, -1, "Shopbackground");
+}
 void Littlehero::set_IDs()
 {
     auto heros = LHcontroler::getInstance()->heros;
@@ -104,9 +147,22 @@ void Littlehero::set_IDs()
         heroslayer->addChild(IDlabel, 0, "IDlabel"+ heros.at(i)->ID);
     }
 }
+void Littlehero::set_avatar()//显示头像
+{
+    avatarimage = createSprite("herolayer/Avatar.png", 0, 0);
+    heroslayer->addChild(avatarimage, 0, "avatarimage");
+}
+void Littlehero::set_HP_Bar()//显示血条
+{
+
+}
+/*————————————————————————————————————*/
+/*下面是更新数据相关的函数*/
+/*————————————————————————————————————*/
 void Littlehero::update_Hp(int hp)
 {
     Hp -= hp;
+    Hplabel->setString(StringUtils::toString(Hp));
 }
 void Littlehero::Buy_exp()
 {
@@ -116,6 +172,7 @@ void Littlehero::Buy_exp()
     //更新标签
     Explabel->setString("Your Exp:" + StringUtils::toString(Exp) + "/" + StringUtils::toString(Level == M_LEVEL ? 0 : Explevel[Level]));
     Levellabel->setString("Your Level:" + StringUtils::toString(Level));
+    update_gold();
 }
 void Littlehero::Update_exp(int exp)
 {
@@ -136,27 +193,41 @@ void Littlehero::Checklevel()
 }
 void Littlehero::update_gold()//每回合更新金币
 {
-     Gold = Gold + Winning_Streak_Rewards * VICTORY + Gold_Per_Turn;
-     Goldlabel->setString("Your Gold:" + StringUtils::toString(Gold));
+    int interest;
+    if (Gold >= 50)
+        interest = 5;
+    else 
+        interest = Gold / 10;
+     Gold = Gold + Winning_Streak_Rewards * VICTORY + Gold_Per_Turn+interest;
+     Goldlabel->setString(StringUtils::toString(Gold));
+     showInterest();
 }
 void Littlehero::update_gold(int num)//更新金币
 {
     Gold = Gold + num;
+    Goldlabel->setString(StringUtils::toString(Gold));
+   showInterest();
 }
-void Littlehero::set_HP_Bar()//显示血条
+void Littlehero::showInterest()//显示利息的图标
 {
-
+    int interest;
+    if (Gold >= 50)
+        interest = 5;
+    else
+        interest = Gold / 10;
+    auto node = heroslayer->getChildByName("Interest");
+    if (node != nullptr)
+        node->removeFromParent();
+    if (interest > 0)
+    {
+       Sprite* newnode = createSprite("herolayer/Interest" + StringUtils::toString(interest) + ".png", 0, 0);
+        heroslayer->addChild(newnode, 0, "Interest");
+    }
+   
 }
-void Littlehero::set_avatar()//显示头像
-{
-    avatar = Sprite::create("avatar/Portraits2_02.png");
-    avatar->setPosition(Vec2(visibleSize.width/2, visibleSize.height/2 ));
-    heroslayer->addChild(avatar, 0, "avatar");
-}
-
-
-
+/*————————————————————————————————————*/
 /*下面是实现棋子拖动的几个函数*/
+/*————————————————————————————————————*/
 void Littlehero::initMouseListeners()
 {
     auto mouseListener = EventListenerMouse::create();
@@ -197,8 +268,12 @@ void Littlehero::onLeftMouseMove(EventMouse* event)
     {
         //开始移动精灵
         Vec2 location = event->getLocationInView();
-        // 移动精灵
+        //显示人口和回显
         My_Map->setmaplines(100);
+        Population->setOpacity(100);
+        heroslayer->getChildByName("PopulationLabel")->setOpacity(100);
+        // 移动精灵
+        
         YourLittleHreo->setPosition(location);
     }
     return ;
@@ -212,6 +287,8 @@ void Littlehero::onLeftMouseUp(EventMouse* event)
         //这里应该将棋子直接摆放到距离鼠标距离最近的正确的位置
         isDragging = false;
         My_Map->setmaplines(0);
+        Population->setOpacity(0);
+        heroslayer->getChildByName("PopulationLabel")->setOpacity(0);
         return;
     }
 }
@@ -238,13 +315,14 @@ bool Littlehero::onRightMouseDown(EventMouse* event)
 
     return false;
 }
-
+/*————————————————————————————————————*/
 /*下面是实现小小英雄移动的函数*/
-
+/*————————————————————————————————————*/
 /*按钮创建函数
 *后四个参数是设置x，y坐标，设置x，y锚点
 */
-MenuItemImage* Littlehero::createMenuItem(const std::string& normalImage, const std::string& selectedImage, const ccMenuCallback& callback, const float x, const float y, const float anchorX, const float anchorY)
+MenuItemImage* Littlehero::createMenuItem(const std::string& normalImage, const std::string& selectedImage, const ccMenuCallback& callback, 
+                                          const float x, const float y, const float anchorX, const float anchorY, const float contentsizex)
 {
     auto item = MenuItemImage::create(normalImage, selectedImage, callback);
 
@@ -253,7 +331,23 @@ MenuItemImage* Littlehero::createMenuItem(const std::string& normalImage, const 
     else
     {
         item->setAnchorPoint({ anchorX, anchorY });
+        item->setScale(contentsizex/item->getContentSize().width);
         item->setPosition(origin.x + x, origin.y + y);
     }
     return item;
+}
+/*创建精灵*/
+cocos2d::Sprite* Littlehero::createSprite(const std::string& SpriteImage, const float x, const float y, const float anchorX ,
+                                          const float anchorY, const float contentsizex , const float contentsizey )
+{
+    auto sprite = Sprite::create(SpriteImage);
+    sprite->setContentSize(Size(Vec2(contentsizex, contentsizey)));
+    if (sprite == nullptr)
+        problemLoading("'" + SpriteImage );
+    else
+    {
+        sprite->setAnchorPoint({ anchorX, anchorY });
+        sprite->setPosition(origin.x + x, origin.y + y);
+    }
+    return sprite;
 }
