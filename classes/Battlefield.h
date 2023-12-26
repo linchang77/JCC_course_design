@@ -91,9 +91,6 @@ public:
 	bool getStatus();
 	void reverseStatus();
 
-	//禁用/启用商店按钮
-	void menuDisabled();
-
 	//实现create方法
 	CREATE_FUNC(Store);
 
@@ -124,6 +121,7 @@ class Preparation
 public:
 	static Preparation* create();
 	void placeHero(Hero* hero);
+	bool is_full() { return occupied >= size; }
 
 private:
 	const int size = 9;																									//备战席尺寸

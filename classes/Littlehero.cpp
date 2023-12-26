@@ -54,7 +54,9 @@ void Littlehero::init_layer()
     //放置购买经验的按钮
     set_ExpButton();
     //放置金币标签,和图标
-    set_Gold();  
+    set_Gold(); 
+    //放置消息提示类
+    set_Messagelabel();
     //放置人口的图标
     set_PopulationLabel();
     //显示血条
@@ -152,6 +154,13 @@ void Littlehero::set_avatar()//显示头像
     avatarimage->setContentSize(Size(1600.0f, 948.f));
     heroslayer->addChild(avatarimage, 0, "avatarimage");
 }
+//显示消息提示标签
+void Littlehero::set_Messagelabel()
+{
+    Messagelabel = Label::createWithTTF("", "fonts/Marker Felt.ttf", 24);
+    Messagelabel->setPosition(MESSAGELABEL);
+    heroslayer->addChild(Messagelabel, 0, "Messagelabel");
+}
 void Littlehero::set_HP_Bar()//显示血条
 {
 
@@ -206,7 +215,7 @@ void Littlehero::update_gold(int num)//更新金币
 {
     Gold -= num;
     Goldlabel->setString(StringUtils::toString(Gold));
-    showInterest();
+   showInterest();
 }
 void Littlehero::showInterest()//显示利息的图标
 {
@@ -252,6 +261,7 @@ bool Littlehero::onLeftMouseDown(EventMouse* event)
     {
         //判断这个位置上有没有棋子
         Vec2 location = event->getLocationInView();
+        Lastposition = YourLittleHreo->getPosition();
         //两个for循环遍历备战席和场上的棋子
         if (YourLittleHreo->getBoundingBox().containsPoint(location))
         {
@@ -259,7 +269,8 @@ bool Littlehero::onLeftMouseDown(EventMouse* event)
             return true;
         }
     }
-
+    set_message("");
+    //Messagelabel->setString("");
     return false;
 }
 
@@ -274,26 +285,28 @@ void Littlehero::onLeftMouseMove(EventMouse* event)
         Population->setOpacity(100);
         heroslayer->getChildByName("PopulationLabel")->setOpacity(100);
         // 移动精灵
-        
+
         YourLittleHreo->setPosition(location);
     }
-    return ;
+    return;
 }
 
 void Littlehero::onLeftMouseUp(EventMouse* event)
 {
-    if (event->getMouseButton() == EventMouse::MouseButton::BUTTON_LEFT)
+    if (event->getMouseButton() == EventMouse::MouseButton::BUTTON_LEFT && isDragging == 1)
     {
         // 处理左键释放事件
         //这里应该将棋子直接摆放到距离鼠标距离最近的正确的位置
-        isDragging = false;
+
         My_Map->setmaplines(0);
         Population->setOpacity(0);
         heroslayer->getChildByName("PopulationLabel")->setOpacity(0);
+        Vec2 location = event->getLocationInView();
+        YourLittleHreo->setPosition(getmidposition(location));
+        isDragging = false;
         return;
     }
 }
-
 bool Littlehero::onRightMouseDown(EventMouse* event)
 {
     if (event->getMouseButton() == EventMouse::MouseButton::BUTTON_RIGHT)

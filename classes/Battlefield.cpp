@@ -221,10 +221,6 @@ void Preparation::placeHero(Hero* hero)
     hero->setPosition(startingPoint.x + (occupied++) * seatWidth, startingPoint.y);
     auto heroesLayer = LHcontroler::getInstance()->getMyLittleHero()->get_heroslayer();
     heroesLayer->addChild(hero, 2);
-
-    //备战席满，禁用商店按钮
-    if (occupied == size)
-        static_cast<Battlefield*>(Director::getInstance()->getRunningScene())->getCurrentStore()->menuDisabled();
 }
 
 bool Store::init()
@@ -347,40 +343,53 @@ void Store::purchaseCallback(Ref* pSender)
 {
     auto littlehero = LHcontroler::getInstance()->getMyLittleHero();
 
-    if (!littlehero->get_gold())
+    if (dynamic_cast<Battlefield*>(getParent())->getCurrentPreparation()->is_full())   //座无虚席
+        littlehero->set_message("The preparation seats are full!");
+    else    //也许可以购买
     {
+        MenuItem* chosenItem = dynamic_cast<MenuItem*>(pSender);                //被选中的商品按钮
+        const float pos = chosenItem->convertToWorldSpace({ 0.0f, 1.0f }).x;    //获取被点中item在世界坐标系的横坐标
+        const int good = chosenItem->getName().back() - '0' - 1;
 
+        //good就是玩家购买的棋子在商店中的顺序（从左到右是0~4）
+        if (littlehero->get_gold() - displayment.at(0)->getCost() < 0)    //仓无余储
+            littlehero->set_message("You're out of money!");
+        else   //确实可以购买
+        {
+            littlehero->update_gold(displayment.at(0)->getCost());
+            static_cast<Battlefield*>(Director::getInstance()->getRunningScene())->getCurrentPreparation()->placeHero(displayment.at(good));    //将棋子渲染到备战席上
+            chosenItem->removeFromParent();     //该项商品按钮从商店移除（现在只是简单的remove，若需要更复杂的效果请自行实现）
+            log("you've purchased hero %s", displayment.at(good)->getName().data());
+        }
     }
-    MenuItem* chosenItem = dynamic_cast<MenuItem*>(pSender);                //被选中的商品按钮
-    const float pos = chosenItem->convertToWorldSpace({ 0.0f, 1.0f }).x;    //获取被点中item在世界坐标系的横坐标
-    const int good = chosenItem->getName().back() - '0' - 1;
-
-    //good就是玩家购买的棋子在商店中的顺序（从左到右是0~4），后面的操作请棋子设计者实现
-    static_cast<Battlefield*>(Director::getInstance()->getRunningScene())->getCurrentPreparation()->placeHero(displayment.at(good));    //将棋子渲染到备战席上
-    chosenItem->removeFromParent();     //该项商品按钮从商店移除（现在只是简单的remove，若需要更复杂的效果请自行实现）
-    littlehero->update_gold(displayment.at(0)->getCost());
-    log("you've purchased hero %s", displayment.at(good)->getName().data());
 }
 
 void Store::refreshCallback(Ref* pSender)
 {
-    //重新随机生成商品
-    displayment = randomDisplay();
-
-    //清除菜单内容
-    menu->removeAllChildren();
-
-    //更新金币数量
-    LHcontroler::getInstance()->getMyLittleHero()->update_gold(2);
-
-    //重新渲染商品按钮
-    for (Vector<Hero*>::iterator p = displayment.begin(); p != displayment.end(); p++)
+    auto littlehero = LHcontroler::getInstance()->getMyLittleHero();
+    
+    if (littlehero->get_gold() - 2 < 0)    //仓无余储
+        littlehero->set_message("You're out of money!");
+    else
     {
-        auto images = (*p)->getImages();         //获取图像集
-        auto item = GCreator::getInstance()->createMenuItem(images.imageInStoreNormal, images.imageInStoreSelected, CC_CALLBACK_1(Store::purchaseCallback, this), 0.0f, 0.0f, 0.0f, 0.0f);   //先放到坐下角
-        item->setName("good" + std::to_string(p - displayment.begin() + 1));
-        item->setPositionX((p - displayment.begin()) * item->getContentSize().width);   //生成后再调整位置
-        menu->addChild(item);
+        //重新随机生成商品
+        displayment = randomDisplay();
+
+        //清除菜单内容
+        menu->removeAllChildren();
+
+        //更新金币数量
+        littlehero->update_gold(2);
+
+        //重新渲染商品按钮
+        for (Vector<Hero*>::iterator p = displayment.begin(); p != displayment.end(); p++)
+        {
+            auto images = (*p)->getImages();         //获取图像集
+            auto item = GCreator::getInstance()->createMenuItem(images.imageInStoreNormal, images.imageInStoreSelected, CC_CALLBACK_1(Store::purchaseCallback, this), 0.0f, 0.0f, 0.0f, 0.0f);   //先放到坐下角
+            item->setName("good" + std::to_string(p - displayment.begin() + 1));
+            item->setPositionX((p - displayment.begin()) * item->getContentSize().width);   //生成后再调整位置
+            menu->addChild(item);
+        }
     }
 }
 
@@ -392,10 +401,4 @@ bool Store::getStatus()
 void Store::reverseStatus()
 {
     on = !on;
-}
-
-void Store::menuDisabled()
-{
-    menu->setEnabled(false);
-    refresh->setEnabled(false);
 }

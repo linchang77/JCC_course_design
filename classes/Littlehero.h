@@ -13,6 +13,7 @@
 /*部分标签的位置*/
 #define GoldLabelPosition cocos2d::Vec2(694,209)
 #define PopulationLabelPosition cocos2d::Vec2(755,948-252)
+#define MESSAGELABEL  cocos2d::Vec2(755,948-145)
 USING_NS_CC;
 /****************************************************************************
 名称：小小英雄类
@@ -31,6 +32,7 @@ public:
 	void set_threelabel();//放置血量，经验和等级的标签
 	void set_ExpButton();//放置购买经验的按钮
 	void set_Gold();   //放置金币标签,和图标
+	void set_Messagelabel();//放置消息标签
 	void set_PopulationLabel();//放置人口的图标
 	void set_HP_Bar();//显示血条
 	void add_Littlehero();//加入小小英雄
@@ -78,6 +80,11 @@ public:
 	int getLevel() { return Level; }
 	int getEnemyHp() { return EnemyHp; }
 	MapData* get_MyMap() { return My_Map; }
+	void set_message(std::string str) { Messagelabel->setString(str); }
+	/*关于地图的函数*/
+	Vec2 getmidposition(int x, int y);//输入数组坐标返回格子中点坐标
+	Vec2 getmidposition(Vec2 location);//传入一个二维向量，返回距离这个二维向量最近的格子中点坐标
+	Vec2 getmidposition(int x);//输入横坐标，获取备战席上格子中点的坐标
 
 private:
 	/*小小英雄数据*/
@@ -90,7 +97,7 @@ private:
 	/*血量*****/int Hp = 100;//血量
 	Label* Hplabel;//显示血量的标签
 	int EnemyHp;
-	/*金币*****/int Gold = 100;//金币
+	/*金币*****/int Gold = 15;//金币
 	Label* Goldlabel;//金币数量标签
 
 	/*状态*****/int status = PREPARE;//小小英雄的状态
