@@ -114,6 +114,8 @@ private:
 	/*战斗类***/Vector<Hero*> Preparation_Position[9];//备战席
 	            int chequers = 0;//备战席上棋子的数量
 				Hero* Map[6][6];//地图上的棋子位置
+				float MapSizeX[9] = { 370 ,478.75 ,587.5 ,696.25, 805.0 ,913.75 ,1022.5, 1131.25 ,1024 };
+				float MapSizeY[5] = { 770,657.5,545,432.5,320};
 				Vector<Hero*> Enemy_fightheros;//敌方棋子数组
 	
 
