@@ -51,7 +51,9 @@ void Littlehero::init_layer()
     //放置购买经验的按钮
     set_ExpButton();
     //放置金币标签,和图标
-    set_Gold();  
+    set_Gold(); 
+    //放置消息提示类
+    set_Messagelabel();
     //放置人口的图标
     set_PopulationLabel();
     //放置商店
@@ -152,6 +154,13 @@ void Littlehero::set_avatar()//显示头像
     avatarimage = createSprite("herolayer/Avatar.png", 0, 0);
     heroslayer->addChild(avatarimage, 0, "avatarimage");
 }
+//显示消息提示标签
+void Littlehero::set_Messagelabel()
+{
+    Messagelabel = Label::createWithTTF("", "fonts/Marker Felt.ttf", 24);
+    Messagelabel->setPosition(MESSAGELABEL);
+    heroslayer->addChild(Messagelabel, 0, "Messagelabel");
+}
 void Littlehero::set_HP_Bar()//显示血条
 {
 
@@ -251,6 +260,7 @@ bool Littlehero::onLeftMouseDown(EventMouse* event)
     {
         //判断这个位置上有没有棋子
         Vec2 location = event->getLocationInView();
+        Lastposition = YourLittleHreo->getPosition();
         //两个for循环遍历备战席和场上的棋子
         if (YourLittleHreo->getBoundingBox().containsPoint(location))
         {
@@ -258,7 +268,8 @@ bool Littlehero::onLeftMouseDown(EventMouse* event)
             return true;
         }
     }
-
+    set_message("");
+    //Messagelabel->setString("");
     return false;
 }
 
@@ -273,26 +284,28 @@ void Littlehero::onLeftMouseMove(EventMouse* event)
         Population->setOpacity(100);
         heroslayer->getChildByName("PopulationLabel")->setOpacity(100);
         // 移动精灵
-        
+
         YourLittleHreo->setPosition(location);
     }
-    return ;
+    return;
 }
 
 void Littlehero::onLeftMouseUp(EventMouse* event)
 {
-    if (event->getMouseButton() == EventMouse::MouseButton::BUTTON_LEFT)
+    if (event->getMouseButton() == EventMouse::MouseButton::BUTTON_LEFT && isDragging == 1)
     {
         // 处理左键释放事件
         //这里应该将棋子直接摆放到距离鼠标距离最近的正确的位置
-        isDragging = false;
+
         My_Map->setmaplines(0);
         Population->setOpacity(0);
         heroslayer->getChildByName("PopulationLabel")->setOpacity(0);
+        Vec2 location = event->getLocationInView();
+        YourLittleHreo->setPosition(getmidposition(location));
+        isDragging = false;
         return;
     }
 }
-
 bool Littlehero::onRightMouseDown(EventMouse* event)
 {
     if (event->getMouseButton() == EventMouse::MouseButton::BUTTON_RIGHT)
@@ -321,8 +334,8 @@ bool Littlehero::onRightMouseDown(EventMouse* event)
 /*按钮创建函数
 *后四个参数是设置x，y坐标，设置x，y锚点
 */
-MenuItemImage* Littlehero::createMenuItem(const std::string& normalImage, const std::string& selectedImage, const ccMenuCallback& callback, 
-                                          const float x, const float y, const float anchorX, const float anchorY, const float contentsizex)
+MenuItemImage* Littlehero::createMenuItem(const std::string& normalImage, const std::string& selectedImage, const ccMenuCallback& callback,
+    const float x, const float y, const float anchorX, const float anchorY, const float contentsizex)
 {
     auto item = MenuItemImage::create(normalImage, selectedImage, callback);
 
@@ -331,24 +344,73 @@ MenuItemImage* Littlehero::createMenuItem(const std::string& normalImage, const 
     else
     {
         item->setAnchorPoint({ anchorX, anchorY });
-        item->setScale(contentsizex/item->getContentSize().width);
+        item->setScale(contentsizex / item->getContentSize().width);
         item->setPosition(origin.x + x, origin.y + y);
     }
     return item;
 }
 /*创建精灵*/
-cocos2d::Sprite* Littlehero::createSprite(const std::string& SpriteImage, const float x, const float y, const float anchorX ,
-                                          const float anchorY, const float contentsizex , const float contentsizey )
+cocos2d::Sprite* Littlehero::createSprite(const std::string& SpriteImage, const float x, const float y, const float anchorX,
+    const float anchorY, const float contentsizex, const float contentsizey)
 {
     auto sprite = Sprite::create(SpriteImage);
     sprite->setContentSize(Size(Vec2(contentsizex, contentsizey)));
     if (sprite == nullptr)
-        problemLoading("'" + SpriteImage );
+        problemLoading("'" + SpriteImage);
     else
     {
         sprite->setAnchorPoint({ anchorX, anchorY });
         sprite->setPosition(origin.x + x, origin.y + y);
     }
     return sprite;
+}
+
+/*————————————————————————————————————*/
+/*下面是地图相关的函数*/
+/*————————————————————————————————————*/
+Vec2 Littlehero::getmidposition(int x, int y)
+{
+    Vec2 vec2;
+    vec2.x = (MapSizeX[x] + MapSizeX[x + 1]) / 2;
+    vec2.y = (MapSizeY[y] + MapSizeY[y + 1]) / 2;
+    return vec2;
+}
+Vec2 Littlehero::getmidposition(Vec2 location)
+{
+    if ((location.x >= MapSizeX[0] && location.x <= MapSizeX[4] && location.y >= MapSizeY[0] && location.y <= MapSizeY[4]))
+    {
+        int i = 0;
+        while (location.x > MapSizeX[i])
+        {
+            i++;
+        }
+        int j = 0;
+        while (location.y > MapSizeY[j])
+        {
+            j++;
+        }
+        return  getmidposition(i - 1, j - 1);
+    }
+    else if(location.x >= PreparationsSizeX[0] && location.x <= PreparationsSizeX[9] && location.y >= PreparationsSizeY[0] && location.y <= PreparationsSizeY[1])
+    {
+        int i = 0;
+        while (location.x > PreparationsSizeX[i])
+        {
+            i++;
+        }
+        return  getmidposition(i-1);
+    }
+    else
+    {
+        Messagelabel->setString("You can only place the chess on the left half of the square or on the Preparation Seat.");
+        return Lastposition;
+    }
+}
+Vec2 Littlehero::getmidposition(int x)
+{
+    Vec2 vec2;
+    vec2.x = (PreparationsSizeX[x] + PreparationsSizeX[x + 1]) / 2;
+    vec2.y = (PreparationsSizeY[1] + PreparationsSizeY[0]) / 2;
+    return vec2;
 }
 

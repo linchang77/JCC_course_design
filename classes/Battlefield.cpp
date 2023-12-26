@@ -47,6 +47,7 @@ bool Battlefield::init()
 	//添加人物信息图层
 	auto controler = LHcontroler::getInstance()->heros.at(0);
 	auto herolayer = controler->get_heroslayer();//初始化一下
+
     //添加战场图层
     auto map = controler->get_MyMap();
 

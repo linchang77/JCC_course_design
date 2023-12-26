@@ -13,6 +13,7 @@
 /*部分标签的位置*/           
 #define GoldLabelPosition cocos2d::Vec2(694,209)
 #define PopulationLabelPosition cocos2d::Vec2(755,948-252)
+#define MESSAGELABEL  cocos2d::Vec2(755,948-145)
 USING_NS_CC;
 /****************************************************************************
 名称：小小英雄类
@@ -31,6 +32,7 @@ public:
 	void set_threelabel();//放置血量，经验和等级的标签
 	void set_ExpButton();//放置购买经验的按钮
 	void set_Gold();   //放置金币标签,和图标
+	void set_Messagelabel();//放置消息标签
 	void set_PopulationLabel();//放置人口的图标
 	void set_Shop();//放置商店
 	void set_HP_Bar();//显示血条
@@ -66,6 +68,7 @@ public:
 	void onLeftMouseMove(EventMouse* event);
 	void onLeftMouseUp(EventMouse* event);
 	bool onRightMouseDown(EventMouse* event);
+	
 
 	void addhero(Hero * hero);//添加棋子到备战席
 	/*
@@ -80,6 +83,11 @@ public:
 	int getLevel() { return Level; }
 	int getEnemyHp() { return EnemyHp; }
 	MapData* get_MyMap() { return My_Map; }
+	void set_message(std::string str) { Messagelabel->setString(str); }
+	/*关于地图的函数*/
+	Vec2 getmidposition(int x, int y);//输入数组坐标返回格子中点坐标
+	Vec2 getmidposition(Vec2 location);//传入一个二维向量，返回距离这个二维向量最近的格子中点坐标
+	Vec2 getmidposition(int x);//输入横坐标，获取备战席上格子中点的坐标
 
 	cocos2d::MenuItemImage* createMenuItem(const std::string& normalImage, const std::string& selectedImage, const cocos2d::ccMenuCallback& callback, const float x, const float y,
 		                                   const float anchorX = 0.5f, const float anchorY = 0.5f, const float contentsizex = 1600);
@@ -108,15 +116,18 @@ private:
 	            Sprite* Goldimage;//金币图标
 	            Sprite* Population;//人口图标
 	            Sprite* avatarimage;//头像图标
-				Sprite* Shopbackground;
+				Sprite* Shopbackground;//商店背景
 	            
 	/*战斗类***/Vector<Hero*> Preparation_Position[9];//备战席
 	            int chequers = 0;//备战席上棋子的数量
-				Hero* Map[6][6];//地图上的棋子位置
-				float MapSizeX[9] = { 370 ,478.75 ,587.5 ,696.25, 805.0 ,913.75 ,1022.5, 1131.25 ,1024 };
-				float MapSizeY[5] = { 770,657.5,545,432.5,320};
+				Vec2 Lastposition;
+				Hero* Map[8][4];//地图上的棋子位置
+				float MapSizeX[9] = { 382,  490.125 ,  598.25 ,  706.375, 814.5  ,922.625  , 1030.75  , 1138.875   , 1247 };
+				float MapSizeY[5] = {315,426.75,538.5,650.25,762 };
+				float PreparationsSizeX[10] = { 279   ,386.88  ,  494.76  ,  602.64  , 710.52  , 818.4    ,926.28 ,   1034.16  ,  1142.04 , 1249.92 };
+				float PreparationsSizeY[2] = { 215,315 };
 				Vector<Hero*> Enemy_fightheros;//敌方棋子数组
-	
+	/*消息提示类*/Label* Messagelabel;//提示标签
 
 	cocos2d::Layer* heroslayer;//选手图层
 	MapData* My_Map;//在Map图层在小小英雄类里面初始化
