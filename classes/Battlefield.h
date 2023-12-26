@@ -44,12 +44,7 @@ public:
 	//实现create方法
 	CREATE_FUNC(Battlefield);
 
-	//菜单按钮创建处理
-	cocos2d::MenuItemImage* createMenuItem(const std::string& normalImage, const std::string& selectedImage, const cocos2d::ccMenuCallback& callback, const float x, const float y, const float anchorX = 0.5f, const float anchorY = 0.5f);
-
 private:
-	cocos2d::Size visibleSize = cocos2d::Director::getInstance()->getVisibleSize(); //屏幕尺寸
-	cocos2d::Vec2 origin = cocos2d::Director::getInstance()->getVisibleOrigin();    //坐标原点
 	Store* store = nullptr;															//商店（与给定战场相绑定）
 	Preparation* preparation = nullptr;												//备战席（与给定战场相绑定）
 	static float prepareDuration;
@@ -88,18 +83,19 @@ public:
 	//获取当前池中第i个n费棋子的拷贝
 	static Hero* getHeroByCost(const int cost, const int i);
 	
-	//购买回调
-	void purchaseCallback(cocos2d::Ref* pSender);	//这个只是样例名称，请棋子设计者自行命名并实现
+	//回调
+	void purchaseCallback(cocos2d::Ref* pSender);	//购买回调
+	void refreshCallback(cocos2d::Ref* pSender);	//刷新回调
 
 	//返回/反转商店当前启闭状态
 	bool getStatus();
 	void reverseStatus();
 
+	//禁用/启用商店按钮
+	void menuDisabled();
+
 	//实现create方法
 	CREATE_FUNC(Store);
-
-	//菜单按钮创建处理
-	static cocos2d::MenuItemImage* createMenuItem(const std::string& normalImage, const std::string& selectedImage, const cocos2d::ccMenuCallback& callback, const float x, const float y, const float anchorX = 0.5f, const float anchorY = 0.5f);
 
 private:
 	static cocos2d::Vector<Hero*> pool;								//英雄池（应该是启动游戏时就进行初始化的）
@@ -116,40 +112,24 @@ private:
 		{10, 20, 25, 35, 10},
 		{5, 10, 20, 40, 25}
 	};
-	bool on = false;	//商店当前启闭状态
-	cocos2d::Menu* menu;	//背景
-	cocos2d::Size visibleSize = cocos2d::Director::getInstance()->getVisibleSize(); //屏幕尺寸
-	cocos2d::Vec2 origin = cocos2d::Director::getInstance()->getVisibleOrigin();    //坐标原点
-};
-
-//棋盘
-class Board : public cocos2d::Layer
-{
-public:
-	virtual bool init();
-
-	//实现create方法
-	CREATE_FUNC(Board);
-
-private:
-
+	bool on = false;				//商店当前启闭状态
+	cocos2d::Sprite* background;	//背景
+	cocos2d::Menu* menu;			//菜单
+	cocos2d::Menu* refresh;			//刷新按钮
 };
 
 //备战席
-class Preparation : public cocos2d::Layer
+class Preparation
 {
 public:
-	virtual bool init();
-
+	static Preparation* create();
 	void placeHero(Hero* hero);
 
-	//实现create方法
-	CREATE_FUNC(Preparation);
-
 private:
-	const std::string seat = "preparationSeat.png";	//单个席位图片
-	const int size = 9;								//备战席尺寸
-	int occupied = 0;								//已占用席位数
+	const int size = 9;																									//备战席尺寸
+	int occupied = 0;																									//已占用席位数
+	const cocos2d::Vec2 startingPoint = { 340.0f, cocos2d::Director::getInstance()->getVisibleSize().height - 684.0f};	//最左侧席位锚点
+	const float seatWidth = 104.0f;																						//席位宽度
 };
 
 #endif // !BATTLEFIELD_H

@@ -1,11 +1,6 @@
 #include "Heroes.h"
+#include "GeneralCreator.h"
 USING_NS_CC;
-
-//调试：文件打开失败时的信息输出
-static void problemLoading(const std::string filename)
-{
-    log("打开文件%s不成功！", filename);
-}
 
 bool Hero::init()
 {
@@ -34,7 +29,7 @@ void Hero::getSpriteReady()
 {
     body = Sprite::create(imageOnField);
     if (body == nullptr)
-        problemLoading(imageOnField);
+        GCreator::problemLoading(imageOnField);
     addChild(body);
 }
 
@@ -83,6 +78,7 @@ bool Example::init()
     //数据初始化
     cost = 1;
     name = "Example";
+    id = EXAMPLE;
 
     //后面可能还需要一些别的内容
     

@@ -10,7 +10,7 @@
 /*部分图片的尺寸*/
 #define BuyexpButtonSize cocos2d::Vec2(211, 77)
 #define RefreshButtonSize cocos2d::Vec2(211, 77)
-/*部分标签的位置*/           
+/*部分标签的位置*/
 #define GoldLabelPosition cocos2d::Vec2(694,209)
 #define PopulationLabelPosition cocos2d::Vec2(755,948-252)
 #define MESSAGELABEL  cocos2d::Vec2(755,948-145)
@@ -34,7 +34,6 @@ public:
 	void set_Gold();   //放置金币标签,和图标
 	void set_Messagelabel();//放置消息标签
 	void set_PopulationLabel();//放置人口的图标
-	void set_Shop();//放置商店
 	void set_HP_Bar();//显示血条
 	void add_Littlehero();//加入小小英雄
 	/*
@@ -49,8 +48,8 @@ public:
 	void Update_exp(int exp);//更新经验值
 	void Checklevel();//判断是否要升级
 	/*
-     *小小英雄的金币相关函数
-     */
+	 *小小英雄的金币相关函数
+	 */
 	void update_gold();//每回合更新金币
 	void update_gold(int num);//更新金币
 	void showInterest();//显示利息图标
@@ -68,9 +67,12 @@ public:
 	void onLeftMouseMove(EventMouse* event);
 	void onLeftMouseUp(EventMouse* event);
 	bool onRightMouseDown(EventMouse* event);
+<<<<<<< HEAD
 	
 
 	void addhero(Hero * hero);//添加棋子到备战席
+=======
+>>>>>>> LQS
 	/*
 	*类内部成员的操作函数
 	*/
@@ -89,29 +91,25 @@ public:
 	Vec2 getmidposition(Vec2 location);//传入一个二维向量，返回距离这个二维向量最近的格子中点坐标
 	Vec2 getmidposition(int x);//输入横坐标，获取备战席上格子中点的坐标
 
-	cocos2d::MenuItemImage* createMenuItem(const std::string& normalImage, const std::string& selectedImage, const cocos2d::ccMenuCallback& callback, const float x, const float y,
-		                                   const float anchorX = 0.5f, const float anchorY = 0.5f, const float contentsizex = 1600);
-	cocos2d::Sprite* createSprite(const std::string& SpriteImage,const float x, const float y, const float anchorX = 0, 
-		                          const float anchorY = 0,const float contentsizex= 1600, const float contentsizey=948 );
-	
 private:
 	/*小小英雄数据*/
-	/*ID*******/  
+	/*ID*******/
 	/*等级经验*/int Explevel[LHNUM] = { 0,2,6,8,20,30 };//经验条，记录每个等级的经验值
-	            int Level = 1;//等级
-				Label* Levellabel;//显示等级的标签
-				int Exp = 0;//经验
-				Label* Explabel;//显示经验的标签
+	int Level = 1;//等级
+	Label* Levellabel;//显示等级的标签
+	int Exp = 0;//经验
+	Label* Explabel;//显示经验的标签
 	/*血量*****/int Hp = 100;//血量
-	            Label* Hplabel;//显示血量的标签
-				int EnemyHp;
+	Label* Hplabel;//显示血量的标签
+	int EnemyHp;
 	/*金币*****/int Gold = 0;//金币
-	            Label* Goldlabel;//金币数量标签
-				
+	Label* Goldlabel;//金币数量标签
+
 	/*状态*****/int status = PREPARE;//小小英雄的状态
-	            int VICTORY = 0;//记录连败或者连胜次数
-				bool isDragging;//记录是否在拖动图片
+	int VICTORY = 0;//记录连败或者连胜次数
+	bool isDragging;//记录是否在拖动图片
 	/*图像类***/Sprite* YourLittleHreo;//小小英雄
+<<<<<<< HEAD
 	            Sprite* Movinghero;//正在移动的英雄
 	            Sprite* Goldimage;//金币图标
 	            Sprite* Population;//人口图标
@@ -128,12 +126,25 @@ private:
 				float PreparationsSizeY[2] = { 215,315 };
 				Vector<Hero*> Enemy_fightheros;//敌方棋子数组
 	/*消息提示类*/Label* Messagelabel;//提示标签
+=======
+	Sprite* Movinghero;//正在移动的英雄
+	Sprite* Goldimage;//金币图标
+	Sprite* Population;//人口图标
+	Sprite* avatarimage;//头像图标
+	Sprite* Shopbackground;
+
+	/*战斗类***/Vector<Hero*> Preparation_Position[9];//备战席
+	int chequers = 0;//备战席上棋子的数量
+	Hero* Map[6][6];//地图上的棋子位置
+	float MapSizeX[9] = { 370 ,478.75 ,587.5 ,696.25, 805.0 ,913.75 ,1022.5, 1131.25 ,1024 };
+	float MapSizeY[5] = { 770,657.5,545,432.5,320 };
+	Vector<Hero*> Enemy_fightheros;//敌方棋子数组
+
+>>>>>>> LQS
 
 	cocos2d::Layer* heroslayer;//选手图层
 	MapData* My_Map;//在Map图层在小小英雄类里面初始化
-	cocos2d::Size visibleSize = cocos2d::Director::getInstance()->getVisibleSize();  //屏幕尺寸
-	cocos2d::Vec2 origin = cocos2d::Director::getInstance()->getVisibleOrigin();     //坐标原点
-	
+
 	/*
 	*需要上传的数据
 	*/
@@ -150,7 +161,11 @@ public:
 	static int get_mynumber();//获取这个小小英雄在controler里面的位置
 	friend Littlehero;
 	static LHcontroler* getInstance();
+	static void clearInstance();//重置单例
 	virtual bool init();
+	Littlehero* getMyLittleHero() { return heros.at(0); }
+
+private:
 	Vector<Littlehero*> heros;
 
 };
