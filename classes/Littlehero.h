@@ -67,12 +67,6 @@ public:
 	void onLeftMouseMove(EventMouse* event);
 	void onLeftMouseUp(EventMouse* event);
 	bool onRightMouseDown(EventMouse* event);
-<<<<<<< HEAD
-	
-
-	void addhero(Hero * hero);//添加棋子到备战席
-=======
->>>>>>> LQS
 	/*
 	*类内部成员的操作函数
 	*/
@@ -109,7 +103,6 @@ private:
 	int VICTORY = 0;//记录连败或者连胜次数
 	bool isDragging;//记录是否在拖动图片
 	/*图像类***/Sprite* YourLittleHreo;//小小英雄
-<<<<<<< HEAD
 	            Sprite* Movinghero;//正在移动的英雄
 	            Sprite* Goldimage;//金币图标
 	            Sprite* Population;//人口图标
@@ -126,21 +119,6 @@ private:
 				float PreparationsSizeY[2] = { 215,315 };
 				Vector<Hero*> Enemy_fightheros;//敌方棋子数组
 	/*消息提示类*/Label* Messagelabel;//提示标签
-=======
-	Sprite* Movinghero;//正在移动的英雄
-	Sprite* Goldimage;//金币图标
-	Sprite* Population;//人口图标
-	Sprite* avatarimage;//头像图标
-	Sprite* Shopbackground;
-
-	/*战斗类***/Vector<Hero*> Preparation_Position[9];//备战席
-	int chequers = 0;//备战席上棋子的数量
-	Hero* Map[6][6];//地图上的棋子位置
-	float MapSizeX[9] = { 370 ,478.75 ,587.5 ,696.25, 805.0 ,913.75 ,1022.5, 1131.25 ,1024 };
-	float MapSizeY[5] = { 770,657.5,545,432.5,320 };
-	Vector<Hero*> Enemy_fightheros;//敌方棋子数组
-
->>>>>>> LQS
 
 	cocos2d::Layer* heroslayer;//选手图层
 	MapData* My_Map;//在Map图层在小小英雄类里面初始化
