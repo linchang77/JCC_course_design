@@ -34,18 +34,8 @@ public:
 	//实现create方法
 	CREATE_FUNC(Setting);
 
-	//菜单按钮创建处理
-	cocos2d::MenuItemImage* createMenuItem(const std::string& normalImage, const std::string& selectedImage, const cocos2d::ccMenuCallback& callback, const float x, const float y, const float anchorX = 0.5f, const float anchorY = 0.5f);
-	
-	//标签创建处理
-	cocos2d::Label* createLabel(const std::string& text, const std::string& font, const float fontSize, const float x, const float y, const float anchorX = 0.5f, const float anchorY = 0.5f);
-	
-	//精灵创建处理
-	cocos2d::Sprite* createSprite(const std::string& image, const float x, const float y, const float anchorX = 0.5f, const float anchorY = 0.5f);
-
 private:
-	cocos2d::Size visibleSize = cocos2d::Director::getInstance()->getVisibleSize(); //屏幕尺寸
-	cocos2d::Vec2 origin = cocos2d::Director::getInstance()->getVisibleOrigin();    //坐标原点
+	cocos2d::Size visibleSize = cocos2d::Director::getInstance()->getVisibleSize();
 };
 
 //设置选项参数集

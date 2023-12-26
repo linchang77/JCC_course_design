@@ -25,18 +25,12 @@
 #include "HelloWorldScene.h"
 #include "Setting.h"
 #include "Battlefield.h"
+#include "GeneralCreator.h"
 USING_NS_CC;
 
 Scene* HelloWorld::createScene()
 {
     return HelloWorld::create();
-}
-
-// Print useful error message instead of segfaulting when files are not there.
-static void problemLoading(const std::string filename)
-{
-    log("Error while loading: %s\n", filename.data());
-    log("Depending on how you compiled you might have to add 'Resources/' in front of filenames in HelloWorldScene.cpp\n");
 }
 
 // on "init" you need to initialize your instance
@@ -53,15 +47,22 @@ bool HelloWorld::init()
     // 2. add a menu item with "X" image, which is clicked to quit the program
     //    you may modify it.
 
+    //get director and general creator instances
+    auto director = Director::getInstance();
+    auto creator = GCreator::getInstance();
+
+    //get visible size of the screen
+    auto visibleSize = director->getVisibleSize();
+
     // add a "close" icon to exit the progress. it's an autorelease object
-    auto closeItem = createMenuItem("closeNormal.png", "closeSelected.png", CC_CALLBACK_1(HelloWorld::menuCloseCallback, this), visibleSize.width, visibleSize.height, 1.0f, 1.0f);
+    auto closeItem = creator->createMenuItem("closeNormal.png", "closeSelected.png", CC_CALLBACK_1(HelloWorld::menuCloseCallback, this), visibleSize.width, visibleSize.height, 1.0f, 1.0f);
 
     //模式选项按钮
-    auto intoPracticeMode = createMenuItem("practiceNormal.png", "practiceSelected.png", CC_CALLBACK_1(HelloWorld::menuPracticeCallback, this), visibleSize.width * 0.618f, visibleSize.height * 0.618f);  //开始游戏（练习模式）
-    auto intoBattleMode = createMenuItem("battleNormal.png", "battleSelected.png", CC_CALLBACK_1(HelloWorld::menuBattleCallback, this), visibleSize.width * 0.618f, visibleSize.height * 0.618f - intoPracticeMode->getContentSize().height); //开始游戏（战斗模式？）
+    auto intoPracticeMode = creator->createMenuItem("practiceNormal.png", "practiceSelected.png", CC_CALLBACK_1(HelloWorld::menuPracticeCallback, this), visibleSize.width * 0.618f, visibleSize.height * 0.618f);  //开始游戏（练习模式）
+    auto intoBattleMode = creator->createMenuItem("battleNormal.png", "battleSelected.png", CC_CALLBACK_1(HelloWorld::menuBattleCallback, this), visibleSize.width * 0.618f, visibleSize.height * 0.618f - intoPracticeMode->getContentSize().height); //开始游戏（战斗模式？）
 
     //设置菜单选项按钮
-    auto setItem = createMenuItem("setNormal.png", "setSelected.png", CC_CALLBACK_1(HelloWorld::menuSetCallback, this), visibleSize.width - closeItem->getContentSize().width, visibleSize.height, 1.0f, 1.0f);
+    auto setItem = creator->createMenuItem("setNormal.png", "setSelected.png", CC_CALLBACK_1(HelloWorld::menuSetCallback, this), visibleSize.width - closeItem->getContentSize().width, visibleSize.height, 1.0f, 1.0f);
 
     // create menu, it's an autorelease object
     auto menu = Menu::create(closeItem, intoPracticeMode, intoBattleMode, setItem, NULL);
@@ -74,41 +75,23 @@ bool HelloWorld::init()
     // add a label shows "Hello World"
     // create and initialize a label
 
-    auto label = Label::createWithTTF("Golden Shovel War", "fonts/Marker Felt.ttf", 24);
-    if (label == nullptr)
-    {
-        problemLoading("'fonts/Marker Felt.ttf'");
-    }
-    else
-    {
-        // position the label on the center of the screen
-        label->setPosition(Vec2(origin.x + visibleSize.width/2,
-                                origin.y + visibleSize.height - label->getContentSize().height));
-
-        // add the label as a child to this layer
-        this->addChild(label, 1);
-    }
+    auto label = creator->createLabel("Golden Shovel War", "fonts/Marker Felt.ttf", 24, visibleSize.width / 2, 0.0f);
+    label->setPositionX(visibleSize.height - label->getContentSize().height);
+    addChild(label, 0);
 
     // add "HelloWorld" splash screen"
-    auto sprite = Sprite::create("StartUI.png");
-    if (sprite == nullptr)
-    {
-        problemLoading("StartUI.png");
-    }
-    else
-    {
-        // position the sprite on the center of the screen
-        sprite->setContentSize(Size(Vec2(visibleSize.width, visibleSize.height)));
-        sprite->setPosition(Vec2(visibleSize.width/2 + origin.x, visibleSize.height/2 + origin.y));
-        // add the sprite as a child to this layer
-        this->addChild(sprite, 0);
-    }
+    auto sprite = creator->createSprite("StartUI.png", visibleSize.width / 2, visibleSize.height / 2);
+    addChild(sprite, 0);
+
     return true;
 }
 
 
 void HelloWorld::menuCloseCallback(Ref* pSender)
 {
+    //clear the LHcontroller
+    LHcontroler::clearInstance();
+
     //Close the cocos2d-x game scene and quit the application
     Director::getInstance()->end();
 
@@ -122,6 +105,7 @@ void HelloWorld::menuCloseCallback(Ref* pSender)
 
 void HelloWorld::menuPracticeCallback(Ref* pSender)
 {
+    LHcontroler::clearInstance();   //渲染战场前，先清理小小英雄控制器单例
     auto practice = Battlefield::createScene();
     Director::getInstance()->pushScene(practice);
     ModeSelector::getInstance()->setMode(Practice, practice);
@@ -130,6 +114,7 @@ void HelloWorld::menuPracticeCallback(Ref* pSender)
 
 void HelloWorld::menuBattleCallback(Ref* pSender)
 {
+    LHcontroler::clearInstance();   //渲染战场前，先清理小小英雄控制器单例
     auto battle = Battlefield::createScene();
     Director::getInstance()->pushScene(battle);
     ModeSelector::getInstance()->setMode(Battle, battle);
@@ -140,20 +125,5 @@ void HelloWorld::menuSetCallback(Ref* pSender)
 {
     auto setting = Setting::createScene();
     Director::getInstance()->pushScene(setting);
-}
-
-MenuItemImage* HelloWorld::createMenuItem(const std::string& normalImage, const std::string& selectedImage, const ccMenuCallback& callback, const float x, const float y, const float anchorX, const float anchorY)
-{
-    auto item = MenuItemImage::create(normalImage, selectedImage, callback);
-
-    if (item == nullptr || item->getContentSize().width <= 0 || item->getContentSize().height <= 0)
-        problemLoading("'" + normalImage + "' and '" + selectedImage);
-    else
-    {
-        item->setAnchorPoint({ anchorX, anchorY });
-        item->setPosition(origin.x + x, origin.y + y);
-    }
-
-    return item;
 }
 

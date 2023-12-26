@@ -40,15 +40,8 @@ public:
     void menuBattleCallback(cocos2d::Ref* pSender);
     void menuSetCallback(cocos2d::Ref* pSender);
 
-    //菜单创建处理
-    cocos2d::MenuItemImage* createMenuItem(const std::string& normalImage, const std::string& selectedImage, const cocos2d::ccMenuCallback& callback, const float x, const float y, const float anchorX = 0.5f, const float anchorY = 0.5f);
-    
     // implement the "static create()" method manually
     CREATE_FUNC(HelloWorld);
-
-private:
-    cocos2d::Size visibleSize = cocos2d::Director::getInstance()->getVisibleSize();  //屏幕尺寸
-    cocos2d::Vec2 origin = cocos2d::Director::getInstance()->getVisibleOrigin();     //坐标原点
 };
 
 #endif // __HELLOWORLD_SCENE_H__
