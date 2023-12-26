@@ -44,10 +44,12 @@ bool Battlefield::init()
     addChild(menu, 1);
 
     //战场大背景
-    auto map = MapData::create();
 	//添加人物信息图层
 	auto controler = LHcontroler::getInstance()->heros.at(0);
 	auto herolayer = controler->get_heroslayer();//初始化一下
+    //添加战场图层
+    auto map = controler->get_MyMap();
+
 	if (map == nullptr)
 	{
 		problemLoading("'battlefield.png'");
@@ -77,8 +79,7 @@ void Battlefield::dataExchange(float dt)
     auto transmission = httpTransmission::getInstance();
 
     //transmission->upload(this);
-    transmission->download(this);
-    //执行到这里，敌方棋子数据会存进小小英雄类的对应vector中
+   // transmission->download(this);
 
     //下面是调试用代码
     auto littlehero = LHcontroler::getInstance()->heros.at(0);
