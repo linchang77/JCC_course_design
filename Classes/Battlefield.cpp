@@ -224,7 +224,9 @@ Preparation* Preparation::create()
 void Preparation::placeHero(Hero* hero)
 {
     hero->setPosition(startingPoint.x + (occupied++) * seatWidth, startingPoint.y);
-    auto heroesLayer = LHcontroler::getInstance()->getMyLittleHero()->get_heroslayer();
+    //建议修改的将英雄加入到准备图层，同时增加了将英雄放到备战席数组
+    LHcontroler::getInstance()->getMyLittleHero()->addhero(hero, occupied);
+    auto heroesLayer = prepare::getInstance();
     hero->SetSpace(heroesLayer);
     heroesLayer->addChild(hero, 2);
 
@@ -358,7 +360,7 @@ void Store::purchaseCallback(Ref* pSender)
 
     //good就是玩家购买的棋子在商店中的顺序（从左到右是0~4），后面的操作请棋子设计者实现
     static_cast<Battlefield*>(Director::getInstance()->getRunningScene())->getCurrentPreparation()->placeHero(displayment.at(good));    //将棋子渲染到备战席上
-   // LHcontroler::getInstance()->getMyLittleHero()->addhero();
+   
     chosenItem->removeFromParent();     //该项商品按钮从商店移除（现在只是简单的remove，若需要更复杂的效果请自行实现）
     log("you've purchased hero %s", displayment.at(good)->getName().data());
 }

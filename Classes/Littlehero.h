@@ -93,6 +93,8 @@ public:
 	Vec2 getmidposition(int x, int y);//输入数组坐标返回格子中点坐标
 	Vec2 getmidposition(Vec2 location);//传入一个二维向量，返回距离这个二维向量最近的格子中点坐标
 	Vec2 getmidposition(int x);//输入横坐标，获取备战席上格子中点的坐标
+	Vec2 getFightarrayposition(Vec2 location);//输入坐标返回返回距离这个二维向量最近的战场数组坐标
+	int getPreparationarrayposition(Vec2 location);//输入输入坐标返回返回距离这个二维向量最近的备战席数组坐标
 
 private:
 	/*小小英雄数据*/
@@ -120,8 +122,13 @@ private:
 	Sprite* sellarea;//出售区域的图片
 
 	/*战斗类***/Hero* Preparation[9] = { nullptr,nullptr,nullptr ,nullptr,nullptr,nullptr,nullptr ,nullptr,nullptr };//备战席
+	            Hero* Fightfield[4][4] = { {nullptr,nullptr,nullptr ,nullptr},{nullptr,nullptr,nullptr ,nullptr },
+							               {nullptr,nullptr,nullptr ,nullptr},{nullptr,nullptr,nullptr ,nullptr } };//战场上的棋子分布
+	/*棋子拖拽类*/
 	int chequers = 0;//备战席上棋子的数量
 	Vec2 Lastposition;
+	Hero* Draging_hero;
+
 	Hero* Map[8][4];//地图上的棋子位置
 	float MapSizeX[9] = { 382,  490.125 ,  598.25 ,  706.375, 814.5  ,922.625  , 1030.75  , 1138.875   , 1247 };
 	float MapSizeY[5] = { 315,426.75,538.5,650.25,762 };

@@ -264,12 +264,27 @@ bool Littlehero::onLeftMouseDown(EventMouse* event)
     {
         //判断这个位置上有没有棋子
         Vec2 location = event->getLocationInView();
-        Lastposition = YourLittleHreo->getPosition();
+        Lastposition = getmidposition(location);
         //两个for循环遍历备战席和场上的棋子
-        if (YourLittleHreo->getBoundingBox().containsPoint(location))
+        if (location.x >= PreparationsSizeX[0] && location.x <= PreparationsSizeX[9] && location.y >= PreparationsSizeY[0] && location.y <= PreparationsSizeY[1])//点击在战场内
         {
-            isDragging = true;
-            return true;
+         if (Preparation[getPreparationarrayposition(location)] != nullptr)
+            {
+                Draging_hero = Preparation[getPreparationarrayposition(location)];
+                isDragging = true;
+            }
+        }
+        else if (location.x >= MapSizeX[0] && location.x <= MapSizeX[4] && location.y >= MapSizeY[0] && location.y <= MapSizeY[4])//点击在备战席上
+        {
+            Vec2 vec2 = getFightarrayposition(location);
+            int x = vec2.x;
+            int y = vec2.y;
+            if (Fightfield[x][y] != nullptr)
+            {
+                Draging_hero = Fightfield[x][y];
+                Lastposition = Draging_hero->getPosition();
+                isDragging = true;
+            }
         }
     }
     set_message("");
@@ -292,7 +307,7 @@ void Littlehero::onLeftMouseMove(EventMouse* event)
         heroslayer->getChildByName("PopulationLabel")->setOpacity(100);
         // 移动精灵
 
-        YourLittleHreo->setPosition(location);
+        Draging_hero->setPosition(location);
     }
     return;
 }
@@ -308,8 +323,114 @@ void Littlehero::onLeftMouseUp(EventMouse* event)
         heroslayer->getChildByName("PopulationLabel")->setOpacity(0);
         sellarea->removeFromParent();
         Vec2 location = event->getLocationInView();
-        YourLittleHreo->setPosition(getmidposition(location));
+        //判断鼠标抬起位置目标
+        if (location.x >= PreparationsSizeX[0] && location.x <= PreparationsSizeX[9] && location.y >= PreparationsSizeY[0]
+            && location.y <= PreparationsSizeY[1]&&Lastposition.y<=315)//点击备战席内拖动的起始点在备战席
+        {
+            int x = getPreparationarrayposition(location);
+            int pre = getPreparationarrayposition(Lastposition);//获取移动之前的数组位置
+            if (Preparation[x] != nullptr)
+            {
+                Draging_hero->setPosition(getmidposition(x));
+                Preparation[x]->setPosition(Lastposition);
+                Preparation[pre] = Preparation[x];
+                Preparation[x] = Draging_hero;  
+            }
+            else
+            {
+                Draging_hero->setPosition(getmidposition(x));
+                Preparation[x] = Draging_hero;
+                Preparation[pre] = nullptr;
+            }
+        }
+        else if (location.x >= MapSizeX[0] && location.x <= MapSizeX[4] && location.y >= MapSizeY[0]
+                 && location.y <= MapSizeY[4]&&Lastposition.y>=315)//点击在战场上拖动的起始点在战场上
+        {
+            Vec2 vec2 = getFightarrayposition(location);
+            int x = vec2.x;
+            int y = vec2.y;
+            int prex = getFightarrayposition(Lastposition).x;
+            int prey = getFightarrayposition(Lastposition).y;//获取移动之前的数组位置
+            if (Fightfield[x][y] != nullptr)//交换
+            {
+                Draging_hero->setPosition(getmidposition(x,y));
+                Fightfield[x][y]->setPosition(Lastposition);
+                Fightfield[prex][prey] = Fightfield[x][y];
+                Fightfield[x][y] = Draging_hero;
+            }
+            else
+            {
+                Draging_hero->setPosition(getmidposition(x, y));
+                Fightfield[prex][prey] =nullptr;
+                Fightfield[x][y] = Draging_hero;
+            }
+        }
+        else if (location.x >= PreparationsSizeX[0] && location.x <= PreparationsSizeX[9] && location.y >= PreparationsSizeY[0] 
+                 && location.y <= PreparationsSizeY[1] && Lastposition.y >= 315)//点击备战席内，拖动的起始点在战场
+        {
+            int x = getPreparationarrayposition(location);
+            int prex = getFightarrayposition(Lastposition).x;
+            int prey = getFightarrayposition(Lastposition).y;//获取移动之前的数组位置
+            if (Preparation[x] != nullptr)
+            {
+                Draging_hero->setPosition(getmidposition(x));
+                Preparation[x]->setPosition(Lastposition);
+                Fightfield[prex][prey] = Preparation[x];
+                Preparation[x] = Draging_hero;
+            }
+            else
+            {
+                Draging_hero->setPosition(getmidposition(x));
+                Preparation[x] = Draging_hero;
+                Fightfield[prex][prey] = nullptr;
+            }
+        }
+        else if (location.x >= MapSizeX[0] && location.x <= MapSizeX[4] && location.y >= MapSizeY[0]
+            && location.y <= MapSizeY[4]&& Lastposition.y <= 315)//点击在战场上，拖动的起始点在备战席上
+        {
+            Vec2 vec2 = getFightarrayposition(location);
+            int x = vec2.x;
+            int y = vec2.y;
+            int pre = getPreparationarrayposition(Lastposition);
+            if (Fightfield[x][y] != nullptr)//交换
+            {
+                Draging_hero->setPosition(getmidposition(x, y));
+                Fightfield[x][y]->setPosition(Lastposition);
+                Preparation[pre] = Fightfield[x][y];
+                Fightfield[x][y] = Draging_hero;
+            }
+            else
+            {
+                Draging_hero->setPosition(getmidposition(x, y));
+                Preparation[pre] = nullptr;
+                Fightfield[x][y] = Draging_hero;
+            }
+        }
+        else if ((location.x >= 84 && location.x <= 188 && location.y >= (948-368) && location.y <= (948 - 290) || (location.x >= 1370
+            && location.x <= 1477 && location.y >= (948 - 375) && location.y <= (948 - 300))))//此处添加出售棋子
+        {
+            if (Lastposition.y <= 315)//如果是备战席
+             {
+                int pre = getPreparationarrayposition(Lastposition);
+                Draging_hero->removeFromParent();
+                Preparation[pre] = nullptr;
+             }
+             else //如果是战场
+             {
+                int prex = getFightarrayposition(Lastposition).x;
+                int prey = getFightarrayposition(Lastposition).y;//获取移动之前的数组位置
+                Draging_hero->removeFromParent();
+                Fightfield[prex][prey] = nullptr;
+             }
+             update_gold(Draging_hero->getCost());//更新金币
+        }
+        else
+        {
+            Messagelabel->setString("You can only place the chess on the left half of the square or on the Preparation Seat.");
+            Draging_hero->setPosition( Lastposition);
+        }
         isDragging = false;
+        Lastposition = Vec2(0, 0);
         return;
     }
 }
@@ -377,8 +498,7 @@ Vec2 Littlehero::getmidposition(Vec2 location)
     }
     else
     {
-        Messagelabel->setString("You can only place the chess on the left half of the square or on the Preparation Seat.");
-        return Lastposition;
+       
     }
 }
 Vec2 Littlehero::getmidposition(int x)
@@ -387,4 +507,27 @@ Vec2 Littlehero::getmidposition(int x)
     vec2.x = (PreparationsSizeX[x] + PreparationsSizeX[x + 1]) / 2;
     vec2.y = (PreparationsSizeY[1] + PreparationsSizeY[0]) / 2;
     return vec2;
+}
+Vec2 Littlehero::getFightarrayposition(Vec2 location)//输入坐标返回返回距离这个二维向量最近的战场数组坐标
+{
+    int i = 0;
+    while (location.x > MapSizeX[i])
+    {
+        i++;
+    }
+    int j = 0;
+    while (location.y > MapSizeY[j])
+    {
+        j++;
+    }
+    return  Vec2(i-1,j-1);
+}
+int Littlehero::getPreparationarrayposition(Vec2 location)//输入输入坐标返回返回距离这个二维向量最近的备战席数组坐标
+{
+    int i = 0;
+    while (location.x > PreparationsSizeX[i])
+    {
+        i++;
+    }
+    return  i - 1;
 }

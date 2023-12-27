@@ -42,7 +42,7 @@ public:
 	virtual void Move();    //移动动画
 	void StarUp(Hero* a, Hero* b, Hero* c);    //升星动画
 	//virtual void Ultimate();    //大招动画
-	HeroPosition getPosition();    //获取英雄位置位置
+	HeroPosition getposition();    //获取英雄位置位置
 	HeroImages getImages();							//获取英雄图像信息
 	int getCost();									//获取价格
 	float getMaxHp() const { return maxHp; }    //获取英雄最大血量

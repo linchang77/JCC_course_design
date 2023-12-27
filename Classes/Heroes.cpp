@@ -112,7 +112,7 @@ void Hero::Death() {};
 
 void Hero::Move() {};
 
-HeroPosition Hero::getPosition()
+HeroPosition Hero::getposition()
 {
     return { position.x,position.y };
 };
