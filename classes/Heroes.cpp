@@ -129,9 +129,9 @@ void Hero::Attack() {};
 
 void Hero::Death() {};
 
-void Hero::Move() {};
+void Hero::Move(HeroPosition destination) {};
 
-HeroPosition Hero::getPosition()
+HeroPosition Hero::getHeroPosition()
 {
     return { position.x,position.y };
 };
@@ -268,20 +268,21 @@ void Golem::Attack()
     body->runAction(Sequence::create(startCallback, action, endCallback, nullptr));
 };
 
-void Golem::Move()
+void Golem::Move(HeroPosition destination)
 {
-    this->addChild(body);
     auto startCallback = CallFunc::create([this]()
         {
             isMove = true;    //开始移动动作
         });
-    /*position.x = destination.x;
-    position.y = destination.y;    //将英雄位置更新为终点位置*/
-    //float distance;    //通过坐标获取移动距离
-    //auto moveto = MoveTo::create(distance / movespeed, MapData::Position(position.x, position.y));   //移动
-    auto moveto = MoveTo::create(2.0f, Point(-300, 0));
-    body->runAction(moveto);
-    SpriteFrameCache::getInstance()->addSpriteFramesWithFile("Golem_01_Walking.plist");    ////创建一个Vector类型的数据用来存放所需要的精灵帧
+    position.x = destination.x;
+    position.y = destination.y;    //将英雄位置更新为终点位置
+    LHcontroler::getInstance()->getMyLittleHero()->Fightfield[destination.x][destination.y] = this;//更新小小英雄里面的fightfield
+    //float distance;    //通过坐标获取移动距离//LHcontroler::getInstance()->getMyLittleHero()->getmidposition(destination.x, destination.y)
+
+    auto moveto = MoveTo::create(4.0f, LHcontroler::getInstance()->getMyLittleHero()->getmidposition(destination.x, destination.y));   //移动
+    //auto moveto = MoveTo::create(2.0f, Point(-300, 0));
+    this->runAction(moveto);
+    SpriteFrameCache::getInstance()->addSpriteFramesWithFile("Golem_01_Walking1.plist");    ////创建一个Vector类型的数据用来存放所需要的精灵帧
     Vector<SpriteFrame*> frameVector;
     for (int i = 0; i < 18; i++)
     {
@@ -292,12 +293,16 @@ void Golem::Move()
     }
     auto animation = Animation::createWithSpriteFrames(frameVector, 1 / frequency / 12);    //第二个参数是动画执行的持续时间
     animation->setRestoreOriginalFrame(false);    //设置动画执行完时是否回到原始状态
-    animation->setLoops(3);    //设置动画反复执行的次数
+    animation->setLoops(4);    //设置动画反复执行的次数
     auto action = Animate::create(animation);    //用动画缓存初始化Animation实例，用Animate实例来播放序列帧动画
+
     auto endCallback = CallFunc::create([this]()
         {
             isMove = false;    //结束移动动作
-            Attack();
+            // Attack();
+            
+           
         });
     body->runAction(Sequence::create(startCallback, action, endCallback, nullptr));
-}
+
+};

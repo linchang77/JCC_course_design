@@ -26,8 +26,8 @@
 #include "Setting.h"
 #include "Battlefield.h"
 #include "GeneralCreator.h"
+#include "AudioEngine.h"
 USING_NS_CC;
-
 Scene* HelloWorld::createScene()
 {
     return HelloWorld::create();
@@ -50,7 +50,7 @@ bool HelloWorld::init()
     //get director and general creator instances
     auto director = Director::getInstance();
     auto creator = GCreator::getInstance();
-
+    // auto backgroundAudioID =AudioEngine::play2d("music.mp3", true);
     //get visible size of the screen
     auto visibleSize = director->getVisibleSize();
 

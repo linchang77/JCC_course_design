@@ -2,6 +2,8 @@
 #include "Setting.h"
 #include "GeneralCreator.h"
 #include "httpTransmission.h"
+#include "Littlehero.h"
+#include "prepare.h"
 USING_NS_CC;
 using namespace network;
 
@@ -45,7 +47,8 @@ bool Battlefield::init()
 	auto herolayer = controler->get_heroslayer();//初始化一下
     //添加战场图层
     auto map = controler->get_MyMap();
-
+    auto preparelayer = prepare::getInstance();
+    auto fightlayer = fight::create();
 	if (map == nullptr)
 	{
 		GCreator::problemLoading("'battlefield.png'");
@@ -62,6 +65,8 @@ bool Battlefield::init()
 		// add the sprite as a child to this layer
 		this->addChild(map, 0, "map");
 		this->addChild(herolayer, 2, "herolayer");
+        this->addChild(preparelayer, 2, "preparelayer");
+        this->addChild(fightlayer, 2, "fightlayer");
 	}
 
     //备战阶段开始，启用单次调度器计时
@@ -219,6 +224,8 @@ Preparation* Preparation::create()
 void Preparation::placeHero(Hero* hero)
 {
     hero->setPosition(startingPoint.x + (occupied++) * seatWidth, startingPoint.y);
+    //建议修改的将英雄加入到准备图层，同时增加了将英雄放到备战席数组
+    LHcontroler::getInstance()->getMyLittleHero()->addhero(hero, occupied);
     auto heroesLayer = LHcontroler::getInstance()->getMyLittleHero()->get_heroslayer();
     hero->SetSpace(heroesLayer);
     heroesLayer->addChild(hero, 2);
@@ -353,6 +360,7 @@ void Store::purchaseCallback(Ref* pSender)
 
     //good就是玩家购买的棋子在商店中的顺序（从左到右是0~4），后面的操作请棋子设计者实现
     static_cast<Battlefield*>(Director::getInstance()->getRunningScene())->getCurrentPreparation()->placeHero(displayment.at(good));    //将棋子渲染到备战席上
+   
     chosenItem->removeFromParent();     //该项商品按钮从商店移除（现在只是简单的remove，若需要更复杂的效果请自行实现）
     log("you've purchased hero %s", displayment.at(good)->getName().data());
 }

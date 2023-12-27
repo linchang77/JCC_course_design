@@ -53,10 +53,10 @@ public:
 	void UpdateMp(float delta);    //蓝条刷新
 	virtual void Death();    //死亡动画
 	virtual void Attack();    //攻击动画
-	virtual void Move();    //移动动画
+	virtual void Move(HeroPosition destination);    //移动动画
 	void StarUp(Hero* a, Hero* b, Hero* c);    //升星动画
 	//virtual void Ultimate();    //大招动画
-	HeroPosition getPosition();    //获取英雄位置位置
+	HeroPosition getHeroPosition();    //获取英雄位置位置
 	HeroImages getImages();							//获取英雄图像信息
 	int getCost();									//获取价格
 	float getMaxHp() const { return maxHp; }    //获取英雄最大血量
@@ -125,7 +125,7 @@ public:
 	bool init() override;
 	void Attack() override;
 	void Death() override;
-	void Move() override;
+	void Move(HeroPosition destination) override;
 	CREATE_FUNC(Golem);
 protected:
 };
