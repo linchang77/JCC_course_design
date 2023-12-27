@@ -69,6 +69,9 @@ void Littlehero::init_layer()
     set_avatar();
     //加入小小英雄
     add_Littlehero();
+    sellarea = GCreator::getInstance()->createSprite("herolayer/Sellarea.png", 0, 0, 0, 0);
+    sellarea->setContentSize(Size(1600.0f, 948.0f));
+    sellarea->retain();
     /*创建监听器*/
     initMouseListeners();
 }
@@ -280,6 +283,9 @@ void Littlehero::onLeftMouseMove(EventMouse* event)
     {
         //开始移动精灵
         Vec2 location = event->getLocationInView();
+        //显示出售区域
+        if(heroslayer->getChildByName("sellarea")==nullptr)
+             heroslayer->addChild(sellarea, -1, "sellarea");
         //显示人口和回显
         My_Map->setmaplines(100);
         Population->setOpacity(100);
@@ -297,10 +303,10 @@ void Littlehero::onLeftMouseUp(EventMouse* event)
     {
         // 处理左键释放事件
         //这里应该将棋子直接摆放到距离鼠标距离最近的正确的位置
-
         My_Map->setmaplines(0);
         Population->setOpacity(0);
         heroslayer->getChildByName("PopulationLabel")->setOpacity(0);
+        sellarea->removeFromParent();
         Vec2 location = event->getLocationInView();
         YourLittleHreo->setPosition(getmidposition(location));
         isDragging = false;
@@ -328,6 +334,11 @@ bool Littlehero::onRightMouseDown(EventMouse* event)
     }
 
     return false;
+}
+/*出售棋子*/
+void Littlehero::sellhero()
+{
+
 }
 /*————————————————————————————————————*/
 /*下面是地图相关的函数*/

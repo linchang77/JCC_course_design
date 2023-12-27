@@ -69,7 +69,8 @@ public:
 	bool onRightMouseDown(EventMouse* event);
 	void addhero(Hero* hero, int x) { Preparation[x - 1] = hero; }//添加棋子到备战席
 	void addhero(Hero* hero) {};//添加棋子到战斗数组
-	void remove(Hero* hero){ hero->removeFromParent(); }//删除这个英雄
+	void remove(Hero* hero){ hero->removeFromParent(); }//删除这个棋子
+	void sellhero();                                //出售棋子
 	/*
 	*类内部成员的操作函数
 	*/
@@ -116,6 +117,7 @@ private:
 	Sprite* Population;//人口图标
 	Sprite* avatarimage;//头像图标
 	Sprite* Shopbackground;//商店背景
+	Sprite* sellarea;//出售区域的图片
 
 	/*战斗类***/Hero* Preparation[9] = { nullptr,nullptr,nullptr ,nullptr,nullptr,nullptr,nullptr ,nullptr,nullptr };//备战席
 	int chequers = 0;//备战席上棋子的数量
