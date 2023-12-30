@@ -50,20 +50,33 @@ bool HelloWorld::init()
     //get director and general creator instances
     auto director = Director::getInstance();
     auto creator = GCreator::getInstance();
-    //auto backgroundAudioID =AudioEngine::play2d("music.mp3", true);
+    auto glView = director->getOpenGLView();
+    glView->setFrameSize(1600, 900);
+    // auto backgroundAudioID =AudioEngine::play2d("music.mp3", true);
     //get visible size of the screen
     auto visibleSize = director->getVisibleSize();
 
     // add a "close" icon to exit the progress. it's an autorelease object
     auto closeItem = creator->createMenuItem("closeNormal.png", "closeSelected.png", CC_CALLBACK_1(HelloWorld::menuCloseCallback, this), visibleSize.width, visibleSize.height, 1.0f, 1.0f);
-
-    //模式选项按钮
-    auto intoPracticeMode = creator->createMenuItem("practiceNormal.png", "practiceSelected.png", CC_CALLBACK_1(HelloWorld::menuPracticeCallback, this), visibleSize.width * 0.618f, visibleSize.height * 0.618f);  //开始游戏（练习模式）
-    auto intoBattleMode = creator->createMenuItem("battleNormal.png", "battleSelected.png", CC_CALLBACK_1(HelloWorld::menuBattleCallback, this), visibleSize.width * 0.618f, visibleSize.height * 0.618f - intoPracticeMode->getContentSize().height); //开始游戏（战斗模式？）
-
+    closeItem->setScale(CloseitemSize.x / closeItem->getContentSize().width);
+    closeItem->setPosition(CloseitemPosition);
+    //模式选项按钮和文字
+    auto intoPracticeMode = creator->createMenuItem("PracticeModeSelectedNormal.png", "PracticeModeSelected.png", CC_CALLBACK_1(HelloWorld::menuPracticeCallback, this), visibleSize.width * 0.618f, visibleSize.height * 0.618f);  //开始游戏（练习模式）
+    intoPracticeMode->setPosition(PracticeItemPosition);
+    intoPracticeMode->setScale(ModeitemSize.x/ intoPracticeMode->getContentSize().width);
+    auto intoBattleMode = creator->createMenuItem("OnlineModeNormal.png", "OnlineModeSelected.png", CC_CALLBACK_1(HelloWorld::menuBattleCallback, this), visibleSize.width * 0.618f, visibleSize.height * 0.618f - intoPracticeMode->getContentSize().height); //开始游戏（战斗模式？）
+    intoBattleMode->setPosition(OnlineItemPosition);
+    intoBattleMode->setScale(ModeitemSize.x / intoPracticeMode->getContentSize().width);
+    auto PracticeWords = creator->createSprite("PracticeWord.png", 0, 0,0,0);
+    auto OnlineWords = creator->createSprite("OnlineWord.png", 0, 0,0,0);
+    PracticeWords->setContentSize(Size(1600, 900));
+    OnlineWords->setContentSize(Size(1600, 900));
+    this->addChild(PracticeWords, 1);
+    this->addChild(OnlineWords, 1);
     //设置菜单选项按钮
     auto setItem = creator->createMenuItem("setNormal.png", "setSelected.png", CC_CALLBACK_1(HelloWorld::menuSetCallback, this), visibleSize.width - closeItem->getContentSize().width, visibleSize.height, 1.0f, 1.0f);
-
+    setItem->setScale(SetitemSize.x / setItem->getContentSize().width);
+    setItem->setPosition(SetitemPosition);
     // create menu, it's an autorelease object
     auto menu = Menu::create(closeItem, intoPracticeMode, intoBattleMode, setItem, NULL);
     menu->setPosition(Vec2::ZERO);
@@ -80,7 +93,8 @@ bool HelloWorld::init()
     addChild(label, 0);
 
     // add "HelloWorld" splash screen"
-    auto sprite = creator->createSprite("StartUI.png", visibleSize.width / 2, visibleSize.height / 2);
+    auto sprite = creator->createSprite("StartUI.png", 0, 0,0,0);
+    sprite->setContentSize(Size(1600, 948));
     addChild(sprite, 0);
 
     return true;

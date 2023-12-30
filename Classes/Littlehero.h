@@ -6,7 +6,10 @@
 #include "cocos2d.h"
 #include "Heroes.h"
 #include "Map.h"
-#define LHNUM 6
+#define LHNUM 4      //最大小小英雄数量
+#define M_LEVEL 6    //最大等级
+#define Winning_Streak_Rewards 1//连胜或者连败奖励
+#define Gold_Per_Turn  5//每回合固定金币
 /*部分图片的尺寸*/
 #define BuyexpButtonSize cocos2d::Vec2(211, 77)
 #define RefreshButtonSize cocos2d::Vec2(211, 77)
@@ -70,7 +73,6 @@ public:
 	void addhero(Hero* hero, int x) { Preparation[x - 1] = hero; }//添加棋子到备战席
 	void addhero(Hero* hero) {};//添加棋子到战斗数组
 	void remove(Hero* hero){ hero->removeFromParent(); }//删除这个棋子
-	void sellhero();                                //出售棋子
 	/*
 	*类内部成员的操作函数
 	*/
@@ -95,11 +97,13 @@ public:
 	Vec2 getmidposition(int x);//输入横坐标，获取备战席上格子中点的坐标
 	Vec2 getFightarrayposition(Vec2 location);//输入坐标返回返回距离这个二维向量最近的战场数组坐标
 	int getPreparationarrayposition(Vec2 location);//输入输入坐标返回返回距离这个二维向量最近的备战席数组坐标
-
+	/*战斗类***/Hero* Preparation[9] = { nullptr,nullptr,nullptr ,nullptr,nullptr,nullptr,nullptr ,nullptr,nullptr };//备战席
+	Hero* Fightfield[4][4] = { {nullptr,nullptr,nullptr ,nullptr},{nullptr,nullptr,nullptr ,nullptr },
+							   {nullptr,nullptr,nullptr ,nullptr},{nullptr,nullptr,nullptr ,nullptr } };//战场上的棋子分布
 private:
 	/*小小英雄数据*/
 	/*ID*******/
-	/*等级经验*/int Explevel[LHNUM] = { 0,2,6,8,20,30 };//经验条，记录每个等级的经验值
+	/*等级经验*/int Explevel[M_LEVEL] = { 0,2,6,8,20,30 };//经验条，记录每个等级的经验值
 	int Level = 1;//等级
 	Label* Levellabel;//显示等级的标签
 	int Exp = 0;//经验
@@ -121,9 +125,7 @@ private:
 	Sprite* Shopbackground;//商店背景
 	Sprite* sellarea;//出售区域的图片
 
-	/*战斗类***/Hero* Preparation[9] = { nullptr,nullptr,nullptr ,nullptr,nullptr,nullptr,nullptr ,nullptr,nullptr };//备战席
-	            Hero* Fightfield[4][4] = { {nullptr,nullptr,nullptr ,nullptr},{nullptr,nullptr,nullptr ,nullptr },
-							               {nullptr,nullptr,nullptr ,nullptr},{nullptr,nullptr,nullptr ,nullptr } };//战场上的棋子分布
+	
 	/*棋子拖拽类*/
 	int chequers = 0;//备战席上棋子的数量
 	Vec2 Lastposition;
@@ -148,7 +150,8 @@ private:
 	/*
 	*需要上传的数据
 	*/
-	Vector<Hero*> fightheros;//我方场上对战的棋子
+	Vector<Hero*>fightheros;
+	
 };
 /****************************************************************************
 名称：小小英雄控制器类
@@ -164,9 +167,6 @@ public:
 	static void clearInstance();//重置单例
 	virtual bool init();
 	Littlehero* getMyLittleHero() { return heros.at(0); }
-
-private:
 	Vector<Littlehero*> heros;
-
 };
 #endif // !SETTING_H 

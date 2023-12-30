@@ -2,7 +2,6 @@
 
 #ifndef HEROES_H
 #define HEROES_H
-
 #include "cocos2d.h"
 
 #define MAX_GRADE 9		//小小英雄最高等级
@@ -10,6 +9,20 @@
 #define MAX_COST 5		//英雄最大价格
 #define Hp_Bar 1    //血条标记
 #define Mp_Bar 2    //蓝条标记
+
+//小小英雄
+class LittleHero : public cocos2d::Sprite
+{
+public:
+	//单例？
+	static LittleHero* getInstance();
+
+	//返回等级
+	int getGrade();
+
+private:
+	int grade;			//等级
+};
 
 struct HeroImages;
 enum HeroType { GOLEM };	//英雄种类
@@ -39,10 +52,11 @@ public:
 	void UpdateMp(float delta);    //蓝条刷新
 	virtual void Death();    //死亡动画
 	virtual void Attack();    //攻击动画
-	virtual void Move();    //移动动画
+	virtual void Move(HeroPosition destination);    //移动动画
 	void StarUp(Hero* a, Hero* b, Hero* c);    //升星动画
 	//virtual void Ultimate();    //大招动画
-	HeroPosition getposition();    //获取英雄位置位置
+	HeroPosition getHeroPosition();    //获取英雄位置位置
+	void setHeroPosition(HeroPosition NowPosition);
 	HeroImages getImages();							//获取英雄图像信息
 	int getCost();									//获取价格
 	float getMaxHp() const { return maxHp; }    //获取英雄最大血量
@@ -53,6 +67,7 @@ public:
 	int getRange() const { return range; }    //获取攻击距离
 	float getFrequency() const { return frequency; }    //获取攻击频率
 	float getAttackCounter() const { return attackCounter; }    //获取用于判断攻击的计数器
+	void ChangeAttackCounter(float ATK) { attackCounter = ATK; }    //改变判断攻击的计数器
 	Hero* getEnemy() const { return enemy; }    //获取正在攻击的敌人
 	cocos2d::Sprite* getBody() const { return body; }    //获取英雄精灵
 	static Hero* copy(Hero* templt);    //拷贝
@@ -64,6 +79,8 @@ public:
 	bool IsDying() const { return isDying; }    //判断是否正在死亡
 	void ChangeDead() { isDead = 0; }     //将死亡状态置为存活
 	void ChooseEnemy(Hero* a) { enemy = a; }    //选择攻击的目标
+	void ChangeFaceRight(bool Face1) { FaceRight = Face1; }   //改变朝向
+	bool getFaceRight() { return FaceRight; }   //获取朝向
 	CREATE_FUNC(Hero);
 protected:
 	std::string imageOnField;			//战场形象（多个，暂时只开一个，后面可能要改成样例）
@@ -91,6 +108,7 @@ protected:
 	bool isMove = 0;    //判断是否在移动
 	bool isDead = 0;    //判断是否死亡
 	bool isDying = 0;    //判断是否正在死亡
+	bool FaceRight = 1;   //判断面朝的方向是不是右边
 	float attackCounter = 0;    //用于判断攻击的计数器
 	Hero* enemy = nullptr;    //攻击的目标
 	HeroType id;						//ID（种类标志）
@@ -111,9 +129,8 @@ public:
 	bool init() override;
 	void Attack() override;
 	void Death() override;
-	void Move() override;
+	void Move(HeroPosition destination) override;
 	CREATE_FUNC(Golem);
 protected:
 };
-
 #endif // !HEROES_H

@@ -18,15 +18,17 @@ bool Battlefield::init()
 {
     if (!Scene::init())
         return false;
-
+    auto glView = Director::getInstance()->getOpenGLView();
+    glView->setFrameSize(1600, 948);
     auto visibleSize = Director::getInstance()->getVisibleSize();
-
+   
 	//返回开始界面
     auto returnItem = GCreator::getInstance()->createMenuItem("battlefieldToStartNormal.png", "battlefieldToStartSelected.png", CC_CALLBACK_1(Battlefield::menuReturnCallback, this), visibleSize.width, visibleSize.height, 1.0f, 1.0f);
 
     //进入设置
     auto setItem = GCreator::getInstance()->createMenuItem("setNormal.png", "setSelected.png", CC_CALLBACK_1(Battlefield::menuSetCallback, this), visibleSize.width - returnItem->getContentSize().width, visibleSize.height, 1.0f, 1.0f);
-
+    setItem->setScale(SetitemSize.x / setItem->getContentSize().width);
+    setItem->setPosition(1550,948);
     //商店
     store = Store::create();    //创建但暂不渲染
     store->retain();
@@ -66,7 +68,7 @@ bool Battlefield::init()
 		this->addChild(map, 0, "map");
 		this->addChild(herolayer, 2, "herolayer");
         this->addChild(preparelayer, 2, "preparelayer");
-        this->addChild(fightlayer, 2, "fightlayer");
+        this->addChild(fightlayer, 3, "fightlayer");
 	}
 
     //备战阶段开始，启用单次调度器计时
@@ -226,9 +228,9 @@ void Preparation::placeHero(Hero* hero)
     hero->setPosition(startingPoint.x + (occupied++) * seatWidth, startingPoint.y);
     //建议修改的将英雄加入到准备图层，同时增加了将英雄放到备战席数组
     LHcontroler::getInstance()->getMyLittleHero()->addhero(hero, occupied);
-    auto heroesLayer = prepare::getInstance();
-    hero->SetSpace(heroesLayer);
-    heroesLayer->addChild(hero, 2);
+    auto prepareLayer = prepare::getInstance();
+    hero->SetSpace(prepareLayer);
+    prepareLayer->addChild(hero, 2);
 
     //备战席满，禁用商店按钮
     if (occupied == size)

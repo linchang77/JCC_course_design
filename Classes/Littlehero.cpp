@@ -3,10 +3,6 @@
 #include"Heroes.h"
 #include"Littlehero.h"
 #include "GeneralCreator.h"
-#define LHNUM 6      //最大小小英雄数量
-#define M_LEVEL 6    //最大等级
-#define Winning_Streak_Rewards 1//连胜或者连败奖励
-#define Gold_Per_Turn  5//每回合固定金币
 USING_NS_CC;
 static LHcontroler* s_Sharedcontroler = nullptr;
 static int mynumber=0;
@@ -44,6 +40,7 @@ bool LHcontroler::init()
         heros.pushBack(Littlehero::create());
         heros.at(i)->ID = "Gamer"+StringUtils::toString( i);
     }
+    int a = LHcontroler::get_mynumber();
     heros.at(LHcontroler::get_mynumber())->init_layer();//初始化图层此玩家的选手图层
     heros.at(LHcontroler::get_mynumber())->init_MyMap();
     return true;
@@ -143,7 +140,7 @@ void Littlehero::set_IDs()
 {
     auto visibleSize = Director::getInstance()->getVisibleSize();
     auto heros = LHcontroler::getInstance()->heros;
-    for (int i = 0; i < M_LEVEL; i++)
+    for (int i = 0; i < LHNUM; i++)
     {
         auto IDlabel = Label::createWithTTF(heros.at(i)->ID, "fonts/Marker Felt.ttf", 24);
         IDlabel->setAnchorPoint(Vec2(1, 1));
@@ -349,6 +346,10 @@ void Littlehero::onLeftMouseUp(EventMouse* event)
             Vec2 vec2 = getFightarrayposition(location);
             int x = vec2.x;
             int y = vec2.y;
+            HeroPosition h1;
+            h1.x = x;
+            h1.y = y;
+            Draging_hero->setHeroPosition(h1);
             int prex = getFightarrayposition(Lastposition).x;
             int prey = getFightarrayposition(Lastposition).y;//获取移动之前的数组位置
             if (Fightfield[x][y] != nullptr)//交换
@@ -431,6 +432,7 @@ void Littlehero::onLeftMouseUp(EventMouse* event)
         }
         isDragging = false;
         Lastposition = Vec2(0, 0);
+
         return;
     }
 }
@@ -455,11 +457,6 @@ bool Littlehero::onRightMouseDown(EventMouse* event)
     }
 
     return false;
-}
-/*出售棋子*/
-void Littlehero::sellhero()
-{
-
 }
 /*————————————————————————————————————*/
 /*下面是地图相关的函数*/
@@ -498,7 +495,7 @@ Vec2 Littlehero::getmidposition(Vec2 location)
     }
     else
     {
-       
+        return(Vec2(0, 0));
     }
 }
 Vec2 Littlehero::getmidposition(int x)

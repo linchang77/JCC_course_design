@@ -8,7 +8,8 @@
 #include "Heroes.h"
 #include "Map.h"
 #include "Littlehero.h"
-
+#define SetitemPosition      cocos2d::Vec2(1600-50,925)
+#define SetitemSize          cocos2d::Vec2(50,50)
 //模式选项
 enum Mode { Practice, Battle };
 

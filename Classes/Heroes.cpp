@@ -4,6 +4,25 @@
 
 USING_NS_CC;
 
+LittleHero* s_SharedLittleHero = nullptr;
+
+LittleHero* LittleHero::getInstance()
+{
+    if (!s_SharedLittleHero)
+    {
+        s_SharedLittleHero = new (std::nothrow) LittleHero;
+        CCASSERT(s_SharedLittleHero, "FATAL: Not enough memory");
+        s_SharedLittleHero->grade = 1;
+    }
+
+    return s_SharedLittleHero;
+}
+
+int LittleHero::getGrade()
+{
+    return grade;
+}
+
 HeroImages Hero::getImages()
 {
 	return { imageOnField, imageInStoreNormal, imageInStoreSelected };
@@ -13,6 +32,11 @@ int Hero::getCost()
 {
     return cost;
 };
+
+void Hero::setHeroPosition(HeroPosition NowPosition)
+{
+    position = NowPosition;
+}
 
 Hero* Hero::copy(Hero* templt)
 {
@@ -90,14 +114,15 @@ bool Golem::init()    //坦克-Demon
         return false;
     }
     cost = 1;
-    maxHp = 100;
-    realHp = 100;
+    maxHp = 200;
+    realHp = 200;
     maxMp = 100;
     realMp = 100;
-    range = 3;
+    range = 1;
     frequency = 2;
     attackMp = 10;
     hurtMp = 20;
+    damage = 25;
     imageOnField = "Golem_01_Idle.png";
     imageInStoreNormal = "Golem_01_Idle.png";
     imageInStoreSelected = "Golem_01_Idle.png";
@@ -110,11 +135,11 @@ void Hero::Attack() {};
 
 void Hero::Death() {};
 
-void Hero::Move() {};
+void Hero::Move(HeroPosition destination) {};
 
-HeroPosition Hero::getposition()
+HeroPosition Hero::getHeroPosition()
 {
-    return { position.x,position.y };
+    return position;
 };
 
 void Hero::StarUp(Hero* a, Hero* b, Hero* c)
@@ -236,33 +261,32 @@ void Golem::Attack()
     }
     auto animation = Animation::createWithSpriteFrames(frameVector, 1 / frequency / 12);    //第二个参数是动画执行的持续时间
     animation->setRestoreOriginalFrame(false);    //设置动画执行完时是否回到原始状态
-    animation->setLoops(3);    //设置动画反复执行的次数
+    animation->setLoops(1);    //设置动画反复执行的次数
     auto action = Animate::create(animation);    //用动画缓存初始化Animation实例，用Animate实例来播放序列帧动画
     auto endCallback = CallFunc::create([this]()    //攻击动作执行回调
         {
             isAttack = false;    //结束攻击动作
             /*realMp += attackMp;    //攻击回蓝
-            enemy->ChangeRealMp(enemy->getRealMp() + enemy->getHurtMp());    //敌人受击回蓝
-            enemy->ChangeRealHp(enemy->getRealHp() - damage);    //敌人受击掉血*/
-            Death();
+            enemy->ChangeRealMp(enemy->getRealMp() + enemy->getHurtMp());    //敌人受击回蓝*/
+            if (enemy != NULL)
+                enemy->ChangeRealHp(enemy->getRealHp() - damage);   //敌人受击掉血
         });
     body->runAction(Sequence::create(startCallback, action, endCallback, nullptr));
 };
 
-void Golem::Move()
+void Golem::Move(HeroPosition destination)
 {
-    this->addChild(body);
     auto startCallback = CallFunc::create([this]()
         {
             isMove = true;    //开始移动动作
         });
-    /*position.x = destination.x;
-    position.y = destination.y;    //将英雄位置更新为终点位置*/
-    //float distance;    //通过坐标获取移动距离
-    //auto moveto = MoveTo::create(distance / movespeed, MapData::Position(position.x, position.y));   //移动
-    auto moveto = MoveTo::create(2.0f, Point(-300, 0));
-    body->runAction(moveto);
-    SpriteFrameCache::getInstance()->addSpriteFramesWithFile("Golem_01_Walking.plist");    ////创建一个Vector类型的数据用来存放所需要的精灵帧
+    position.x = destination.x;
+    position.y = destination.y;    //将英雄位置更新为终点位置
+    //float distance;    //通过坐标获取移动距离//LHcontroler::getInstance()->getMyLittleHero()->getmidposition(destination.x, destination.y)
+    auto moveto = MoveTo::create(0.4f, LHcontroler::getInstance()->getMyLittleHero()->getmidposition(destination.x, destination.y));   //移动
+    //auto moveto = MoveTo::create(2.0f, Point(-300, 0));
+    this->runAction(moveto);
+    SpriteFrameCache::getInstance()->addSpriteFramesWithFile("Golem_01_Walking1.plist");    ////创建一个Vector类型的数据用来存放所需要的精灵帧
     Vector<SpriteFrame*> frameVector;
     for (int i = 0; i < 18; i++)
     {
@@ -271,14 +295,17 @@ void Golem::Move()
         SpriteFrame* pngNameSF = SpriteFrameCache::getInstance()->getSpriteFrameByName(pngName);
         frameVector.pushBack(pngNameSF);
     }
-    auto animation = Animation::createWithSpriteFrames(frameVector, 1 / frequency / 12);    //第二个参数是动画执行的持续时间
+    auto animation = Animation::createWithSpriteFrames(frameVector, 0.4f / 18);    //第二个参数是动画执行的持续时间
     animation->setRestoreOriginalFrame(false);    //设置动画执行完时是否回到原始状态
-    animation->setLoops(3);    //设置动画反复执行的次数
+    animation->setLoops(1);    //设置动画反复执行的次数
     auto action = Animate::create(animation);    //用动画缓存初始化Animation实例，用Animate实例来播放序列帧动画
+
     auto endCallback = CallFunc::create([this]()
         {
             isMove = false;    //结束移动动作
-            Attack();
+            // Attack();
+            
+           
         });
     body->runAction(Sequence::create(startCallback, action, endCallback, nullptr));
-}
+};

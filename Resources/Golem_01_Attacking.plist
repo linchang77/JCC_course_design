@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+    <dict>
+        <key>frames</key>
+        <dict>
+            <key>Golem_01_Attacking_00.png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{69.5,-33}</string>
+                <key>spriteSize</key>
+                <string>{435,358}</string>
+                <key>spriteSourceSize</key>
+                <string>{720,480}</string>
+                <key>textureRect</key>
+                <string>{{917,355},{435,358}}</string>
+                <key>textureRotated</key>
+                <false/>
+                <key>triangles</key>
+                <string>16 17 18 2 3 16 15 13 14 15 16 13 11 3 4 11 12 13 3 11 13 5 7 8 5 8 9 5 6 7 4 5 9 4 9 10 11 4 10 3 13 16 2 16 18 1 2 18 0 1 18</string>
+                <key>vertices</key>
+                <string>473 106 494 161 485 250 459 302 478 332 582 269 626 252 647 290 633 325 513 377 483 396 442 452 272 451 261 414 222 409 212 374 268 230 284 112 379 94</string>
+                <key>verticesUV</key>
+                <string>1178 367 1199 422 1190 511 1164 563 1183 593 1287 530 1331 513 1352 551 1338 586 1218 638 1188 657 1147 713 977 712 966 675 927 670 917 635 973 491 989 373 1084 355</string>
+            </dict>
+            <key>Golem_01_Attacking_01.png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{52,-29}</string>
+                <key>spriteSize</key>
+                <string>{410,364}</string>
+                <key>spriteSourceSize</key>
+                <string>{720,480}</string>
+                <key>textureRect</key>
+                <string>{{1,328},{410,364}}</string>
+                <key>textureRotated</key>
+                <false/>
+                <key>triangles</key>
+                <string>17 1 2 17 18 19 14 11 12 16 14 15 16 17 14 14 17 11 12 13 14 10 11 17 2 10 17 10 2 3 3 7 8 6 3 4 3 6 7 6 4 5 10 3 8 10 8 9 17 19 1 1 19 20 0 1 20</string>
+                <key>vertices</key>
+                <string>459 111 473 155 475 263 508 264 559 113 611 137 617 183 561 275 534 364 499 380 467 374 445 406 445 451 268 451 269 417 207 412 207 364 261 228 253 126 314 96 422 87</string>
+                <key>verticesUV</key>
+                <string>253 352 267 396 269 504 302 505 353 354 405 378 411 424 355 516 328 605 293 621 261 615 239 647 239 692 62 692 63 658 1 653 1 605 55 469 47 367 108 337 216 328</string>
+            </dict>
+            <key>Golem_01_Attacking_010.png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{74,-36}</string>
+                <key>spriteSize</key>
+                <string>{502,352}</string>
+                <key>spriteSourceSize</key>
+                <string>{720,480}</string>
+                <key>textureRect</key>
+                <string>{{413,352},{502,352}}</string>
+                <key>textureRotated</key>
+                <false/>
+                <key>triangles</key>
+                <string>12 14 15 12 13 14 3 9 10 12 15 3 10 11 12 12 3 10 5 7 8 5 6 7 4 5 8 4 8 9 3 4 9 0 3 15 3 0 1 3 1 2 0 15 16</string>
+                <key>vertices</key>
+                <string>414 101 507 130 543 178 489 319 517 350 619 312 673 305 685 351 654 379 512 405 439 452 268 452 269 407 183 363 198 323 304 203 336 100</string>
+                <key>verticesUV</key>
+                <string>644 353 737 382 773 430 719 571 747 602 849 564 903 557 915 603 884 631 742 657 669 704 498 704 499 659 413 615 428 575 534 455 566 352</string>
+            </dict>
+            <key>Golem_01_Attacking_011.png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{73,-33}</string>
+                <key>spriteSize</key>
+                <string>{478,358}</string>
+                <key>spriteSourceSize</key>
+                <string>{720,480}</string>
+                <key>textureRect</key>
+                <string>{{1354,355},{478,358}}</string>
+                <key>textureRotated</key>
+                <false/>
+                <key>triangles</key>
+                <string>16 17 18 15 16 18 3 9 10 12 14 15 12 13 14 3 10 12 10 11 12 3 12 15 8 5 6 8 6 7 4 5 8 4 8 9 3 4 9 2 3 15 2 15 18 1 2 18 0 1 18</string>
+                <key>vertices</key>
+                <string>493 120 517 161 502 248 476 310 503 340 604 290 648 281 672 305 657 349 499 400 441 451 268 452 269 411 194 387 205 345 291 199 300 133 326 104 396 94</string>
+                <key>verticesUV</key>
+                <string>1653 381 1677 422 1662 509 1636 571 1663 601 1764 551 1808 542 1832 566 1817 610 1659 661 1601 712 1428 713 1429 672 1354 648 1365 606 1451 460 1460 394 1486 365 1556 355</string>
+            </dict>
+            <key>Golem_01_Attacking_02.png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{25,-1.5}</string>
+                <key>spriteSize</key>
+                <string>{374,421}</string>
+                <key>spriteSourceSize</key>
+                <string>{720,480}</string>
+                <key>textureRect</key>
+                <string>{{988,715},{374,421}}</string>
+                <key>textureRotated</key>
+                <true/>
+                <key>triangles</key>
+                <string>0 19 20 16 17 18 13 16 18 13 15 16 13 14 15 13 5 10 4 18 19 12 10 11 10 12 13 10 7 9 7 8 9 5 6 7 10 5 7 13 18 5 4 5 18 2 3 4 1 4 19 1 2 4 0 1 19 0 20 21</string>
+                <key>vertices</key>
+                <string>515 53 541 200 572 255 544 298 490 286 443 291 469 357 445 427 445 452 273 452 257 415 199 415 198 367 247 232 236 129 287 97 376 81 438 90 471 213 485 209 436 45 484 31</string>
+                <key>verticesUV</key>
+                <string>1387 1032 1240 1058 1185 1089 1142 1061 1154 1007 1149 960 1083 986 1013 962 988 962 988 790 1025 774 1025 716 1073 715 1208 764 1311 753 1343 804 1359 893 1350 955 1227 988 1231 1002 1395 953 1409 1001</string>
+            </dict>
+            <key>Golem_01_Attacking_03.png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{7.5,5}</string>
+                <key>spriteSize</key>
+                <string>{359,434}</string>
+                <key>spriteSourceSize</key>
+                <string>{720,480}</string>
+                <key>textureRect</key>
+                <string>{{1,706},{359,434}}</string>
+                <key>textureRotated</key>
+                <true/>
+                <key>triangles</key>
+                <string>0 15 16 12 13 14 12 5 9 11 9 10 8 6 7 11 12 9 5 6 8 5 8 9 4 5 12 4 12 14 1 4 14 4 1 2 4 2 3 0 1 14 0 14 15</string>
+                <key>vertices</key>
+                <string>371 23 445 97 522 142 547 182 437 258 438 281 466 348 444 452 276 451 239 421 190 417 188 374 236 238 212 137 305 76 303 47 325 18</string>
+                <key>verticesUV</key>
+                <string>430 889 356 963 311 1040 271 1065 195 955 172 956 105 984 1 962 2 794 32 757 36 708 79 706 215 754 316 730 377 823 406 821 435 843</string>
+            </dict>
+            <key>Golem_01_Attacking_04.png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{1.5,6.5}</string>
+                <key>spriteSize</key>
+                <string>{349,437}</string>
+                <key>spriteSourceSize</key>
+                <string>{720,480}</string>
+                <key>textureRect</key>
+                <string>{{842,1},{349,437}}</string>
+                <key>textureRotated</key>
+                <true/>
+                <key>triangles</key>
+                <string>13 14 15 11 12 13 11 3 4 8 5 7 10 8 9 10 11 8 8 11 4 8 4 5 7 5 6 11 13 3 0 3 13 3 0 1 3 1 2 0 13 15</string>
+                <key>vertices</key>
+                <string>466 110 513 130 536 169 444 246 437 291 465 346 445 452 274 452 250 418 188 421 187 371 234 238 211 144 284 76 281 38 327 15</string>
+                <key>verticesUV</key>
+                <string>1184 280 1164 327 1125 350 1048 258 1003 251 948 279 842 259 842 88 876 64 873 2 923 1 1056 48 1150 25 1218 98 1256 95 1279 141</string>
+            </dict>
+            <key>Golem_01_Attacking_05.png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{-6,-1.5}</string>
+                <key>spriteSize</key>
+                <string>{340,421}</string>
+                <key>spriteSourceSize</key>
+                <string>{720,480}</string>
+                <key>textureRect</key>
+                <string>{{419,1},{340,421}}</string>
+                <key>textureRotated</key>
+                <true/>
+                <key>triangles</key>
+                <string>14 15 16 12 13 14 0 3 4 6 8 9 11 9 10 11 12 9 4 6 9 6 7 8 4 9 12 4 5 6 4 12 14 0 4 14 3 0 1 3 1 2 0 14 16</string>
+                <key>vertices</key>
+                <string>419 87 504 121 524 161 468 211 427 264 466 349 446 385 445 451 274 452 247 418 188 418 184 376 231 245 210 138 267 88 268 34 325 31</string>
+                <key>verticesUV</key>
+                <string>784 236 750 321 710 341 660 285 607 244 522 283 486 263 420 262 419 91 453 64 453 5 495 1 626 48 733 27 783 84 837 85 840 142</string>
+            </dict>
+            <key>Golem_01_Attacking_06.png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{-13.5,-4}</string>
+                <key>spriteSize</key>
+                <string>{325,416}</string>
+                <key>spriteSourceSize</key>
+                <string>{720,480}</string>
+                <key>textureRect</key>
+                <string>{{1,1},{325,416}}</string>
+                <key>textureRotated</key>
+                <true/>
+                <key>triangles</key>
+                <string>11 12 13 0 11 13 7 9 10 0 3 10 7 8 9 4 5 7 5 6 7 3 4 7 3 7 10 0 2 3 0 1 2 0 10 11</string>
+                <key>vertices</key>
+                <string>422 93 509 114 509 154 425 261 465 345 445 452 272 451 263 419 185 417 184 369 232 242 209 155 265 42 306 36</string>
+                <key>verticesUV</key>
+                <string>360 239 339 326 299 326 192 242 108 282 1 262 2 89 34 80 36 2 84 1 211 49 298 26 411 82 417 123</string>
+            </dict>
+            <key>Golem_01_Attacking_07.png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{13,-1.5}</string>
+                <key>spriteSize</key>
+                <string>{412,419}</string>
+                <key>spriteSourceSize</key>
+                <string>{720,480}</string>
+                <key>textureRect</key>
+                <string>{{1411,715},{412,419}}</string>
+                <key>textureRotated</key>
+                <true/>
+                <key>triangles</key>
+                <string>0 21 22 17 18 19 16 17 19 13 16 19 14 15 16 13 14 16 13 5 10 4 19 20 12 10 11 10 12 13 10 7 9 7 8 9 5 6 7 10 5 7 13 19 5 4 5 19 4 2 3 4 20 2 20 1 2 0 1 20 0 20 21</string>
+                <key>vertices</key>
+                <string>561 62 563 192 579 264 559 303 494 287 451 294 472 369 445 423 445 451 272 451 260 406 183 386 167 353 266 223 266 139 279 99 375 85 435 92 472 113 491 211 507 206 484 34 538 32</string>
+                <key>verticesUV</key>
+                <string>1800 1109 1670 1111 1598 1127 1559 1107 1575 1042 1568 999 1493 1020 1439 993 1411 993 1411 820 1456 808 1476 731 1509 715 1639 814 1723 814 1763 827 1777 923 1770 983 1749 1020 1651 1039 1656 1055 1828 1032 1830 1086</string>
+            </dict>
+            <key>Golem_01_Attacking_08.png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{81.5,-32}</string>
+                <key>spriteSize</key>
+                <string>{549,360}</string>
+                <key>spriteSourceSize</key>
+                <string>{720,480}</string>
+                <key>textureRect</key>
+                <string>{{437,715},{549,360}}</string>
+                <key>textureRotated</key>
+                <false/>
+                <key>triangles</key>
+                <string>15 16 17 13 14 15 12 13 15 2 9 15 9 10 12 10 11 12 9 12 15 9 2 3 6 3 4 6 4 5 3 6 7 3 7 8 9 3 8 0 2 15 0 1 2 0 15 17</string>
+                <key>vertices</key>
+                <string>486 120 546 155 506 295 550 322 690 237 716 289 693 323 561 379 517 415 467 408 442 452 270 451 267 398 179 346 167 313 300 211 337 107 392 92</string>
+                <key>verticesUV</key>
+                <string>756 743 816 778 776 918 820 945 960 860 986 912 963 946 831 1002 787 1038 737 1031 712 1075 540 1074 537 1021 449 969 437 936 570 834 607 730 662 715</string>
+            </dict>
+            <key>Golem_01_Attacking_09.png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{73,-36}</string>
+                <key>spriteSize</key>
+                <string>{528,352}</string>
+                <key>spriteSourceSize</key>
+                <string>{720,480}</string>
+                <key>textureRect</key>
+                <string>{{1281,1},{528,352}}</string>
+                <key>textureRotated</key>
+                <false/>
+                <key>triangles</key>
+                <string>0 16 17 12 14 15 12 13 14 3 9 10 12 15 3 10 11 12 12 3 10 5 7 8 5 6 7 4 5 8 4 8 9 3 4 9 0 3 15 3 0 1 3 1 2 0 15 16</string>
+                <key>vertices</key>
+                <string>444 109 522 143 558 188 503 324 534 358 639 332 690 332 697 378 667 402 508 419 440 451 268 452 269 403 169 335 199 295 307 207 363 110 395 100</string>
+                <key>verticesUV</key>
+                <string>1556 10 1634 44 1670 89 1615 225 1646 259 1751 233 1802 233 1809 279 1779 303 1620 320 1552 352 1380 353 1381 304 1281 236 1311 196 1419 108 1475 11 1507 1</string>
+            </dict>
+        </dict>
+        <key>metadata</key>
+        <dict>
+            <key>format</key>
+            <integer>3</integer>
+            <key>pixelFormat</key>
+            <string>RGBA8888</string>
+            <key>premultiplyAlpha</key>
+            <false/>
+            <key>realTextureFileName</key>
+            <string>Golem_01_Attacking.png</string>
+            <key>size</key>
+            <string>{1833,1128}</string>
+            <key>smartupdate</key>
+            <string>$TexturePacker:SmartUpdate:41f19e1c55b95dc901a7625d85b8bb60:9ba0c426dc51ba26ccc5010ca472edd8:8e863c87f62a8bc78aac65efbae6d95c$</string>
+            <key>textureFileName</key>
+            <string>Golem_01_Attacking.png</string>
+        </dict>
+    </dict>
+</plist>
