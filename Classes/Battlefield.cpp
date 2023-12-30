@@ -51,6 +51,7 @@ bool Battlefield::init()
     auto map = controler->get_MyMap();
     auto preparelayer = prepare::getInstance();
     auto fightlayer = fight::create();
+    
 	if (map == nullptr)
 	{
 		GCreator::problemLoading("'battlefield.png'");
@@ -69,6 +70,9 @@ bool Battlefield::init()
 		this->addChild(herolayer, 2, "herolayer");
         this->addChild(preparelayer, 2, "preparelayer");
         this->addChild(fightlayer, 3, "fightlayer");
+        /*测试Godie
+         *LHcontroler::getInstance()->Godie(this);
+         */
 	}
 
     //备战阶段开始，启用单次调度器计时
@@ -89,7 +93,8 @@ void Battlefield::dataExchange(float dt)
     Vector<Hero*> enemyFightingHeroes = littlehero->getEnemyFightingHeroes();
     for (Vector<Hero*>::iterator p = enemyFightingHeroes.begin(); p != enemyFightingHeroes.end(); p++)
         addChild(*p);
-    log("enemy's current Hp: %d", littlehero->getEnemyHp());
+    /*需要修改一下*/
+   // log("enemy's current Hp: %d", littlehero->getEnemyHp());
 }
 
 Store* Battlefield::getCurrentStore()
@@ -176,7 +181,7 @@ void Battlefield::hpCallback(HttpClient* client, HttpResponse* response)
     long statusCode = response->getResponseCode();
 
     //设置敌方血量
-    LHcontroler::getInstance()->getMyLittleHero()->setEnemyHp(std::stoi(buffer->data()));
+   // LHcontroler::getInstance()->getMyLittleHero()->setEnemyHp(std::stoi(buffer->data()));这里的代码需要修改因为敌人不止一个
 }
 
 //模式选择器的单例对象

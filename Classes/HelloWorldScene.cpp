@@ -120,6 +120,9 @@ void HelloWorld::menuCloseCallback(Ref* pSender)
 void HelloWorld::menuPracticeCallback(Ref* pSender)
 {
     LHcontroler::clearInstance();   //渲染战场前，先清理小小英雄控制器单例
+    LHcontroler::getInstance();
+    LHcontroler::initlocal();
+    LHcontroler::getInstance()->init();
     auto practice = Battlefield::createScene();
     Director::getInstance()->pushScene(practice);
     ModeSelector::getInstance()->setMode(Practice, practice);
@@ -129,6 +132,9 @@ void HelloWorld::menuPracticeCallback(Ref* pSender)
 void HelloWorld::menuBattleCallback(Ref* pSender)
 {
     LHcontroler::clearInstance();   //渲染战场前，先清理小小英雄控制器单例
+    LHcontroler::getInstance();//获取指针
+    LHcontroler::initonline();
+    LHcontroler::getInstance()->init();
     auto battle = Battlefield::createScene();
     Director::getInstance()->pushScene(battle);
     ModeSelector::getInstance()->setMode(Battle, battle);

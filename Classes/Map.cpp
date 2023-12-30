@@ -12,9 +12,9 @@ bool MapData::init()
     //产生地图
 	Background = Sprite::create("JCC.png");
     Mapline = Sprite::create("maplines.png");
-    Background->setContentSize(Size(Vec2(visibleSize.width, visibleSize.height)));
+    Background->setContentSize(Size(1600,948));
     Background->setAnchorPoint(Vec2(0, 0));
-    Mapline->setContentSize(Size(Vec2(visibleSize.width, visibleSize.height)));
+    Mapline->setContentSize(Size(1600, 948));
     Mapline->setAnchorPoint(Vec2(0, 0));
     /*刚开始时Mapline完全透明，只有拖动时才是不透明*/
     Mapline->setOpacity(0);

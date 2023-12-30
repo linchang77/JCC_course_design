@@ -24,12 +24,12 @@
 
 #ifndef __HELLOWORLD_SCENE_H__
 #define __HELLOWORLD_SCENE_H__
-#define PracticeItemPosition cocos2d::Vec2(250,900-462)
-#define OnlineItemPosition   cocos2d::Vec2(1600-250 ,900-462)
+#define PracticeItemPosition cocos2d::Vec2(250.0f,900.0f-462.0f)
+#define OnlineItemPosition   cocos2d::Vec2(1600.0f-250.0f ,900.0f-462.0f)
 #define ModeitemSize         cocos2d::Vec2(200,193)
 #define SetitemSize          cocos2d::Vec2(50,50)
 #define CloseitemSize        cocos2d::Vec2(50,50)
-#define SetitemPosition      cocos2d::Vec2(1600-50,925)
+#define SetitemPosition      cocos2d::Vec2(1600-50,950)
 #define CloseitemPosition    cocos2d::Vec2(1600,925)
 #define StartitemPosition    cocos2d::Vec2(802£¬900-764)
 #define StartitemSize        cocos2d::Vec2(146,50)

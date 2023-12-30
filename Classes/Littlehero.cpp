@@ -6,19 +6,33 @@
 USING_NS_CC;
 static LHcontroler* s_Sharedcontroler = nullptr;
 static int mynumber=0;
+static int Status=LOCAL;
 int LHcontroler::get_mynumber()
 {
     return mynumber;
+}
+int LHcontroler::GetStatus()
+{
+    return Status;
 }
 LHcontroler* LHcontroler::getInstance()
 {
     if (!s_Sharedcontroler)
     {
         s_Sharedcontroler = new (std::nothrow) LHcontroler;
-       // CCASSERT(s_SharedModeSelector, "FATAL: Not enough memory");
-        s_Sharedcontroler->init();
+        // CCASSERT(s_SharedModeSelector, "FATAL: Not enough memory");
     }
     return s_Sharedcontroler;
+}
+void LHcontroler::initlocal()
+{
+    Status = LOCAL;
+    //生成
+   
+ }
+void LHcontroler::initonline()
+{
+    Status = ONLINE;
 }
 void LHcontroler::clearInstance()
 {
@@ -34,13 +48,26 @@ bool Littlehero::init()
 //控制器的初始化
 bool LHcontroler::init()
 {
-    //生成
-    for (int i = 0; i < LHNUM; i++)
+    /*联网目前待定*/
+    if (Status == ONLINE)
     {
-        heros.pushBack(Littlehero::create());
-        heros.at(i)->ID = "Gamer"+StringUtils::toString( i);
+        for (int i = 0; i < 2; i++)
+        {
+            heros.pushBack(Littlehero::create());
+            heros.at(i)->ID = "Gamer" + StringUtils::toString(i);
+        }
     }
-    int a = LHcontroler::get_mynumber();
+    else if (Status == LOCAL)
+    {
+        /*创建你的本地的小小英雄*/
+        heros.pushBack(Littlehero::create());
+        heros.at(0)->ID = "You" ;
+        for (int i = 1; i < 4; i++)
+        {
+            heros.pushBack(Littlehero::create());
+            heros.at(i)->ID = "AI" + StringUtils::toString(i);
+        }  
+    }
     heros.at(LHcontroler::get_mynumber())->init_layer();//初始化图层此玩家的选手图层
     heros.at(LHcontroler::get_mynumber())->init_MyMap();
     return true;
@@ -90,9 +117,9 @@ void Littlehero::set_threelabel()
     Hplabel->setAnchorPoint(Vec2(0, 1));
     Explabel->setAnchorPoint(Vec2(0, 1));
     Levellabel->setAnchorPoint(Vec2(0, 1));
-    Hplabel->setPosition(Vec2(5, visibleSize.height));
-    Explabel->setPosition(Vec2(5, visibleSize.height - Hplabel->getContentSize().height));
-    Levellabel->setPosition(Vec2(5, visibleSize.height - 2 * Explabel->getContentSize().height));
+    Hplabel->setPosition(Vec2(5, 948));
+    Explabel->setPosition(Vec2(5, 948 - Hplabel->getContentSize().height));
+    Levellabel->setPosition(Vec2(5, 948 - 2 * Explabel->getContentSize().height));
     heroslayer->addChild(Hplabel, 0, "Hplabel");
     heroslayer->addChild(Explabel, 0, "Hplabel");
     heroslayer->addChild(Levellabel, 0, "Levellabel"); 
@@ -140,17 +167,34 @@ void Littlehero::set_IDs()
 {
     auto visibleSize = Director::getInstance()->getVisibleSize();
     auto heros = LHcontroler::getInstance()->heros;
-    for (int i = 0; i < LHNUM; i++)
+    if (LHcontroler::GetStatus() == LOCAL)
     {
-        auto IDlabel = Label::createWithTTF(heros.at(i)->ID, "fonts/Marker Felt.ttf", 24);
-        IDlabel->setAnchorPoint(Vec2(1, 1));
-        IDlabel->setPosition(Vec2(visibleSize.width, visibleSize.height - 60-i*110));
-        heroslayer->addChild(IDlabel, 0, "IDlabel"+ heros.at(i)->ID);
+        for (int i = 0; i < 4; i++)
+        {
+            auto IDlabel = Label::createWithTTF(heros.at(i)->ID, "fonts/Marker Felt.ttf", 24);
+            IDlabel->setAnchorPoint(Vec2(1, 1));
+            IDlabel->setPosition(Vec2(1600.0f, 948.0f - 60.0f - i * 110.0f));
+            heroslayer->addChild(IDlabel, 0, "IDlabel" + heros.at(i)->ID);
+        }
     }
+    else
+    {
+        for (int i = 0; i < 2; i++)
+        {
+            auto IDlabel = Label::createWithTTF(heros.at(i)->ID, "fonts/Marker Felt.ttf", 24);
+            IDlabel->setAnchorPoint(Vec2(1, 1));
+            IDlabel->setPosition(Vec2(1600.0f, 948.0f - 60.0f - i * 110.0f));
+            heroslayer->addChild(IDlabel, 0, "IDlabel" + heros.at(i)->ID);
+        }
+    }
+        
 }
 void Littlehero::set_avatar()//显示头像
 {
-    avatarimage = GCreator::getInstance()->createSprite("herolayer/Avatar.png", 0, 0, 0, 0);
+    if(LHcontroler::GetStatus() == LOCAL)
+    avatarimage = GCreator::getInstance()->createSprite("herolayer/AvatarLocal.png", 0, 0, 0, 0);
+    else
+    avatarimage = GCreator::getInstance()->createSprite("herolayer/AvatarOnline1.png", 0, 0, 0, 0);
     avatarimage->setContentSize(Size(1600.0f, 948.f));
     heroslayer->addChild(avatarimage, 0, "avatarimage");
 }
@@ -163,15 +207,54 @@ void Littlehero::set_Messagelabel()
 }
 void Littlehero::set_HP_Bar()//显示血条
 {
-
+    if (LHcontroler::GetStatus() == LOCAL)
+    {
+        Hpframe = GCreator::getInstance()->createSprite("herolayer/HpframeLocal.png", 0, 0, 0, 0);
+        Hpframe->setContentSize(Size(1600.0f, 948.f));
+        heroslayer->addChild(Hpframe, 1, "  Hpframe");
+        for (int i = 0; i < 4; i++)
+        {
+            Hpbar[i] = Sprite::create("herolayer/HpBar.png");
+            Hpbar[i]->setAnchorPoint(Point(0, 0));
+            Hpbar[i]->setContentSize(Size(16, 66));
+            Hpbar[i]->setPosition(1504.0f, 940.0f - (145.0f + 115 * i));
+            heroslayer->addChild(Hpbar[i], 0);
+        }
+    }
+    else
+    {
+        Hpframe = GCreator::getInstance()->createSprite("herolayer/HpframeOnline.png", 0, 0, 0, 0);
+        Hpframe->setContentSize(Size(1600.0f, 948.f));
+        heroslayer->addChild(Hpframe, 1, "  Hpframe");
+        for (int i = 0; i < 2; i++)
+        {
+            Hpbar[i] = Sprite::create("herolayer/HpBar.png");
+            Hpbar[i] -> setAnchorPoint(Point(0, 0));
+            Hpbar[i]->setContentSize(Size(16, 66));
+            Hpbar[i]->setPosition(1505.0f   ,940.0f - (145.0f+115*i));
+            heroslayer->addChild(Hpbar[i], 0);
+        }
+    }
+    
 }
 /*————————————————————————————————————*/
 /*下面是更新数据相关的函数*/
 /*————————————————————————————————————*/
-void Littlehero::update_Hp(int hp)
+void Littlehero::update_Hp(int updatehp)
 {
-    Hp -= hp;
+    Hp -= updatehp;
+    Hps[0] -= 5;
+    if (Hp < 0)
+        Hp = 0;
     Hplabel->setString(StringUtils::toString(Hp));
+    if (LHcontroler::GetStatus() == LOCAL)
+        for (int i = 0; i < 4; i++)
+            Hpbar[i]->setScaleY(Hps[i] / 100.0f);
+    else
+    {
+        Hpbar[0]->setScaleY(Hp / 100.0f);
+        Hpbar[1]->setScaleY(enemyHp / 100.0f);
+    }
 }
 void Littlehero::Buy_exp()
 {
@@ -181,7 +264,6 @@ void Littlehero::Buy_exp()
     //更新标签
     Explabel->setString("Your Exp:" + StringUtils::toString(Exp) + "/" + StringUtils::toString(Level == M_LEVEL ? 0 : Explevel[Level]));
     Levellabel->setString("Your Level:" + StringUtils::toString(Level));
-    update_gold();
 }
 void Littlehero::Update_exp(int exp)
 {
@@ -527,4 +609,41 @@ int Littlehero::getPreparationarrayposition(Vec2 location)//输入输入坐标返回返回
         i++;
     }
     return  i - 1;
+}
+/*游戏进程的函数*/
+void LHcontroler::Godie(Node* layer)
+{
+    /*失败动画*/
+    layer->removeAllChildren();
+    auto Defeat = Sprite::create("Defeat.png");
+    auto closeItem = GCreator::getInstance()->createMenuItem("closeNormal.png", "closeSelected.png", CC_CALLBACK_1(LHcontroler::menuCloseCallback, this), 0, 0, 0, 0);
+    closeItem->setScale(CloseitemSize.x / closeItem->getContentSize().width);
+    closeItem->setPosition(EnditemPosition);
+    Defeat->setPosition(DefeatPosition);
+    auto menu = Menu::create(closeItem,NULL);
+    menu->setPosition(Vec2::ZERO);
+    layer->addChild(menu, 1);
+    layer->addChild(Defeat, 0);
+}
+void LHcontroler::menuCloseCallback(Ref* pSender)
+{
+    //clear the LHcontroller
+    LHcontroler::clearInstance();
+    //Close the cocos2d-x game scene and quit the application
+    Director::getInstance()->end();
+}
+void LHcontroler::Govictory(Node*layer)
+{
+    /*胜利动画*/
+
+    layer->removeAllChildren();
+    auto Defeat = Sprite::create("Victor.png");
+    auto closeItem = GCreator::getInstance()->createMenuItem("closeNormal.png", "closeSelected.png", CC_CALLBACK_1(LHcontroler::menuCloseCallback, this), 0, 0, 0, 0);
+    closeItem->setScale(CloseitemSize.x / closeItem->getContentSize().width);
+    closeItem->setPosition(EnditemPosition);
+    Defeat->setPosition(DefeatPosition);
+    auto menu = Menu::create(closeItem, NULL);
+    menu->setPosition(Vec2::ZERO);
+    layer->addChild(menu, 1);
+    layer->addChild(Defeat, 0);
 }

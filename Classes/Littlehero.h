@@ -6,17 +6,25 @@
 #include "cocos2d.h"
 #include "Heroes.h"
 #include "Map.h"
-#define LHNUM 4      //最大小小英雄数量
+#define ONLINENUM   2   //联网模式的小小英雄数量
 #define M_LEVEL 6    //最大等级
 #define Winning_Streak_Rewards 1//连胜或者连败奖励
 #define Gold_Per_Turn  5//每回合固定金币
+/*匹配模式*/
+#define ONLINE 1
+#define LOCAL  2
 /*部分图片的尺寸*/
 #define BuyexpButtonSize cocos2d::Vec2(211, 77)
 #define RefreshButtonSize cocos2d::Vec2(211, 77)
-/*部分标签的位置*/
+#define CloseitemSize        cocos2d::Vec2(50,50)
+/*部分标签和图片的位置*/
 #define GoldLabelPosition cocos2d::Vec2(694,209)
 #define PopulationLabelPosition cocos2d::Vec2(755,948-252)
 #define MESSAGELABEL  cocos2d::Vec2(755,948-145)
+#define EnditemPosition    cocos2d::Vec2(775,300)
+#define DefeatPosition       cocos2d::Vec2(800,474)
+
+
 USING_NS_CC;
 /****************************************************************************
 名称：小小英雄类
@@ -77,17 +85,17 @@ public:
 	*类内部成员的操作函数
 	*/
 	Vector<Hero*> getEnemyFightingHeroes() { return Enemy_fightheros; }
-	void setEnemyHp(int Hp) { EnemyHp = Hp; }
 	void setEnemyFightingHeroes(Vector<Hero*> vec) { Enemy_fightheros = vec; }
 	cocos2d::Layer* get_heroslayer() { return heroslayer; }
 	std::string ID = "";//小小英雄的ID
 	int getHp() { return Hp; }
 	int getLevel() { return Level; }
-	int getEnemyHp() { return EnemyHp; }
 	int getNum() { return Num; }
 	int getEnemyNum() { return EnemyNum; }
 	void chooseEnemyNum(int Enemy_Num) { EnemyNum = Enemy_Num; }
 	int getLastEnemyNum() { return LastEnemyNum; }
+	int getenemyHp() { return enemyHp; }
+	void setenemyHp(int hp) { enemyHp = hp; }
 	bool getIsAI() { return IsAI; }
 	MapData* get_MyMap() { return My_Map; }
 	void set_message(std::string str) { Messagelabel->setString(str); }
@@ -108,9 +116,13 @@ private:
 	Label* Levellabel;//显示等级的标签
 	int Exp = 0;//经验
 	Label* Explabel;//显示经验的标签
-	/*血量*****/int Hp = 100;//血量
+	/*血量*****/int Hps[4] = { 100,100,100,100 };//血量
+	int Hp = 100;
+	int enemyHp;
 	Label* Hplabel;//显示血量的标签
-	int EnemyHp;
+	Sprite* Hpbar[4];//四个血条
+	Sprite* Hpframe;//血条框
+
 	/*金币*****/int Gold = 0;//金币
 	Label* Goldlabel;//金币数量标签
 
@@ -161,12 +173,24 @@ private:
 class LHcontroler : public cocos2d::Ref
 {
 public:
-	static int get_mynumber();//获取这个小小英雄在controler里面的位置
 	friend Littlehero;
-	static LHcontroler* getInstance();
+
+	/*初始化函数*/
+	static void initlocal();
+	static void initonline();
+	static int get_mynumber();//获取这个小小英雄在controler里面的位置
+	static LHcontroler* getInstance();//获取单例
 	static void clearInstance();//重置单例
-	virtual bool init();
-	Littlehero* getMyLittleHero() { return heros.at(0); }
+	static int GetStatus();
+	virtual bool init();//初始化
+	Littlehero* getMyLittleHero() { return heros.at(get_mynumber()); }
+	bool is_dead = 0;
+	void Godie(Node*layer);//死亡的结算动画
+	void menuCloseCallback(cocos2d::Ref* pSender);
+	void Govictory(Node*layer);//输了的结算动画
+	
+	/*数据*/
 	Vector<Littlehero*> heros;
+
 };
 #endif // !SETTING_H 
