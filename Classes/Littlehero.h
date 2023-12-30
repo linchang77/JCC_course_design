@@ -99,6 +99,7 @@ public:
 	bool getIsAI() { return IsAI; }
 	MapData* get_MyMap() { return My_Map; }
 	void set_message(std::string str) { Messagelabel->setString(str); }
+	int get_gold() { return Gold; }
 	/*关于地图的函数*/
 	Vec2 getmidposition(int x, int y);//输入数组坐标返回格子中点坐标
 	Vec2 getmidposition(Vec2 location);//传入一个二维向量，返回距离这个二维向量最近的格子中点坐标
