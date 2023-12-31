@@ -8,6 +8,8 @@
 #include "Heroes.h"
 #include "Map.h"
 #include "Littlehero.h"
+#define SetitemPosition      cocos2d::Vec2(1600-50,925)
+#define SetitemSize          cocos2d::Vec2(50,50)
 
 //模式选项
 enum Mode { Practice, Battle };
@@ -31,8 +33,7 @@ public:
 	void menuStoreCallback(cocos2d::Ref* pSender);
 
 	//http回调
-	void heroesCallback(cocos2d::network::HttpClient* sender, cocos2d::network::HttpResponse* response);
-	void hpCallback(cocos2d::network::HttpClient* sender, cocos2d::network::HttpResponse* response);
+	void preparationCallback(cocos2d::network::HttpClient* sender, cocos2d::network::HttpResponse* response);
 
 	//服务端数据交互
 	void dataExchange(float dt);
@@ -48,20 +49,6 @@ private:
 	Store* store = nullptr;															//商店（与给定战场相绑定）
 	Preparation* preparation = nullptr;												//备战席（与给定战场相绑定）
 	static float prepareDuration;
-};
-
-//模式选择器，与具体的战斗场景相绑定
-class ModeSelector
-{
-public:
-	//模式选择器是单例的
-	static ModeSelector* getInstance();
-	bool setMode(const Mode mode, cocos2d::Scene* scene);
-	Mode getMode(); 
-
-private:
-	Mode mode;
-	cocos2d::Scene* scene;
 };
 
 //商店界面
@@ -121,11 +108,10 @@ class Preparation
 public:
 	static Preparation* create();
 	void placeHero(Hero* hero);
-	bool is_full() { return occupied >= size; }
+	bool is_full();
 
 private:
 	const int size = 9;																									//备战席尺寸
-	int occupied = 0;																									//已占用席位数
 	const cocos2d::Vec2 startingPoint = { 340.0f, cocos2d::Director::getInstance()->getVisibleSize().height - 684.0f};	//最左侧席位锚点
 	const float seatWidth = 104.0f;																						//席位宽度
 };

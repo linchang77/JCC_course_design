@@ -2,6 +2,8 @@
 #include "Setting.h"
 #include "GeneralCreator.h"
 #include "httpTransmission.h"
+#include "fight.h"
+#include "prepare.h"
 USING_NS_CC;
 using namespace network;
 
@@ -16,15 +18,17 @@ bool Battlefield::init()
 {
     if (!Scene::init())
         return false;
-
+    auto glView = Director::getInstance()->getOpenGLView();
+    glView->setFrameSize(1600, 948);
     auto visibleSize = Director::getInstance()->getVisibleSize();
 
-	//返回开始界面
+    //返回开始界面
     auto returnItem = GCreator::getInstance()->createMenuItem("battlefieldToStartNormal.png", "battlefieldToStartSelected.png", CC_CALLBACK_1(Battlefield::menuReturnCallback, this), visibleSize.width, visibleSize.height, 1.0f, 1.0f);
 
     //进入设置
     auto setItem = GCreator::getInstance()->createMenuItem("setNormal.png", "setSelected.png", CC_CALLBACK_1(Battlefield::menuSetCallback, this), visibleSize.width - returnItem->getContentSize().width, visibleSize.height, 1.0f, 1.0f);
-
+    setItem->setScale(SetitemSize.x / setItem->getContentSize().width);
+    setItem->setPosition(1550, 948);
     //商店
     store = Store::create();    //创建但暂不渲染
     store->retain();
@@ -40,29 +44,36 @@ bool Battlefield::init()
     addChild(menu, 1);
 
     //战场大背景
-	//添加人物信息图层
-	auto controler = LHcontroler::getInstance()->getMyLittleHero();
-	auto herolayer = controler->get_heroslayer();//初始化一下
+    //添加人物信息图层
+    auto controler = LHcontroler::getInstance()->getMyLittleHero();
+    auto herolayer = controler->get_heroslayer();//初始化一下
     //添加战场图层
     auto map = controler->get_MyMap();
+    auto preparelayer = prepare::getInstance();
+    auto fightlayer = fight::create();
 
-	if (map == nullptr)
-	{
-		GCreator::problemLoading("'battlefield.png'");
-	}
-	else if (herolayer == nullptr)
-	{
-		GCreator::problemLoading("herolayer is nullptr");
-	}
-	else
-	{
-		// position the sprite on the center of the screen
-		//sprite->setPosition(Vec2(visibleSize.width / 2 + origin.x, visibleSize.height / 2 + origin.y));
+    if (map == nullptr)
+    {
+        GCreator::problemLoading("'battlefield.png'");
+    }
+    else if (herolayer == nullptr)
+    {
+        GCreator::problemLoading("herolayer is nullptr");
+    }
+    else
+    {
+        // position the sprite on the center of the screen
+        //sprite->setPosition(Vec2(visibleSize.width / 2 + origin.x, visibleSize.height / 2 + origin.y));
 
-		// add the sprite as a child to this layer
-		this->addChild(map, 0, "map");
-		this->addChild(herolayer, 2, "herolayer");
-	}
+        // add the sprite as a child to this layer
+        this->addChild(map, 0, "map");
+        this->addChild(herolayer, 2, "herolayer");
+        this->addChild(preparelayer, 2, "preparelayer");
+        this->addChild(fightlayer, 3, "fightlayer");
+        /*测试G
+             *LHcontroler::getInstance()->Godie(this);
+             */
+    }
 
     //备战阶段开始，启用单次调度器计时
     scheduleOnce(CC_CALLBACK_1(Battlefield::dataExchange, this), prepareDuration, "dataExchange");
@@ -74,15 +85,8 @@ void Battlefield::dataExchange(float dt)
 {
     auto transmission = httpTransmission::getInstance();
 
-    //transmission->upload(this);
-   // transmission->download(this);
-
-    //下面是调试用代码
-    auto littlehero = LHcontroler::getInstance()->getMyLittleHero();
-    Vector<Hero*> enemyFightingHeroes = littlehero->getEnemyFightingHeroes();
-    for (Vector<Hero*>::iterator p = enemyFightingHeroes.begin(); p != enemyFightingHeroes.end(); p++)
-        addChild(*p);
-    log("enemy's current Hp: %d", littlehero->getEnemyHp());
+    transmission->upload(this);
+    transmission->download(this);
 }
 
 Store* Battlefield::getCurrentStore()
@@ -124,7 +128,7 @@ void Battlefield::menuStoreCallback(Ref* pSender)
     log("The store is %s now.", store->getStatus() ? "on" : "off");
 }
 
-void Battlefield::heroesCallback(HttpClient* client, HttpResponse* response)
+void Battlefield::preparationCallback(HttpClient* client, HttpResponse* response)
 {
     if (response == nullptr)
     {
@@ -143,69 +147,20 @@ void Battlefield::heroesCallback(HttpClient* client, HttpResponse* response)
     //服务器端回复内容
     std::vector<char>* buffer = response->getResponseData();
     long statusCode = response->getResponseCode();
+    buffer->push_back('\0');
 
-    //设置敌方棋子表
-    LHcontroler::getInstance()->getMyLittleHero()->setEnemyFightingHeroes(httpTransmission::getInstance()->stringToHeroData(buffer->data()));
-}
+    //处理回复内容
+    httpTransmission::getInstance()->convert(buffer->data());
+    //这里把小小英雄的enemyhero添加到战场上
+    //下面是测试样例
+    auto littlehero = LHcontroler::getInstance()->getMyLittleHero();
+    Vector<Hero*> enemyFightingHeroes = littlehero->getEnemyFightingHeroes();
+    for (Vector<Hero*>::iterator p = enemyFightingHeroes.begin(); p != enemyFightingHeroes.end(); p++)
+        ;//这里把敌方棋子加到战场上
+    log("enemy's current Hp: %d", littlehero->getEnemyHp());
 
-void Battlefield::hpCallback(HttpClient* client, HttpResponse* response)
-{
-    if (response == nullptr)
-    {
-        log("no response");
-        return;
-    }
-
-    /*
-    if (!response->isSucceed())
-    {
-        log("error msg: %s", response->getErrorBuffer());
-        return;
-    }
-    */
-
-    //服务器端回复内容
-    std::vector<char>* buffer = response->getResponseData();
-    long statusCode = response->getResponseCode();
-
-    //设置敌方血量
-    LHcontroler::getInstance()->getMyLittleHero()->setEnemyHp(std::stoi(buffer->data()));
-}
-
-//模式选择器的单例对象
-static ModeSelector* s_SharedModeSelector = nullptr;
-
-ModeSelector* ModeSelector::getInstance()
-{
-    if (!s_SharedModeSelector)
-    {
-        s_SharedModeSelector = new (std::nothrow) ModeSelector;
-        CCASSERT(s_SharedModeSelector, "FATAL: Not enough memory");
-        s_SharedModeSelector->mode = Practice;
-        s_SharedModeSelector->scene = nullptr;
-    }
-
-    return s_SharedModeSelector;
-}
-
-bool ModeSelector::setMode(const Mode mode, Scene* scene)
-{
-    if (!this)
-        log("模式选择器尚未初始化！");
-
-    this->mode = mode;
-    if (scene)
-    {
-        this->scene = scene;
-        return true;
-    }
-    else
-        return false;
-}
-
-Mode ModeSelector::getMode()
-{
-    return mode;
+    //test
+    log("%s", buffer->data());
 }
 
 Preparation* Preparation::create()
@@ -218,9 +173,28 @@ Preparation* Preparation::create()
 
 void Preparation::placeHero(Hero* hero)
 {
-    hero->setPosition(startingPoint.x + (occupied++) * seatWidth, startingPoint.y);
-    auto heroesLayer = LHcontroler::getInstance()->getMyLittleHero()->get_heroslayer();
-    heroesLayer->addChild(hero, 2);
+    int i;
+    for (i = 0; i < 9; i++)
+    {
+        if (!LHcontroler::getInstance()->getMyLittleHero()->Preparation[i])
+            break;
+    }
+    hero->setPosition(startingPoint.x + i * seatWidth, startingPoint.y);
+    LHcontroler::getInstance()->getMyLittleHero()->addhero(hero, i + 1);
+    auto prepareLayer = prepare::getInstance();
+    hero->SetSpace(prepareLayer);
+    prepareLayer->addChild(hero, 2);
+}
+
+bool Preparation::is_full()
+{
+    int i;
+    for (i = 0; i < 9; i++)
+    {
+        if (!LHcontroler::getInstance()->getMyLittleHero()->Preparation[i])
+            return false;
+    }
+    return true;
 }
 
 bool Store::init()
@@ -267,7 +241,7 @@ bool Store::init()
 }
 
 //英雄池初始化
-Vector<Hero*> Store::pool = { Example::create() };
+Vector<Hero*> Store::pool = { Golem::create() };
 
 bool Store::addHero(Hero* newHero)
 {
@@ -356,7 +330,7 @@ void Store::purchaseCallback(Ref* pSender)
             littlehero->set_message("You're out of money!");
         else   //确实可以购买
         {
-            littlehero->update_gold(displayment.at(0)->getCost());
+            littlehero->update_gold(-displayment.at(0)->getCost());
             static_cast<Battlefield*>(Director::getInstance()->getRunningScene())->getCurrentPreparation()->placeHero(displayment.at(good));    //将棋子渲染到备战席上
             chosenItem->removeFromParent();     //该项商品按钮从商店移除（现在只是简单的remove，若需要更复杂的效果请自行实现）
             log("you've purchased hero %s", displayment.at(good)->getName().data());
@@ -379,7 +353,7 @@ void Store::refreshCallback(Ref* pSender)
         menu->removeAllChildren();
 
         //更新金币数量
-        littlehero->update_gold(2);
+        littlehero->update_gold(-2);
 
         //重新渲染商品按钮
         for (Vector<Hero*>::iterator p = displayment.begin(); p != displayment.end(); p++)

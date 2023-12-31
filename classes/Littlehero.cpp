@@ -3,26 +3,36 @@
 #include"Heroes.h"
 #include"Littlehero.h"
 #include "GeneralCreator.h"
-#define LHNUM 6      //最大小小英雄数量
-#define M_LEVEL 6    //最大等级
-#define Winning_Streak_Rewards 1//连胜或者连败奖励
-#define Gold_Per_Turn  5//每回合固定金币
 USING_NS_CC;
 static LHcontroler* s_Sharedcontroler = nullptr;
-static int mynumber=0;
+static int mynumber = 0;
+static int Status = LOCAL;
 int LHcontroler::get_mynumber()
 {
     return mynumber;
+}
+int LHcontroler::GetStatus()
+{
+    return Status;
 }
 LHcontroler* LHcontroler::getInstance()
 {
     if (!s_Sharedcontroler)
     {
         s_Sharedcontroler = new (std::nothrow) LHcontroler;
-       // CCASSERT(s_SharedModeSelector, "FATAL: Not enough memory");
-        s_Sharedcontroler->init();
+        // CCASSERT(s_SharedModeSelector, "FATAL: Not enough memory");
     }
     return s_Sharedcontroler;
+}
+void LHcontroler::initlocal()
+{
+    Status = LOCAL;
+    //生成
+
+}
+void LHcontroler::initonline()
+{
+    Status = ONLINE;
 }
 void LHcontroler::clearInstance()
 {
@@ -38,11 +48,25 @@ bool Littlehero::init()
 //控制器的初始化
 bool LHcontroler::init()
 {
-    //生成
-    for (int i = 0; i < LHNUM; i++)
+    /*联网目前待定*/
+    if (Status == ONLINE)
     {
+        for (int i = 0; i < 2; i++)
+        {
+            heros.pushBack(Littlehero::create());
+            heros.at(i)->ID = "Gamer" + StringUtils::toString(i);
+        }
+    }
+    else if (Status == LOCAL)
+    {
+        /*创建你的本地的小小英雄*/
         heros.pushBack(Littlehero::create());
-        heros.at(i)->ID = "Gamer"+StringUtils::toString( i);
+        heros.at(0)->ID = "You";
+        for (int i = 1; i < 4; i++)
+        {
+            heros.pushBack(Littlehero::create());
+            heros.at(i)->ID = "AI" + StringUtils::toString(i);
+        }
     }
     heros.at(LHcontroler::get_mynumber())->init_layer();//初始化图层此玩家的选手图层
     heros.at(LHcontroler::get_mynumber())->init_MyMap();
@@ -51,10 +75,14 @@ bool LHcontroler::init()
 void Littlehero::init_layer()
 {
     heroslayer = Layer::create();//创建图层
+    
+    if (Status == ONLINE)
+        heroslayer->retain();
+
     //放置购买经验的按钮
     set_ExpButton();
     //放置金币标签,和图标
-    set_Gold(); 
+    set_Gold();
     //放置消息提示类
     set_Messagelabel();
     //放置人口的图标
@@ -69,6 +97,9 @@ void Littlehero::init_layer()
     set_avatar();
     //加入小小英雄
     add_Littlehero();
+    sellarea = GCreator::getInstance()->createSprite("herolayer/Sellarea.png", 0, 0, 0, 0);
+    sellarea->setContentSize(Size(1600.0f, 948.0f));
+    sellarea->retain();
     /*创建监听器*/
     initMouseListeners();
 }
@@ -84,18 +115,18 @@ void Littlehero::init_MyMap()
 void Littlehero::set_threelabel()
 {
     auto visibleSize = Director::getInstance()->getVisibleSize();
-    Hplabel = Label::createWithTTF(  "Your Hp:"+StringUtils::toString(Hp), "fonts/Marker Felt.ttf", 24);
-    Explabel = Label::createWithTTF("Your Exp:" + StringUtils::toString(Exp) + "/" + StringUtils::toString(Level== M_LEVEL ? 0:Explevel[Level]), "fonts/Marker Felt.ttf", 24);
+    Hplabel = Label::createWithTTF("Your Hp:" + StringUtils::toString(Hp), "fonts/Marker Felt.ttf", 24);
+    Explabel = Label::createWithTTF("Your Exp:" + StringUtils::toString(Exp) + "/" + StringUtils::toString(Level == M_LEVEL ? 0 : Explevel[Level]), "fonts/Marker Felt.ttf", 24);
     Levellabel = Label::createWithTTF("Your Level:" + StringUtils::toString(Level), "fonts/Marker Felt.ttf", 24);
     Hplabel->setAnchorPoint(Vec2(0, 1));
     Explabel->setAnchorPoint(Vec2(0, 1));
     Levellabel->setAnchorPoint(Vec2(0, 1));
-    Hplabel->setPosition(Vec2(5, visibleSize.height));
-    Explabel->setPosition(Vec2(5, visibleSize.height - Hplabel->getContentSize().height));
-    Levellabel->setPosition(Vec2(5, visibleSize.height - 2 * Explabel->getContentSize().height));
+    Hplabel->setPosition(Vec2(5, 948));
+    Explabel->setPosition(Vec2(5, 948 - Hplabel->getContentSize().height));
+    Levellabel->setPosition(Vec2(5, 948 - 2 * Explabel->getContentSize().height));
     heroslayer->addChild(Hplabel, 0, "Hplabel");
     heroslayer->addChild(Explabel, 0, "Hplabel");
-    heroslayer->addChild(Levellabel, 0, "Levellabel"); 
+    heroslayer->addChild(Levellabel, 0, "Levellabel");
 }
 void Littlehero::add_Littlehero()//加入小小英雄
 {
@@ -140,17 +171,34 @@ void Littlehero::set_IDs()
 {
     auto visibleSize = Director::getInstance()->getVisibleSize();
     auto heros = LHcontroler::getInstance()->heros;
-    for (int i = 0; i < M_LEVEL; i++)
+    if (LHcontroler::getInstance()->GetStatus() == LOCAL)
     {
-        auto IDlabel = Label::createWithTTF(heros.at(i)->ID, "fonts/Marker Felt.ttf", 24);
-        IDlabel->setAnchorPoint(Vec2(1, 1));
-        IDlabel->setPosition(Vec2(visibleSize.width, visibleSize.height - 60-i*110));
-        heroslayer->addChild(IDlabel, 0, "IDlabel"+ heros.at(i)->ID);
+        for (int i = 0; i < 4; i++)
+        {
+            auto IDlabel = Label::createWithTTF(heros.at(i)->ID, "fonts/Marker Felt.ttf", 24);
+            IDlabel->setAnchorPoint(Vec2(1, 1));
+            IDlabel->setPosition(Vec2(1600.0f, 948.0f - 60.0f - i * 110.0f));
+            heroslayer->addChild(IDlabel, 0, "IDlabel" + heros.at(i)->ID);
+        }
     }
+    else
+    {
+        for (int i = 0; i < 2; i++)
+        {
+            auto IDlabel = Label::createWithTTF(heros.at(i)->ID, "fonts/Marker Felt.ttf", 24);
+            IDlabel->setAnchorPoint(Vec2(1, 1));
+            IDlabel->setPosition(Vec2(1600.0f, 948.0f - 60.0f - i * 110.0f));
+            heroslayer->addChild(IDlabel, 0, "IDlabel" + heros.at(i)->ID);
+        }
+    }
+
 }
 void Littlehero::set_avatar()//显示头像
 {
-    avatarimage = GCreator::getInstance()->createSprite("herolayer/Avatar.png", 0, 0, 0, 0);
+    if (LHcontroler::getInstance()->GetStatus() == LOCAL)
+        avatarimage = GCreator::getInstance()->createSprite("herolayer/AvatarLocal.png", 0, 0, 0, 0);
+    else
+        avatarimage = GCreator::getInstance()->createSprite("herolayer/AvatarOnline1.png", 0, 0, 0, 0);
     avatarimage->setContentSize(Size(1600.0f, 948.f));
     heroslayer->addChild(avatarimage, 0, "avatarimage");
 }
@@ -163,15 +211,54 @@ void Littlehero::set_Messagelabel()
 }
 void Littlehero::set_HP_Bar()//显示血条
 {
+    if (LHcontroler::getInstance()->GetStatus() == LOCAL)
+    {
+        Hpframe = GCreator::getInstance()->createSprite("herolayer/HpframeLocal.png", 0, 0, 0, 0);
+        Hpframe->setContentSize(Size(1600.0f, 948.f));
+        heroslayer->addChild(Hpframe, 1, "  Hpframe");
+        for (int i = 0; i < 4; i++)
+        {
+            Hpbar[i] = Sprite::create("herolayer/HpBar.png");
+            Hpbar[i]->setAnchorPoint(Point(0, 0));
+            Hpbar[i]->setContentSize(Size(16, 66));
+            Hpbar[i]->setPosition(1504.0f, 940.0f - (145.0f + 115 * i));
+            heroslayer->addChild(Hpbar[i], 0);
+        }
+    }
+    else
+    {
+        Hpframe = GCreator::getInstance()->createSprite("herolayer/HpframeOnline.png", 0, 0, 0, 0);
+        Hpframe->setContentSize(Size(1600.0f, 948.f));
+        heroslayer->addChild(Hpframe, 1, "  Hpframe");
+        for (int i = 0; i < 2; i++)
+        {
+            Hpbar[i] = Sprite::create("herolayer/HpBar.png");
+            Hpbar[i]->setAnchorPoint(Point(0, 0));
+            Hpbar[i]->setContentSize(Size(16, 66));
+            Hpbar[i]->setPosition(1505.0f, 940.0f - (145.0f + 115 * i));
+            heroslayer->addChild(Hpbar[i], 0);
+        }
+    }
 
 }
 /*————————————————————————————————————*/
 /*下面是更新数据相关的函数*/
 /*————————————————————————————————————*/
-void Littlehero::update_Hp(int hp)
+void Littlehero::update_Hp(int updatehp)
 {
-    Hp -= hp;
+    Hp -= updatehp;
+    Hps[0] -= 5;
+    if (Hp < 0)
+        Hp = 0;
     Hplabel->setString(StringUtils::toString(Hp));
+    if (LHcontroler::getInstance()->GetStatus() == LOCAL)
+        for (int i = 0; i < 4; i++)
+            Hpbar[i]->setScaleY(Hps[i] / 100.0f);
+    else
+    {
+        Hpbar[0]->setScaleY(Hp / 100.0f);
+        Hpbar[1]->setScaleY(enemyHp / 100.0f);
+    }
 }
 void Littlehero::Buy_exp()
 {
@@ -181,7 +268,6 @@ void Littlehero::Buy_exp()
     //更新标签
     Explabel->setString("Your Exp:" + StringUtils::toString(Exp) + "/" + StringUtils::toString(Level == M_LEVEL ? 0 : Explevel[Level]));
     Levellabel->setString("Your Level:" + StringUtils::toString(Level));
-    update_gold();
 }
 void Littlehero::Update_exp(int exp)
 {
@@ -191,7 +277,7 @@ void Littlehero::Update_exp(int exp)
 }
 void Littlehero::Checklevel()
 {
-    while (Level <=5&&Exp - Explevel[Level] >= 0)
+    while (Level <= 5 && Exp - Explevel[Level] >= 0)
     {
         Exp -= Explevel[Level];
         Level++;
@@ -205,17 +291,17 @@ void Littlehero::update_gold()//每回合更新金币
     int interest;
     if (Gold >= 50)
         interest = 5;
-    else 
+    else
         interest = Gold / 10;
-     Gold = Gold + Winning_Streak_Rewards * VICTORY + Gold_Per_Turn+interest;
-     Goldlabel->setString(StringUtils::toString(Gold));
-     showInterest();
+    Gold = Gold + Winning_Streak_Rewards * VICTORY + Gold_Per_Turn + interest;
+    Goldlabel->setString(StringUtils::toString(Gold));
+    showInterest();
 }
 void Littlehero::update_gold(int num)//更新金币
 {
-    Gold -= num;
+    Gold = Gold + num;
     Goldlabel->setString(StringUtils::toString(Gold));
-   showInterest();
+    showInterest();
 }
 void Littlehero::showInterest()//显示利息的图标
 {
@@ -229,11 +315,11 @@ void Littlehero::showInterest()//显示利息的图标
         node->removeFromParent();
     if (interest > 0)
     {
-       Sprite* newnode = GCreator::getInstance()->createSprite("herolayer/Interest" + StringUtils::toString(interest) + ".png", 0, 0, 0, 0);
-       newnode->setContentSize(Size(1600.0f, 948.0f));
+        Sprite* newnode = GCreator::getInstance()->createSprite("herolayer/Interest" + StringUtils::toString(interest) + ".png", 0, 0, 0, 0);
+        newnode->setContentSize(Size(1600.0f, 948.0f));
         heroslayer->addChild(newnode, 0, "Interest");
     }
-   
+
 }
 /*————————————————————————————————————*/
 /*下面是实现棋子拖动的几个函数*/
@@ -261,12 +347,27 @@ bool Littlehero::onLeftMouseDown(EventMouse* event)
     {
         //判断这个位置上有没有棋子
         Vec2 location = event->getLocationInView();
-        Lastposition = YourLittleHreo->getPosition();
+        Lastposition = getmidposition(location);
         //两个for循环遍历备战席和场上的棋子
-        if (YourLittleHreo->getBoundingBox().containsPoint(location))
+        if (location.x >= PreparationsSizeX[0] && location.x <= PreparationsSizeX[9] && location.y >= PreparationsSizeY[0] && location.y <= PreparationsSizeY[1])//点击在战场内
         {
-            isDragging = true;
-            return true;
+            if (Preparation[getPreparationarrayposition(location)] != nullptr)
+            {
+                Draging_hero = Preparation[getPreparationarrayposition(location)];
+                isDragging = true;
+            }
+        }
+        else if (location.x >= MapSizeX[0] && location.x <= MapSizeX[4] && location.y >= MapSizeY[0] && location.y <= MapSizeY[4])//点击在备战席上
+        {
+            Vec2 vec2 = getFightarrayposition(location);
+            int x = vec2.x;
+            int y = vec2.y;
+            if (Fightfield[x][y] != nullptr)
+            {
+                Draging_hero = Fightfield[x][y];
+                Lastposition = Draging_hero->getPosition();
+                isDragging = true;
+            }
         }
     }
     set_message("");
@@ -276,17 +377,20 @@ bool Littlehero::onLeftMouseDown(EventMouse* event)
 
 void Littlehero::onLeftMouseMove(EventMouse* event)
 {
-    if (event->getMouseButton() == EventMouse::MouseButton::BUTTON_LEFT&&isDragging==1)
+    if (event->getMouseButton() == EventMouse::MouseButton::BUTTON_LEFT && isDragging == 1)
     {
         //开始移动精灵
         Vec2 location = event->getLocationInView();
+        //显示出售区域
+        if (heroslayer->getChildByName("sellarea") == nullptr)
+            heroslayer->addChild(sellarea, -1, "sellarea");
         //显示人口和回显
         My_Map->setmaplines(100);
         Population->setOpacity(100);
         heroslayer->getChildByName("PopulationLabel")->setOpacity(100);
         // 移动精灵
 
-        YourLittleHreo->setPosition(location);
+        Draging_hero->setPosition(location);
     }
     return;
 }
@@ -297,13 +401,124 @@ void Littlehero::onLeftMouseUp(EventMouse* event)
     {
         // 处理左键释放事件
         //这里应该将棋子直接摆放到距离鼠标距离最近的正确的位置
-
         My_Map->setmaplines(0);
         Population->setOpacity(0);
         heroslayer->getChildByName("PopulationLabel")->setOpacity(0);
+        sellarea->removeFromParent();
         Vec2 location = event->getLocationInView();
-        YourLittleHreo->setPosition(getmidposition(location));
+        //判断鼠标抬起位置目标
+        if (location.x >= PreparationsSizeX[0] && location.x <= PreparationsSizeX[9] && location.y >= PreparationsSizeY[0]
+            && location.y <= PreparationsSizeY[1] && Lastposition.y <= 315)//点击备战席内拖动的起始点在备战席
+        {
+            int x = getPreparationarrayposition(location);
+            int pre = getPreparationarrayposition(Lastposition);//获取移动之前的数组位置
+            if (Preparation[x] != nullptr)
+            {
+                Draging_hero->setPosition(getmidposition(x));
+                Preparation[x]->setPosition(Lastposition);
+                Preparation[pre] = Preparation[x];
+                Preparation[x] = Draging_hero;
+            }
+            else
+            {
+                Draging_hero->setPosition(getmidposition(x));
+                Preparation[x] = Draging_hero;
+                Preparation[pre] = nullptr;
+            }
+        }
+        else if (location.x >= MapSizeX[0] && location.x <= MapSizeX[4] && location.y >= MapSizeY[0]
+            && location.y <= MapSizeY[4] && Lastposition.y >= 315)//点击在战场上拖动的起始点在战场上
+        {
+            Vec2 vec2 = getFightarrayposition(location);
+            int x = vec2.x;
+            int y = vec2.y;
+            HeroPosition h1;
+            h1.x = x;
+            h1.y = y;
+            Draging_hero->setHeroPosition(h1);
+            int prex = getFightarrayposition(Lastposition).x;
+            int prey = getFightarrayposition(Lastposition).y;//获取移动之前的数组位置
+            if (Fightfield[x][y] != nullptr)//交换
+            {
+                Draging_hero->setPosition(getmidposition(x, y));
+                Fightfield[x][y]->setPosition(Lastposition);
+                Fightfield[prex][prey] = Fightfield[x][y];
+                Fightfield[x][y] = Draging_hero;
+            }
+            else
+            {
+                Draging_hero->setPosition(getmidposition(x, y));
+                Fightfield[prex][prey] = nullptr;
+                Fightfield[x][y] = Draging_hero;
+            }
+        }
+        else if (location.x >= PreparationsSizeX[0] && location.x <= PreparationsSizeX[9] && location.y >= PreparationsSizeY[0]
+            && location.y <= PreparationsSizeY[1] && Lastposition.y >= 315)//点击备战席内，拖动的起始点在战场
+        {
+            int x = getPreparationarrayposition(location);
+            int prex = getFightarrayposition(Lastposition).x;
+            int prey = getFightarrayposition(Lastposition).y;//获取移动之前的数组位置
+            if (Preparation[x] != nullptr)
+            {
+                Draging_hero->setPosition(getmidposition(x));
+                Preparation[x]->setPosition(Lastposition);
+                Fightfield[prex][prey] = Preparation[x];
+                Preparation[x] = Draging_hero;
+            }
+            else
+            {
+                Draging_hero->setPosition(getmidposition(x));
+                Preparation[x] = Draging_hero;
+                Fightfield[prex][prey] = nullptr;
+            }
+        }
+        else if (location.x >= MapSizeX[0] && location.x <= MapSizeX[4] && location.y >= MapSizeY[0]
+            && location.y <= MapSizeY[4] && Lastposition.y <= 315)//点击在战场上，拖动的起始点在备战席上
+        {
+            Vec2 vec2 = getFightarrayposition(location);
+            int x = vec2.x;
+            int y = vec2.y;
+            int pre = getPreparationarrayposition(Lastposition);
+            if (Fightfield[x][y] != nullptr)//交换
+            {
+                Draging_hero->setPosition(getmidposition(x, y));
+                Fightfield[x][y]->setPosition(Lastposition);
+                Preparation[pre] = Fightfield[x][y];
+                Fightfield[x][y] = Draging_hero;
+            }
+            else
+            {
+                Draging_hero->setPosition(getmidposition(x, y));
+                Preparation[pre] = nullptr;
+                Fightfield[x][y] = Draging_hero;
+            }
+        }
+        else if ((location.x >= 84 && location.x <= 188 && location.y >= (948 - 368) && location.y <= (948 - 290) || (location.x >= 1370
+            && location.x <= 1477 && location.y >= (948 - 375) && location.y <= (948 - 300))))//此处添加出售棋子
+        {
+            if (Lastposition.y <= 315)//如果是备战席
+            {
+                int pre = getPreparationarrayposition(Lastposition);
+                Draging_hero->removeFromParent();
+                Preparation[pre] = nullptr;
+            }
+            else //如果是战场
+            {
+                int prex = getFightarrayposition(Lastposition).x;
+                int prey = getFightarrayposition(Lastposition).y;//获取移动之前的数组位置
+                Draging_hero->removeFromParent();
+                Fightfield[prex][prey] = nullptr;
+            }
+            update_gold(Draging_hero->getCost());//更新金币
+        }
+        else
+        {
+            Messagelabel->setString("You can only place the chess on the left half of the square or on the Preparation Seat.");
+            Draging_hero->setPosition(Lastposition);
+        }
         isDragging = false;
+        Lastposition = Vec2(0, 0);
+
         return;
     }
 }
@@ -330,11 +545,6 @@ bool Littlehero::onRightMouseDown(EventMouse* event)
     return false;
 }
 /*————————————————————————————————————*/
-/*下面是实现小小英雄移动的函数*/
-/*————————————————————————————————————*/
-
-
-/*————————————————————————————————————*/
 /*下面是地图相关的函数*/
 /*————————————————————————————————————*/
 Vec2 Littlehero::getmidposition(int x, int y)
@@ -360,19 +570,18 @@ Vec2 Littlehero::getmidposition(Vec2 location)
         }
         return  getmidposition(i - 1, j - 1);
     }
-    else if(location.x >= PreparationsSizeX[0] && location.x <= PreparationsSizeX[9] && location.y >= PreparationsSizeY[0] && location.y <= PreparationsSizeY[1])
+    else if (location.x >= PreparationsSizeX[0] && location.x <= PreparationsSizeX[9] && location.y >= PreparationsSizeY[0] && location.y <= PreparationsSizeY[1])
     {
         int i = 0;
         while (location.x > PreparationsSizeX[i])
         {
             i++;
         }
-        return  getmidposition(i-1);
+        return  getmidposition(i - 1);
     }
     else
     {
-        Messagelabel->setString("You can only place the chess on the left half of the square or on the Preparation Seat.");
-        return Lastposition;
+        return(Vec2(0, 0));
     }
 }
 Vec2 Littlehero::getmidposition(int x)
@@ -382,4 +591,63 @@ Vec2 Littlehero::getmidposition(int x)
     vec2.y = (PreparationsSizeY[1] + PreparationsSizeY[0]) / 2;
     return vec2;
 }
+Vec2 Littlehero::getFightarrayposition(Vec2 location)//输入坐标返回返回距离这个二维向量最近的战场数组坐标
+{
+    int i = 0;
+    while (location.x > MapSizeX[i])
+    {
+        i++;
+    }
+    int j = 0;
+    while (location.y > MapSizeY[j])
+    {
+        j++;
+    }
+    return  Vec2(i - 1, j - 1);
+}
+int Littlehero::getPreparationarrayposition(Vec2 location)//输入输入坐标返回返回距离这个二维向量最近的备战席数组坐标
+{
+    int i = 0;
+    while (location.x > PreparationsSizeX[i])
+    {
+        i++;
+    }
+    return  i - 1;
+}
+/*游戏进程的函数*/
+void LHcontroler::Godie(Node* layer)
+{
+    /*失败动画*/
+    layer->removeAllChildren();
+    auto Defeat = Sprite::create("Defeat.png");
+    auto closeItem = GCreator::getInstance()->createMenuItem("closeNormal.png", "closeSelected.png", CC_CALLBACK_1(LHcontroler::menuCloseCallback, this), 0, 0, 0, 0);
+    closeItem->setScale(CloseitemSize.x / closeItem->getContentSize().width);
+    closeItem->setPosition(EnditemPosition);
+    Defeat->setPosition(DefeatPosition);
+    auto menu = Menu::create(closeItem, NULL);
+    menu->setPosition(Vec2::ZERO);
+    layer->addChild(menu, 1);
+    layer->addChild(Defeat, 0);
+}
+void LHcontroler::menuCloseCallback(Ref* pSender)
+{
+    //clear the LHcontroller
+    LHcontroler::clearInstance();
+    //Close the cocos2d-x game scene and quit the application
+    Director::getInstance()->end();
+}
+void LHcontroler::Govictory(Node* layer)
+{
+    /*胜利动画*/
 
+    layer->removeAllChildren();
+    auto Defeat = Sprite::create("Victor.png");
+    auto closeItem = GCreator::getInstance()->createMenuItem("closeNormal.png", "closeSelected.png", CC_CALLBACK_1(LHcontroler::menuCloseCallback, this), 0, 0, 0, 0);
+    closeItem->setScale(CloseitemSize.x / closeItem->getContentSize().width);
+    closeItem->setPosition(EnditemPosition);
+    Defeat->setPosition(DefeatPosition);
+    auto menu = Menu::create(closeItem, NULL);
+    menu->setPosition(Vec2::ZERO);
+    layer->addChild(menu, 1);
+    layer->addChild(Defeat, 0);
+}
