@@ -49,10 +49,16 @@ public:
 	virtual void Death();    //死亡动画
 	virtual void Attack();    //攻击动画
 	virtual void Move(HeroPosition destination);    //移动动画
+<<<<<<< HEAD
 	virtual void Ultimate() {} //大招动画
 	Hero* StarUp(Hero* a, Hero* b, Hero* c);    //升星动画
 	HeroPosition getHeroPosition();    //获取英雄位置位置
 	void setHeroPosition(HeroPosition NowPosition);
+=======
+	void StarUp(Hero* a, Hero* b, Hero* c);    //升星动画
+	//virtual void Ultimate();    //大招动画
+	HeroPosition getHeroPosition();    //获取英雄位置位置
+>>>>>>> affd7e5c2e4d7c4aa9b3e774deec4501f5a7068c
 	HeroImages getImages();							//获取英雄图像信息
 	int getCost();									//获取价格
 	int getvalue();                                 //获取价值
@@ -147,9 +153,16 @@ class Golem :public Hero
 	//坦克-Golem
 {
 public:
+<<<<<<< HEAD
 	bool init()override;
 	void getSpriteReady(int star1 = 1) override;
 	void Ultimate()override;
+=======
+	bool init() override;
+	void Attack() override;
+	void Death() override;
+	void Move(HeroPosition destination) override;
+>>>>>>> affd7e5c2e4d7c4aa9b3e774deec4501f5a7068c
 	CREATE_FUNC(Golem);
 protected:
 };

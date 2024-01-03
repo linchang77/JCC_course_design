@@ -51,9 +51,12 @@ bool HelloWorld::init()
     //get director and general creator instances
     auto director = Director::getInstance();
     auto creator = GCreator::getInstance();
+<<<<<<< HEAD
     auto glView = director->getOpenGLView();
     glView->setFrameSize(1600, 900);
 
+=======
+>>>>>>> affd7e5c2e4d7c4aa9b3e774deec4501f5a7068c
     // auto backgroundAudioID =AudioEngine::play2d("music.mp3", true);
     //get visible size of the screen
     auto visibleSize = director->getVisibleSize();

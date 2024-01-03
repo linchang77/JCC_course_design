@@ -260,7 +260,17 @@ bool Golem::init()    //坦克-Demon
     return true;
 };
 
+<<<<<<< HEAD
 void Goblin::getSpriteReady(int star1)
+=======
+void Hero::Attack() {};
+
+void Hero::Death() {};
+
+void Hero::Move(HeroPosition destination) {};
+
+HeroPosition Hero::getHeroPosition()
+>>>>>>> affd7e5c2e4d7c4aa9b3e774deec4501f5a7068c
 {
     setStar(star1);
     BodyInit();
@@ -653,12 +663,17 @@ void Hero::Attack()
     body->runAction(Sequence::create(startCallback, action, endCallback, nullptr));
 };
 
+<<<<<<< HEAD
 void Hero::Move(HeroPosition destination)
+=======
+void Golem::Move(HeroPosition destination)
+>>>>>>> affd7e5c2e4d7c4aa9b3e774deec4501f5a7068c
 {
     auto startCallback = CallFunc::create([this]()
         {
             isMove = true;    //开始移动动作
         });
+<<<<<<< HEAD
     ToTurn(destination);
     position.x = destination.x;
     position.y = destination.y;    //将英雄位置更新为终点位置
@@ -668,6 +683,17 @@ void Hero::Move(HeroPosition destination)
     this->runAction(moveto);
     std::string Plist = HeroTypes[id] + "_0" + StringUtils::toString(star) + ".plist";
     SpriteFrameCache::getInstance()->addSpriteFramesWithFile(Plist);    ////创建一个Vector类型的数据用来存放所需要的精灵帧
+=======
+    position.x = destination.x;
+    position.y = destination.y;    //将英雄位置更新为终点位置
+    LHcontroler::getInstance()->getMyLittleHero()->Fightfield[destination.x][destination.y] = this;//更新小小英雄里面的fightfield
+    //float distance;    //通过坐标获取移动距离//LHcontroler::getInstance()->getMyLittleHero()->getmidposition(destination.x, destination.y)
+
+    auto moveto = MoveTo::create(4.0f, LHcontroler::getInstance()->getMyLittleHero()->getmidposition(destination.x, destination.y));   //移动
+    //auto moveto = MoveTo::create(2.0f, Point(-300, 0));
+    this->runAction(moveto);
+    SpriteFrameCache::getInstance()->addSpriteFramesWithFile("Golem_01_Walking1.plist");    ////创建一个Vector类型的数据用来存放所需要的精灵帧
+>>>>>>> affd7e5c2e4d7c4aa9b3e774deec4501f5a7068c
     Vector<SpriteFrame*> frameVector;
     int Max_Walking = 0;
     if (id == FAIRY)
@@ -1073,6 +1099,7 @@ void Golem::Ultimate()
     }
     auto animation = Animation::createWithSpriteFrames(frameVector, 1 / frequency / 12);    //第二个参数是动画执行的持续时间
     animation->setRestoreOriginalFrame(false);    //设置动画执行完时是否回到原始状态
+<<<<<<< HEAD
     animation->setLoops(1);    //设置动画反复执行的次数
     auto action = Animate::create(animation);    //用动画缓存初始化Animation实例，用Animate实例来播放序列帧动画
     auto endCallback = CallFunc::create([this]()    //攻击动作执行回调
@@ -1616,4 +1643,18 @@ void King::KingBuff(float dt)
         counter++;
     }
     counterTime += dt;
+=======
+    animation->setLoops(4);    //设置动画反复执行的次数
+    auto action = Animate::create(animation);    //用动画缓存初始化Animation实例，用Animate实例来播放序列帧动画
+
+    auto endCallback = CallFunc::create([this]()
+        {
+            isMove = false;    //结束移动动作
+            // Attack();
+            
+           
+        });
+    body->runAction(Sequence::create(startCallback, action, endCallback, nullptr));
+
+>>>>>>> affd7e5c2e4d7c4aa9b3e774deec4501f5a7068c
 };

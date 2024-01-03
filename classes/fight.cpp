@@ -1,5 +1,9 @@
 #include"fight.h"
+<<<<<<< HEAD
 #include"Battlefield.h"
+=======
+
+>>>>>>> affd7e5c2e4d7c4aa9b3e774deec4501f5a7068c
 Isfight_label* Isfight_label::getInstance()
 {
 	if (!Isfight_l)
@@ -20,7 +24,10 @@ bool Isfight_label::init()
 	float set_y = 848;
 	ShowIsfight = Label::createWithTTF("Preparation Stage", "fonts/arial.ttf", size);
 	ShowIsfight->setPosition(Vec2(set_x, set_y));
+<<<<<<< HEAD
 	ShowIsfight->setTag(3);
+=======
+>>>>>>> affd7e5c2e4d7c4aa9b3e774deec4501f5a7068c
 	this->addChild(ShowIsfight);
 	return 1;
 }
@@ -35,12 +42,16 @@ void Isfight_label::update_Isfight(int x)
 		ShowIsfight->setString("Fighting Stage");
 	}
 }
+<<<<<<< HEAD
 void Isfight_label::clearInstance()
 {
 	if (Isfight_l)
 		delete Isfight_l;
 	Isfight_l = nullptr;
 }
+=======
+
+>>>>>>> affd7e5c2e4d7c4aa9b3e774deec4501f5a7068c
 
 turn_label* turn_label::getInstance()
 {
@@ -80,12 +91,15 @@ bool turn_label::init()
 	this->addChild(Showturn);
 	return 1;
 }
+<<<<<<< HEAD
 void turn_label::clearInstance()
 {
 	if (turn_l)
 		delete turn_l;
 	turn_l = nullptr;
 }
+=======
+>>>>>>> affd7e5c2e4d7c4aa9b3e774deec4501f5a7068c
 void turn_label::update_turns(int bigt,int smallt)
 {
 	big_turn = bigt;
@@ -131,12 +145,15 @@ bool time_label::init()
 	this->addChild(Showtime);
 	return 1;
 }
+<<<<<<< HEAD
 void time_label::clearInstance()
 {
 	if (time_l)
 		delete time_l;
 	time_l = nullptr;
 }
+=======
+>>>>>>> affd7e5c2e4d7c4aa9b3e774deec4501f5a7068c
 void time_label::update_time(int x)
 {
 	num = x;
@@ -144,6 +161,7 @@ void time_label::update_time(int x)
 	return;
 }
 
+<<<<<<< HEAD
 void fight::Map1init()
 {
 	for (int i = 0; i < 8; i++)
@@ -166,12 +184,16 @@ void fight::Map1init()
 		Map1[h1.x][h1.y] = 1;
 	}
 }
+=======
+
+>>>>>>> affd7e5c2e4d7c4aa9b3e774deec4501f5a7068c
 bool fight::init()
 {
 	if (!Layer::init())
 	{
 		return false;
 	}
+<<<<<<< HEAD
 	
 	schedule(CC_SCHEDULE_SELECTOR(fight::Fight_base));
 	return true;
@@ -716,10 +738,113 @@ void fight::Fight_base(float dt)
 			{  //对目标发起攻击
 				thisHero->Attack();
 				thisHero->ChangeAttackCounter(thisHero->getAttackCounter() - 1.0f / (thisHero->getFrequency())); //重置攻击计时器。
+=======
+	for (auto& e : My_Hero_use)
+	{
+		/*
+		HeroPosition h1;
+		h1 = e->getPosition();
+		Map1[h1.x][h1.y] = 1;
+		*/
+	}
+	for (auto& e : Enemy_Hero_use)
+	{
+		/*
+		HeroPosition h1;
+		h1 = e->getPosition();
+		Map1[h1.x][h1.y] = 1;
+		*/
+	}
+	time_l1 = time_label::getInstance();
+	turn_l1 = turn_label::getInstance();
+	Isfight_l1 = Isfight_label::getInstance();
+	schedule(CC_SCHEDULE_SELECTOR(fight::Fight_base));
+	return true;
+}
+/*
+bool fight::isfunction(Hero* e)
+{
+	if (e->getIsdying())
+		return 1;
+	if (e->getIsmove())
+		return 1;
+	if (e->getIsattack())
+		return 1;
+	return 0;
+}
+*/
+
+void fight::Fight_base(float dt)
+{
+	is_my_hero = 1;
+	timef += dt;
+	if (last_time == 0)
+	{
+		small_turn++;
+		if (small_turn > 7)
+			small_turn = 1,
+			big_turn++;
+		if (big_turn == 1 && small_turn > 3)
+			small_turn = 1,
+			big_turn++;	
+		last_time=MaxTime;
+		turn_l1->update_turns(small_turn,big_turn);
+	}
+	if (timef >= 1)
+	{
+		timef--;
+		last_time--;
+		if(last_time > 0&&last_time<=MaxTime/2)
+		time_l1->update_time(last_time);
+	}
+	if (last_time > MaxTime/2)
+	{
+		return;
+	}
+	else if(last_time == MaxTime/2)
+	{
+		Isfight_l1->update_Isfight(1);
+	}
+	return;
+	/*
+	for (auto& e : My_Hero_use)
+	{
+		if (e->getAttackCounter() < 1.0f / (e->getFrequency()))
+			e->changeAttackCounter(e->getAttackCounter() + dt);
+		if (isfunction(e))
+			continue;//正在执行动画，不可进行其它操作。
+		if (e->getRealHp() <= 0 && !e->getIsdead())
+		{//发现没血，开始执行死亡动画
+			e->Death();
+			continue;
+		}
+		if (e->getIsdead())
+		{//死亡动画执行完毕，死透了。
+			somebodydead(e, is_my_hero);
+		}
+		if (e->getEnemy())
+		{//有目标可能已丢失，需要再次判断
+			if (!Hasenemy(e,e->getEnemy()))
+			{
+				e->chooseEnemy(NULL);
+			}
+		}
+		if (!e->getEnemy())
+		{
+			Findenemy(e);
+		}
+		if (e->getEnemy())
+		{
+			if (e->getAttackCounter()>=1.0f/(e->getFrequency()))
+			{
+				e->Attack(e->getEnemy());
+				e->changeAttackCounter(e->getAttackCounter() - 1.0f / (e->getFrequency()));
+>>>>>>> affd7e5c2e4d7c4aa9b3e774deec4501f5a7068c
 			}
 		}
 	}
 	is_my_hero = 0;
+<<<<<<< HEAD
 	for (auto& thisHero : Enemy_Hero_use)
 	{//代码同上，处理敌人的操作
 		for (int i = 0; i < 3; i++)
@@ -895,6 +1020,76 @@ void fight::somebodydead(Hero* Hero1,bool isMy)
 bool fight::Hasenemy(Hero *Hero1,Hero*Hero2)
 {//是否有可攻击敌人
 	if (solve_distance(Hero1, Hero2) <= Hero1->getRange() && Hero2->getRealHp() > 0)
+=======
+	for (auto& e : Enemy_Hero_use)
+	{
+		if (e->getAttackCounter() < 1.0f / (e->getFrequency()))
+			e->ChangeAttackCounter(e->getAttackCounter() + dt);
+		if (isfunction(e))
+			continue;//正在执行动画，不可进行其它操作。
+		if (e->getRealHp() <= 0 && !e->getIsDead())
+		{//发现没血，开始执行死亡动画
+			e->Death();
+			continue;
+		}
+		if (e->getIsDead())
+		{//死亡动画执行完毕，死透了。
+			somebodydead(e, is_my_hero);
+		}
+		if (e->getEnemy())
+		{//有目标可能已丢失，需要再次判断
+			if (!Hasenemy(e, e->getEnemy()))
+			{
+				e->ChooseEnemy(NULL);
+			}
+		}
+		if (!e->getEnemy())
+		{
+			Findenemy(e);
+		}
+		if (e->getEnemy())
+		{
+			if (e->getAttackCounter() >= 1.0f / (e->getFrequency()))
+			{
+				e->Attack(e->getEnemy());
+				e->ChangeAttackCounter(e->getAttackCounter() - 1.0f / (e->getFrequency()));
+			}
+		}
+	}*/
+};
+
+/*
+void fight::somebodydead(Hero* e1,bool isMy)
+{//一个人死后要干的事情：先释放当前位置的格子，然后再将所有锁定该角色的人锁定目标清除，最后从容器中移除该角色。
+	HeroPosition h1 = e1->getPosition();
+	Map1[h1.x][h1.y] = 0;
+	if (isMy == 1)
+	{
+		for (auto& e : Enemy_Hero_use)
+		{
+			if (e->getEnemy() == e1)
+			{
+				e->ChooseEnemy(NULL);
+			}
+		}
+		My_Hero_use.erase(My_Hero_use.find(e1));
+	}
+	if (isMy == 0)
+	{
+		for (auto& e : My_Hero_use)
+		{
+			if (e->getEnemy() == e1)
+			{
+				e->ChooseEnemy(NULL);
+			}
+		}
+		Enemy_Hero_use.erase(Enemy_Hero_use.find(e1));
+	}
+}
+bool fight::Hasenemy(Hero *Hero1,Hero*Hero2)
+{
+	if (solve_distance(Hero1, Hero2) <= Hero1->getRange())
+>>>>>>> affd7e5c2e4d7c4aa9b3e774deec4501f5a7068c
 	{
 		return 1;
 	}
@@ -903,6 +1098,7 @@ bool fight::Hasenemy(Hero *Hero1,Hero*Hero2)
 int fight::solve_distance(Hero *Hero1,Hero *Hero2)
 {
 	HeroPosition h1, h2;
+<<<<<<< HEAD
 	h1 = Hero1->getHeroPosition();
 	h2 = Hero2->getHeroPosition();
 	return abs(h1.x - h2.x) + abs(h1.y - h2.y);  //得出距离
@@ -988,10 +1184,43 @@ bool fight::Findenemy(Hero *Hero1)
 }
 bool fight::trueposition(int x,int y)
 {  //位置是否正确？
+=======
+	h1 = Hero1->getPosition();
+	h2 = Hero2->getPosition();
+	return abs(h1.x - h2.x) + abs(h1.y - h2.y);
+}
+bool fight::Findenemy(Hero *Hero1)
+{
+	int min_distance = 15;
+	Hero* enemy_hero=NULL;
+	for (auto& e : Enemy_Hero_use)
+	{
+		int len = solve_distance(Hero1, e);
+		if (min_distance < len)
+		{
+			min_distance = len;
+			enemy_hero = e;
+		}
+	}
+	if (min_distance <= Hero1->getRange())
+	{//如果敌人离你最短的距离小于你的射程，锁定目标
+		Hero1->ChooseEnemy(enemy_hero);
+		return 1;
+	}
+	else
+	{//如果敌人离你距离大于射程，就开始找路，找到路就开始move，此时getEnemy不会被设置为1，且ismove变为1。
+		Find_way(Hero1, enemy_hero);
+	}
+	return 0;
+}
+bool fight::trueposition(int x,int y)
+{
+>>>>>>> affd7e5c2e4d7c4aa9b3e774deec4501f5a7068c
 	if (x < 8 && x >= 0 && y < 4 && y >= 0)
 		return 1;
 	return 0;
 }
+<<<<<<< HEAD
 bool fight::isFace(HeroPosition HPT1, HeroPosition HPT2)
 {//是否面对？（两个位置）
 	if (HPT1.y == HPT2.y)
@@ -999,6 +1228,10 @@ bool fight::isFace(HeroPosition HPT1, HeroPosition HPT2)
 	else return 0;
 }
 HeroPosition fight::bfs(Hero *WantFind)
+=======
+
+HeroPosition fight::bfs()
+>>>>>>> affd7e5c2e4d7c4aa9b3e774deec4501f5a7068c
 {
 	for (int i = 0; i < 8; i++)
 	{
@@ -1008,6 +1241,7 @@ HeroPosition fight::bfs(Hero *WantFind)
 			if (Map1[i][j] == 1)
 				vis[i][j] = 1;
 		}
+<<<<<<< HEAD
 	}//初始化vis数组
 	que.pushBack(new way_Node(start,NULL));
 	//通过Vector模拟队列实现bfs查找最短路径
@@ -1019,10 +1253,26 @@ HeroPosition fight::bfs(Hero *WantFind)
 			for (int j = -1; j <= 1; j++)
 			{//下一步会到哪里
 				if (abs(i) + abs(j) != 1)
+=======
+	}
+	que.pushBack(way_Node(start,NULL));
+	while (!que.empty())
+	{
+		way_Node* tmp = new way_Node(que.front());
+		que.popBack();
+		for (int i = -1; i <= 1; i++)
+		{
+			for (int j = -1; j <= 1; j++)
+			{
+				if (abs(i) + abs(j) > 1)
+					continue;
+				if (i == j && i == 0)
+>>>>>>> affd7e5c2e4d7c4aa9b3e774deec4501f5a7068c
 					continue;
 				HeroPosition h0;
 				h0.x = tmp->place.x + i;
 				h0.y = tmp->place.y + j;
+<<<<<<< HEAD
 				if (!trueposition(h0.x, h0.y))
 					continue;  //位置不对
 				if (vis[h0.x][h0.y])
@@ -1118,31 +1368,61 @@ HeroPosition fight::bfs(Hero *WantFind)
 			}
 		}
 		que.erase(0);  //最后把队列头弹出
+=======
+				if (h0.x == end.x && h0.y == end.y)
+				{
+					while (tmp->pre->place.x != start.x || tmp->pre->place.y!=start.y)
+					{
+						tmp = tmp->pre;
+					}
+					return tmp->place;
+				}
+				vis[h0.x][h0.y] = 1;
+				que.pushBack(way_Node(h0, tmp));
+			}
+		}
+>>>>>>> affd7e5c2e4d7c4aa9b3e774deec4501f5a7068c
 	}
 	HeroPosition h0;
 	h0.x = h0.y = -1;
 	return h0;
 }
 
+<<<<<<< HEAD
 bool fight::Find_way(Hero* Hero1)
 {
 	start = Hero1->getHeroPosition();
 	HeroPosition h0 = bfs(Hero1);  //通过bfs求取下一步要到的位置。
 	
+=======
+bool fight::Find_way(Hero* Hero1,Hero* Hero2)
+{
+	start = Hero1->getPosition();
+	end = Hero2->getPosition();
+	HeroPosition h0 = bfs();
+>>>>>>> affd7e5c2e4d7c4aa9b3e774deec4501f5a7068c
 	if (h0.x == h0.y && h0.x == -1)
 	{}//故意留空，不是写错
 	else
 	{
+<<<<<<< HEAD
 		if (!isfunction(Hero1))
 		{  //如果棋子不在做动作就移动到h0位置
 			Map1[start.x][start.y] = 0;
 			Map1[h0.x][h0.y] = 1;
 			Hero1->Move(h0);
 		}
+=======
+		/*
+		if(!Hero1->getIsattack())
+		Hero1->Move(h0);
+		
+>>>>>>> affd7e5c2e4d7c4aa9b3e774deec4501f5a7068c
 		return 1;
 	}
 	return 0;
 }
+<<<<<<< HEAD
 
 void fight::MatchAI()
 {
@@ -1177,3 +1457,38 @@ void fight::MatchAI()
 			Has_Match_AI[i] = 0;
 	}
 }
+=======
+void fight::add_ai()
+{
+
+	return;
+}
+*/
+/*void fight::Match()
+{
+	auto LH = LHcontroler::getInstance();
+	int LH_size = LH->heros.size();
+	for (int i = 1; i <= LH_size / 2 - 1; i++)
+	{
+		int hero1_num=-1, hero2_num=-1;
+		while (1)
+		{
+			hero2_num = random(0, LH_size - 1);
+			hero1_num = random(0, LH_size - 1);
+			if (hero1_num == hero2_num)
+				continue;
+			if (LH->heros.at(hero1_num)->getEnemyNum())
+				continue;
+			if (LH->heros.at(hero2_num)->getEnemyNum())
+				continue;
+			if (LH->heros.at(hero1_num)->getLastEnemyNum()==hero2_num)
+				continue;
+
+		}
+	}
+	for (int i = 0; i < LH_size; i++)
+	{
+
+	}
+}*/
+>>>>>>> affd7e5c2e4d7c4aa9b3e774deec4501f5a7068c

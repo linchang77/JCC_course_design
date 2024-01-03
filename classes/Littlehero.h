@@ -22,6 +22,7 @@
 #define GoldLabelPosition cocos2d::Vec2(694,209)
 #define PopulationLabelPosition cocos2d::Vec2(755,948-252)
 #define MESSAGELABEL  cocos2d::Vec2(755,948-145)
+<<<<<<< HEAD
 #define EnditemPosition    cocos2d::Vec2(775,300)
 #define DefeatPosition       cocos2d::Vec2(800,474)
 /*九个英雄的宏定义*/
@@ -30,6 +31,8 @@
 #define CLEARMIND 2
 #define POPULATION 3
 
+=======
+>>>>>>> affd7e5c2e4d7c4aa9b3e774deec4501f5a7068c
 USING_NS_CC;
 /****************************************************************************
 名称：小小英雄类
@@ -89,24 +92,36 @@ public:
 	bool onRightMouseDown(EventMouse* event);
 	void addhero(Hero* hero, int x) { Preparation[x - 1] = hero; }//添加棋子到备战席
 	void addhero(Hero* hero) {};//添加棋子到战斗数组
+<<<<<<< HEAD
 	void remove(Hero* hero) { hero->removeFromParent(); }//删除这个棋子
 	/*海克斯有关的函数*/
 	bool is_ClearMind();
+=======
+	void remove(Hero* hero){ hero->removeFromParent(); }//删除这个棋子
+>>>>>>> affd7e5c2e4d7c4aa9b3e774deec4501f5a7068c
 	/*
 	*类内部成员的操作函数
 	*/
 	Vector<Hero*> getEnemyFightingHeroes() { return Enemy_fightheros; }
 	void setEnemyFightingHeroes(Vector<Hero*> vec) { Enemy_fightheros = vec; }
 	cocos2d::Layer* get_heroslayer() { return heroslayer; }
+<<<<<<< HEAD
 
 	int getHp() { return Hp; }
 	int getEnemyHp() { return enemyHp; }
 	int getLevel() { return Level; }
+=======
+	std::string ID = "";//小小英雄的ID
+	int getHp() { return Hp; }
+	int getLevel() { return Level; }
+	int getEnemyHp() { return EnemyHp; }
+>>>>>>> affd7e5c2e4d7c4aa9b3e774deec4501f5a7068c
 	int getNum() { return Num; }
 	int getEnemyNum() { return EnemyNum; }
 	void chooseEnemyNum(int Enemy_Num) { EnemyNum = Enemy_Num; }
 	int getLastEnemyNum() { return LastEnemyNum; }
 	bool getIsAI() { return IsAI; }
+<<<<<<< HEAD
 	void setHextechStatus(int status) { HextechStatus = status; }
 	int getHextechStatus() { return HextechStatus; }
 	/*海克斯类*/
@@ -119,6 +134,10 @@ public:
 	std::string getID() { return ID; }
 	void setID(std::string ID) { this->ID = ID; }
 	void setRoomParam(int seq, std::string room_num) { this->seq = seq, this->room_num = room_num; }
+=======
+	MapData* get_MyMap() { return My_Map; }
+	void set_message(std::string str) { Messagelabel->setString(str); }
+>>>>>>> affd7e5c2e4d7c4aa9b3e774deec4501f5a7068c
 	/*关于地图的函数*/
 	Vec2 getmidposition(int x, int y);//输入数组坐标返回格子中点坐标
 	Vec2 getmidposition(Vec2 location);//传入一个二维向量，返回距离这个二维向量最近的格子中点坐标
@@ -128,10 +147,13 @@ public:
 	/*战斗类***/Hero* Preparation[9] = { nullptr,nullptr,nullptr ,nullptr,nullptr,nullptr,nullptr ,nullptr,nullptr };//备战席
 	Hero* Fightfield[4][4] = { {nullptr,nullptr,nullptr ,nullptr},{nullptr,nullptr,nullptr ,nullptr },
 							   {nullptr,nullptr,nullptr ,nullptr},{nullptr,nullptr,nullptr ,nullptr } };//战场上的棋子分布
+<<<<<<< HEAD
 	int HerosType[18] = { 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 };//记录棋子种类
 	/*升星函数*/
 	bool FindUpgradeHero(Hero* &hero1, Hero* &hero2, Hero* &hero3);//找到可以升星的英雄们
 	void CheckUpgrade(Hero* hero);
+=======
+>>>>>>> affd7e5c2e4d7c4aa9b3e774deec4501f5a7068c
 private:
 	/*小小英雄数据*/
 	/*ID*******/
@@ -169,6 +191,7 @@ private:
 	Sprite* Shopbackground;//商店背景
 	Sprite* sellarea;//出售区域的图片
 
+<<<<<<< HEAD
 
 	/*棋子拖拽类*/
 	int chequers = 0;//场上棋子的数量
@@ -186,6 +209,25 @@ private:
 	int LastEnemyNum = 0; //上把敌人的编号
 	bool IsAI = 1; //是不是AI
 
+=======
+	
+	/*棋子拖拽类*/
+	int chequers = 0;//备战席上棋子的数量
+	Vec2 Lastposition;
+	Hero* Draging_hero;
+
+	Hero* Map[8][4];//地图上的棋子位置
+	float MapSizeX[9] = { 382,  490.125 ,  598.25 ,  706.375, 814.5  ,922.625  , 1030.75  , 1138.875   , 1247 };
+	float MapSizeY[5] = { 315,426.75,538.5,650.25,762 };
+	float PreparationsSizeX[10] = { 279   ,386.88  ,  494.76  ,  602.64  , 710.52  , 818.4    ,926.28 ,   1034.16  ,  1142.04 , 1249.92 };
+	float PreparationsSizeY[2] = { 215,315 };
+	Vector<Hero*> Enemy_fightheros;//敌方棋子数组
+	int Num = 0; //小小英雄编号
+	int EnemyNum = 0; //敌人的编号
+	int LastEnemyNum = 0; //上把敌人的编号
+	bool IsAI = 1; //是不是AI
+
+>>>>>>> affd7e5c2e4d7c4aa9b3e774deec4501f5a7068c
 	/*消息提示类*/Label* Messagelabel;//提示标签
 
 	cocos2d::Layer* heroslayer;//选手图层

@@ -2,9 +2,14 @@
 #include "Setting.h"
 #include "GeneralCreator.h"
 #include "httpTransmission.h"
+<<<<<<< HEAD
 #include "fight.h"
 #include "prepare.h"
 #include "Hextech.h"
+=======
+#include "Littlehero.h"
+#include "prepare.h"
+>>>>>>> affd7e5c2e4d7c4aa9b3e774deec4501f5a7068c
 USING_NS_CC;
 using namespace network;
 
@@ -55,6 +60,7 @@ bool Battlefield::init()
     //添加战场图层
     auto map = controler->get_MyMap();
     auto preparelayer = prepare::getInstance();
+<<<<<<< HEAD
     auto fightlayer = fight::getInstance();
     auto hextechlayer = Hextech::create();
 
@@ -81,6 +87,31 @@ bool Battlefield::init()
              *LHcontroler::getInstance()->Godie(this);
              */
     }
+=======
+    auto fightlayer = fight::create();
+	if (map == nullptr)
+	{
+		GCreator::problemLoading("'battlefield.png'");
+	}
+	else if (herolayer == nullptr)
+	{
+		GCreator::problemLoading("herolayer is nullptr");
+	}
+	else
+	{
+		// position the sprite on the center of the screen
+		//sprite->setPosition(Vec2(visibleSize.width / 2 + origin.x, visibleSize.height / 2 + origin.y));
+
+		// add the sprite as a child to this layer
+		this->addChild(map, 0, "map");
+		this->addChild(herolayer, 2, "herolayer");
+        this->addChild(preparelayer, 2, "preparelayer");
+        this->addChild(fightlayer, 2, "fightlayer");
+	}
+
+    //备战阶段开始，启用单次调度器计时
+    scheduleOnce(CC_CALLBACK_1(Battlefield::dataExchange, this), prepareDuration, "dataExchange");
+>>>>>>> affd7e5c2e4d7c4aa9b3e774deec4501f5a7068c
 
     return true;
 }
@@ -178,6 +209,7 @@ Preparation* Preparation::create()
 
 void Preparation::placeHero(Hero* hero)
 {
+<<<<<<< HEAD
     int i;
     for (i = 0; i < 9; i++)
     {
@@ -191,6 +223,14 @@ void Preparation::placeHero(Hero* hero)
     prepareLayer->addChild(hero, 2);
     LHcontroler::getInstance()->getMyLittleHero()->CheckUpgrade(hero);//判断是否需要升星
 }
+=======
+    hero->setPosition(startingPoint.x + (occupied++) * seatWidth, startingPoint.y);
+    //建议修改的将英雄加入到准备图层，同时增加了将英雄放到备战席数组
+    LHcontroler::getInstance()->getMyLittleHero()->addhero(hero, occupied);
+    auto heroesLayer = LHcontroler::getInstance()->getMyLittleHero()->get_heroslayer();
+    hero->SetSpace(heroesLayer);
+    heroesLayer->addChild(hero, 2);
+>>>>>>> affd7e5c2e4d7c4aa9b3e774deec4501f5a7068c
 
 bool Preparation::is_full()
 {
@@ -338,7 +378,24 @@ Hero* Store::getHeroByCost(const int cost, const int i)
     return copy;
 }
 
+<<<<<<< HEAD
 void Store::Refresh()
+=======
+void Store::purchaseCallback(Ref* pSender)
+{
+    MenuItem* chosenItem = dynamic_cast<MenuItem*>(pSender);    //被选中的商品按钮
+    const float pos = chosenItem->convertToWorldSpace({ 0.0f, 1.0f }).x;    //获取被点中item在世界坐标系的横坐标
+    const int good = chosenItem->getName().back() - '0' - 1;
+
+    //good就是玩家购买的棋子在商店中的顺序（从左到右是0~4），后面的操作请棋子设计者实现
+    static_cast<Battlefield*>(Director::getInstance()->getRunningScene())->getCurrentPreparation()->placeHero(displayment.at(good));    //将棋子渲染到备战席上
+   
+    chosenItem->removeFromParent();     //该项商品按钮从商店移除（现在只是简单的remove，若需要更复杂的效果请自行实现）
+    log("you've purchased hero %s", displayment.at(good)->getName().data());
+}
+
+void Store::refreshCallback(Ref* pSender)
+>>>>>>> affd7e5c2e4d7c4aa9b3e774deec4501f5a7068c
 {
     //重新随机生成商品
     displayment = randomDisplay();

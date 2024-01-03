@@ -87,7 +87,11 @@ void Littlehero::init_layer()
     //·ÅÖÃ¹ºÂò¾­ÑéµÄ°´Å¥
     set_ExpButton();
     //·ÅÖÃ½ð±Ò±êÇ©,ºÍÍ¼±ê
+<<<<<<< HEAD
     set_Gold();
+=======
+    set_Gold(); 
+>>>>>>> affd7e5c2e4d7c4aa9b3e774deec4501f5a7068c
     //·ÅÖÃÏûÏ¢ÌáÊ¾Àà
     set_Messagelabel();
     //·ÅÖÃÈË¿ÚµÄÍ¼±ê
@@ -396,7 +400,11 @@ bool Littlehero::onLeftMouseDown(EventMouse* event)
         //Á½¸öforÑ­»·±éÀú±¸Õ½Ï¯ºÍ³¡ÉÏµÄÆå×Ó
         if (location.x >= PreparationsSizeX[0] && location.x <= PreparationsSizeX[9] && location.y >= PreparationsSizeY[0] && location.y <= PreparationsSizeY[1])//µã»÷ÔÚÕ½³¡ÄÚ
         {
+<<<<<<< HEAD
             if (Preparation[getPreparationarrayposition(location)] != nullptr)
+=======
+         if (Preparation[getPreparationarrayposition(location)] != nullptr)
+>>>>>>> affd7e5c2e4d7c4aa9b3e774deec4501f5a7068c
             {
                 Draging_hero = Preparation[getPreparationarrayposition(location)];
                 isDragging = true;
@@ -427,8 +435,13 @@ void Littlehero::onLeftMouseMove(EventMouse* event)
         //¿ªÊ¼ÒÆ¶¯¾«Áé
         Vec2 location = event->getLocationInView();
         //ÏÔÊ¾³öÊÛÇøÓò
+<<<<<<< HEAD
         if (heroslayer->getChildByName("sellarea") == nullptr)
             heroslayer->addChild(sellarea, -1, "sellarea");
+=======
+        if(heroslayer->getChildByName("sellarea")==nullptr)
+             heroslayer->addChild(sellarea, -1, "sellarea");
+>>>>>>> affd7e5c2e4d7c4aa9b3e774deec4501f5a7068c
         //ÏÔÊ¾ÈË¿ÚºÍ»ØÏÔ
         My_Map->setmaplines(100);
         if (HextechStatus == POPULATION)
@@ -457,7 +470,11 @@ void Littlehero::onLeftMouseUp(EventMouse* event)
         Vec2 location = event->getLocationInView();
         //ÅÐ¶ÏÊó±êÌ§ÆðÎ»ÖÃÄ¿±ê
         if (location.x >= PreparationsSizeX[0] && location.x <= PreparationsSizeX[9] && location.y >= PreparationsSizeY[0]
+<<<<<<< HEAD
             && location.y <= PreparationsSizeY[1] && Lastposition.y <= 315)//µã»÷±¸Õ½Ï¯ÄÚÍÏ¶¯µÄÆðÊ¼µãÔÚ±¸Õ½Ï¯
+=======
+            && location.y <= PreparationsSizeY[1]&&Lastposition.y<=315)//µã»÷±¸Õ½Ï¯ÄÚÍÏ¶¯µÄÆðÊ¼µãÔÚ±¸Õ½Ï¯
+>>>>>>> affd7e5c2e4d7c4aa9b3e774deec4501f5a7068c
         {
             int x = getPreparationarrayposition(location);
             int pre = getPreparationarrayposition(Lastposition);//»ñÈ¡ÒÆ¶¯Ö®Ç°µÄÊý×éÎ»ÖÃ
@@ -466,7 +483,11 @@ void Littlehero::onLeftMouseUp(EventMouse* event)
                 Draging_hero->setPosition(getmidposition(x));
                 Preparation[x]->setPosition(Lastposition);
                 Preparation[pre] = Preparation[x];
+<<<<<<< HEAD
                 Preparation[x] = Draging_hero;
+=======
+                Preparation[x] = Draging_hero;  
+>>>>>>> affd7e5c2e4d7c4aa9b3e774deec4501f5a7068c
             }
             else
             {
@@ -476,20 +497,31 @@ void Littlehero::onLeftMouseUp(EventMouse* event)
             }
         }
         else if (location.x >= MapSizeX[0] && location.x <= MapSizeX[4] && location.y >= MapSizeY[0]
+<<<<<<< HEAD
             && location.y <= MapSizeY[4] && Lastposition.y >= 315)//µã»÷ÔÚÕ½³¡ÉÏÍÏ¶¯µÄÆðÊ¼µãÔÚÕ½³¡ÉÏ
+=======
+                 && location.y <= MapSizeY[4]&&Lastposition.y>=315)//µã»÷ÔÚÕ½³¡ÉÏÍÏ¶¯µÄÆðÊ¼µãÔÚÕ½³¡ÉÏ
+>>>>>>> affd7e5c2e4d7c4aa9b3e774deec4501f5a7068c
         {
             Vec2 vec2 = getFightarrayposition(location);
             int x = vec2.x;
             int y = vec2.y;
+<<<<<<< HEAD
             HeroPosition h1;
             h1.x = x;
             h1.y = y;
             Draging_hero->setHeroPosition(h1);
+=======
+>>>>>>> affd7e5c2e4d7c4aa9b3e774deec4501f5a7068c
             int prex = getFightarrayposition(Lastposition).x;
             int prey = getFightarrayposition(Lastposition).y;//»ñÈ¡ÒÆ¶¯Ö®Ç°µÄÊý×éÎ»ÖÃ
             if (Fightfield[x][y] != nullptr)//½»»»
             {
+<<<<<<< HEAD
                 Draging_hero->setPosition(getmidposition(x, y));
+=======
+                Draging_hero->setPosition(getmidposition(x,y));
+>>>>>>> affd7e5c2e4d7c4aa9b3e774deec4501f5a7068c
                 Fightfield[x][y]->setPosition(Lastposition);
                 Fightfield[prex][prey] = Fightfield[x][y];
                 Fightfield[x][y] = Draging_hero;
@@ -497,12 +529,21 @@ void Littlehero::onLeftMouseUp(EventMouse* event)
             else
             {
                 Draging_hero->setPosition(getmidposition(x, y));
+<<<<<<< HEAD
                 Fightfield[prex][prey] = nullptr;
                 Fightfield[x][y] = Draging_hero;
             }
         }
         else if (location.x >= PreparationsSizeX[0] && location.x <= PreparationsSizeX[9] && location.y >= PreparationsSizeY[0]
             && location.y <= PreparationsSizeY[1] && Lastposition.y >= 315)//µã»÷±¸Õ½Ï¯ÄÚ£¬ÍÏ¶¯µÄÆðÊ¼µãÔÚÕ½³¡
+=======
+                Fightfield[prex][prey] =nullptr;
+                Fightfield[x][y] = Draging_hero;
+            }
+        }
+        else if (location.x >= PreparationsSizeX[0] && location.x <= PreparationsSizeX[9] && location.y >= PreparationsSizeY[0] 
+                 && location.y <= PreparationsSizeY[1] && Lastposition.y >= 315)//µã»÷±¸Õ½Ï¯ÄÚ£¬ÍÏ¶¯µÄÆðÊ¼µãÔÚÕ½³¡
+>>>>>>> affd7e5c2e4d7c4aa9b3e774deec4501f5a7068c
         {
             int x = getPreparationarrayposition(location);
             int prex = getFightarrayposition(Lastposition).x;
@@ -513,13 +554,17 @@ void Littlehero::onLeftMouseUp(EventMouse* event)
                 Preparation[x]->setPosition(Lastposition);
                 Fightfield[prex][prey] = Preparation[x];
                 Preparation[x] = Draging_hero;
+<<<<<<< HEAD
                 
+=======
+>>>>>>> affd7e5c2e4d7c4aa9b3e774deec4501f5a7068c
             }
             else
             {
                 Draging_hero->setPosition(getmidposition(x));
                 Preparation[x] = Draging_hero;
                 Fightfield[prex][prey] = nullptr;
+<<<<<<< HEAD
                 chequers--;
                 auto p1 = fightheros.find(Draging_hero);//»ñÈ¡Ö¸ÏòËüµÄÖ¸Õë
                 fightheros.erase(p1);//½«¸ÃÖ¸ÕëÉ¾È¥
@@ -527,6 +572,12 @@ void Littlehero::onLeftMouseUp(EventMouse* event)
         }
         else if (location.x >= MapSizeX[0] && location.x <= MapSizeX[4] && location.y >= MapSizeY[0]
             && location.y <= MapSizeY[4] && Lastposition.y <= 315)//µã»÷ÔÚÕ½³¡ÉÏ£¬ÍÏ¶¯µÄÆðÊ¼µãÔÚ±¸Õ½Ï¯ÉÏ
+=======
+            }
+        }
+        else if (location.x >= MapSizeX[0] && location.x <= MapSizeX[4] && location.y >= MapSizeY[0]
+            && location.y <= MapSizeY[4]&& Lastposition.y <= 315)//µã»÷ÔÚÕ½³¡ÉÏ£¬ÍÏ¶¯µÄÆðÊ¼µãÔÚ±¸Õ½Ï¯ÉÏ
+>>>>>>> affd7e5c2e4d7c4aa9b3e774deec4501f5a7068c
         {
             Vec2 vec2 = getFightarrayposition(location);
             int x = vec2.x;
@@ -541,6 +592,7 @@ void Littlehero::onLeftMouseUp(EventMouse* event)
             }
             else
             {
+<<<<<<< HEAD
                 if (HextechStatus == POPULATION)
                     MaxPeople = Level + 1;
                 else
@@ -579,11 +631,39 @@ void Littlehero::onLeftMouseUp(EventMouse* event)
                 Fightfield[prex][prey] = nullptr;
             }
             
+=======
+                Draging_hero->setPosition(getmidposition(x, y));
+                Preparation[pre] = nullptr;
+                Fightfield[x][y] = Draging_hero;
+            }
+        }
+        else if ((location.x >= 84 && location.x <= 188 && location.y >= (948-368) && location.y <= (948 - 290) || (location.x >= 1370
+            && location.x <= 1477 && location.y >= (948 - 375) && location.y <= (948 - 300))))//´Ë´¦Ìí¼Ó³öÊÛÆå×Ó
+        {
+            if (Lastposition.y <= 315)//Èç¹ûÊÇ±¸Õ½Ï¯
+             {
+                int pre = getPreparationarrayposition(Lastposition);
+                Draging_hero->removeFromParent();
+                Preparation[pre] = nullptr;
+             }
+             else //Èç¹ûÊÇÕ½³¡
+             {
+                int prex = getFightarrayposition(Lastposition).x;
+                int prey = getFightarrayposition(Lastposition).y;//»ñÈ¡ÒÆ¶¯Ö®Ç°µÄÊý×éÎ»ÖÃ
+                Draging_hero->removeFromParent();
+                Fightfield[prex][prey] = nullptr;
+             }
+             update_gold(Draging_hero->getCost());//¸üÐÂ½ð±Ò
+>>>>>>> affd7e5c2e4d7c4aa9b3e774deec4501f5a7068c
         }
         else
         {
             Messagelabel->setString("You can only place the chess on the left half of the square or on the Preparation Seat.");
+<<<<<<< HEAD
             Draging_hero->setPosition(Lastposition);
+=======
+            Draging_hero->setPosition( Lastposition);
+>>>>>>> affd7e5c2e4d7c4aa9b3e774deec4501f5a7068c
         }
         isDragging = false;
         Lastposition = Vec2(0, 0);
@@ -639,18 +719,30 @@ Vec2 Littlehero::getmidposition(Vec2 location)
         }
         return  getmidposition(i - 1, j - 1);
     }
+<<<<<<< HEAD
     else if (location.x >= PreparationsSizeX[0] && location.x <= PreparationsSizeX[9] && location.y >= PreparationsSizeY[0] && location.y <= PreparationsSizeY[1])
+=======
+    else if(location.x >= PreparationsSizeX[0] && location.x <= PreparationsSizeX[9] && location.y >= PreparationsSizeY[0] && location.y <= PreparationsSizeY[1])
+>>>>>>> affd7e5c2e4d7c4aa9b3e774deec4501f5a7068c
     {
         int i = 0;
         while (location.x > PreparationsSizeX[i])
         {
             i++;
         }
+<<<<<<< HEAD
         return  getmidposition(i - 1);
     }
     else
     {
         return(Vec2(0, 0));
+=======
+        return  getmidposition(i-1);
+    }
+    else
+    {
+       
+>>>>>>> affd7e5c2e4d7c4aa9b3e774deec4501f5a7068c
     }
 }
 Vec2 Littlehero::getmidposition(int x)
@@ -672,7 +764,11 @@ Vec2 Littlehero::getFightarrayposition(Vec2 location)//ÊäÈë×ø±ê·µ»Ø·µ»Ø¾àÀëÕâ¸ö¶
     {
         j++;
     }
+<<<<<<< HEAD
     return  Vec2(i - 1, j - 1);
+=======
+    return  Vec2(i-1,j-1);
+>>>>>>> affd7e5c2e4d7c4aa9b3e774deec4501f5a7068c
 }
 int Littlehero::getPreparationarrayposition(Vec2 location)//ÊäÈëÊäÈë×ø±ê·µ»Ø·µ»Ø¾àÀëÕâ¸ö¶þÎ¬ÏòÁ¿×î½üµÄ±¸Õ½Ï¯Êý×é×ø±ê
 {
@@ -683,6 +779,7 @@ int Littlehero::getPreparationarrayposition(Vec2 location)//ÊäÈëÊäÈë×ø±ê·µ»Ø·µ»Ø
     }
     return  i - 1;
 }
+<<<<<<< HEAD
 
 /*ÉýÐÇº¯Êý*/
 bool Littlehero::FindUpgradeHero(Hero*& hero1, Hero*& hero2, Hero*& hero3)//ÕÒµ½¿ÉÒÔÉýÈýÐÇµÄÓ¢ÐÛÃÇ
@@ -799,3 +896,5 @@ void LHcontroler::Govictory(Node* layer)
     layer->addChild(Defeat, 0);
     int audioId = AudioEngine::play2d("victory.mp3", false);
 }
+=======
+>>>>>>> affd7e5c2e4d7c4aa9b3e774deec4501f5a7068c
