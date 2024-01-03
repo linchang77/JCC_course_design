@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+    <dict>
+        <key>frames</key>
+        <dict>
+            <key>Golem_02_Weapon (1).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{5,12}</string>
+                <key>spriteSize</key>
+                <string>{257,171}</string>
+                <key>spriteSourceSize</key>
+                <string>{295,217}</string>
+                <key>textureRect</key>
+                <string>{{264,197},{257,171}}</string>
+                <key>textureRotated</key>
+                <false/>
+                <key>triangles</key>
+                <string>8 9 10 0 1 8 3 6 7 4 5 6 3 4 6 3 7 8 2 3 8 1 2 8 0 8 10</string>
+                <key>vertices</key>
+                <string>255 23 281 100 219 130 170 123 36 182 24 152 103 111 151 94 191 46 191 30 221 11</string>
+                <key>verticesUV</key>
+                <string>495 209 521 286 459 316 410 309 276 368 264 338 343 297 391 280 431 232 431 216 461 197</string>
+            </dict>
+            <key>Golem_02_Weapon (10).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{0.5,6}</string>
+                <key>spriteSize</key>
+                <string>{263,105}</string>
+                <key>spriteSourceSize</key>
+                <string>{288,125}</string>
+                <key>textureRect</key>
+                <string>{{686,377},{263,105}}</string>
+                <key>textureRotated</key>
+                <false/>
+                <key>triangles</key>
+                <string>2 0 1 4 6 7 4 5 6 2 7 8 3 4 7 2 3 7 2 8 0 0 8 9</string>
+                <key>vertices</key>
+                <string>276 22 271 104 202 109 167 87 108 80 13 89 14 56 171 43 217 4 251 4</string>
+                <key>verticesUV</key>
+                <string>949 395 944 477 875 482 840 460 781 453 686 462 687 429 844 416 890 377 924 377</string>
+            </dict>
+            <key>Golem_02_Weapon (2).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{11.5,5.5}</string>
+                <key>spriteSize</key>
+                <string>{184,256}</string>
+                <key>spriteSourceSize</key>
+                <string>{217,295}</string>
+                <key>textureRect</key>
+                <string>{{776,1},{184,256}}</string>
+                <key>textureRotated</key>
+                <false/>
+                <key>triangles</key>
+                <string>0 10 11 3 7 8 5 6 7 4 5 7 2 3 8 3 4 7 2 8 9 1 2 9 0 1 9 0 9 10</string>
+                <key>vertices</key>
+                <string>149 17 212 60 180 122 129 157 101 193 64 267 28 270 76 173 106 125 112 83 97 58 117 14</string>
+                <key>verticesUV</key>
+                <string>897 4 960 47 928 109 877 144 849 180 812 254 776 257 824 160 854 112 860 70 845 45 865 1</string>
+            </dict>
+            <key>Golem_02_Weapon (3).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{-15,-1}</string>
+                <key>spriteSize</key>
+                <string>{116,272}</string>
+                <key>spriteSourceSize</key>
+                <string>{148,294}</string>
+                <key>textureRect</key>
+                <string>{{686,259},{116,272}}</string>
+                <key>textureRotated</key>
+                <true/>
+                <key>triangles</key>
+                <string>8 9 10 7 8 10 4 5 6 3 4 6 3 6 7 2 3 7 2 7 10 0 1 2 0 2 10</string>
+                <key>vertices</key>
+                <string>104 18 117 88 95 104 97 196 111 269 96 284 79 275 48 110 10 82 1 26 59 12</string>
+                <key>verticesUV</key>
+                <string>952 362 882 375 866 353 774 355 701 369 686 354 695 337 860 306 888 268 944 259 958 317</string>
+            </dict>
+            <key>Golem_02_Weapon (4).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{-8.5,10}</string>
+                <key>spriteSize</key>
+                <string>{240,221}</string>
+                <key>spriteSourceSize</key>
+                <string>{271,267}</string>
+                <key>textureRect</key>
+                <string>{{1,217},{240,221}}</string>
+                <key>textureRotated</key>
+                <false/>
+                <key>triangles</key>
+                <string>0 4 7 5 6 7 4 5 7 1 3 4 1 2 3 0 1 4 0 7 8</string>
+                <key>vertices</key>
+                <string>132 59 144 109 247 223 213 234 96 119 45 117 7 79 48 28 86 13</string>
+                <key>verticesUV</key>
+                <string>126 263 138 313 241 427 207 438 90 323 39 321 1 283 42 232 80 217</string>
+            </dict>
+            <key>Golem_02_Weapon (5).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{-6.5,16.5}</string>
+                <key>spriteSize</key>
+                <string>{261,214}</string>
+                <key>spriteSourceSize</key>
+                <string>{284,249}</string>
+                <key>textureRect</key>
+                <string>{{1,1},{261,214}}</string>
+                <key>textureRotated</key>
+                <false/>
+                <key>triangles</key>
+                <string>6 7 8 0 5 6 5 1 2 2 3 4 5 2 4 0 1 5 0 6 8</string>
+                <key>vertices</key>
+                <string>130 50 155 106 193 144 266 199 232 215 103 117 50 120 5 87 64 1</string>
+                <key>verticesUV</key>
+                <string>126 50 151 106 189 144 262 199 228 215 99 117 46 120 1 87 60 1</string>
+            </dict>
+            <key>Golem_02_Weapon (6).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{-4.5,11}</string>
+                <key>spriteSize</key>
+                <string>{247,197}</string>
+                <key>spriteSourceSize</key>
+                <string>{290,237}</string>
+                <key>textureRect</key>
+                <string>{{527,1},{247,197}}</string>
+                <key>textureRotated</key>
+                <false/>
+                <key>triangles</key>
+                <string>5 0 4 7 5 6 7 8 5 5 8 0 1 3 4 1 2 3 0 1 4 0 8 9</string>
+                <key>vertices</key>
+                <string>128 44 146 91 264 177 245 206 117 119 52 120 25 102 17 70 42 32 71 9</string>
+                <key>verticesUV</key>
+                <string>638 36 656 83 774 169 755 198 627 111 562 112 535 94 527 62 552 24 581 1</string>
+            </dict>
+            <key>Golem_02_Weapon (7).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{-9,16.5}</string>
+                <key>spriteSize</key>
+                <string>{261,194}</string>
+                <key>spriteSourceSize</key>
+                <string>{293,227}</string>
+                <key>textureRect</key>
+                <string>{{264,1},{261,194}}</string>
+                <key>textureRotated</key>
+                <false/>
+                <key>triangles</key>
+                <string>4 6 7 4 5 6 1 3 4 1 2 3 0 1 4 0 4 7</string>
+                <key>vertices</key>
+                <string>125 41 149 88 268 165 252 194 102 110 47 123 7 83 54 0</string>
+                <key>verticesUV</key>
+                <string>382 42 406 89 525 166 509 195 359 111 304 124 264 84 311 1</string>
+            </dict>
+            <key>Golem_02_Weapon (8).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{-1.5,-3.5}</string>
+                <key>spriteSize</key>
+                <string>{103,273}</string>
+                <key>spriteSourceSize</key>
+                <string>{110,284}</string>
+                <key>textureRect</key>
+                <string>{{243,370},{103,273}}</string>
+                <key>textureRotated</key>
+                <true/>
+                <key>triangles</key>
+                <string>8 9 10 7 8 10 4 5 6 3 4 6 3 6 7 2 3 7 1 2 7 0 1 7 0 7 10</string>
+                <key>vertices</key>
+                <string>102 17 105 87 79 114 72 202 74 266 59 282 43 266 35 102 2 68 2 29 22 9</string>
+                <key>verticesUV</key>
+                <string>508 470 438 473 411 447 323 440 259 442 243 427 259 411 423 403 457 370 496 370 516 390</string>
+            </dict>
+            <key>Golem_02_Weapon (9).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{0,13}</string>
+                <key>spriteSize</key>
+                <string>{271,161}</string>
+                <key>spriteSourceSize</key>
+                <string>{297,209}</string>
+                <key>textureRect</key>
+                <string>{{523,200},{271,161}}</string>
+                <key>textureRotated</key>
+                <true/>
+                <key>triangles</key>
+                <string>2 0 1 4 6 7 4 5 6 7 2 3 3 4 7 7 8 2 2 8 0 0 8 9</string>
+                <key>vertices</key>
+                <string>260 22 284 100 219 129 160 124 118 135 39 172 13 146 155 82 196 25 227 11</string>
+                <key>verticesUV</key>
+                <string>673 447 595 471 566 406 571 347 560 305 523 226 549 200 613 342 670 383 684 414</string>
+            </dict>
+        </dict>
+        <key>metadata</key>
+        <dict>
+            <key>format</key>
+            <integer>3</integer>
+            <key>pixelFormat</key>
+            <string>RGBA8888</string>
+            <key>premultiplyAlpha</key>
+            <false/>
+            <key>realTextureFileName</key>
+            <string>Golem_02_Weapon.png</string>
+            <key>size</key>
+            <string>{961,483}</string>
+            <key>smartupdate</key>
+            <string>$TexturePacker:SmartUpdate:356ab4d6fa1d757a327167965ba102b4:5d5fe5cf9a11f4f7717828c6602716f9:59a300ee553967ce9fe7d306f4cd7cc0$</string>
+            <key>textureFileName</key>
+            <string>Golem_02_Weapon.png</string>
+        </dict>
+    </dict>
+</plist>

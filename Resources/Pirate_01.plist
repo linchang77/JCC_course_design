@@ -1,0 +1,971 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+    <dict>
+        <key>frames</key>
+        <dict>
+            <key>Pirate_01_Attacking (1).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{17,11.5}</string>
+                <key>spriteSize</key>
+                <string>{274,309}</string>
+                <key>spriteSourceSize</key>
+                <string>{480,360}</string>
+                <key>textureRect</key>
+                <string>{{1,1752},{274,309}}</string>
+                <key>textureRotated</key>
+                <true/>
+                <key>triangles</key>
+                <string>11 13 14 11 12 13 9 10 11 1 11 14 8 9 11 4 5 8 7 8 5 7 5 6 3 4 8 1 3 8 1 2 3 1 8 11 0 1 14</string>
+                <key>vertices</key>
+                <string>311 24 338 76 394 103 394 153 330 299 276 323 210 323 179 285 177 247 125 157 120 119 154 95 165 49 197 24 256 14</string>
+                <key>verticesUV</key>
+                <string>300 1943 248 1970 221 2026 171 2026 25 1962 1 1908 1 1842 39 1811 77 1809 167 1757 205 1752 229 1786 275 1797 300 1829 310 1888</string>
+            </dict>
+            <key>Pirate_01_Attacking (10).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{73,8}</string>
+                <key>spriteSize</key>
+                <string>{324,306}</string>
+                <key>spriteSourceSize</key>
+                <string>{480,360}</string>
+                <key>textureRect</key>
+                <string>{{1,1},{324,306}}</string>
+                <key>textureRotated</key>
+                <false/>
+                <key>triangles</key>
+                <string>12 14 15 12 13 14 10 11 12 0 2 12 8 9 10 2 3 10 7 8 10 6 3 4 6 4 5 3 6 7 3 7 10 2 10 12 0 1 2 0 12 15</string>
+                <key>vertices</key>
+                <string>358 40 413 133 353 213 352 254 463 229 475 241 457 279 273 325 210 322 163 257 179 235 151 97 196 81 216 30 260 19 312 19</string>
+                <key>verticesUV</key>
+                <string>208 22 263 115 203 195 202 236 313 211 325 223 307 261 123 307 60 304 13 239 29 217 1 79 46 63 66 12 110 1 162 1</string>
+            </dict>
+            <key>Pirate_01_Attacking (11).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{59.5,6}</string>
+                <key>spriteSize</key>
+                <string>{323,314}</string>
+                <key>spriteSourceSize</key>
+                <string>{480,360}</string>
+                <key>textureRect</key>
+                <string>{{327,1},{323,314}}</string>
+                <key>textureRotated</key>
+                <false/>
+                <key>triangles</key>
+                <string>14 15 16 12 13 14 3 14 16 12 14 3 3 4 8 9 10 11 8 9 11 7 4 5 7 5 6 4 7 8 3 8 11 12 3 11 0 1 2 0 2 3 0 3 16</string>
+                <key>vertices</key>
+                <string>332 22 395 109 391 142 351 196 360 231 446 179 461 194 448 236 303 318 217 331 168 270 183 224 165 195 138 104 182 86 202 26 269 17</string>
+                <key>verticesUV</key>
+                <string>521 6 584 93 580 126 540 180 549 215 635 163 650 178 637 220 492 302 406 315 357 254 372 208 354 179 327 88 371 70 391 10 458 1</string>
+            </dict>
+            <key>Pirate_01_Attacking (12).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{43,13.5}</string>
+                <key>spriteSize</key>
+                <string>{310,313}</string>
+                <key>spriteSourceSize</key>
+                <string>{480,360}</string>
+                <key>textureRect</key>
+                <string>{{1,886},{310,313}}</string>
+                <key>textureRotated</key>
+                <true/>
+                <key>triangles</key>
+                <string>15 16 17 13 14 15 1 4 15 13 15 4 5 9 12 10 11 12 9 10 12 8 5 6 8 6 7 5 8 9 4 5 12 13 4 12 1 3 4 1 2 3 1 15 17 0 1 17</string>
+                <key>vertices</key>
+                <string>329 32 357 87 390 103 370 152 343 190 348 205 413 137 438 143 427 193 306 323 210 323 173 279 176 234 147 176 128 113 172 87 185 31 279 10</string>
+                <key>verticesUV</key>
+                <string>292 1087 237 1115 221 1148 172 1128 134 1101 119 1106 187 1171 181 1196 131 1185 1 1064 1 968 45 931 90 934 148 905 211 886 237 930 293 943 314 1037</string>
+            </dict>
+            <key>Pirate_01_Attacking (2).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{-2.5,13}</string>
+                <key>spriteSize</key>
+                <string>{253,312}</string>
+                <key>spriteSourceSize</key>
+                <string>{480,360}</string>
+                <key>textureRect</key>
+                <string>{{638,897},{253,312}}</string>
+                <key>textureRotated</key>
+                <true/>
+                <key>triangles</key>
+                <string>11 12 13 9 10 11 1 11 13 8 9 11 3 4 5 6 7 8 5 6 8 3 5 8 1 2 3 1 3 8 1 8 11 0 1 13</string>
+                <key>vertices</key>
+                <string>297 18 324 57 364 87 347 253 333 295 276 323 196 323 173 277 179 248 136 190 111 129 149 95 155 39 232 11</string>
+                <key>verticesUV</key>
+                <string>943 1083 904 1110 874 1150 708 1133 666 1119 638 1062 638 982 684 959 713 965 771 922 832 897 866 935 922 941 950 1018</string>
+            </dict>
+            <key>Pirate_01_Attacking (3).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{-8.5,8.5}</string>
+                <key>spriteSize</key>
+                <string>{259,317}</string>
+                <key>spriteSourceSize</key>
+                <string>{480,360}</string>
+                <key>textureRect</key>
+                <string>{{1294,581},{259,317}}</string>
+                <key>textureRotated</key>
+                <true/>
+                <key>triangles</key>
+                <string>2 11 12 9 10 11 2 9 11 7 8 9 2 3 4 5 6 7 4 5 7 2 4 7 2 7 9 1 2 12 0 1 12</string>
+                <key>vertices</key>
+                <string>361 86 346 135 328 154 358 256 284 321 220 330 171 286 171 252 102 133 143 100 145 42 216 13 279 13</string>
+                <key>verticesUV</key>
+                <string>1538 840 1489 825 1470 807 1368 837 1303 763 1294 699 1338 650 1372 650 1491 581 1524 622 1582 624 1611 695 1611 758</string>
+            </dict>
+            <key>Pirate_01_Attacking (4).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{-18.5,11}</string>
+                <key>spriteSize</key>
+                <string>{257,316}</string>
+                <key>spriteSourceSize</key>
+                <string>{480,360}</string>
+                <key>textureRect</key>
+                <string>{{322,579},{257,316}}</string>
+                <key>textureRotated</key>
+                <true/>
+                <key>triangles</key>
+                <string>2 13 14 11 12 13 2 11 13 9 10 11 7 5 6 7 8 9 7 9 5 3 4 5 2 3 5 2 5 9 2 9 11 1 2 14 0 1 14</string>
+                <key>vertices</key>
+                <string>345 73 345 113 327 158 350 227 335 265 297 281 290 327 211 322 167 283 166 243 93 146 135 103 136 40 211 12 270 11</string>
+                <key>verticesUV</key>
+                <string>576 831 536 831 491 813 422 836 384 821 368 783 322 776 327 697 366 653 406 652 503 579 546 621 609 622 637 697 638 756</string>
+            </dict>
+            <key>Pirate_01_Attacking (5).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{-18,11}</string>
+                <key>spriteSize</key>
+                <string>{254,316}</string>
+                <key>spriteSourceSize</key>
+                <string>{480,360}</string>
+                <key>textureRect</key>
+                <string>{{965,626},{254,316}}</string>
+                <key>textureRotated</key>
+                <true/>
+                <key>triangles</key>
+                <string>2 14 15 11 13 14 11 12 13 9 2 5 9 10 11 7 5 6 7 8 9 7 9 5 9 11 2 3 4 5 2 3 5 2 11 14 0 1 2 0 2 15</string>
+                <key>vertices</key>
+                <string>346 74 340 123 320 147 349 223 336 263 292 279 292 327 211 322 163 282 170 251 95 143 133 105 132 60 150 32 213 11 266 11</string>
+                <key>verticesUV</key>
+                <string>1218 877 1169 871 1145 851 1069 880 1029 867 1013 823 965 823 970 742 1010 694 1041 701 1149 626 1187 664 1232 663 1260 681 1281 744 1281 797</string>
+            </dict>
+            <key>Pirate_01_Attacking (6).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{-21,13}</string>
+                <key>spriteSize</key>
+                <string>{260,320}</string>
+                <key>spriteSourceSize</key>
+                <string>{480,360}</string>
+                <key>textureRect</key>
+                <string>{{325,317},{260,320}}</string>
+                <key>textureRotated</key>
+                <true/>
+                <key>triangles</key>
+                <string>0 14 15 12 13 14 10 11 12 10 3 6 8 6 7 8 9 10 8 10 6 10 12 3 4 5 6 3 4 6 0 3 12 0 1 2 0 2 3 0 12 14</string>
+                <key>vertices</key>
+                <string>307 56 336 64 345 92 325 158 349 224 334 261 292 281 292 327 212 322 167 284 167 248 89 137 129 115 129 50 192 10 264 7</string>
+                <key>verticesUV</key>
+                <string>596 535 588 564 560 573 494 553 428 577 391 562 371 520 325 520 330 440 368 395 404 395 515 317 537 357 602 357 642 420 645 492</string>
+            </dict>
+            <key>Pirate_01_Attacking (7).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{-21,14}</string>
+                <key>spriteSize</key>
+                <string>{258,322}</string>
+                <key>spriteSourceSize</key>
+                <string>{480,360}</string>
+                <key>textureRect</key>
+                <string>{{1,309},{258,322}}</string>
+                <key>textureRotated</key>
+                <true/>
+                <key>triangles</key>
+                <string>1 16 17 14 15 16 12 13 14 1 4 14 11 12 14 9 7 8 9 10 11 9 11 7 4 7 11 5 6 7 4 5 7 4 11 14 1 3 4 1 2 3 1 14 16 0 1 17</string>
+                <key>vertices</key>
+                <string>263 12 304 53 337 65 337 108 322 154 348 220 335 259 292 277 292 327 211 322 164 281 167 240 125 198 90 140 127 114 127 47 178 20 229 5</string>
+                <key>verticesUV</key>
+                <string>316 482 275 523 263 556 220 556 174 541 108 567 69 554 51 511 1 511 6 430 47 383 88 386 130 344 188 309 214 346 281 346 308 397 323 448</string>
+            </dict>
+            <key>Pirate_01_Attacking (8).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{8.5,12.5}</string>
+                <key>spriteSize</key>
+                <string>{265,317}</string>
+                <key>spriteSourceSize</key>
+                <string>{480,360}</string>
+                <key>textureRect</key>
+                <string>{{1294,314},{265,317}}</string>
+                <key>textureRotated</key>
+                <true/>
+                <key>triangles</key>
+                <string>10 11 12 10 0 1 8 9 10 6 7 8 3 4 8 5 6 8 4 5 8 2 3 8 2 8 10 10 1 2 0 10 12</string>
+                <key>vertices</key>
+                <string>302 17 369 76 381 111 348 266 295 319 250 326 208 321 159 268 174 240 116 124 161 80 164 29 254 9</string>
+                <key>verticesUV</key>
+                <string>1603 500 1544 567 1509 579 1354 546 1301 493 1294 448 1299 406 1352 357 1380 372 1496 314 1540 359 1591 362 1611 452</string>
+            </dict>
+            <key>Pirate_01_Attacking (9).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{71.5,7}</string>
+                <key>spriteSize</key>
+                <string>{321,318}</string>
+                <key>spriteSourceSize</key>
+                <string>{480,360}</string>
+                <key>textureRect</key>
+                <string>{{652,1},{321,318}}</string>
+                <key>textureRotated</key>
+                <false/>
+                <key>triangles</key>
+                <string>13 14 15 11 12 13 0 2 13 10 11 13 2 10 13 8 9 10 7 8 10 6 3 4 6 4 5 3 6 7 2 3 7 2 7 10 0 1 2 0 13 15</string>
+                <key>vertices</key>
+                <string>354 38 410 128 351 215 367 228 457 180 472 195 457 235 295 322 217 332 163 260 181 222 154 140 151 98 195 75 213 24 302 14</string>
+                <key>verticesUV</key>
+                <string>855 25 911 115 852 202 868 215 958 167 973 182 958 222 796 309 718 319 664 247 682 209 655 127 652 85 696 62 714 11 803 1</string>
+            </dict>
+            <key>Pirate_01_Dying (1).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{17,11.5}</string>
+                <key>spriteSize</key>
+                <string>{274,309}</string>
+                <key>spriteSourceSize</key>
+                <string>{480,360}</string>
+                <key>textureRect</key>
+                <string>{{312,1752},{274,309}}</string>
+                <key>textureRotated</key>
+                <true/>
+                <key>triangles</key>
+                <string>11 13 14 11 12 13 9 10 11 1 11 14 8 9 11 4 5 8 7 8 5 7 5 6 3 4 8 1 3 8 1 2 3 1 8 11 0 1 14</string>
+                <key>vertices</key>
+                <string>311 24 338 76 394 103 394 153 330 299 276 323 210 323 179 285 177 247 125 157 120 119 154 95 165 49 197 24 256 14</string>
+                <key>verticesUV</key>
+                <string>611 1943 559 1970 532 2026 482 2026 336 1962 312 1908 312 1842 350 1811 388 1809 478 1757 516 1752 540 1786 586 1797 611 1829 621 1888</string>
+            </dict>
+            <key>Pirate_01_Dying (10).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{-83,-30}</string>
+                <key>spriteSize</key>
+                <string>{290,242}</string>
+                <key>spriteSourceSize</key>
+                <string>{480,360}</string>
+                <key>textureRect</key>
+                <string>{{1,1507},{290,242}}</string>
+                <key>textureRotated</key>
+                <false/>
+                <key>triangles</key>
+                <string>0 1 10 9 7 8 9 10 7 1 7 10 5 6 7 5 1 2 5 3 4 5 2 3 1 5 7 0 10 11</string>
+                <key>vertices</key>
+                <string>205 126 211 149 276 192 302 251 296 319 134 331 40 312 44 258 13 227 12 172 64 99 178 89</string>
+                <key>verticesUV</key>
+                <string>194 1544 200 1567 265 1610 291 1669 285 1737 123 1749 29 1730 33 1676 2 1645 1 1590 53 1517 167 1507</string>
+            </dict>
+            <key>Pirate_01_Dying (11).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{-90,-25.5}</string>
+                <key>spriteSize</key>
+                <string>{300,273}</string>
+                <key>spriteSourceSize</key>
+                <string>{480,360}</string>
+                <key>textureRect</key>
+                <string>{{1617,1},{300,273}}</string>
+                <key>textureRotated</key>
+                <false/>
+                <key>triangles</key>
+                <string>8 9 10 3 0 1 8 6 7 8 10 6 6 4 5 6 10 3 6 3 4 0 3 10 3 1 2 0 10 11</string>
+                <key>vertices</key>
+                <string>209 99 300 239 300 318 189 330 149 342 53 340 49 303 6 259 0 216 25 133 138 96 172 69</string>
+                <key>verticesUV</key>
+                <string>1826 31 1917 171 1917 250 1806 262 1766 274 1670 272 1666 235 1623 191 1617 148 1642 65 1755 28 1789 1</string>
+            </dict>
+            <key>Pirate_01_Dying (12).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{-88,-31}</string>
+                <key>spriteSize</key>
+                <string>{304,284}</string>
+                <key>spriteSourceSize</key>
+                <string>{480,360}</string>
+                <key>textureRect</key>
+                <string>{{1613,540},{304,284}}</string>
+                <key>textureRotated</key>
+                <false/>
+                <key>triangles</key>
+                <string>0 16 17 11 13 14 11 12 13 4 14 15 10 11 14 7 10 14 9 10 7 9 7 8 5 7 14 5 6 7 4 5 14 4 1 2 1 4 15 4 2 3 0 1 15 0 15 16</string>
+                <key>vertices</key>
+                <string>251 104 288 226 304 260 293 331 218 331 130 353 62 353 47 305 12 288 0 273 0 197 27 143 125 102 164 134 178 162 209 170 197 83 216 69</string>
+                <key>verticesUV</key>
+                <string>1864 575 1901 697 1917 731 1906 802 1831 802 1743 824 1675 824 1660 776 1625 759 1613 744 1613 668 1640 614 1738 573 1777 605 1791 633 1822 641 1810 554 1829 540</string>
+            </dict>
+            <key>Pirate_01_Dying (13).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{-88,-31}</string>
+                <key>spriteSize</key>
+                <string>{304,284}</string>
+                <key>spriteSourceSize</key>
+                <string>{480,360}</string>
+                <key>textureRect</key>
+                <string>{{1613,540},{304,284}}</string>
+                <key>textureRotated</key>
+                <false/>
+                <key>triangles</key>
+                <string>0 16 17 11 13 14 11 12 13 4 14 15 10 11 14 7 10 14 9 10 7 9 7 8 5 7 14 5 6 7 4 5 14 4 1 2 1 4 15 4 2 3 0 1 15 0 15 16</string>
+                <key>vertices</key>
+                <string>251 104 288 226 304 260 293 331 218 331 130 353 62 353 47 305 12 288 0 273 0 197 27 143 125 102 164 134 178 162 209 170 197 83 216 69</string>
+                <key>verticesUV</key>
+                <string>1864 575 1901 697 1917 731 1906 802 1831 802 1743 824 1675 824 1660 776 1625 759 1613 744 1613 668 1640 614 1738 573 1777 605 1791 633 1822 641 1810 554 1829 540</string>
+            </dict>
+            <key>Pirate_01_Dying (14).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{-88,-31}</string>
+                <key>spriteSize</key>
+                <string>{304,284}</string>
+                <key>spriteSourceSize</key>
+                <string>{480,360}</string>
+                <key>textureRect</key>
+                <string>{{1613,540},{304,284}}</string>
+                <key>textureRotated</key>
+                <false/>
+                <key>triangles</key>
+                <string>0 16 17 11 13 14 11 12 13 4 14 15 10 11 14 7 10 14 9 10 7 9 7 8 5 7 14 5 6 7 4 5 14 4 1 2 1 4 15 4 2 3 0 1 15 0 15 16</string>
+                <key>vertices</key>
+                <string>251 104 288 226 304 260 293 331 218 331 130 353 62 353 47 305 12 288 0 273 0 197 27 143 125 102 164 134 178 162 209 170 197 83 216 69</string>
+                <key>verticesUV</key>
+                <string>1864 575 1901 697 1917 731 1906 802 1831 802 1743 824 1675 824 1660 776 1625 759 1613 744 1613 668 1640 614 1738 573 1777 605 1791 633 1822 641 1810 554 1829 540</string>
+            </dict>
+            <key>Pirate_01_Dying (15).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{-88,-31}</string>
+                <key>spriteSize</key>
+                <string>{304,284}</string>
+                <key>spriteSourceSize</key>
+                <string>{480,360}</string>
+                <key>textureRect</key>
+                <string>{{1613,540},{304,284}}</string>
+                <key>textureRotated</key>
+                <false/>
+                <key>triangles</key>
+                <string>0 16 17 11 13 14 11 12 13 4 14 15 10 11 14 7 10 14 9 10 7 9 7 8 5 7 14 5 6 7 4 5 14 4 1 2 1 4 15 4 2 3 0 1 15 0 15 16</string>
+                <key>vertices</key>
+                <string>251 104 288 226 304 260 293 331 218 331 130 353 62 353 47 305 12 288 0 273 0 197 27 143 125 102 164 134 178 162 209 170 197 83 216 69</string>
+                <key>verticesUV</key>
+                <string>1864 575 1901 697 1917 731 1906 802 1831 802 1743 824 1675 824 1660 776 1625 759 1613 744 1613 668 1640 614 1738 573 1777 605 1791 633 1822 641 1810 554 1829 540</string>
+            </dict>
+            <key>Pirate_01_Dying (2).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{20.5,9}</string>
+                <key>spriteSize</key>
+                <string>{273,308}</string>
+                <key>spriteSourceSize</key>
+                <string>{480,360}</string>
+                <key>textureRect</key>
+                <string>{{623,1752},{273,308}}</string>
+                <key>textureRotated</key>
+                <true/>
+                <key>triangles</key>
+                <string>0 12 13 10 11 12 0 10 12 8 9 10 8 10 0 7 2 3 6 7 4 6 4 5 3 4 7 0 1 2 7 0 2 8 0 7</string>
+                <key>vertices</key>
+                <string>344 76 388 105 397 145 326 308 255 325 201 319 182 283 180 248 142 172 124 112 165 88 180 32 239 17 321 17</string>
+                <key>verticesUV</key>
+                <string>872 1972 843 2016 803 2025 640 1954 623 1883 629 1829 665 1810 700 1808 776 1770 836 1752 860 1793 916 1808 931 1867 931 1949</string>
+            </dict>
+            <key>Pirate_01_Dying (3).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{24.5,13}</string>
+                <key>spriteSize</key>
+                <string>{269,310}</string>
+                <key>spriteSourceSize</key>
+                <string>{480,360}</string>
+                <key>textureRect</key>
+                <string>{{941,1195},{269,310}}</string>
+                <key>textureRotated</key>
+                <true/>
+                <key>triangles</key>
+                <string>11 13 14 11 12 13 9 10 11 0 1 11 8 9 11 3 4 8 7 8 5 7 5 6 4 5 8 1 3 8 1 2 3 1 8 11 0 11 14</string>
+                <key>vertices</key>
+                <string>335 35 366 94 385 102 399 138 329 303 264 322 206 320 187 282 178 224 158 195 130 106 175 83 189 37 221 19 296 12</string>
+                <key>verticesUV</key>
+                <string>1228 1400 1169 1431 1161 1450 1125 1464 960 1394 941 1329 943 1271 981 1252 1039 1243 1068 1223 1157 1195 1180 1240 1226 1254 1244 1286 1251 1361</string>
+            </dict>
+            <key>Pirate_01_Dying (4).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{27,13.5}</string>
+                <key>spriteSize</key>
+                <string>{252,307}</string>
+                <key>spriteSourceSize</key>
+                <string>{480,360}</string>
+                <key>textureRect</key>
+                <string>{{1561,1731},{252,307}}</string>
+                <key>textureRotated</key>
+                <true/>
+                <key>triangles</key>
+                <string>9 10 11 7 8 9 3 5 7 7 9 3 7 5 6 3 4 5 2 3 9 9 0 1 9 1 2 0 9 11</string>
+                <key>vertices</key>
+                <string>344 36 393 116 393 154 355 228 335 299 266 320 204 319 147 148 141 95 183 78 204 20 293 13</string>
+                <key>verticesUV</key>
+                <string>1845 1934 1765 1983 1727 1983 1653 1945 1582 1925 1561 1856 1562 1794 1733 1737 1786 1731 1803 1773 1861 1794 1868 1883</string>
+            </dict>
+            <key>Pirate_01_Dying (5).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{2,14.5}</string>
+                <key>spriteSize</key>
+                <string>{258,315}</string>
+                <key>spriteSourceSize</key>
+                <string>{480,360}</string>
+                <key>textureRect</key>
+                <string>{{640,637},{258,315}}</string>
+                <key>textureRotated</key>
+                <true/>
+                <key>triangles</key>
+                <string>0 2 10 7 9 10 7 8 9 7 2 6 4 2 3 4 5 6 4 6 2 7 10 2 0 1 2 0 10 11</string>
+                <key>vertices</key>
+                <string>353 83 371 93 342 186 342 272 279 313 218 323 175 235 145 200 113 121 172 32 215 15 292 8</string>
+                <key>verticesUV</key>
+                <string>880 877 870 895 777 866 691 866 650 803 640 742 728 699 763 669 842 637 931 696 948 739 955 816</string>
+            </dict>
+            <key>Pirate_01_Dying (6).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{-26,14}</string>
+                <key>spriteSize</key>
+                <string>{256,308}</string>
+                <key>spriteSourceSize</key>
+                <string>{480,360}</string>
+                <key>textureRect</key>
+                <string>{{1251,1466},{256,308}}</string>
+                <key>textureRotated</key>
+                <true/>
+                <key>triangles</key>
+                <string>11 12 13 9 10 11 9 4 8 9 11 4 6 7 8 5 6 8 4 5 8 1 4 11 1 3 4 1 2 3 0 1 11 0 11 13</string>
+                <key>vertices</key>
+                <string>260 15 314 69 331 69 338 99 321 162 342 245 280 318 226 320 189 272 129 212 86 142 124 110 125 53 186 12</string>
+                <key>verticesUV</key>
+                <string>1556 1640 1502 1694 1502 1711 1472 1718 1409 1701 1326 1722 1253 1660 1251 1606 1299 1569 1359 1509 1429 1466 1461 1504 1518 1505 1559 1566</string>
+            </dict>
+            <key>Pirate_01_Dying (7).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{-40,12.5}</string>
+                <key>spriteSize</key>
+                <string>{262,299}</string>
+                <key>spriteSourceSize</key>
+                <string>{480,360}</string>
+                <key>textureRect</key>
+                <string>{{1617,276},{262,299}}</string>
+                <key>textureRotated</key>
+                <true/>
+                <key>triangles</key>
+                <string>10 12 13 10 11 12 2 10 13 8 9 10 8 10 2 4 5 6 4 6 7 3 4 7 2 3 7 8 2 7 1 2 13 0 1 13</string>
+                <key>vertices</key>
+                <string>301 65 307 101 297 148 331 215 311 281 276 316 233 317 194 284 118 235 69 174 98 131 85 74 156 26 213 18</string>
+                <key>verticesUV</key>
+                <string>1869 508 1833 514 1786 504 1719 538 1653 518 1618 483 1617 440 1650 401 1699 325 1760 276 1803 305 1860 292 1908 363 1916 420</string>
+            </dict>
+            <key>Pirate_01_Dying (8).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{-56,5.5}</string>
+                <key>spriteSize</key>
+                <string>{274,289}</string>
+                <key>spriteSourceSize</key>
+                <string>{480,360}</string>
+                <key>textureRect</key>
+                <string>{{314,1460},{274,289}}</string>
+                <key>textureRotated</key>
+                <false/>
+                <key>triangles</key>
+                <string>1 10 11 8 9 10 6 7 8 1 8 10 1 5 6 3 4 5 1 2 3 1 3 5 1 6 8 0 1 11</string>
+                <key>vertices</key>
+                <string>269 67 269 149 321 203 304 281 274 316 240 319 124 270 47 216 69 179 52 115 89 70 149 30</string>
+                <key>verticesUV</key>
+                <string>536 1497 536 1579 588 1633 571 1711 541 1746 507 1749 391 1700 314 1646 336 1609 319 1545 356 1500 416 1460</string>
+            </dict>
+            <key>Pirate_01_Dying (9).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{-78.5,-11.5}</string>
+                <key>spriteSize</key>
+                <string>{285,261}</string>
+                <key>spriteSourceSize</key>
+                <string>{480,360}</string>
+                <key>textureRect</key>
+                <string>{{933,1752},{285,261}}</string>
+                <key>textureRotated</key>
+                <false/>
+                <key>triangles</key>
+                <string>2 11 12 9 10 11 2 7 9 7 8 9 2 6 7 4 5 6 2 4 6 2 3 4 2 9 11 0 1 2 0 2 12</string>
+                <key>vertices</key>
+                <string>216 73 238 111 237 146 304 198 304 269 288 309 252 322 123 300 39 262 55 215 19 162 68 87 114 61</string>
+                <key>verticesUV</key>
+                <string>1130 1764 1152 1802 1151 1837 1218 1889 1218 1960 1202 2000 1166 2013 1037 1991 953 1953 969 1906 933 1853 982 1778 1028 1752</string>
+            </dict>
+            <key>Pirate_01_Walking (1).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{31.5,12.5}</string>
+                <key>spriteSize</key>
+                <string>{279,309}</string>
+                <key>spriteSourceSize</key>
+                <string>{480,360}</string>
+                <key>textureRect</key>
+                <string>{{940,1466},{279,309}}</string>
+                <key>textureRotated</key>
+                <true/>
+                <key>triangles</key>
+                <string>12 13 14 10 11 12 9 1 4 9 10 12 5 6 9 7 8 9 6 7 9 4 5 9 9 12 1 1 3 4 1 2 3 0 1 12 0 12 14</string>
+                <key>vertices</key>
+                <string>336 36 379 101 401 117 411 162 373 219 333 298 297 322 228 322 179 283 178 222 161 199 132 108 168 90 197 27 292 13</string>
+                <key>verticesUV</key>
+                <string>1226 1670 1161 1713 1145 1735 1100 1745 1043 1707 964 1667 940 1631 940 1562 979 1513 1040 1512 1063 1495 1154 1466 1172 1502 1235 1531 1249 1626</string>
+            </dict>
+            <key>Pirate_01_Walking (10).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{43.5,10.5}</string>
+                <key>spriteSize</key>
+                <string>{307,311}</string>
+                <key>spriteSourceSize</key>
+                <string>{480,360}</string>
+                <key>textureRect</key>
+                <string>{{1,1198},{307,311}}</string>
+                <key>textureRotated</key>
+                <true/>
+                <key>triangles</key>
+                <string>12 13 14 10 11 12 0 2 12 10 12 2 2 7 9 7 8 9 6 3 4 6 4 5 3 6 7 2 3 7 10 2 9 0 1 2 0 12 14</string>
+                <key>vertices</key>
+                <string>326 28 395 117 345 212 360 211 414 170 437 193 413 231 284 325 198 322 188 255 153 185 130 107 173 94 189 36 254 14</string>
+                <key>verticesUV</key>
+                <string>298 1394 209 1463 114 1413 115 1428 156 1482 133 1505 95 1481 1 1352 4 1266 71 1256 141 1221 219 1198 232 1241 290 1257 312 1322</string>
+            </dict>
+            <key>Pirate_01_Walking (11).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{43,6.5}</string>
+                <key>spriteSize</key>
+                <string>{302,311}</string>
+                <key>spriteSourceSize</key>
+                <string>{480,360}</string>
+                <key>textureRect</key>
+                <string>{{1271,1150},{302,311}}</string>
+                <key>textureRotated</key>
+                <true/>
+                <key>triangles</key>
+                <string>13 14 15 11 12 13 2 13 15 11 13 2 8 9 10 2 7 10 7 8 10 3 5 6 3 4 5 3 6 7 2 3 7 11 2 10 0 1 2 0 2 15</string>
+                <key>vertices</key>
+                <string>327 29 394 118 350 198 361 210 419 157 434 194 412 227 292 320 236 329 193 312 204 273 152 189 132 112 174 85 195 27 273 18</string>
+                <key>verticesUV</key>
+                <string>1571 1345 1482 1412 1402 1368 1390 1379 1443 1437 1406 1452 1373 1430 1280 1310 1271 1254 1288 1211 1327 1222 1411 1170 1488 1150 1515 1192 1573 1213 1582 1291</string>
+            </dict>
+            <key>Pirate_01_Walking (12).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{37,7.5}</string>
+                <key>spriteSize</key>
+                <string>{298,313}</string>
+                <key>spriteSourceSize</key>
+                <string>{480,360}</string>
+                <key>textureRect</key>
+                <string>{{1598,1135},{298,313}}</string>
+                <key>textureRotated</key>
+                <true/>
+                <key>triangles</key>
+                <string>12 13 14 10 11 12 3 12 14 10 12 3 3 7 9 7 8 9 4 5 6 4 6 7 3 4 7 10 3 9 0 2 3 0 1 2 0 3 14</string>
+                <key>vertices</key>
+                <string>323 28 390 113 369 157 342 191 361 205 426 145 426 213 281 329 197 321 202 263 158 203 128 113 173 87 185 32 261 16</string>
+                <key>verticesUV</key>
+                <string>1899 1330 1814 1397 1770 1376 1736 1349 1722 1368 1782 1433 1714 1433 1598 1288 1606 1204 1664 1209 1724 1165 1814 1135 1840 1180 1895 1192 1911 1268</string>
+            </dict>
+            <key>Pirate_01_Walking (13).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{34,13.5}</string>
+                <key>spriteSize</key>
+                <string>{308,311}</string>
+                <key>spriteSourceSize</key>
+                <string>{480,360}</string>
+                <key>textureRect</key>
+                <string>{{316,1150},{308,311}}</string>
+                <key>textureRotated</key>
+                <true/>
+                <key>triangles</key>
+                <string>14 15 16 12 13 14 1 4 14 12 14 4 4 9 11 9 10 11 8 5 6 8 6 7 5 8 9 4 5 9 12 4 11 1 3 4 1 2 3 1 14 16 0 1 16</string>
+                <key>vertices</key>
+                <string>325 28 341 74 380 100 368 146 339 185 356 204 408 154 428 160 422 208 291 322 204 322 182 236 156 204 120 115 166 91 176 38 247 11</string>
+                <key>verticesUV</key>
+                <string>610 1355 564 1371 538 1410 492 1398 453 1369 434 1386 484 1438 478 1458 430 1452 316 1321 316 1234 402 1212 434 1186 523 1150 547 1196 600 1206 627 1277</string>
+            </dict>
+            <key>Pirate_01_Walking (14).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{30.5,15.5}</string>
+                <key>spriteSize</key>
+                <string>{311,319}</string>
+                <key>spriteSourceSize</key>
+                <string>{480,360}</string>
+                <key>textureRect</key>
+                <string>{{1296,1},{311,319}}</string>
+                <key>textureRotated</key>
+                <true/>
+                <key>triangles</key>
+                <string>12 14 15 12 13 14 10 11 12 1 2 12 10 12 2 9 3 7 7 8 9 6 3 4 6 4 5 3 6 7 9 2 3 10 2 9 1 12 15 0 1 15</string>
+                <key>vertices</key>
+                <string>369 87 369 125 333 191 342 208 409 145 426 156 421 199 295 324 207 322 181 237 154 207 115 120 157 96 167 42 201 22 287 5</string>
+                <key>verticesUV</key>
+                <string>1533 255 1495 255 1429 219 1412 228 1475 295 1464 312 1421 307 1296 181 1298 93 1383 67 1413 40 1500 1 1524 43 1578 53 1598 87 1615 173</string>
+            </dict>
+            <key>Pirate_01_Walking (15).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{29.5,10.5}</string>
+                <key>spriteSize</key>
+                <string>{315,319}</string>
+                <key>spriteSourceSize</key>
+                <string>{480,360}</string>
+                <key>textureRect</key>
+                <string>{{1,569},{315,319}}</string>
+                <key>textureRotated</key>
+                <true/>
+                <key>triangles</key>
+                <string>1 14 15 12 13 14 1 12 14 10 11 12 10 12 1 1 6 9 7 8 9 6 7 9 2 4 5 2 3 4 1 2 5 1 5 6 10 1 9 0 1 15</string>
+                <key>vertices</key>
+                <string>376 97 338 190 369 176 408 136 427 153 415 200 308 308 262 329 209 321 170 228 153 208 112 124 149 94 163 35 223 15 289 10</string>
+                <key>verticesUV</key>
+                <string>233 833 140 795 154 826 194 865 177 884 130 872 22 765 1 719 9 666 102 627 122 610 206 569 236 606 295 620 315 680 320 746</string>
+            </dict>
+            <key>Pirate_01_Walking (16).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{32.5,13}</string>
+                <key>spriteSize</key>
+                <string>{317,310}</string>
+                <key>spriteSourceSize</key>
+                <string>{480,360}</string>
+                <key>textureRect</key>
+                <string>{{975,314},{317,310}}</string>
+                <key>textureRotated</key>
+                <false/>
+                <key>triangles</key>
+                <string>15 16 17 13 14 15 3 15 17 13 15 3 8 9 12 11 12 9 11 9 10 3 8 12 7 4 5 7 5 6 4 7 8 3 4 8 13 3 12 0 2 3 0 1 2 0 3 17</string>
+                <key>vertices</key>
+                <string>296 13 369 90 362 130 335 180 354 190 399 129 431 146 411 192 315 306 276 322 215 322 192 288 178 233 153 206 114 125 145 94 166 33 226 12</string>
+                <key>verticesUV</key>
+                <string>1157 315 1230 392 1223 432 1196 482 1215 492 1260 431 1292 448 1272 494 1176 608 1137 624 1076 624 1053 590 1039 535 1014 508 975 427 1006 396 1027 335 1087 314</string>
+            </dict>
+            <key>Pirate_01_Walking (17).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{27,10}</string>
+                <key>spriteSize</key>
+                <string>{294,310}</string>
+                <key>spriteSourceSize</key>
+                <string>{480,360}</string>
+                <key>textureRect</key>
+                <string>{{629,1152},{294,310}}</string>
+                <key>textureRotated</key>
+                <true/>
+                <key>triangles</key>
+                <string>2 16 17 14 15 16 2 14 16 12 13 14 2 12 14 11 3 7 9 10 11 8 9 11 7 8 11 6 3 4 6 4 5 3 6 7 11 2 3 2 11 12 1 2 17 0 1 17</string>
+                <key>vertices</key>
+                <string>381 95 363 141 339 180 344 195 395 123 414 131 414 178 321 302 282 325 219 323 186 285 183 248 154 201 120 123 163 79 169 33 233 15 301 15</string>
+                <key>verticesUV</key>
+                <string>859 1413 813 1395 774 1371 759 1376 831 1427 823 1446 776 1446 652 1353 629 1314 631 1251 669 1218 706 1215 753 1186 831 1152 875 1195 921 1201 939 1265 939 1333</string>
+            </dict>
+            <key>Pirate_01_Walking (18).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{33,10}</string>
+                <key>spriteSize</key>
+                <string>{294,308}</string>
+                <key>spriteSourceSize</key>
+                <string>{480,360}</string>
+                <key>textureRect</key>
+                <string>{{1251,1731},{294,308}}</string>
+                <key>textureRotated</key>
+                <true/>
+                <key>triangles</key>
+                <string>11 12 13 9 10 11 1 11 13 9 11 1 4 5 8 6 7 8 5 6 8 1 3 4 1 4 8 1 2 3 9 1 8 0 1 13</string>
+                <key>vertices</key>
+                <string>320 17 353 84 397 105 420 155 324 308 265 324 224 322 182 285 183 233 159 202 126 118 165 84 183 34 236 16</string>
+                <key>verticesUV</key>
+                <string>1558 1925 1491 1958 1470 2002 1420 2025 1267 1929 1251 1870 1253 1829 1290 1787 1342 1788 1373 1764 1457 1731 1491 1770 1541 1788 1559 1841</string>
+            </dict>
+            <key>Pirate_01_Walking (2).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{40,5}</string>
+                <key>spriteSize</key>
+                <string>{294,308}</string>
+                <key>spriteSourceSize</key>
+                <string>{480,360}</string>
+                <key>textureRect</key>
+                <string>{{1584,1435},{294,308}}</string>
+                <key>textureRotated</key>
+                <true/>
+                <key>triangles</key>
+                <string>0 10 11 8 9 10 0 8 10 6 7 8 6 8 0 6 0 5 3 4 5 2 3 5 0 1 2 0 2 5</string>
+                <key>vertices</key>
+                <string>364 82 427 141 320 315 232 329 182 287 182 232 161 201 133 116 177 72 195 36 240 21 325 21</string>
+                <key>verticesUV</key>
+                <string>1831 1666 1772 1729 1598 1622 1584 1534 1626 1484 1681 1484 1712 1463 1797 1435 1841 1479 1877 1497 1892 1542 1892 1627</string>
+            </dict>
+            <key>Pirate_01_Walking (3).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{41,8.5}</string>
+                <key>spriteSize</key>
+                <string>{302,309}</string>
+                <key>spriteSourceSize</key>
+                <string>{480,360}</string>
+                <key>textureRect</key>
+                <string>{{629,1448},{302,309}}</string>
+                <key>textureRotated</key>
+                <true/>
+                <key>triangles</key>
+                <string>7 9 10 7 8 9 1 7 10 1 2 3 5 6 3 5 3 4 1 3 6 1 6 7 0 1 10</string>
+                <key>vertices</key>
+                <string>325 29 365 86 432 153 306 326 219 323 187 286 179 231 158 202 130 119 196 28 268 17</string>
+                <key>verticesUV</key>
+                <string>926 1643 869 1683 802 1750 629 1624 632 1537 669 1505 724 1497 753 1476 836 1448 927 1514 938 1586</string>
+            </dict>
+            <key>Pirate_01_Walking (4).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{33.5,10.5}</string>
+                <key>spriteSize</key>
+                <string>{303,307}</string>
+                <key>spriteSourceSize</key>
+                <string>{480,360}</string>
+                <key>textureRect</key>
+                <string>{{1613,826},{303,307}}</string>
+                <key>textureRotated</key>
+                <false/>
+                <key>triangles</key>
+                <string>16 17 18 14 15 16 2 4 16 14 16 4 9 10 13 12 13 10 12 10 11 8 9 13 4 8 13 7 4 5 7 5 6 4 7 8 14 4 13 2 3 4 2 16 18 0 1 2 0 2 18</string>
+                <key>vertices</key>
+                <string>292 18 326 34 341 73 387 104 351 177 402 126 425 149 411 192 352 256 320 303 274 323 209 322 190 284 181 236 156 204 122 119 164 82 177 35 231 16</string>
+                <key>verticesUV</key>
+                <string>1783 828 1817 844 1832 883 1878 914 1842 987 1893 936 1916 959 1902 1002 1843 1066 1811 1113 1765 1133 1700 1132 1681 1094 1672 1046 1647 1014 1613 929 1655 892 1668 845 1722 826</string>
+            </dict>
+            <key>Pirate_01_Walking (5).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{32,13.5}</string>
+                <key>spriteSize</key>
+                <string>{312,311}</string>
+                <key>spriteSourceSize</key>
+                <string>{480,360}</string>
+                <key>textureRect</key>
+                <string>{{957,882},{312,311}}</string>
+                <key>textureRotated</key>
+                <false/>
+                <key>triangles</key>
+                <string>15 16 17 1 4 15 13 14 15 13 15 4 9 10 12 10 11 12 4 9 12 8 5 6 8 6 7 5 8 9 4 5 9 13 4 12 1 3 4 1 2 3 1 15 17 0 1 17</string>
+                <key>vertices</key>
+                <string>313 21 338 78 380 91 359 142 335 179 351 197 398 143 428 129 418 192 327 293 284 322 204 322 180 237 152 204 116 124 156 82 169 29 250 11</string>
+                <key>verticesUV</key>
+                <string>1154 892 1179 949 1221 962 1200 1013 1176 1050 1192 1068 1239 1014 1269 1000 1259 1063 1168 1164 1125 1193 1045 1193 1021 1108 993 1075 957 995 997 953 1010 900 1091 882</string>
+            </dict>
+            <key>Pirate_01_Walking (6).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{31,15}</string>
+                <key>spriteSize</key>
+                <string>{316,314}</string>
+                <key>spriteSourceSize</key>
+                <string>{480,360}</string>
+                <key>textureRect</key>
+                <string>{{647,321},{316,314}}</string>
+                <key>textureRotated</key>
+                <false/>
+                <key>triangles</key>
+                <string>0 15 16 13 14 15 0 3 13 11 12 13 11 13 3 11 3 10 8 9 10 7 4 5 7 5 6 4 7 8 10 3 4 10 4 8 0 2 3 0 1 2 0 13 15</string>
+                <key>vertices</key>
+                <string>335 72 376 87 354 142 333 164 346 206 407 146 429 152 420 201 293 322 208 322 183 247 150 203 113 126 155 83 159 36 218 15 298 8</string>
+                <key>verticesUV</key>
+                <string>869 385 910 400 888 455 867 477 880 519 941 459 963 465 954 514 827 635 742 635 717 560 684 516 647 439 689 396 693 349 752 328 832 321</string>
+            </dict>
+            <key>Pirate_01_Walking (7).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{29.5,11.5}</string>
+                <key>spriteSize</key>
+                <string>{311,319}</string>
+                <key>spriteSourceSize</key>
+                <string>{480,360}</string>
+                <key>textureRect</key>
+                <string>{{975,1},{311,319}}</string>
+                <key>textureRotated</key>
+                <true/>
+                <key>triangles</key>
+                <string>0 15 16 13 14 15 0 13 15 11 12 13 11 13 3 13 0 3 8 9 10 7 8 10 4 5 6 4 6 7 3 4 7 3 7 10 0 1 2 0 2 3 11 3 10</string>
+                <key>vertices</key>
+                <string>330 65 365 85 365 123 333 178 351 207 425 138 425 203 300 314 257 328 205 320 179 234 147 200 114 124 154 85 161 36 218 14 302 9</string>
+                <key>verticesUV</key>
+                <string>1238 217 1218 252 1180 252 1125 220 1096 238 1165 312 1100 312 989 187 975 144 983 92 1069 66 1103 34 1179 1 1218 41 1267 48 1289 105 1294 189</string>
+            </dict>
+            <key>Pirate_01_Walking (8).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{34,12}</string>
+                <key>spriteSize</key>
+                <string>{310,314}</string>
+                <key>spriteSourceSize</key>
+                <string>{480,360}</string>
+                <key>textureRect</key>
+                <string>{{322,838},{310,314}}</string>
+                <key>textureRotated</key>
+                <true/>
+                <key>triangles</key>
+                <string>14 16 17 14 15 16 1 14 17 12 13 14 14 1 4 11 5 9 9 10 11 8 5 6 8 6 7 5 8 9 11 4 5 4 11 12 1 3 4 1 2 3 14 4 12 0 1 17</string>
+                <key>vertices</key>
+                <string>318 23 341 79 379 90 365 141 338 180 357 207 410 159 429 167 421 214 290 323 197 325 202 264 156 205 119 124 164 76 167 42 202 23 255 11</string>
+                <key>verticesUV</key>
+                <string>624 1037 568 1060 557 1098 506 1084 467 1057 440 1076 488 1129 480 1148 433 1140 324 1009 322 916 383 921 442 875 523 838 571 883 605 886 624 921 636 974</string>
+            </dict>
+            <key>Pirate_01_Walking (9).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{36,6.5}</string>
+                <key>spriteSize</key>
+                <string>{306,313}</string>
+                <key>spriteSourceSize</key>
+                <string>{480,360}</string>
+                <key>textureRect</key>
+                <string>{{1283,842},{306,313}}</string>
+                <key>textureRotated</key>
+                <true/>
+                <key>triangles</key>
+                <string>14 15 16 12 13 14 2 4 14 11 12 14 5 9 11 9 10 11 8 5 6 8 6 7 5 8 9 4 5 11 4 11 14 2 3 4 2 14 16 0 1 2 0 2 16</string>
+                <key>vertices</key>
+                <string>300 18 330 35 344 75 390 105 343 195 351 216 414 164 429 179 421 221 279 330 199 320 177 226 159 203 123 115 163 93 181 34 235 17</string>
+                <key>verticesUV</key>
+                <string>1595 1019 1578 1049 1538 1063 1508 1109 1418 1062 1397 1070 1449 1133 1434 1148 1392 1140 1283 998 1293 918 1387 896 1410 878 1498 842 1520 882 1579 900 1596 954</string>
+            </dict>
+        </dict>
+        <key>metadata</key>
+        <dict>
+            <key>format</key>
+            <integer>3</integer>
+            <key>pixelFormat</key>
+            <string>RGBA8888</string>
+            <key>premultiplyAlpha</key>
+            <false/>
+            <key>realTextureFileName</key>
+            <string>Pirate_01.png</string>
+            <key>size</key>
+            <string>{1918,2027}</string>
+            <key>smartupdate</key>
+            <string>$TexturePacker:SmartUpdate:9934f563c1c8064101eb63c961af2ea5:21d2603fc61ce0653eca1a20a97afb16:974b70cf72b856e77ada2f73ef0d5461$</string>
+            <key>textureFileName</key>
+            <string>Pirate_01.png</string>
+        </dict>
+    </dict>
+</plist>

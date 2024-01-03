@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+    <dict>
+        <key>frames</key>
+        <dict>
+            <key>Golem_03_Weapon (1).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{-6,1.5}</string>
+                <key>spriteSize</key>
+                <string>{259,156}</string>
+                <key>spriteSourceSize</key>
+                <string>{295,217}</string>
+                <key>textureRect</key>
+                <string>{{1,442},{259,156}}</string>
+                <key>textureRotated</key>
+                <false/>
+                <key>triangles</key>
+                <string>0 5 6 1 4 5 2 3 4 1 2 4 0 1 5</string>
+                <key>vertices</key>
+                <string>271 78 205 117 40 185 12 157 112 98 181 29 271 29</string>
+                <key>verticesUV</key>
+                <string>260 491 194 530 29 598 1 570 101 511 170 442 260 442</string>
+            </dict>
+            <key>Golem_03_Weapon (10).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{0.5,14}</string>
+                <key>spriteSize</key>
+                <string>{285,89}</string>
+                <key>spriteSourceSize</key>
+                <string>{288,125}</string>
+                <key>textureRect</key>
+                <string>{{1,1},{285,89}}</string>
+                <key>textureRotated</key>
+                <false/>
+                <key>triangles</key>
+                <string>3 4 5 2 3 5 2 5 6 1 2 6 0 1 6</string>
+                <key>vertices</key>
+                <string>287 28 273 82 196 91 2 93 17 57 124 34 186 4</string>
+                <key>verticesUV</key>
+                <string>286 25 272 79 195 88 1 90 16 54 123 31 185 1</string>
+            </dict>
+            <key>Golem_03_Weapon (2).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{2.5,-0.5}</string>
+                <key>spriteSize</key>
+                <string>{152,276}</string>
+                <key>spriteSourceSize</key>
+                <string>{217,295}</string>
+                <key>textureRect</key>
+                <string>{{1,288},{152,276}}</string>
+                <key>textureRotated</key>
+                <true/>
+                <key>triangles</key>
+                <string>0 1 5 1 4 5 2 3 4 1 2 4 0 5 6</string>
+                <key>vertices</key>
+                <string>187 42 174 100 57 286 35 249 80 145 85 74 155 10</string>
+                <key>verticesUV</key>
+                <string>245 440 187 427 1 310 38 288 142 333 213 338 277 408</string>
+            </dict>
+            <key>Golem_03_Weapon (3).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{-10,4.5}</string>
+                <key>spriteSize</key>
+                <string>{104,281}</string>
+                <key>spriteSourceSize</key>
+                <string>{148,294}</string>
+                <key>textureRect</key>
+                <string>{{1,92},{104,281}}</string>
+                <key>textureRotated</key>
+                <true/>
+                <key>triangles</key>
+                <string>0 5 6 0 4 5 1 2 3 0 1 3 0 3 4</string>
+                <key>vertices</key>
+                <string>96 38 116 283 78 274 47 151 12 107 25 22 52 2</string>
+                <key>verticesUV</key>
+                <string>246 176 1 196 10 158 133 127 177 92 262 105 282 132</string>
+            </dict>
+            <key>Golem_03_Weapon (4).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{-2.5,1.5}</string>
+                <key>spriteSize</key>
+                <string>{222,214}</string>
+                <key>spriteSourceSize</key>
+                <string>{271,267}</string>
+                <key>textureRect</key>
+                <string>{{262,496},{222,214}}</string>
+                <key>textureRotated</key>
+                <true/>
+                <key>triangles</key>
+                <string>0 4 5 0 3 4 1 2 3 0 1 3 0 5 6</string>
+                <key>vertices</key>
+                <string>104 52 244 212 218 239 105 149 62 138 22 58 49 25</string>
+                <key>verticesUV</key>
+                <string>449 578 289 718 262 692 352 579 363 536 443 496 476 523</string>
+            </dict>
+            <key>Golem_03_Weapon (5).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{-1,0}</string>
+                <key>spriteSize</key>
+                <string>{238,189}</string>
+                <key>spriteSourceSize</key>
+                <string>{284,249}</string>
+                <key>textureRect</key>
+                <string>{{281,256},{238,189}}</string>
+                <key>textureRotated</key>
+                <true/>
+                <key>triangles</key>
+                <string>5 6 7 4 5 7 0 3 4 1 2 3 0 1 3 0 4 7</string>
+                <key>vertices</key>
+                <string>127 71 260 188 240 219 121 152 55 131 22 61 38 35 66 30</string>
+                <key>verticesUV</key>
+                <string>429 361 312 494 281 474 348 355 369 289 439 256 465 272 470 300</string>
+            </dict>
+            <key>Golem_03_Weapon (6).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{1.5,5}</string>
+                <key>spriteSize</key>
+                <string>{253,177}</string>
+                <key>spriteSourceSize</key>
+                <string>{290,237}</string>
+                <key>textureRect</key>
+                <string>{{288,1},{253,177}}</string>
+                <key>textureRotated</key>
+                <true/>
+                <key>triangles</key>
+                <string>5 6 7 4 5 7 0 3 4 0 1 2 0 2 3 0 4 7</string>
+                <key>vertices</key>
+                <string>139 76 273 180 241 202 108 136 72 138 20 67 35 37 63 25</string>
+                <key>verticesUV</key>
+                <string>414 120 310 254 288 222 354 89 352 53 423 1 453 16 465 44</string>
+            </dict>
+            <key>Golem_03_Weapon (7).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{-1.5,2.5}</string>
+                <key>spriteSize</key>
+                <string>{258,168}</string>
+                <key>spriteSourceSize</key>
+                <string>{293,227}</string>
+                <key>textureRect</key>
+                <string>{{1,600},{258,168}}</string>
+                <key>textureRotated</key>
+                <false/>
+                <key>triangles</key>
+                <string>5 6 7 4 5 7 0 3 4 1 2 3 0 1 3 0 4 7</string>
+                <key>vertices</key>
+                <string>138 71 274 166 245 195 126 134 77 134 16 73 33 36 66 27</string>
+                <key>verticesUV</key>
+                <string>123 644 259 739 230 768 111 707 62 707 1 646 18 609 51 600</string>
+            </dict>
+            <key>Golem_03_Weapon (8).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{-11,-2}</string>
+                <key>spriteSize</key>
+                <string>{88,278}</string>
+                <key>spriteSourceSize</key>
+                <string>{110,284}</string>
+                <key>textureRect</key>
+                <string>{{1,198},{88,278}}</string>
+                <key>textureRotated</key>
+                <true/>
+                <key>triangles</key>
+                <string>7 8 9 4 6 7 4 5 6 0 1 7 2 3 4 1 2 4 1 4 7 0 7 9</string>
+                <key>vertices</key>
+                <string>75 11 88 75 78 271 44 283 22 132 0 94 5 77 21 60 21 17 44 5</string>
+                <key>verticesUV</key>
+                <string>273 273 209 286 13 276 1 242 152 220 190 198 207 203 224 219 267 219 279 242</string>
+            </dict>
+            <key>Golem_03_Weapon (9).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{6,5.5}</string>
+                <key>spriteSize</key>
+                <string>{257,162}</string>
+                <key>spriteSourceSize</key>
+                <string>{297,209}</string>
+                <key>textureRect</key>
+                <string>{{1,770},{257,162}}</string>
+                <key>textureRotated</key>
+                <false/>
+                <key>triangles</key>
+                <string>0 5 6 1 4 5 2 3 4 1 2 4 0 1 5</string>
+                <key>vertices</key>
+                <string>283 76 195 121 29 180 26 141 137 78 169 37 261 18</string>
+                <key>verticesUV</key>
+                <string>258 828 170 873 4 932 1 893 112 830 144 789 236 770</string>
+            </dict>
+        </dict>
+        <key>metadata</key>
+        <dict>
+            <key>format</key>
+            <integer>3</integer>
+            <key>pixelFormat</key>
+            <string>RGBA8888</string>
+            <key>premultiplyAlpha</key>
+            <false/>
+            <key>realTextureFileName</key>
+            <string>Golem_03_Weapon.png</string>
+            <key>size</key>
+            <string>{477,933}</string>
+            <key>smartupdate</key>
+            <string>$TexturePacker:SmartUpdate:fd90b087b98d00a5b9ada3e631cd19d6:3c6124912e60b1ece26d50aaa2f7873e:8794836d34a2fc3ac4169df1e5093d98$</string>
+            <key>textureFileName</key>
+            <string>Golem_03_Weapon.png</string>
+        </dict>
+    </dict>
+</plist>

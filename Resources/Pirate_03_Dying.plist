@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+    <dict>
+        <key>frames</key>
+        <dict>
+            <key>Dying_000.png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{24.5,-11.5}</string>
+                <key>spriteSize</key>
+                <string>{275,271}</string>
+                <key>spriteSourceSize</key>
+                <string>{480,360}</string>
+                <key>textureRect</key>
+                <string>{{276,1},{275,271}}</string>
+                <key>textureRotated</key>
+                <false/>
+                <key>triangles</key>
+                <string>1 12 13 11 9 10 11 12 9 1 9 12 8 9 6 8 6 7 4 5 6 9 1 4 1 2 3 1 3 4 9 4 6 0 1 13</string>
+                <key>vertices</key>
+                <string>315 74 350 141 372 80 402 133 331 302 268 327 248 314 222 327 177 286 181 230 143 212 127 120 204 70 252 56</string>
+                <key>verticesUV</key>
+                <string>464 19 499 86 521 25 551 78 480 247 417 272 397 259 371 272 326 231 330 175 292 157 276 65 353 15 401 1</string>
+            </dict>
+            <key>Dying_001.png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{26,-7}</string>
+                <key>spriteSize</key>
+                <string>{260,270}</string>
+                <key>spriteSourceSize</key>
+                <string>{480,360}</string>
+                <key>textureRect</key>
+                <string>{{835,1},{260,270}}</string>
+                <key>textureRotated</key>
+                <true/>
+                <key>triangles</key>
+                <string>0 13 14 12 10 11 12 13 10 5 6 7 8 9 10 7 8 10 5 7 10 1 5 10 1 3 4 1 2 3 1 4 5 13 0 1 13 1 10</string>
+                <key>vertices</key>
+                <string>330 88 350 136 363 98 388 99 396 149 347 248 338 294 279 322 221 322 178 285 187 226 146 204 136 113 208 69 276 52</string>
+                <key>verticesUV</key>
+                <string>1069 195 1021 215 1059 228 1058 253 1008 261 909 212 863 203 835 144 835 86 872 43 931 52 953 11 1044 1 1088 73 1105 141</string>
+            </dict>
+            <key>Dying_002.png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{29.5,-5.5}</string>
+                <key>spriteSize</key>
+                <string>{253,269}</string>
+                <key>spriteSourceSize</key>
+                <string>{480,360}</string>
+                <key>textureRect</key>
+                <string>{{1107,1},{253,269}}</string>
+                <key>textureRotated</key>
+                <true/>
+                <key>triangles</key>
+                <string>8 10 11 8 9 10 4 5 8 6 7 8 5 6 8 1 3 4 1 4 8 1 2 3 0 1 8 0 8 11</string>
+                <key>vertices</key>
+                <string>306 68 354 105 387 91 396 143 333 301 273 320 223 320 183 280 195 227 148 198 143 105 246 51</string>
+                <key>verticesUV</key>
+                <string>1359 164 1322 212 1336 245 1284 254 1126 191 1107 131 1107 81 1147 41 1200 53 1229 6 1322 1 1376 104</string>
+            </dict>
+            <key>Dying_003.png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{33.5,-7.5}</string>
+                <key>spriteSize</key>
+                <string>{249,263}</string>
+                <key>spriteSourceSize</key>
+                <string>{480,360}</string>
+                <key>textureRect</key>
+                <string>{{1107,256},{249,263}}</string>
+                <key>textureRotated</key>
+                <true/>
+                <key>triangles</key>
+                <string>6 9 10 6 8 9 6 7 8 2 3 6 4 5 6 3 4 6 1 2 6 1 6 10 0 1 10</string>
+                <key>vertices</key>
+                <string>383 100 398 138 338 283 304 317 227 319 190 285 188 216 149 192 151 98 232 63 278 56</string>
+                <key>verticesUV</key>
+                <string>1326 490 1288 505 1143 445 1109 411 1107 334 1141 297 1210 295 1234 256 1328 258 1363 339 1370 385</string>
+            </dict>
+            <key>Dying_004.png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{-2,-6.5}</string>
+                <key>spriteSize</key>
+                <string>{238,263}</string>
+                <key>spriteSourceSize</key>
+                <string>{480,360}</string>
+                <key>textureRect</key>
+                <string>{{1625,265},{238,263}}</string>
+                <key>textureRotated</key>
+                <true/>
+                <key>triangles</key>
+                <string>6 10 11 8 9 10 6 8 10 6 7 8 2 3 6 5 6 3 5 3 4 1 2 6 1 6 11 0 1 11</string>
+                <key>vertices</key>
+                <string>332 66 357 97 339 274 287 309 240 318 206 298 177 219 136 207 135 147 119 117 195 67 243 55</string>
+                <key>verticesUV</key>
+                <string>1877 478 1846 503 1669 485 1634 433 1625 386 1645 352 1724 323 1736 282 1796 281 1826 265 1876 341 1888 389</string>
+            </dict>
+            <key>Dying_005.png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{-19.5,-3}</string>
+                <key>spriteSize</key>
+                <string>{243,266}</string>
+                <key>spriteSourceSize</key>
+                <string>{480,360}</string>
+                <key>textureRect</key>
+                <string>{{553,264},{243,266}}</string>
+                <key>textureRotated</key>
+                <true/>
+                <key>triangles</key>
+                <string>0 9 10 8 0 5 7 5 6 7 8 5 1 2 5 4 5 2 4 2 3 0 1 5 8 9 0</string>
+                <key>vertices</key>
+                <string>307 86 342 249 297 299 253 316 214 306 175 236 120 226 99 138 170 72 242 51 288 50</string>
+                <key>verticesUV</key>
+                <string>783 472 620 507 570 462 553 418 563 379 633 340 643 285 731 264 797 335 818 407 819 453</string>
+            </dict>
+            <key>Dying_006.png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{-34,-1}</string>
+                <key>spriteSize</key>
+                <string>{254,262}</string>
+                <key>spriteSourceSize</key>
+                <string>{480,360}</string>
+                <key>textureRect</key>
+                <string>{{1643,1},{254,262}}</string>
+                <key>textureRotated</key>
+                <false/>
+                <key>triangles</key>
+                <string>1 9 10 8 6 7 8 9 6 3 4 5 3 5 6 2 3 6 1 2 6 1 6 9 0 1 10</string>
+                <key>vertices</key>
+                <string>240 60 274 100 333 217 306 285 265 312 227 311 166 251 119 248 79 168 132 94 204 50</string>
+                <key>verticesUV</key>
+                <string>1804 11 1838 51 1897 168 1870 236 1829 263 1791 262 1730 202 1683 199 1643 119 1696 45 1768 1</string>
+            </dict>
+            <key>Dying_007.png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{-52.5,-6.5}</string>
+                <key>spriteSize</key>
+                <string>{259,263}</string>
+                <key>spriteSourceSize</key>
+                <string>{480,360}</string>
+                <key>textureRect</key>
+                <string>{{1378,1},{259,263}}</string>
+                <key>textureRotated</key>
+                <true/>
+                <key>triangles</key>
+                <string>0 5 8 7 8 5 7 5 6 2 3 4 2 4 5 1 2 5 0 1 5 0 8 9</string>
+                <key>vertices</key>
+                <string>221 79 317 203 307 272 275 315 237 318 175 273 115 278 58 208 102 120 172 55</string>
+                <key>verticesUV</key>
+                <string>1617 164 1493 260 1424 250 1381 218 1378 180 1423 118 1418 58 1488 1 1576 45 1641 115</string>
+            </dict>
+            <key>Dying_008.png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{-63,-20}</string>
+                <key>spriteSize</key>
+                <string>{256,246}</string>
+                <key>spriteSourceSize</key>
+                <string>{480,360}</string>
+                <key>textureRect</key>
+                <string>{{835,263},{256,246}}</string>
+                <key>textureRotated</key>
+                <false/>
+                <key>triangles</key>
+                <string>7 8 9 4 7 9 6 7 4 6 4 5 1 2 3 1 3 4 0 1 4 0 4 9</string>
+                <key>vertices</key>
+                <string>297 194 305 257 291 298 252 323 167 294 109 313 49 251 69 168 120 83 169 77</string>
+                <key>verticesUV</key>
+                <string>1083 380 1091 443 1077 484 1038 509 953 480 895 499 835 437 855 354 906 269 955 263</string>
+            </dict>
+            <key>Dying_009.png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{-66.5,-37.5}</string>
+                <key>spriteSize</key>
+                <string>{251,247}</string>
+                <key>spriteSourceSize</key>
+                <string>{480,360}</string>
+                <key>textureRect</key>
+                <string>{{1372,262},{251,247}}</string>
+                <key>textureRotated</key>
+                <false/>
+                <key>triangles</key>
+                <string>5 6 8 6 7 8 0 5 8 3 4 5 2 3 5 5 0 1 5 1 2 0 8 9</string>
+                <key>vertices</key>
+                <string>147 106 275 191 299 243 295 292 267 324 187 311 127 341 48 300 49 216 97 94</string>
+                <key>verticesUV</key>
+                <string>1471 274 1599 359 1623 411 1619 460 1591 492 1511 479 1451 509 1372 468 1373 384 1421 262</string>
+            </dict>
+            <key>Dying_010.png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{-69.5,-36}</string>
+                <key>spriteSize</key>
+                <string>{261,280}</string>
+                <key>spriteSourceSize</key>
+                <string>{480,360}</string>
+                <key>textureRect</key>
+                <string>{{553,1},{261,280}}</string>
+                <key>textureRotated</key>
+                <true/>
+                <key>triangles</key>
+                <string>0 10 11 4 9 10 7 8 9 4 7 9 6 7 4 6 4 5 1 2 3 1 3 4 1 4 10 0 1 10 0 11 12</string>
+                <key>vertices</key>
+                <string>203 89 301 240 301 298 268 323 185 319 142 356 58 330 40 221 74 153 119 138 185 144 148 94 159 76</string>
+                <key>verticesUV</key>
+                <string>820 164 669 262 611 262 586 229 590 146 553 103 579 19 688 1 756 35 771 80 765 146 815 109 833 120</string>
+            </dict>
+            <key>Dying_011.png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{-67.5,-32}</string>
+                <key>spriteSize</key>
+                <string>{273,288}</string>
+                <key>spriteSourceSize</key>
+                <string>{480,360}</string>
+                <key>textureRect</key>
+                <string>{{1,1},{273,288}}</string>
+                <key>textureRotated</key>
+                <false/>
+                <key>triangles</key>
+                <string>9 10 11 4 9 11 4 8 9 6 7 8 6 8 4 1 2 3 6 4 5 4 11 1 4 1 3 1 11 12 0 1 12 0 12 13</string>
+                <key>vertices</key>
+                <string>246 86 309 285 290 322 252 334 190 322 156 356 120 356 57 342 36 228 58 177 114 134 207 172 217 144 188 68</string>
+                <key>verticesUV</key>
+                <string>211 19 274 218 255 255 217 267 155 255 121 289 85 289 22 275 1 161 23 110 79 67 172 105 182 77 153 1</string>
+            </dict>
+            <key>Dying_012.png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{-67.5,-32}</string>
+                <key>spriteSize</key>
+                <string>{273,288}</string>
+                <key>spriteSourceSize</key>
+                <string>{480,360}</string>
+                <key>textureRect</key>
+                <string>{{1,1},{273,288}}</string>
+                <key>textureRotated</key>
+                <false/>
+                <key>triangles</key>
+                <string>9 10 11 4 9 11 4 8 9 6 7 8 6 8 4 1 2 3 6 4 5 4 11 1 4 1 3 1 11 12 0 1 12 0 12 13</string>
+                <key>vertices</key>
+                <string>246 86 309 285 290 322 252 334 190 322 156 356 120 356 57 342 36 228 58 177 114 134 207 172 217 144 188 68</string>
+                <key>verticesUV</key>
+                <string>211 19 274 218 255 255 217 267 155 255 121 289 85 289 22 275 1 161 23 110 79 67 172 105 182 77 153 1</string>
+            </dict>
+            <key>Dying_013.png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{-67.5,-32}</string>
+                <key>spriteSize</key>
+                <string>{273,288}</string>
+                <key>spriteSourceSize</key>
+                <string>{480,360}</string>
+                <key>textureRect</key>
+                <string>{{1,1},{273,288}}</string>
+                <key>textureRotated</key>
+                <false/>
+                <key>triangles</key>
+                <string>9 10 11 4 9 11 4 8 9 6 7 8 6 8 4 1 2 3 6 4 5 4 11 1 4 1 3 1 11 12 0 1 12 0 12 13</string>
+                <key>vertices</key>
+                <string>246 86 309 285 290 322 252 334 190 322 156 356 120 356 57 342 36 228 58 177 114 134 207 172 217 144 188 68</string>
+                <key>verticesUV</key>
+                <string>211 19 274 218 255 255 217 267 155 255 121 289 85 289 22 275 1 161 23 110 79 67 172 105 182 77 153 1</string>
+            </dict>
+            <key>Dying_014.png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{-67.5,-32}</string>
+                <key>spriteSize</key>
+                <string>{273,288}</string>
+                <key>spriteSourceSize</key>
+                <string>{480,360}</string>
+                <key>textureRect</key>
+                <string>{{1,1},{273,288}}</string>
+                <key>textureRotated</key>
+                <false/>
+                <key>triangles</key>
+                <string>9 10 11 4 9 11 4 8 9 6 7 8 6 8 4 1 2 3 6 4 5 4 11 1 4 1 3 1 11 12 0 1 12 0 12 13</string>
+                <key>vertices</key>
+                <string>246 86 309 285 290 322 252 334 190 322 156 356 120 356 57 342 36 228 58 177 114 134 207 172 217 144 188 68</string>
+                <key>verticesUV</key>
+                <string>211 19 274 218 255 255 217 267 155 255 121 289 85 289 22 275 1 161 23 110 79 67 172 105 182 77 153 1</string>
+            </dict>
+        </dict>
+        <key>metadata</key>
+        <dict>
+            <key>format</key>
+            <integer>3</integer>
+            <key>pixelFormat</key>
+            <string>RGBA8888</string>
+            <key>premultiplyAlpha</key>
+            <false/>
+            <key>realTextureFileName</key>
+            <string>Pirate_03_Dying.png</string>
+            <key>size</key>
+            <string>{1898,510}</string>
+            <key>smartupdate</key>
+            <string>$TexturePacker:SmartUpdate:2058feb66f1a3dbb118130e494b58405:a8c9308e3ae5740dce562e7ce3f2938e:e66dd1d6ef27e17305370415f34bbfd5$</string>
+            <key>textureFileName</key>
+            <string>Pirate_03_Dying.png</string>
+        </dict>
+    </dict>
+</plist>

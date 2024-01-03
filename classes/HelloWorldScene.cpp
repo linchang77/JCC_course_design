@@ -25,9 +25,10 @@
 #include "HelloWorldScene.h"
 #include "Setting.h"
 #include "Battlefield.h"
+#include "Room.h"
 #include "GeneralCreator.h"
+#include "AudioEngine.h"
 USING_NS_CC;
-
 Scene* HelloWorld::createScene()
 {
     return HelloWorld::create();
@@ -50,19 +51,33 @@ bool HelloWorld::init()
     //get director and general creator instances
     auto director = Director::getInstance();
     auto creator = GCreator::getInstance();
+    auto glView = director->getOpenGLView();
+    glView->setFrameSize(1600, 900);
 
+    // auto backgroundAudioID =AudioEngine::play2d("music.mp3", true);
     //get visible size of the screen
     auto visibleSize = director->getVisibleSize();
 
     // add a "close" icon to exit the progress. it's an autorelease object
     auto closeItem = creator->createMenuItem("closeNormal.png", "closeSelected.png", CC_CALLBACK_1(HelloWorld::menuCloseCallback, this), visibleSize.width, visibleSize.height, 1.0f, 1.0f);
+    closeItem->setScale(CloseitemSize.x / closeItem->getContentSize().width);
+    closeItem->setPosition(CloseitemPosition);
 
-    //模式选项按钮
-    auto intoPracticeMode = creator->createMenuItem("practiceNormal.png", "practiceSelected.png", CC_CALLBACK_1(HelloWorld::menuPracticeCallback, this), visibleSize.width * 0.618f, visibleSize.height * 0.618f);  //开始游戏（练习模式）
-    auto intoBattleMode = creator->createMenuItem("battleNormal.png", "battleSelected.png", CC_CALLBACK_1(HelloWorld::menuBattleCallback, this), visibleSize.width * 0.618f, visibleSize.height * 0.618f - intoPracticeMode->getContentSize().height); //开始游戏（战斗模式？）
+    //模式选项按钮和文字
+    auto intoPracticeMode = creator->createMenuItem("PracticeModeSelectedNormal.png", "PracticeModeSelected.png", CC_CALLBACK_1(HelloWorld::menuPracticeCallback, this), PracticeItemPosition.x, PracticeItemPosition.y);  //开始游戏（练习模式）
+    intoPracticeMode->setScale(ModeitemSize.x/ intoPracticeMode->getContentSize().width);
+    auto intoBattleMode = creator->createMenuItem("OnlineModeNormal.png", "OnlineModeSelected.png", CC_CALLBACK_1(HelloWorld::menuBattleCallback, this), OnlineItemPosition.x, OnlineItemPosition.y); //开始游戏（战斗模式？）
+    intoBattleMode->setScale(ModeitemSize.x / intoPracticeMode->getContentSize().width);
+    auto PracticeWords = creator->createSprite("PracticeWord.png", 0, 0,0,0);
+    PracticeWords->setContentSize(Size(1600, 900));
+    auto OnlineWords = creator->createSprite("OnlineWord.png", 0, 0,0,0);
+    OnlineWords->setContentSize(Size(1600, 900));
+    this->addChild(PracticeWords, 1);
+    this->addChild(OnlineWords, 1);
 
     //设置菜单选项按钮
-    auto setItem = creator->createMenuItem("setNormal.png", "setSelected.png", CC_CALLBACK_1(HelloWorld::menuSetCallback, this), visibleSize.width - closeItem->getContentSize().width, visibleSize.height, 1.0f, 1.0f);
+    auto setItem = creator->createMenuItem("setNormal.png", "setSelected.png", CC_CALLBACK_1(HelloWorld::menuSetCallback, this), SetitemPosition.x, SetitemPosition.y, 1.0f, 1.0f);
+    setItem->setScale(SetitemSize.x / setItem->getContentSize().width);
 
     // create menu, it's an autorelease object
     auto menu = Menu::create(closeItem, intoPracticeMode, intoBattleMode, setItem, NULL);
@@ -75,12 +90,13 @@ bool HelloWorld::init()
     // add a label shows "Hello World"
     // create and initialize a label
 
-    auto label = creator->createLabel("Golden Shovel War", "fonts/Marker Felt.ttf", 24, visibleSize.width / 2, 0.0f);
-    label->setPositionX(visibleSize.height - label->getContentSize().height);
-    addChild(label, 0);
+    auto label = creator->createLabel("Golden Shovel War", "fonts/Marker Felt.ttf", 48, visibleSize.width / 2, 0.0f);
+    label->setPositionY(visibleSize.height - label->getContentSize().height);
+    addChild(label, 1);
 
     // add "HelloWorld" splash screen"
-    auto sprite = creator->createSprite("StartUI.png", visibleSize.width / 2, visibleSize.height / 2);
+    auto sprite = creator->createSprite("StartUI.png", 0, 0,0,0);
+    sprite->setContentSize(Size(1600, 948));
     addChild(sprite, 0);
 
     return true;
@@ -105,20 +121,22 @@ void HelloWorld::menuCloseCallback(Ref* pSender)
 
 void HelloWorld::menuPracticeCallback(Ref* pSender)
 {
-    LHcontroler::clearInstance();   //渲染战场前，先清理小小英雄控制器单例
-    auto practice = Battlefield::createScene();
-    Director::getInstance()->pushScene(practice);
-    ModeSelector::getInstance()->setMode(Practice, practice);
-    log("Now your in %s mode.", ModeSelector::getInstance()->getMode() == Practice ? "practice" : "battle");
+    LHcontroler::clearInstance();   //渲染房间前，先清理小小英雄控制器单例
+    LHcontroler::getInstance()->initlocal();
+    LHcontroler::getInstance()->init();
+
+    auto battlefield = Battlefield::createScene();
+    Director::getInstance()->pushScene(battlefield);
 }
 
 void HelloWorld::menuBattleCallback(Ref* pSender)
 {
-    LHcontroler::clearInstance();   //渲染战场前，先清理小小英雄控制器单例
-    auto battle = Battlefield::createScene();
-    Director::getInstance()->pushScene(battle);
-    ModeSelector::getInstance()->setMode(Battle, battle);
-    log("Now your in %s mode.", ModeSelector::getInstance()->getMode() == Practice ? "practice" : "battle");
+    LHcontroler::clearInstance();   //渲染房间前，先清理小小英雄控制器单例
+    LHcontroler::getInstance()->initonline();
+    LHcontroler::getInstance()->init();
+
+    auto room = Room::createScene();
+    Director::getInstance()->pushScene(room);
 }
 
 void HelloWorld::menuSetCallback(Ref* pSender)

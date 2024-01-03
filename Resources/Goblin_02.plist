@@ -1,0 +1,971 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+    <dict>
+        <key>frames</key>
+        <dict>
+            <key>Goblin_02_Attacking (1).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{37.5,27.5}</string>
+                <key>spriteSize</key>
+                <string>{283,289}</string>
+                <key>spriteSourceSize</key>
+                <string>{440,360}</string>
+                <key>textureRect</key>
+                <string>{{1175,1009},{283,289}}</string>
+                <key>textureRotated</key>
+                <true/>
+                <key>triangles</key>
+                <string>13 14 15 11 12 13 10 1 6 10 11 13 8 9 10 6 7 10 7 8 10 10 13 1 6 1 2 3 4 5 2 3 5 6 2 5 1 13 15 0 1 15</string>
+                <key>vertices</key>
+                <string>286 36 301 79 329 97 357 97 399 118 353 187 318 217 280 293 187 297 141 251 161 205 116 160 118 124 143 103 168 23 242 8</string>
+                <key>verticesUV</key>
+                <string>1436 1179 1393 1194 1375 1222 1375 1250 1354 1292 1285 1246 1255 1211 1179 1173 1175 1080 1221 1034 1267 1054 1312 1009 1348 1011 1369 1036 1449 1061 1464 1135</string>
+            </dict>
+            <key>Goblin_02_Attacking (10).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{66,26.5}</string>
+                <key>spriteSize</key>
+                <string>{304,285}</string>
+                <key>spriteSourceSize</key>
+                <string>{440,360}</string>
+                <key>textureRect</key>
+                <string>{{1475,1295},{304,285}}</string>
+                <key>textureRotated</key>
+                <false/>
+                <key>triangles</key>
+                <string>16 1 2 14 15 16 13 14 16 13 3 8 11 12 13 13 16 2 10 11 13 9 10 13 8 9 13 3 7 8 4 5 6 4 6 7 3 4 7 13 2 3 16 17 1 1 17 18 0 1 18</string>
+                <key>vertices</key>
+                <string>344 35 358 79 358 174 344 225 412 213 438 243 420 282 356 285 309 274 266 293 204 296 156 257 134 224 171 175 152 117 166 89 196 88 237 33 284 11</string>
+                <key>verticesUV</key>
+                <string>1685 1319 1699 1363 1699 1458 1685 1509 1753 1497 1779 1527 1761 1566 1697 1569 1650 1558 1607 1577 1545 1580 1497 1541 1475 1508 1512 1459 1493 1401 1507 1373 1537 1372 1578 1317 1625 1295</string>
+            </dict>
+            <key>Goblin_02_Attacking (11).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{66.5,24.5}</string>
+                <key>spriteSize</key>
+                <string>{307,281}</string>
+                <key>spriteSourceSize</key>
+                <string>{440,360}</string>
+                <key>textureRect</key>
+                <string>{{1466,1012},{307,281}}</string>
+                <key>textureRotated</key>
+                <false/>
+                <key>triangles</key>
+                <string>13 14 15 12 13 15 8 10 12 10 11 12 2 7 8 8 9 10 2 8 12 2 12 15 2 6 7 4 5 6 2 3 4 2 4 6 1 2 15 1 15 16 0 1 16</string>
+                <key>vertices</key>
+                <string>315 17 337 59 358 191 395 170 420 182 440 230 366 255 325 255 294 268 269 293 205 296 133 247 167 177 138 132 151 95 180 93 224 15</string>
+                <key>verticesUV</key>
+                <string>1648 1014 1670 1056 1691 1188 1728 1167 1753 1179 1773 1227 1699 1252 1658 1252 1627 1265 1602 1290 1538 1293 1466 1244 1500 1174 1471 1129 1484 1092 1513 1090 1557 1012</string>
+            </dict>
+            <key>Goblin_02_Attacking (12).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{59,26}</string>
+                <key>spriteSize</key>
+                <string>{300,284}</string>
+                <key>spriteSourceSize</key>
+                <string>{440,360}</string>
+                <key>textureRect</key>
+                <string>{{1173,1295},{300,284}}</string>
+                <key>textureRotated</key>
+                <false/>
+                <key>triangles</key>
+                <string>13 14 15 11 12 13 10 1 5 10 11 13 10 13 1 7 9 10 7 8 9 6 7 10 5 6 10 1 4 5 1 2 3 1 3 4 0 1 13 0 13 15</string>
+                <key>vertices</key>
+                <string>313 45 345 142 388 125 429 174 367 220 316 246 269 293 200 296 148 261 150 220 163 197 129 145 132 111 172 85 196 17 275 12</string>
+                <key>verticesUV</key>
+                <string>1357 1328 1389 1425 1432 1408 1473 1457 1411 1503 1360 1529 1313 1576 1244 1579 1192 1544 1194 1503 1207 1480 1173 1428 1176 1394 1216 1368 1240 1300 1319 1295</string>
+            </dict>
+            <key>Goblin_02_Attacking (2).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{-9.5,29}</string>
+                <key>spriteSize</key>
+                <string>{225,290}</string>
+                <key>spriteSourceSize</key>
+                <string>{440,360}</string>
+                <key>textureRect</key>
+                <string>{{1163,223},{225,290}}</string>
+                <key>textureRotated</key>
+                <true/>
+                <key>triangles</key>
+                <string>10 11 12 9 10 12 7 8 9 0 9 12 6 7 9 2 3 6 4 5 6 3 4 6 1 2 6 9 0 1 9 1 6</string>
+                <key>vertices</key>
+                <string>316 70 323 161 307 266 267 294 188 296 149 268 148 198 121 179 98 141 140 106 149 45 184 12 239 6</string>
+                <key>verticesUV</key>
+                <string>1389 441 1298 448 1193 432 1165 392 1163 313 1191 274 1261 273 1280 246 1318 223 1353 265 1414 274 1447 309 1453 364</string>
+            </dict>
+            <key>Goblin_02_Attacking (3).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{-7,29.5}</string>
+                <key>spriteSize</key>
+                <string>{222,291}</string>
+                <key>spriteSourceSize</key>
+                <string>{440,360}</string>
+                <key>textureRect</key>
+                <string>{{1462,1},{222,291}}</string>
+                <key>textureRotated</key>
+                <true/>
+                <key>triangles</key>
+                <string>10 11 12 7 9 10 7 1 3 7 8 9 5 3 4 5 6 7 5 7 3 7 10 1 1 2 3 0 1 10 0 10 12</string>
+                <key>vertices</key>
+                <string>258 28 314 117 324 228 282 245 275 294 196 296 144 270 146 205 102 176 104 139 130 112 138 32 207 5</string>
+                <key>verticesUV</key>
+                <string>1730 157 1641 213 1530 223 1513 181 1464 174 1462 95 1488 43 1553 45 1582 1 1619 3 1646 29 1726 37 1753 106</string>
+            </dict>
+            <key>Goblin_02_Attacking (4).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{-17,29}</string>
+                <key>spriteSize</key>
+                <string>{222,290}</string>
+                <key>spriteSourceSize</key>
+                <string>{440,360}</string>
+                <key>textureRect</key>
+                <string>{{1,220},{222,290}}</string>
+                <key>textureRotated</key>
+                <true/>
+                <key>triangles</key>
+                <string>11 13 14 11 12 13 0 1 11 10 8 9 10 11 8 4 5 6 6 7 8 4 6 8 4 1 2 1 4 8 4 2 3 1 8 11 0 11 14</string>
+                <key>vertices</key>
+                <string>243 26 293 93 314 144 314 190 282 223 276 293 204 296 145 276 144 207 107 188 92 156 130 85 122 61 142 30 193 6</string>
+                <key>verticesUV</key>
+                <string>271 371 204 421 153 442 107 442 74 410 4 404 1 332 21 273 90 272 109 235 141 220 212 258 236 250 267 270 291 321</string>
+            </dict>
+            <key>Goblin_02_Attacking (5).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{-19.5,30}</string>
+                <key>spriteSize</key>
+                <string>{219,292}</string>
+                <key>spriteSourceSize</key>
+                <string>{440,360}</string>
+                <key>textureRect</key>
+                <string>{{589,1},{219,292}}</string>
+                <key>textureRotated</key>
+                <true/>
+                <key>triangles</key>
+                <string>10 11 12 10 0 1 9 7 8 9 10 7 3 4 5 5 6 7 3 5 7 7 10 1 7 1 3 3 1 2 0 10 12</string>
+                <key>vertices</key>
+                <string>241 27 310 119 310 184 278 218 278 293 204 296 145 276 144 208 106 189 91 157 121 95 122 37 195 4</string>
+                <key>verticesUV</key>
+                <string>858 151 766 220 701 220 667 188 592 188 589 114 609 55 677 54 696 16 728 1 790 31 848 32 881 105</string>
+            </dict>
+            <key>Goblin_02_Attacking (6).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{-17,29}</string>
+                <key>spriteSize</key>
+                <string>{222,290}</string>
+                <key>spriteSourceSize</key>
+                <string>{440,360}</string>
+                <key>textureRect</key>
+                <string>{{293,221},{222,290}}</string>
+                <key>textureRotated</key>
+                <true/>
+                <key>triangles</key>
+                <string>10 11 12 8 9 10 1 3 10 7 8 10 3 4 5 5 6 7 3 5 7 3 7 10 1 2 3 0 1 10 0 10 12</string>
+                <key>vertices</key>
+                <string>237 25 300 105 314 177 275 207 284 293 205 296 144 276 143 208 100 190 92 149 113 128 121 36 187 6</string>
+                <key>verticesUV</key>
+                <string>564 366 484 429 412 443 382 404 296 413 293 334 313 273 381 272 399 229 440 221 461 242 553 250 583 316</string>
+            </dict>
+            <key>Goblin_02_Attacking (7).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{-23,29}</string>
+                <key>spriteSize</key>
+                <string>{224,290}</string>
+                <key>spriteSourceSize</key>
+                <string>{440,360}</string>
+                <key>textureRect</key>
+                <string>{{871,222},{224,290}}</string>
+                <key>textureRotated</key>
+                <true/>
+                <key>triangles</key>
+                <string>0 12 13 11 0 10 8 9 10 0 1 10 7 8 10 3 4 5 5 6 7 3 5 7 1 2 3 1 3 7 1 7 10 11 12 0</string>
+                <key>vertices</key>
+                <string>234 24 302 110 309 165 283 211 276 293 205 296 144 276 142 211 105 199 85 157 117 116 116 62 134 32 183 6</string>
+                <key>verticesUV</key>
+                <string>1143 371 1057 439 1002 446 956 420 874 413 871 342 891 281 956 279 968 242 1010 222 1051 254 1105 253 1135 271 1161 320</string>
+            </dict>
+            <key>Goblin_02_Attacking (8).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{2,31}</string>
+                <key>spriteSize</key>
+                <string>{218,294}</string>
+                <key>spriteSourceSize</key>
+                <string>{440,360}</string>
+                <key>textureRect</key>
+                <string>{{293,1},{218,294}}</string>
+                <key>textureRotated</key>
+                <true/>
+                <key>triangles</key>
+                <string>0 12 13 8 10 11 0 11 12 8 9 10 5 3 4 7 5 6 7 8 5 5 8 3 1 2 3 1 3 8 11 0 1 11 1 8</string>
+                <key>vertices</key>
+                <string>291 40 331 135 319 244 279 265 274 294 206 296 147 267 141 234 154 191 113 163 118 119 144 98 171 22 253 2</string>
+                <key>verticesUV</key>
+                <string>549 179 454 219 345 207 324 167 295 162 293 94 322 35 355 29 398 42 426 1 470 6 491 32 567 59 587 141</string>
+            </dict>
+            <key>Goblin_02_Attacking (9).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{63,23}</string>
+                <key>spriteSize</key>
+                <string>{296,286}</string>
+                <key>spriteSourceSize</key>
+                <string>{440,360}</string>
+                <key>textureRect</key>
+                <string>{{584,1569},{296,286}}</string>
+                <key>textureRotated</key>
+                <false/>
+                <key>triangles</key>
+                <string>13 14 15 12 13 15 12 7 8 10 11 12 2 7 12 9 10 12 12 8 9 2 12 15 2 6 7 5 2 3 5 3 4 2 5 6 1 2 15 1 15 16 0 1 16</string>
+                <key>vertices</key>
+                <string>303 16 338 57 361 170 398 152 431 168 431 213 376 239 326 252 269 292 209 300 156 258 135 225 168 172 139 133 152 96 181 93 226 14</string>
+                <key>verticesUV</key>
+                <string>752 1571 787 1612 810 1725 847 1707 880 1723 880 1768 825 1794 775 1807 718 1847 658 1855 605 1813 584 1780 617 1727 588 1688 601 1651 630 1648 675 1569</string>
+            </dict>
+            <key>Goblin_02_Dying (1).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{37.5,27.5}</string>
+                <key>spriteSize</key>
+                <string>{283,289}</string>
+                <key>spriteSourceSize</key>
+                <string>{440,360}</string>
+                <key>textureRect</key>
+                <string>{{1,1253},{283,289}}</string>
+                <key>textureRotated</key>
+                <true/>
+                <key>triangles</key>
+                <string>13 14 15 11 12 13 10 1 6 10 11 13 8 9 10 6 7 10 7 8 10 10 13 1 6 1 2 3 4 5 2 3 5 6 2 5 1 13 15 0 1 15</string>
+                <key>vertices</key>
+                <string>286 36 301 79 329 97 357 97 399 118 353 187 318 217 280 293 187 297 141 251 161 205 116 160 118 124 143 103 168 23 242 8</string>
+                <key>verticesUV</key>
+                <string>262 1423 219 1438 201 1466 201 1494 180 1536 111 1490 81 1455 5 1417 1 1324 47 1278 93 1298 138 1253 174 1255 195 1280 275 1305 290 1379</string>
+            </dict>
+            <key>Goblin_02_Dying (10).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{-55,-20.5}</string>
+                <key>spriteSize</key>
+                <string>{280,219}</string>
+                <key>spriteSourceSize</key>
+                <string>{440,360}</string>
+                <key>textureRect</key>
+                <string>{{883,1},{280,219}}</string>
+                <key>textureRotated</key>
+                <false/>
+                <key>triangles</key>
+                <string>8 10 11 8 9 10 6 7 8 0 1 5 5 6 8 1 3 4 1 2 3 1 4 5 0 5 8 0 8 11</string>
+                <key>vertices</key>
+                <string>216 128 254 162 305 236 291 275 256 310 156 296 85 308 69 276 77 250 25 172 62 108 123 91</string>
+                <key>verticesUV</key>
+                <string>1074 38 1112 72 1163 146 1149 185 1114 220 1014 206 943 218 927 186 935 160 883 82 920 18 981 1</string>
+            </dict>
+            <key>Goblin_02_Dying (11).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{-64,-32}</string>
+                <key>spriteSize</key>
+                <string>{280,254}</string>
+                <key>spriteSourceSize</key>
+                <string>{440,360}</string>
+                <key>textureRect</key>
+                <string>{{252,445},{280,254}}</string>
+                <key>textureRotated</key>
+                <false/>
+                <key>triangles</key>
+                <string>11 12 13 10 11 13 0 5 13 9 10 13 8 9 13 5 8 13 6 7 8 5 6 8 1 3 4 5 0 1 1 2 3 1 4 5 0 13 14</string>
+                <key>vertices</key>
+                <string>197 132 260 200 293 219 296 285 256 322 176 313 124 339 87 331 83 294 30 255 16 221 24 166 68 134 90 139 143 85</string>
+                <key>verticesUV</key>
+                <string>433 492 496 560 529 579 532 645 492 682 412 673 360 699 323 691 319 654 266 615 252 581 260 526 304 494 326 499 379 445</string>
+            </dict>
+            <key>Goblin_02_Dying (12).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{-69,-33}</string>
+                <key>spriteSize</key>
+                <string>{290,282}</string>
+                <key>spriteSourceSize</key>
+                <string>{440,360}</string>
+                <key>textureRect</key>
+                <string>{{589,992},{290,282}}</string>
+                <key>textureRotated</key>
+                <false/>
+                <key>triangles</key>
+                <string>0 14 15 9 12 13 11 9 10 11 12 9 6 9 13 7 8 9 6 7 9 6 4 5 6 2 3 2 6 13 6 3 4 1 2 13 0 1 13 0 13 14</string>
+                <key>vertices</key>
+                <string>225 82 247 140 252 188 293 231 296 285 260 331 177 327 146 354 106 353 87 314 18 285 6 210 47 164 176 135 161 112 181 72</string>
+                <key>verticesUV</key>
+                <string>808 1002 830 1060 835 1108 876 1151 879 1205 843 1251 760 1247 729 1274 689 1273 670 1234 601 1205 589 1130 630 1084 759 1055 744 1032 764 992</string>
+            </dict>
+            <key>Goblin_02_Dying (13).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{-69,-33}</string>
+                <key>spriteSize</key>
+                <string>{290,282}</string>
+                <key>spriteSourceSize</key>
+                <string>{440,360}</string>
+                <key>textureRect</key>
+                <string>{{589,992},{290,282}}</string>
+                <key>textureRotated</key>
+                <false/>
+                <key>triangles</key>
+                <string>0 14 15 9 12 13 11 9 10 11 12 9 6 9 13 7 8 9 6 7 9 6 4 5 6 2 3 2 6 13 6 3 4 1 2 13 0 1 13 0 13 14</string>
+                <key>vertices</key>
+                <string>225 82 247 140 252 188 293 231 296 285 260 331 177 327 146 354 106 353 87 314 18 285 6 210 47 164 176 135 161 112 181 72</string>
+                <key>verticesUV</key>
+                <string>808 1002 830 1060 835 1108 876 1151 879 1205 843 1251 760 1247 729 1274 689 1273 670 1234 601 1205 589 1130 630 1084 759 1055 744 1032 764 992</string>
+            </dict>
+            <key>Goblin_02_Dying (14).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{-69,-33}</string>
+                <key>spriteSize</key>
+                <string>{290,282}</string>
+                <key>spriteSourceSize</key>
+                <string>{440,360}</string>
+                <key>textureRect</key>
+                <string>{{589,992},{290,282}}</string>
+                <key>textureRotated</key>
+                <false/>
+                <key>triangles</key>
+                <string>0 14 15 9 12 13 11 9 10 11 12 9 6 9 13 7 8 9 6 7 9 6 4 5 6 2 3 2 6 13 6 3 4 1 2 13 0 1 13 0 13 14</string>
+                <key>vertices</key>
+                <string>225 82 247 140 252 188 293 231 296 285 260 331 177 327 146 354 106 353 87 314 18 285 6 210 47 164 176 135 161 112 181 72</string>
+                <key>verticesUV</key>
+                <string>808 1002 830 1060 835 1108 876 1151 879 1205 843 1251 760 1247 729 1274 689 1273 670 1234 601 1205 589 1130 630 1084 759 1055 744 1032 764 992</string>
+            </dict>
+            <key>Goblin_02_Dying (15).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{-69,-33}</string>
+                <key>spriteSize</key>
+                <string>{290,282}</string>
+                <key>spriteSourceSize</key>
+                <string>{440,360}</string>
+                <key>textureRect</key>
+                <string>{{589,992},{290,282}}</string>
+                <key>textureRotated</key>
+                <false/>
+                <key>triangles</key>
+                <string>0 14 15 9 12 13 11 9 10 11 12 9 6 9 13 7 8 9 6 7 9 6 4 5 6 2 3 2 6 13 6 3 4 1 2 13 0 1 13 0 13 14</string>
+                <key>vertices</key>
+                <string>225 82 247 140 252 188 293 231 296 285 260 331 177 327 146 354 106 353 87 314 18 285 6 210 47 164 176 135 161 112 181 72</string>
+                <key>verticesUV</key>
+                <string>808 1002 830 1060 835 1108 876 1151 879 1205 843 1251 760 1247 729 1274 689 1273 670 1234 601 1205 589 1130 630 1084 759 1055 744 1032 764 992</string>
+            </dict>
+            <key>Goblin_02_Dying (2).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{35.5,29}</string>
+                <key>spriteSize</key>
+                <string>{267,292}</string>
+                <key>spriteSourceSize</key>
+                <string>{440,360}</string>
+                <key>textureRect</key>
+                <string>{{1414,462},{267,292}}</string>
+                <key>textureRotated</key>
+                <true/>
+                <key>triangles</key>
+                <string>0 13 14 10 11 12 9 1 5 9 10 12 5 6 9 7 8 9 6 7 9 9 12 1 1 4 5 2 3 4 1 2 4 0 1 12 0 12 13</string>
+                <key>vertices</key>
+                <string>298 39 314 84 371 99 389 130 354 184 335 199 270 297 173 288 151 247 160 202 123 155 122 115 154 99 179 18 264 5</string>
+                <key>verticesUV</key>
+                <string>1672 638 1627 654 1612 711 1581 729 1527 694 1512 675 1414 610 1423 513 1464 491 1509 500 1556 463 1596 462 1612 494 1693 519 1706 604</string>
+            </dict>
+            <key>Goblin_02_Dying (3).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{41,30.5}</string>
+                <key>spriteSize</key>
+                <string>{268,293}</string>
+                <key>spriteSourceSize</key>
+                <string>{440,360}</string>
+                <key>textureRect</key>
+                <string>{{1,701},{268,293}}</string>
+                <key>textureRotated</key>
+                <true/>
+                <key>triangles</key>
+                <string>12 13 14 10 11 12 1 4 12 9 10 12 4 5 9 8 9 6 8 6 7 5 6 9 4 9 12 1 3 4 1 2 3 1 12 14 0 1 14</string>
+                <key>vertices</key>
+                <string>307 26 314 64 395 116 359 179 324 204 284 281 243 296 164 281 158 234 164 199 127 144 127 109 167 82 189 15 260 3</string>
+                <key>verticesUV</key>
+                <string>271 881 233 888 181 969 118 933 93 898 16 858 1 817 16 738 63 732 98 738 153 701 188 701 215 741 282 763 294 834</string>
+            </dict>
+            <key>Goblin_02_Dying (4).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{41,33.5}</string>
+                <key>spriteSize</key>
+                <string>{266,289}</string>
+                <key>spriteSourceSize</key>
+                <string>{440,360}</string>
+                <key>textureRect</key>
+                <string>{{1123,450},{266,289}}</string>
+                <key>textureRotated</key>
+                <true/>
+                <key>triangles</key>
+                <string>1 12 13 9 10 11 8 1 4 8 9 11 8 11 1 7 8 5 7 5 6 4 5 8 1 3 4 1 2 3 1 11 12 0 1 13</string>
+                <key>vertices</key>
+                <string>322 43 320 68 394 113 364 173 333 199 272 291 182 286 161 239 168 185 128 133 137 96 168 85 203 11 277 2</string>
+                <key>verticesUV</key>
+                <string>1371 644 1346 642 1301 716 1241 686 1215 655 1123 594 1128 504 1175 483 1229 490 1281 450 1318 459 1329 490 1403 525 1412 599</string>
+            </dict>
+            <key>Goblin_02_Dying (5).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{19.5,33.5}</string>
+                <key>spriteSize</key>
+                <string>{235,287}</string>
+                <key>spriteSourceSize</key>
+                <string>{440,360}</string>
+                <key>textureRect</key>
+                <string>{{1455,225},{235,287}}</string>
+                <key>textureRotated</key>
+                <true/>
+                <key>triangles</key>
+                <string>0 10 11 7 8 9 6 7 9 0 2 9 3 4 6 4 5 6 2 3 6 2 6 9 0 1 2 0 9 10</string>
+                <key>vertices</key>
+                <string>263 4 357 78 332 170 287 281 223 290 170 272 164 190 123 147 122 104 152 101 177 32 210 3</string>
+                <key>verticesUV</key>
+                <string>1741 366 1667 460 1575 435 1464 390 1455 326 1473 273 1555 267 1598 226 1641 225 1644 255 1713 280 1742 313</string>
+            </dict>
+            <key>Goblin_02_Dying (6).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{-2.5,34}</string>
+                <key>spriteSize</key>
+                <string>{217,290}</string>
+                <key>spriteSourceSize</key>
+                <string>{440,360}</string>
+                <key>textureRect</key>
+                <string>{{1,1},{217,290}}</string>
+                <key>textureRotated</key>
+                <true/>
+                <key>triangles</key>
+                <string>8 9 10 6 7 8 0 8 10 5 6 8 1 2 5 3 4 5 2 3 5 8 0 1 8 1 5</string>
+                <key>vertices</key>
+                <string>307 46 326 153 304 267 236 291 180 276 163 205 115 157 109 120 140 96 165 16 239 1</string>
+                <key>verticesUV</key>
+                <string>246 199 139 218 25 196 1 128 16 72 87 55 135 7 172 1 196 32 276 57 291 131</string>
+            </dict>
+            <key>Goblin_02_Dying (7).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{-8,30.5}</string>
+                <key>spriteSize</key>
+                <string>{220,295}</string>
+                <key>spriteSourceSize</key>
+                <string>{440,360}</string>
+                <key>textureRect</key>
+                <string>{{1165,1},{220,295}}</string>
+                <key>textureRotated</key>
+                <true/>
+                <key>triangles</key>
+                <string>0 11 12 0 10 11 7 8 9 0 1 9 6 7 9 3 4 6 4 5 6 2 3 6 1 2 6 1 6 9 0 9 10</string>
+                <key>vertices</key>
+                <string>269 31 314 118 322 205 295 266 235 297 183 274 172 219 108 171 102 132 133 106 141 50 162 22 214 2</string>
+                <key>verticesUV</key>
+                <string>1431 168 1344 213 1257 221 1196 194 1165 134 1188 82 1243 71 1291 7 1330 1 1356 32 1412 40 1440 61 1460 113</string>
+            </dict>
+            <key>Goblin_02_Dying (8).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{-28.5,23}</string>
+                <key>spriteSize</key>
+                <string>{223,284}</string>
+                <key>spriteSourceSize</key>
+                <string>{440,360}</string>
+                <key>textureRect</key>
+                <string>{{585,222},{223,284}}</string>
+                <key>textureRotated</key>
+                <true/>
+                <key>triangles</key>
+                <string>0 10 11 7 8 9 0 1 9 6 7 9 3 4 5 3 5 6 6 1 2 6 2 3 1 6 9 0 9 10</string>
+                <key>vertices</key>
+                <string>216 39 272 101 303 154 303 241 284 282 211 299 156 242 90 210 80 175 97 148 98 57 168 15</string>
+                <key>verticesUV</key>
+                <string>845 358 783 414 730 445 643 445 602 426 585 353 642 298 674 232 709 222 736 239 827 240 869 310</string>
+            </dict>
+            <key>Goblin_02_Dying (9).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{-41.5,-1.5}</string>
+                <key>spriteSize</key>
+                <string>{249,247}</string>
+                <key>spriteSourceSize</key>
+                <string>{440,360}</string>
+                <key>textureRect</key>
+                <string>{{1,444},{249,247}}</string>
+                <key>textureRotated</key>
+                <false/>
+                <key>triangles</key>
+                <string>8 9 10 7 8 10 0 4 7 5 6 7 4 5 7 1 2 3 1 3 4 0 1 4 0 7 10</string>
+                <key>vertices</key>
+                <string>256 118 303 227 279 290 225 305 166 267 89 258 67 228 81 195 54 115 101 59 157 58</string>
+                <key>verticesUV</key>
+                <string>203 504 250 613 226 676 172 691 113 653 36 644 14 614 28 581 1 501 48 445 104 444</string>
+            </dict>
+            <key>Goblin_02_Walking (1).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{37.5,25.5}</string>
+                <key>spriteSize</key>
+                <string>{261,291}</string>
+                <key>spriteSourceSize</key>
+                <string>{440,360}</string>
+                <key>textureRect</key>
+                <string>{{534,447},{261,291}}</string>
+                <key>textureRotated</key>
+                <true/>
+                <key>triangles</key>
+                <string>1 15 16 1 14 15 11 12 13 10 1 6 10 11 13 8 6 7 8 9 10 8 10 6 10 13 1 6 1 2 2 3 4 2 4 5 6 2 5 1 13 14 0 1 16</string>
+                <key>vertices</key>
+                <string>305 40 310 78 328 95 368 95 388 129 359 180 321 220 291 281 234 300 135 259 156 188 128 156 127 115 157 107 181 40 208 17 263 9</string>
+                <key>verticesUV</key>
+                <string>794 625 756 630 739 648 739 688 705 708 654 679 614 641 553 611 534 554 575 455 646 476 678 448 719 447 727 477 794 501 817 528 825 583</string>
+            </dict>
+            <key>Goblin_02_Walking (10).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{40,27.5}</string>
+                <key>spriteSize</key>
+                <string>{290,285}</string>
+                <key>spriteSourceSize</key>
+                <string>{440,360}</string>
+                <key>textureRect</key>
+                <string>{{292,1264},{290,285}}</string>
+                <key>textureRotated</key>
+                <false/>
+                <key>triangles</key>
+                <string>0 14 15 10 12 13 10 11 12 10 2 7 7 8 10 8 9 10 10 13 2 2 6 7 2 4 5 2 3 4 2 5 6 13 0 1 13 1 2 0 13 14</string>
+                <key>vertices</key>
+                <string>265 11 302 23 342 144 389 145 405 170 405 200 353 232 304 249 274 294 191 295 170 197 115 141 134 113 167 90 183 40 217 10</string>
+                <key>verticesUV</key>
+                <string>442 1265 479 1277 519 1398 566 1399 582 1424 582 1454 530 1486 481 1503 451 1548 368 1549 347 1451 292 1395 311 1367 344 1344 360 1294 394 1264</string>
+            </dict>
+            <key>Goblin_02_Walking (11).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{47,24.5}</string>
+                <key>spriteSize</key>
+                <string>{276,291}</string>
+                <key>spriteSourceSize</key>
+                <string>{440,360}</string>
+                <key>textureRect</key>
+                <string>{{1181,731},{276,291}}</string>
+                <key>textureRotated</key>
+                <true/>
+                <key>triangles</key>
+                <string>15 16 17 11 2 6 12 13 14 11 14 2 11 12 14 9 7 8 9 10 11 9 11 7 6 7 11 14 15 2 2 5 6 5 2 3 5 3 4 1 2 15 0 1 15 0 15 17</string>
+                <key>vertices</key>
+                <string>271 11 310 42 328 102 400 150 405 189 355 224 318 234 296 252 276 291 219 301 183 284 170 205 129 149 129 113 163 95 185 60 185 36 221 10</string>
+                <key>verticesUV</key>
+                <string>1471 873 1440 912 1380 930 1332 1002 1293 1007 1258 957 1248 920 1230 898 1191 878 1181 821 1198 785 1277 772 1333 731 1369 731 1387 765 1422 787 1446 787 1472 823</string>
+            </dict>
+            <key>Goblin_02_Walking (12).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{44.5,28}</string>
+                <key>spriteSize</key>
+                <string>{279,288}</string>
+                <key>spriteSourceSize</key>
+                <string>{440,360}</string>
+                <key>textureRect</key>
+                <string>{{1474,731},{279,288}}</string>
+                <key>textureRotated</key>
+                <true/>
+                <key>triangles</key>
+                <string>12 13 14 10 11 12 9 1 5 9 10 12 8 5 6 8 9 5 8 6 7 9 12 1 1 4 5 2 3 4 1 2 4 0 1 12 0 12 14</string>
+                <key>vertices</key>
+                <string>305 39 327 101 392 135 404 174 356 214 303 242 272 296 198 294 176 265 161 188 127 153 125 113 159 94 189 17 265 8</string>
+                <key>verticesUV</key>
+                <string>1731 911 1669 933 1635 998 1596 1010 1556 962 1528 909 1474 878 1476 804 1505 782 1582 767 1617 733 1657 731 1676 765 1753 795 1762 871</string>
+            </dict>
+            <key>Goblin_02_Walking (13).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{27.5,26.5}</string>
+                <key>spriteSize</key>
+                <string>{297,297}</string>
+                <key>spriteSourceSize</key>
+                <string>{440,360}</string>
+                <key>textureRect</key>
+                <string>{{1464,1582},{297,297}}</string>
+                <key>textureRotated</key>
+                <false/>
+                <key>triangles</key>
+                <string>0 15 16 0 1 14 11 12 13 11 1 6 7 9 10 10 11 7 7 8 9 6 7 11 11 13 1 6 1 2 2 3 4 2 4 5 6 2 5 1 13 14 0 14 15</string>
+                <key>vertices</key>
+                <string>293 35 310 84 347 111 396 126 396 164 353 207 325 217 292 255 274 291 210 302 169 268 166 202 99 134 154 96 170 42 194 16 250 5</string>
+                <key>verticesUV</key>
+                <string>1658 1612 1675 1661 1712 1688 1761 1703 1761 1741 1718 1784 1690 1794 1657 1832 1639 1868 1575 1879 1534 1845 1531 1779 1464 1711 1519 1673 1535 1619 1559 1593 1615 1582</string>
+            </dict>
+            <key>Goblin_02_Walking (14).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{35,29.5}</string>
+                <key>spriteSize</key>
+                <string>{280,295}</string>
+                <key>spriteSourceSize</key>
+                <string>{440,360}</string>
+                <key>textureRect</key>
+                <string>{{292,982},{280,295}}</string>
+                <key>textureRotated</key>
+                <true/>
+                <key>triangles</key>
+                <string>0 14 15 11 12 13 10 1 6 10 11 13 6 7 10 8 9 10 7 8 10 10 13 1 6 1 2 2 3 4 2 4 5 6 2 5 0 1 13 0 13 14</string>
+                <key>vertices</key>
+                <string>281 30 308 89 340 109 376 109 395 148 353 197 313 223 271 292 214 298 164 277 161 206 116 160 115 123 139 103 165 22 236 3</string>
+                <key>verticesUV</key>
+                <string>560 1148 501 1175 481 1207 481 1243 442 1262 393 1220 367 1180 298 1138 292 1081 313 1031 384 1028 430 983 467 982 487 1006 568 1032 587 1103</string>
+            </dict>
+            <key>Goblin_02_Walking (15).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{33.5,30.5}</string>
+                <key>spriteSize</key>
+                <string>{287,293}</string>
+                <key>spriteSourceSize</key>
+                <string>{440,360}</string>
+                <key>textureRect</key>
+                <string>{{878,1280},{287,293}}</string>
+                <key>textureRotated</key>
+                <true/>
+                <key>triangles</key>
+                <string>0 14 15 12 0 1 10 11 12 9 1 5 9 10 12 5 6 9 7 8 9 6 7 9 9 12 1 1 4 5 2 3 4 1 2 4 12 13 0 0 13 14</string>
+                <key>vertices</key>
+                <string>273 29 303 83 367 104 397 132 352 191 324 206 269 293 208 296 155 267 160 211 114 165 110 131 143 99 151 48 174 20 226 3</string>
+                <key>verticesUV</key>
+                <string>1145 1443 1091 1473 1070 1537 1042 1567 983 1522 968 1494 881 1439 878 1378 907 1325 963 1330 1009 1284 1043 1280 1075 1313 1126 1321 1154 1344 1171 1396</string>
+            </dict>
+            <key>Goblin_02_Walking (16).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{26.5,31}</string>
+                <key>spriteSize</key>
+                <string>{289,290}</string>
+                <key>spriteSourceSize</key>
+                <string>{440,360}</string>
+                <key>textureRect</key>
+                <string>{{292,1551},{289,290}}</string>
+                <key>textureRotated</key>
+                <true/>
+                <key>triangles</key>
+                <string>0 15 16 0 1 14 11 12 13 10 1 6 10 11 13 6 7 10 8 9 10 7 8 10 10 13 1 6 1 2 2 3 4 2 4 5 6 2 5 1 13 14 0 14 15</string>
+                <key>vertices</key>
+                <string>272 30 296 77 329 99 372 100 391 137 353 189 327 212 266 294 209 294 157 272 151 203 120 174 102 139 142 104 150 50 172 22 225 4</string>
+                <key>verticesUV</key>
+                <string>556 1721 509 1745 487 1778 486 1821 449 1840 397 1802 374 1776 292 1715 292 1658 314 1606 383 1600 412 1569 447 1551 482 1591 536 1599 564 1621 582 1674</string>
+            </dict>
+            <key>Goblin_02_Walking (17).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{29,30.5}</string>
+                <key>spriteSize</key>
+                <string>{280,289}</string>
+                <key>spriteSourceSize</key>
+                <string>{440,360}</string>
+                <key>textureRect</key>
+                <string>{{1,971},{280,289}}</string>
+                <key>textureRotated</key>
+                <true/>
+                <key>triangles</key>
+                <string>0 14 15 0 13 14 9 11 12 9 1 5 9 10 11 7 5 6 8 9 5 8 5 7 9 12 1 1 4 5 1 3 4 1 2 3 0 1 12 0 12 13</string>
+                <key>vertices</key>
+                <string>281 32 323 102 369 92 389 134 370 171 309 232 278 294 188 294 153 259 146 191 109 164 118 126 149 98 158 47 179 20 235 5</string>
+                <key>verticesUV</key>
+                <string>263 1143 193 1185 203 1231 161 1251 124 1232 63 1171 1 1140 1 1050 36 1015 104 1008 131 971 169 980 197 1011 248 1020 275 1041 290 1097</string>
+            </dict>
+            <key>Goblin_02_Walking (18).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{35,25.5}</string>
+                <key>spriteSize</key>
+                <string>{270,297}</string>
+                <key>spriteSourceSize</key>
+                <string>{440,360}</string>
+                <key>textureRect</key>
+                <string>{{296,710},{270,297}}</string>
+                <key>textureRotated</key>
+                <true/>
+                <key>triangles</key>
+                <string>0 14 15 12 0 1 10 11 12 9 1 5 9 10 12 5 6 9 7 8 9 6 7 9 9 12 1 1 4 5 2 3 4 1 2 4 12 13 0 0 13 14</string>
+                <key>vertices</key>
+                <string>292 37 310 81 372 102 390 131 354 188 334 197 286 281 236 303 136 263 154 197 122 159 120 123 157 92 168 45 193 18 248 6</string>
+                <key>verticesUV</key>
+                <string>562 882 518 900 497 962 468 980 411 944 402 924 318 876 296 826 336 726 402 744 440 712 476 710 507 747 554 758 581 783 593 838</string>
+            </dict>
+            <key>Goblin_02_Walking (2).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{37,23}</string>
+                <key>spriteSize</key>
+                <string>{264,294}</string>
+                <key>spriteSourceSize</key>
+                <string>{440,360}</string>
+                <key>textureRect</key>
+                <string>{{827,448},{264,294}}</string>
+                <key>textureRotated</key>
+                <true/>
+                <key>triangles</key>
+                <string>2 16 17 13 14 15 12 13 15 2 15 16 8 9 12 10 11 12 9 10 12 7 8 12 7 2 3 2 7 12 3 4 5 3 5 6 7 3 6 2 12 15 0 1 2 0 2 17</string>
+                <key>vertices</key>
+                <string>270 11 309 42 309 76 331 97 370 96 389 131 359 181 316 225 289 280 239 304 161 273 143 243 161 186 125 149 131 113 164 92 184 37 218 10</string>
+                <key>verticesUV</key>
+                <string>1120 593 1089 632 1055 632 1034 654 1035 693 1000 712 950 682 906 639 851 612 827 562 858 484 888 466 945 484 982 448 1018 454 1039 487 1094 507 1121 541</string>
+            </dict>
+            <key>Goblin_02_Walking (3).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{33,27}</string>
+                <key>spriteSize</key>
+                <string>{276,294}</string>
+                <key>spriteSourceSize</key>
+                <string>{440,360}</string>
+                <key>textureRect</key>
+                <string>{{595,714},{276,294}}</string>
+                <key>textureRotated</key>
+                <true/>
+                <key>triangles</key>
+                <string>0 15 16 15 0 1 10 12 13 10 1 5 10 11 12 5 6 10 9 7 8 9 10 7 6 7 10 10 13 1 1 4 5 2 3 4 1 2 4 1 13 14 15 1 14</string>
+                <key>vertices</key>
+                <string>305 42 315 83 373 103 391 133 355 187 321 213 280 289 226 300 154 271 150 235 161 188 115 142 131 110 159 97 180 38 206 15 269 6</string>
+                <key>verticesUV</key>
+                <string>853 904 812 914 792 972 762 990 708 954 682 920 606 879 595 825 624 753 660 749 707 760 753 714 785 730 798 758 857 779 880 805 889 868</string>
+            </dict>
+            <key>Goblin_02_Walking (4).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{32,30}</string>
+                <key>spriteSize</key>
+                <string>{276,288}</string>
+                <key>spriteSourceSize</key>
+                <string>{440,360}</string>
+                <key>textureRect</key>
+                <string>{{891,718},{276,288}}</string>
+                <key>textureRotated</key>
+                <true/>
+                <key>triangles</key>
+                <string>1 14 15 1 13 14 10 11 12 9 1 5 9 10 12 5 6 9 7 8 9 6 7 9 9 12 1 1 4 5 2 3 4 1 2 4 1 12 13 0 1 15</string>
+                <key>vertices</key>
+                <string>287 19 311 84 373 104 390 137 353 190 337 199 266 294 189 294 149 254 161 197 123 159 114 119 152 94 169 40 194 16 246 6</string>
+                <key>verticesUV</key>
+                <string>1166 891 1101 915 1081 977 1048 994 995 957 986 941 891 870 891 793 931 753 988 765 1026 727 1066 718 1091 756 1145 773 1169 798 1179 850</string>
+            </dict>
+            <key>Goblin_02_Walking (5).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{32.5,31}</string>
+                <key>spriteSize</key>
+                <string>{287,292}</string>
+                <key>spriteSourceSize</key>
+                <string>{440,360}</string>
+                <key>textureRect</key>
+                <string>{{584,1276},{287,292}}</string>
+                <key>textureRotated</key>
+                <true/>
+                <key>triangles</key>
+                <string>0 13 14 11 12 13 9 10 11 0 1 11 8 9 11 6 4 5 6 7 8 6 8 4 1 4 8 1 2 3 1 3 4 1 8 11 0 11 13</string>
+                <key>vertices</key>
+                <string>280 30 307 84 374 106 396 146 299 243 270 295 192 294 154 256 161 206 118 163 109 126 145 103 156 43 184 17 234 3</string>
+                <key>verticesUV</key>
+                <string>849 1447 795 1474 773 1541 733 1563 636 1466 584 1437 585 1359 623 1321 673 1328 716 1285 753 1276 776 1312 836 1323 862 1351 876 1401</string>
+            </dict>
+            <key>Goblin_02_Walking (6).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{33,30}</string>
+                <key>spriteSize</key>
+                <string>{286,296}</string>
+                <key>spriteSourceSize</key>
+                <string>{440,360}</string>
+                <key>textureRect</key>
+                <string>{{882,1569},{286,296}}</string>
+                <key>textureRotated</key>
+                <false/>
+                <key>triangles</key>
+                <string>13 14 15 11 12 13 10 1 6 10 11 13 8 6 7 8 9 10 8 10 6 10 13 1 6 1 2 3 4 5 2 3 5 6 2 5 0 1 13 0 13 15</string>
+                <key>vertices</key>
+                <string>273 28 296 77 318 92 379 112 396 151 352 195 309 227 271 292 213 298 163 274 161 205 115 171 110 131 143 99 154 27 224 2</string>
+                <key>verticesUV</key>
+                <string>1045 1595 1068 1644 1090 1659 1151 1679 1168 1718 1124 1762 1081 1794 1043 1859 985 1865 935 1841 933 1772 887 1738 882 1698 915 1666 926 1594 996 1569</string>
+            </dict>
+            <key>Goblin_02_Walking (7).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{34,30}</string>
+                <key>spriteSize</key>
+                <string>{282,292}</string>
+                <key>spriteSourceSize</key>
+                <string>{440,360}</string>
+                <key>textureRect</key>
+                <string>{{881,996},{282,292}}</string>
+                <key>textureRotated</key>
+                <true/>
+                <key>triangles</key>
+                <string>0 15 16 0 14 15 11 12 13 10 1 6 10 11 13 6 7 10 8 9 10 7 8 10 10 13 1 1 5 6 2 3 4 1 4 5 2 4 1 0 1 13 0 13 14</string>
+                <key>vertices</key>
+                <string>272 30 331 129 350 111 395 124 395 162 353 206 332 211 272 293 203 296 171 270 161 207 113 170 113 132 143 101 150 50 172 22 225 4</string>
+                <key>verticesUV</key>
+                <string>1147 1155 1048 1214 1066 1233 1053 1278 1015 1278 971 1236 966 1215 884 1155 881 1086 907 1054 970 1044 1007 996 1045 996 1076 1026 1127 1033 1155 1055 1173 1108</string>
+            </dict>
+            <key>Goblin_02_Walking (8).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{36,27.5}</string>
+                <key>spriteSize</key>
+                <string>{292,291}</string>
+                <key>spriteSourceSize</key>
+                <string>{440,360}</string>
+                <key>textureRect</key>
+                <string>{{1170,1581},{292,291}}</string>
+                <key>textureRotated</key>
+                <false/>
+                <key>triangles</key>
+                <string>14 15 16 0 1 14 11 12 13 10 1 6 10 11 13 6 8 9 9 10 6 6 7 8 10 13 1 6 1 2 2 3 4 2 4 5 6 2 5 1 13 14 0 14 16</string>
+                <key>vertices</key>
+                <string>283 32 309 89 349 119 392 132 402 173 355 213 299 245 275 293 205 298 175 268 168 213 110 154 120 124 140 110 163 42 192 11 241 7</string>
+                <key>verticesUV</key>
+                <string>1343 1606 1369 1663 1409 1693 1452 1706 1462 1747 1415 1787 1359 1819 1335 1867 1265 1872 1235 1842 1228 1787 1170 1728 1180 1698 1200 1684 1223 1616 1252 1585 1301 1581</string>
+            </dict>
+            <key>Goblin_02_Walking (9).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{39,28.5}</string>
+                <key>spriteSize</key>
+                <string>{288,289}</string>
+                <key>spriteSourceSize</key>
+                <string>{440,360}</string>
+                <key>textureRect</key>
+                <string>{{1,1538},{288,289}}</string>
+                <key>textureRotated</key>
+                <true/>
+                <key>triangles</key>
+                <string>0 16 17 0 15 16 12 13 14 1 7 11 11 12 14 10 7 8 10 11 7 10 8 9 1 6 7 11 14 1 1 5 6 1 3 4 1 4 5 1 2 3 0 1 14 0 14 15</string>
+                <key>vertices</key>
+                <string>296 37 343 148 356 131 403 144 403 185 367 221 325 229 296 252 275 294 195 296 178 256 168 202 126 160 115 121 152 103 172 41 197 17 252 7</string>
+                <key>verticesUV</key>
+                <string>260 1719 149 1766 166 1779 153 1826 112 1826 76 1790 68 1748 45 1719 3 1698 1 1618 41 1601 95 1591 137 1549 176 1538 194 1575 256 1595 280 1620 290 1675</string>
+            </dict>
+        </dict>
+        <key>metadata</key>
+        <dict>
+            <key>format</key>
+            <integer>3</integer>
+            <key>pixelFormat</key>
+            <string>RGBA8888</string>
+            <key>premultiplyAlpha</key>
+            <false/>
+            <key>realTextureFileName</key>
+            <string>Goblin_02.png</string>
+            <key>size</key>
+            <string>{1780,1880}</string>
+            <key>smartupdate</key>
+            <string>$TexturePacker:SmartUpdate:b52a96aa15d1c52380d3555a34c220c9:aaa8761d589eb4c0f1f3f55f414b80ed:92dcdeb41ca6c25a5fb17c5de663ff38$</string>
+            <key>textureFileName</key>
+            <string>Goblin_02.png</string>
+        </dict>
+    </dict>
+</plist>

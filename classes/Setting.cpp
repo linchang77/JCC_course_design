@@ -1,5 +1,6 @@
 #include "Setting.h"
 #include "GeneralCreator.h"
+#include "AudioEngine.h"
 USING_NS_CC;
 
 Scene* Setting::createScene()
@@ -14,7 +15,8 @@ bool Setting::init()
 
     //返回开始界面
 	auto returnItem = GCreator::getInstance()->createMenuItem("settingToStartNormal.png", "settingToStartSelected.png", CC_CALLBACK_1(Setting::menuReturnCallback, this), visibleSize.width, visibleSize.height, 1.0f, 1.0f);
-
+    returnItem->setScale(50 / returnItem->getContentSize().width);
+    returnItem->setPosition(Vec2(1600,925));
     //设置选项部分（现在只有一个音乐开关）
     Vector<MenuItem*> items = { returnItem };
 
@@ -45,11 +47,14 @@ void Setting::musicSwitchCallback(Ref* pSender)
         auto swoosh = GCreator::getInstance()->createSprite("swoosh.png", (1 - 0.618f) * visibleSize.width, 0.618f * visibleSize.height);
         swoosh->setName("musicSwoosh");
         addChild(swoosh, 1);
+        AudioEngine::resume(0);
+        
     }
     else
     {
         auto swoosh = getChildByName("musicSwoosh");
         swoosh->removeFromParent();
+        AudioEngine::pause(0);
     }
 
     log("Music is %s now.", !music ? "on" : "off");
@@ -62,17 +67,17 @@ MenuItemImage* Setting::setParameter(const ParameterType type, const std::string
     _switch->setName(SettingParameters::getInstance()->getName(type));
 
     //选项标签
-    auto musicLabel = GCreator::getInstance()->createLabel(SettingParameters::getInstance()->getName(type), "fonts/Marker Felt.ttf", 16, x - _switch->getContentSize().width, y, 1.0f);
+    auto musicLabel = GCreator::getInstance()->createLabel(SettingParameters::getInstance()->getName(type), "fonts/Marker Felt.ttf", 24, x - _switch->getContentSize().width, y, 1.0f);
     addChild(musicLabel, 1);
 
     //显示勾选效果
-    if (SettingParameters::getInstance()->getValue(type))
+    if (SettingParameters::getInstance()->getValue(type))//让音乐停止
     {
         auto swoosh = GCreator::getInstance()->createSprite("swoosh.png", x, y);
         swoosh->setName(SettingParameters::getInstance()->getName(type) + "Swoosh");
         addChild(swoosh, 1);
     }
-
+  
     return _switch;
 }
 

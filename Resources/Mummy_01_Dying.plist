@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+    <dict>
+        <key>frames</key>
+        <dict>
+            <key>Mummy_01_Dying_000.png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{26.5,6.5}</string>
+                <key>spriteSize</key>
+                <string>{233,259}</string>
+                <key>spriteSourceSize</key>
+                <string>{520,420}</string>
+                <key>textureRect</key>
+                <string>{{250,1076},{233,259}}</string>
+                <key>textureRotated</key>
+                <true/>
+                <key>triangles</key>
+                <string>8 9 10 7 8 10 3 5 6 2 3 6 3 4 5 2 6 7 2 7 10 0 1 2 0 2 10</string>
+                <key>vertices</key>
+                <string>388 114 403 173 353 232 331 293 284 333 216 320 187 288 170 178 177 117 200 89 278 74</string>
+                <key>verticesUV</key>
+                <string>469 1294 410 1309 351 1259 290 1237 250 1190 263 1122 295 1093 405 1076 466 1083 494 1106 509 1184</string>
+            </dict>
+            <key>Mummy_01_Dying_001.png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{27.5,12}</string>
+                <key>spriteSize</key>
+                <string>{229,246}</string>
+                <key>spriteSourceSize</key>
+                <string>{520,420}</string>
+                <key>textureRect</key>
+                <string>{{254,845},{229,246}}</string>
+                <key>textureRotated</key>
+                <true/>
+                <key>triangles</key>
+                <string>8 10 11 8 9 10 3 8 11 4 5 7 5 6 7 3 4 7 3 7 8 0 1 2 0 2 3 0 3 11</string>
+                <key>vertices</key>
+                <string>388 112 402 146 396 182 357 222 329 294 291 321 226 321 195 290 173 177 186 93 232 80 290 75</string>
+                <key>verticesUV</key>
+                <string>463 1060 429 1074 393 1068 353 1029 281 1001 254 963 254 898 285 867 398 845 482 858 495 904 500 962</string>
+            </dict>
+            <key>Mummy_01_Dying_002.png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{26,15.5}</string>
+                <key>spriteSize</key>
+                <string>{226,251}</string>
+                <key>spriteSourceSize</key>
+                <string>{520,420}</string>
+                <key>textureRect</key>
+                <string>{{1,845},{226,251}}</string>
+                <key>textureRotated</key>
+                <true/>
+                <key>triangles</key>
+                <string>6 7 8 4 2 3 4 5 6 4 6 2 2 6 8 1 2 8 0 1 8</string>
+                <key>vertices</key>
+                <string>399 119 399 180 350 238 328 292 284 320 220 319 173 178 201 82 291 69</string>
+                <key>verticesUV</key>
+                <string>202 1071 141 1071 83 1022 29 1000 1 956 2 892 143 845 239 873 252 963</string>
+            </dict>
+            <key>Mummy_01_Dying_003.png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{31.5,15.5}</string>
+                <key>spriteSize</key>
+                <string>{233,247}</string>
+                <key>spriteSourceSize</key>
+                <string>{520,420}</string>
+                <key>textureRect</key>
+                <string>{{1,1073},{233,247}}</string>
+                <key>textureRotated</key>
+                <true/>
+                <key>triangles</key>
+                <string>8 9 10 7 8 10 4 5 7 5 6 7 3 4 7 0 3 7 3 0 1 3 1 2 0 7 10</string>
+                <key>vertices</key>
+                <string>316 79 395 117 408 182 361 213 322 303 273 318 211 316 202 222 175 186 206 83 257 71</string>
+                <key>verticesUV</key>
+                <string>240 1214 202 1293 137 1306 106 1259 16 1220 1 1171 3 1109 97 1100 133 1073 236 1104 248 1155</string>
+            </dict>
+            <key>Mummy_01_Dying_004.png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{14,17}</string>
+                <key>spriteSize</key>
+                <string>{216,256}</string>
+                <key>spriteSourceSize</key>
+                <string>{520,420}</string>
+                <key>textureRect</key>
+                <string>{{247,403},{216,256}}</string>
+                <key>textureRotated</key>
+                <true/>
+                <key>triangles</key>
+                <string>9 10 11 8 9 11 6 8 11 6 7 8 3 4 6 4 5 6 2 3 6 2 6 11 0 1 2 0 2 11</string>
+                <key>vertices</key>
+                <string>357 85 382 144 349 188 331 278 278 318 222 321 198 228 177 211 166 174 181 103 204 77 262 65</string>
+                <key>verticesUV</key>
+                <string>483 594 424 619 380 586 290 568 250 515 247 459 340 435 357 414 394 403 465 418 491 441 503 499</string>
+            </dict>
+            <key>Mummy_01_Dying_005.png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{-9.5,17}</string>
+                <key>spriteSize</key>
+                <string>{189,256}</string>
+                <key>spriteSourceSize</key>
+                <string>{520,420}</string>
+                <key>textureRect</key>
+                <string>{{1,1},{189,256}}</string>
+                <key>textureRotated</key>
+                <true/>
+                <key>triangles</key>
+                <string>0 1 10 7 1 6 8 10 7 8 9 10 1 2 6 5 6 3 5 3 4 2 3 6 7 10 1 0 10 11</string>
+                <key>vertices</key>
+                <string>345 117 334 179 334 255 300 300 253 321 222 297 199 248 157 206 156 106 182 79 248 69 328 65</string>
+                <key>verticesUV</key>
+                <string>205 190 143 179 67 179 22 145 1 98 25 67 74 44 116 2 216 1 243 27 253 93 257 173</string>
+            </dict>
+            <key>Mummy_01_Dying_006.png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{-23.5,23}</string>
+                <key>spriteSize</key>
+                <string>{197,264}</string>
+                <key>spriteSourceSize</key>
+                <string>{520,420}</string>
+                <key>textureRect</key>
+                <string>{{239,204},{197,264}}</string>
+                <key>textureRotated</key>
+                <true/>
+                <key>triangles</key>
+                <string>7 8 9 0 7 9 5 6 7 4 2 3 4 5 2 1 2 5 0 1 5 0 5 7</string>
+                <key>vertices</key>
+                <string>313 94 335 242 308 290 269 319 233 304 209 263 146 222 138 134 150 96 261 55</string>
+                <key>verticesUV</key>
+                <string>464 379 316 401 268 374 239 335 254 299 295 275 336 212 424 204 462 216 503 327</string>
+            </dict>
+            <key>Mummy_01_Dying_007.png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{-47,18}</string>
+                <key>spriteSize</key>
+                <string>{212,244}</string>
+                <key>spriteSourceSize</key>
+                <string>{520,420}</string>
+                <key>textureRect</key>
+                <string>{{1,403},{212,244}}</string>
+                <key>textureRotated</key>
+                <true/>
+                <key>triangles</key>
+                <string>5 6 7 1 4 5 1 2 3 1 3 4 0 1 5 0 5 7</string>
+                <key>vertices</key>
+                <string>279 97 319 213 315 297 285 314 247 314 135 245 107 141 197 70</string>
+                <key>verticesUV</key>
+                <string>218 575 102 615 18 611 1 581 1 543 70 431 174 403 245 493</string>
+            </dict>
+            <key>Mummy_01_Dying_008.png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{-53,1}</string>
+                <key>spriteSize</key>
+                <string>{232,224}</string>
+                <key>spriteSourceSize</key>
+                <string>{520,420}</string>
+                <key>textureRect</key>
+                <string>{{1,617},{232,224}}</string>
+                <key>textureRotated</key>
+                <false/>
+                <key>triangles</key>
+                <string>0 6 7 0 5 6 4 0 1 1 2 3 4 1 3 0 4 5</string>
+                <key>vertices</key>
+                <string>257 121 323 244 307 305 265 321 134 281 91 187 131 108 227 97</string>
+                <key>verticesUV</key>
+                <string>167 641 233 764 217 825 175 841 44 801 1 707 41 628 137 617</string>
+            </dict>
+            <key>Mummy_01_Dying_009.png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{-55,-13}</string>
+                <key>spriteSize</key>
+                <string>{236,202}</string>
+                <key>spriteSourceSize</key>
+                <string>{520,420}</string>
+                <key>textureRect</key>
+                <string>{{1,192},{236,202}}</string>
+                <key>textureRotated</key>
+                <false/>
+                <key>triangles</key>
+                <string>6 8 9 6 7 8 5 6 9 0 5 9 1 3 4 1 2 3 0 1 4 0 4 5</string>
+                <key>vertices</key>
+                <string>225 123 313 242 323 293 283 324 149 316 105 270 87 231 88 169 120 141 177 122</string>
+                <key>verticesUV</key>
+                <string>139 193 227 312 237 363 197 394 63 386 19 340 1 301 2 239 34 211 91 192</string>
+            </dict>
+            <key>Mummy_01_Dying_010.png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{-66.5,-22.5}</string>
+                <key>spriteSize</key>
+                <string>{247,201}</string>
+                <key>spriteSourceSize</key>
+                <string>{520,420}</string>
+                <key>textureRect</key>
+                <string>{{259,1},{247,201}}</string>
+                <key>textureRotated</key>
+                <false/>
+                <key>triangles</key>
+                <string>0 3 5 3 4 5 3 0 1 3 1 2 0 5 6</string>
+                <key>vertices</key>
+                <string>186 133 317 230 317 320 164 333 90 297 70 242 118 132</string>
+                <key>verticesUV</key>
+                <string>375 2 506 99 506 189 353 202 279 166 259 111 307 1</string>
+            </dict>
+            <key>Mummy_01_Dying_011.png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{-64.5,-23}</string>
+                <key>spriteSize</key>
+                <string>{245,222}</string>
+                <key>spriteSourceSize</key>
+                <string>{520,420}</string>
+                <key>textureRect</key>
+                <string>{{235,621},{245,222}}</string>
+                <key>textureRotated</key>
+                <false/>
+                <key>triangles</key>
+                <string>0 7 8 4 0 3 4 5 6 4 6 0 3 0 1 3 1 2 0 6 7</string>
+                <key>vertices</key>
+                <string>253 181 318 244 318 324 244 324 176 344 73 310 77 202 149 122 208 122</string>
+                <key>verticesUV</key>
+                <string>415 680 480 743 480 823 406 823 338 843 235 809 239 701 311 621 370 621</string>
+            </dict>
+            <key>Mummy_01_Dying_012.png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{-64.5,-23}</string>
+                <key>spriteSize</key>
+                <string>{245,222}</string>
+                <key>spriteSourceSize</key>
+                <string>{520,420}</string>
+                <key>textureRect</key>
+                <string>{{235,621},{245,222}}</string>
+                <key>textureRotated</key>
+                <false/>
+                <key>triangles</key>
+                <string>0 7 8 4 0 3 4 5 6 4 6 0 3 0 1 3 1 2 0 6 7</string>
+                <key>vertices</key>
+                <string>253 181 318 244 318 324 244 324 176 344 73 310 77 202 149 122 208 122</string>
+                <key>verticesUV</key>
+                <string>415 680 480 743 480 823 406 823 338 843 235 809 239 701 311 621 370 621</string>
+            </dict>
+            <key>Mummy_01_Dying_013.png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{-64.5,-23}</string>
+                <key>spriteSize</key>
+                <string>{245,222}</string>
+                <key>spriteSourceSize</key>
+                <string>{520,420}</string>
+                <key>textureRect</key>
+                <string>{{235,621},{245,222}}</string>
+                <key>textureRotated</key>
+                <false/>
+                <key>triangles</key>
+                <string>0 7 8 4 0 3 4 5 6 4 6 0 3 0 1 3 1 2 0 6 7</string>
+                <key>vertices</key>
+                <string>253 181 318 244 318 324 244 324 176 344 73 310 77 202 149 122 208 122</string>
+                <key>verticesUV</key>
+                <string>415 680 480 743 480 823 406 823 338 843 235 809 239 701 311 621 370 621</string>
+            </dict>
+            <key>Mummy_01_Dying_014.png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{-64.5,-23}</string>
+                <key>spriteSize</key>
+                <string>{245,222}</string>
+                <key>spriteSourceSize</key>
+                <string>{520,420}</string>
+                <key>textureRect</key>
+                <string>{{235,621},{245,222}}</string>
+                <key>textureRotated</key>
+                <false/>
+                <key>triangles</key>
+                <string>0 7 8 4 0 3 4 5 6 4 6 0 3 0 1 3 1 2 0 6 7</string>
+                <key>vertices</key>
+                <string>253 181 318 244 318 324 244 324 176 344 73 310 77 202 149 122 208 122</string>
+                <key>verticesUV</key>
+                <string>415 680 480 743 480 823 406 823 338 843 235 809 239 701 311 621 370 621</string>
+            </dict>
+        </dict>
+        <key>metadata</key>
+        <dict>
+            <key>format</key>
+            <integer>3</integer>
+            <key>pixelFormat</key>
+            <string>RGBA8888</string>
+            <key>premultiplyAlpha</key>
+            <false/>
+            <key>realTextureFileName</key>
+            <string>Mummy_01_Dying.png</string>
+            <key>size</key>
+            <string>{510,1310}</string>
+            <key>smartupdate</key>
+            <string>$TexturePacker:SmartUpdate:02ad841e6cd4a9b9c05a4aa298eabb47:3af2a34bb4ac2e830c19ce1314299662:904b2398c2125a7e2184a0b57deb1795$</string>
+            <key>textureFileName</key>
+            <string>Mummy_01_Dying.png</string>
+        </dict>
+    </dict>
+</plist>
