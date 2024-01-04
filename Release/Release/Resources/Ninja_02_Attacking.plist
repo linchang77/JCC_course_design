@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+    <dict>
+        <key>frames</key>
+        <dict>
+            <key>Ninja_02_Attacking (1).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{24,-0.5}</string>
+                <key>spriteSize</key>
+                <string>{250,275}</string>
+                <key>spriteSourceSize</key>
+                <string>{440,320}</string>
+                <key>textureRect</key>
+                <string>{{1,1087},{250,275}}</string>
+                <key>textureRotated</key>
+                <true/>
+                <key>triangles</key>
+                <string>0 11 12 9 10 11 0 9 11 1 5 8 6 7 8 5 6 8 1 3 4 1 2 3 1 4 5 9 0 1 9 1 8</string>
+                <key>vertices</key>
+                <string>281 43 324 101 353 73 369 84 369 115 250 298 184 298 145 247 148 211 119 113 140 47 188 29 238 23</string>
+                <key>verticesUV</key>
+                <string>256 1249 198 1292 226 1321 215 1337 184 1337 1 1218 1 1152 52 1113 88 1116 186 1087 252 1108 270 1156 276 1206</string>
+            </dict>
+            <key>Ninja_02_Attacking (10).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{67,-7.5}</string>
+                <key>spriteSize</key>
+                <string>{304,275}</string>
+                <key>spriteSourceSize</key>
+                <string>{440,320}</string>
+                <key>textureRect</key>
+                <string>{{1,1},{304,275}}</string>
+                <key>textureRotated</key>
+                <false/>
+                <key>triangles</key>
+                <string>11 12 13 1 11 13 1 2 10 9 10 6 9 6 8 8 6 7 5 2 3 5 3 4 2 5 6 2 6 10 1 10 11 0 1 13</string>
+                <key>vertices</key>
+                <string>352 73 365 146 326 228 433 219 439 231 431 259 276 270 240 305 186 296 135 218 166 154 174 99 195 43 285 30</string>
+                <key>verticesUV</key>
+                <string>218 44 231 117 192 199 299 190 305 202 297 230 142 241 106 276 52 267 1 189 32 125 40 70 61 14 151 1</string>
+            </dict>
+            <key>Ninja_02_Attacking (11).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{65.5,-3.5}</string>
+                <key>spriteSize</key>
+                <string>{297,269}</string>
+                <key>spriteSourceSize</key>
+                <string>{440,320}</string>
+                <key>textureRect</key>
+                <string>{{1,278},{297,269}}</string>
+                <key>textureRotated</key>
+                <false/>
+                <key>triangles</key>
+                <string>11 13 14 11 12 13 7 9 10 10 11 7 7 8 9 3 7 11 6 3 4 6 4 5 3 6 7 2 3 11 0 2 11 0 1 2 0 11 14</string>
+                <key>vertices</key>
+                <string>295 38 340 73 350 140 320 208 423 177 434 191 420 218 272 268 249 298 183 297 137 229 158 143 155 82 204 37 245 29</string>
+                <key>verticesUV</key>
+                <string>159 287 204 322 214 389 184 457 287 426 298 440 284 467 136 517 113 547 47 546 1 478 22 392 19 331 68 286 109 278</string>
+            </dict>
+            <key>Ninja_02_Attacking (12).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{55,-1.5}</string>
+                <key>spriteSize</key>
+                <string>{278,273}</string>
+                <key>spriteSourceSize</key>
+                <string>{440,320}</string>
+                <key>textureRect</key>
+                <string>{{1,549},{278,273}}</string>
+                <key>textureRotated</key>
+                <false/>
+                <key>triangles</key>
+                <string>11 12 13 10 11 13 6 8 9 9 10 6 6 7 8 2 6 10 5 2 3 5 3 4 2 5 6 1 2 10 1 10 13 0 1 13</string>
+                <key>vertices</key>
+                <string>298 38 328 90 340 160 396 121 414 137 402 167 281 255 250 297 184 298 140 240 148 184 136 92 178 36 234 25</string>
+                <key>verticesUV</key>
+                <string>163 562 193 614 205 684 261 645 279 661 267 691 146 779 115 821 49 822 5 764 13 708 1 616 43 560 99 549</string>
+            </dict>
+            <key>Ninja_02_Attacking (2).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{-9.5,-1}</string>
+                <key>spriteSize</key>
+                <string>{199,274}</string>
+                <key>spriteSourceSize</key>
+                <string>{440,320}</string>
+                <key>textureRect</key>
+                <string>{{204,1452},{199,274}}</string>
+                <key>textureRotated</key>
+                <true/>
+                <key>triangles</key>
+                <string>0 8 9 6 8 5 6 7 8 0 1 5 4 5 1 4 2 3 4 1 2 0 5 8</string>
+                <key>vertices</key>
+                <string>310 65 296 234 250 297 180 298 143 249 138 187 111 131 121 70 169 25 284 24</string>
+                <key>verticesUV</key>
+                <string>437 1651 268 1637 205 1591 204 1521 253 1484 315 1479 371 1452 432 1462 477 1510 478 1625</string>
+            </dict>
+            <key>Ninja_02_Attacking (3).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{-16.5,-1}</string>
+                <key>spriteSize</key>
+                <string>{201,282}</string>
+                <key>spriteSourceSize</key>
+                <string>{440,320}</string>
+                <key>textureRect</key>
+                <string>{{1,1339},{201,282}}</string>
+                <key>textureRotated</key>
+                <false/>
+                <key>triangles</key>
+                <string>11 12 13 1 11 13 9 10 11 1 9 11 4 6 7 7 8 4 4 5 6 2 3 4 2 4 8 1 2 8 1 8 9 0 1 13</string>
+                <key>vertices</key>
+                <string>283 54 296 95 296 185 304 216 274 235 252 296 193 302 139 248 135 191 110 147 103 105 116 68 154 27 227 20</string>
+                <key>verticesUV</key>
+                <string>181 1373 194 1414 194 1504 202 1535 172 1554 150 1615 91 1621 37 1567 33 1510 8 1466 1 1424 14 1387 52 1346 125 1339</string>
+            </dict>
+            <key>Ninja_02_Attacking (4).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{-22,0}</string>
+                <key>spriteSize</key>
+                <string>{202,290}</string>
+                <key>spriteSourceSize</key>
+                <string>{440,320}</string>
+                <key>textureRect</key>
+                <string>{{300,280},{202,290}}</string>
+                <key>textureRotated</key>
+                <false/>
+                <key>triangles</key>
+                <string>0 11 12 8 10 11 8 9 10 4 5 6 3 4 6 3 6 7 3 7 8 8 0 1 1 2 3 8 1 3 0 8 11</string>
+                <key>vertices</key>
+                <string>240 29 285 69 299 185 267 213 258 291 234 305 182 295 136 249 116 170 97 137 100 82 127 44 178 15</string>
+                <key>verticesUV</key>
+                <string>443 294 488 334 502 450 470 478 461 556 437 570 385 560 339 514 319 435 300 402 303 347 330 309 381 280</string>
+            </dict>
+            <key>Ninja_02_Attacking (5).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{-34.5,-2}</string>
+                <key>spriteSize</key>
+                <string>{211,294}</string>
+                <key>spriteSourceSize</key>
+                <string>{440,320}</string>
+                <key>textureRect</key>
+                <string>{{281,572},{211,294}}</string>
+                <key>textureRotated</key>
+                <false/>
+                <key>triangles</key>
+                <string>10 0 2 8 9 10 4 5 6 7 8 4 7 4 6 10 2 8 2 3 4 8 2 4 0 1 2 0 10 11</string>
+                <key>vertices</key>
+                <string>228 27 277 56 291 121 291 183 269 194 256 309 181 295 134 248 131 204 80 110 120 49 179 15</string>
+                <key>verticesUV</key>
+                <string>429 584 478 613 492 678 492 740 470 751 457 866 382 852 335 805 332 761 281 667 321 606 380 572</string>
+            </dict>
+            <key>Ninja_02_Attacking (6).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{-47.5,2}</string>
+                <key>spriteSize</key>
+                <string>{225,290}</string>
+                <key>spriteSourceSize</key>
+                <string>{440,320}</string>
+                <key>textureRect</key>
+                <string>{{280,868},{225,290}}</string>
+                <key>textureRotated</key>
+                <false/>
+                <key>triangles</key>
+                <string>0 10 11 8 9 10 3 4 6 3 6 7 4 5 6 3 7 8 2 3 8 8 0 1 8 1 2 0 8 10</string>
+                <key>vertices</key>
+                <string>255 43 285 85 285 168 258 222 264 263 252 296 186 303 133 248 131 195 60 138 123 38 199 13</string>
+                <key>verticesUV</key>
+                <string>475 898 505 940 505 1023 478 1077 484 1118 472 1151 406 1158 353 1103 351 1050 280 993 343 893 419 868</string>
+            </dict>
+            <key>Ninja_02_Attacking (7).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{-45.5,-4}</string>
+                <key>spriteSize</key>
+                <string>{227,290}</string>
+                <key>spriteSourceSize</key>
+                <string>{440,320}</string>
+                <key>textureRect</key>
+                <string>{{278,1160},{227,290}}</string>
+                <key>textureRotated</key>
+                <false/>
+                <key>triangles</key>
+                <string>12 13 14 9 11 12 9 12 14 9 10 11 8 2 3 4 5 6 7 8 3 3 4 6 7 3 6 8 9 2 9 1 2 1 9 14 0 1 14</string>
+                <key>vertices</key>
+                <string>241 27 281 81 288 153 252 210 263 249 255 309 177 295 132 248 132 199 112 175 62 175 61 154 89 128 101 54 172 19</string>
+                <key>verticesUV</key>
+                <string>458 1168 498 1222 505 1294 469 1351 480 1390 472 1450 394 1436 349 1389 349 1340 329 1316 279 1316 278 1295 306 1269 318 1195 389 1160</string>
+            </dict>
+            <key>Ninja_02_Attacking (8).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{-1,0.5}</string>
+                <key>spriteSize</key>
+                <string>{198,277}</string>
+                <key>spriteSourceSize</key>
+                <string>{440,320}</string>
+                <key>textureRect</key>
+                <string>{{307,1},{198,277}}</string>
+                <key>textureRotated</key>
+                <false/>
+                <key>triangles</key>
+                <string>0 1 10 8 9 10 8 10 7 1 2 3 6 7 3 3 4 5 3 5 6 1 3 7 1 7 10 0 10 11</string>
+                <key>vertices</key>
+                <string>307 65 318 109 307 214 272 237 252 298 189 297 135 243 134 153 120 110 145 46 190 27 256 21</string>
+                <key>verticesUV</key>
+                <string>494 45 505 89 494 194 459 217 439 278 376 277 322 223 321 133 307 90 332 26 377 7 443 1</string>
+            </dict>
+            <key>Ninja_02_Attacking (9).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{46.5,-4.5}</string>
+                <key>spriteSize</key>
+                <string>{261,277}</string>
+                <key>spriteSourceSize</key>
+                <string>{440,320}</string>
+                <key>textureRect</key>
+                <string>{{1,824},{261,277}}</string>
+                <key>textureRotated</key>
+                <true/>
+                <key>triangles</key>
+                <string>9 10 11 8 9 11 0 3 8 6 7 8 3 6 8 4 5 6 3 4 6 0 1 2 0 2 3 0 8 11</string>
+                <key>vertices</key>
+                <string>360 88 382 74 397 109 302 252 249 296 188 303 169 259 136 226 163 146 163 90 201 36 288 26</string>
+                <key>verticesUV</key>
+                <string>216 1048 230 1070 195 1085 52 990 8 937 1 876 45 857 78 824 158 851 214 851 268 889 278 976</string>
+            </dict>
+        </dict>
+        <key>metadata</key>
+        <dict>
+            <key>format</key>
+            <integer>3</integer>
+            <key>pixelFormat</key>
+            <string>RGBA8888</string>
+            <key>premultiplyAlpha</key>
+            <false/>
+            <key>realTextureFileName</key>
+            <string>Ninja_02_Attacking.png</string>
+            <key>size</key>
+            <string>{506,1652}</string>
+            <key>smartupdate</key>
+            <string>$TexturePacker:SmartUpdate:e5658bfdcd1a6a794f6709d229c0fe10:a99f4fa2e2f240ce1b908e319309fcac:44e1914b3ae6954738b9ff6a195866b4$</string>
+            <key>textureFileName</key>
+            <string>Ninja_02_Attacking.png</string>
+        </dict>
+    </dict>
+</plist>

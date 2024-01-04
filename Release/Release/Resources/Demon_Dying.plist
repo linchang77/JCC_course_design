@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+    <dict>
+        <key>frames</key>
+        <dict>
+            <key>Demon_Dying_0.png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{68,-29.5}</string>
+                <key>spriteSize</key>
+                <string>{432,363}</string>
+                <key>spriteSourceSize</key>
+                <string>{720,480}</string>
+                <key>textureRect</key>
+                <string>{{1,1},{432,363}}</string>
+                <key>textureRotated</key>
+                <false/>
+                <key>triangles</key>
+                <string>15 17 18 15 16 17 0 18 19 15 1 14 14 1 11 11 13 14 11 12 13 15 18 1 1 8 9 2 7 8 7 3 6 7 2 3 6 3 5 5 3 4 1 2 8 11 1 9 11 9 10 0 1 18</string>
+                <key>vertices</key>
+                <string>489 264 457 294 491 326 569 261 644 266 644 298 614 349 529 369 486 393 447 451 272 451 261 414 212 409 221 318 255 266 269 158 313 108 382 90 428 102 489 88</string>
+                <key>verticesUV</key>
+                <string>278 177 246 207 280 239 358 174 433 179 433 211 403 262 318 282 275 306 236 364 61 364 50 327 1 322 10 231 44 179 58 71 102 21 171 3 217 15 278 1</string>
+            </dict>
+            <key>Demon_Dying_1.png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{77,-30.5}</string>
+                <key>spriteSize</key>
+                <string>{420,363}</string>
+                <key>spriteSourceSize</key>
+                <string>{720,480}</string>
+                <key>textureRect</key>
+                <string>{{435,1},{420,363}}</string>
+                <key>textureRotated</key>
+                <false/>
+                <key>triangles</key>
+                <string>17 18 19 1 2 17 2 16 17 15 13 14 15 16 13 11 13 16 11 12 13 9 10 11 2 9 11 7 3 4 7 4 5 3 7 8 7 5 6 3 8 9 2 3 9 2 11 16 1 17 19 0 1 19</string>
+                <key>vertices</key>
+                <string>499 93 489 261 466 298 496 326 567 256 632 259 647 286 615 342 519 370 494 387 451 446 387 452 275 450 268 425 227 401 227 320 252 276 270 158 318 99 391 89</string>
+                <key>verticesUV</key>
+                <string>707 5 697 173 674 210 704 238 775 168 840 171 855 198 823 254 727 282 702 299 659 358 595 364 483 362 476 337 435 313 435 232 460 188 478 70 526 11 599 1</string>
+            </dict>
+            <key>Demon_Dying_10.png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{-71.5,-32.5}</string>
+                <key>spriteSize</key>
+                <string>{359,401}</string>
+                <key>spriteSourceSize</key>
+                <string>{720,480}</string>
+                <key>textureRect</key>
+                <string>{{1,742},{359,401}}</string>
+                <key>textureRotated</key>
+                <true/>
+                <key>triangles</key>
+                <string>17 18 19 1 16 17 13 14 15 8 13 15 12 13 8 8 10 11 8 9 10 6 3 4 8 11 12 7 8 15 6 7 15 3 6 15 16 2 3 6 4 5 3 15 16 1 2 16 0 1 17 0 17 19</string>
+                <key>vertices</key>
+                <string>354 99 370 147 375 184 399 225 463 257 468 442 392 473 280 453 237 426 214 439 166 430 109 367 114 277 144 230 122 185 333 230 339 222 271 150 275 75 305 72</string>
+                <key>verticesUV</key>
+                <string>375 987 327 1003 290 1008 249 1032 217 1096 32 1101 1 1025 21 913 48 870 35 847 44 799 107 742 197 747 244 777 289 755 244 966 252 972 324 904 399 908 402 938</string>
+            </dict>
+            <key>Demon_Dying_11.png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{-72.5,-43}</string>
+                <key>spriteSize</key>
+                <string>{369,392}</string>
+                <key>spriteSourceSize</key>
+                <string>{720,480}</string>
+                <key>textureRect</key>
+                <string>{{1224,731},{369,392}}</string>
+                <key>textureRotated</key>
+                <true/>
+                <key>triangles</key>
+                <string>18 19 20 0 18 20 8 15 16 13 14 15 13 8 12 10 8 9 7 3 6 10 11 8 11 12 8 13 15 8 7 8 16 7 16 3 1 16 17 1 3 16 3 4 5 1 2 3 6 3 5 0 1 17 0 17 18</string>
+                <key>vertices</key>
+                <string>403 127 410 255 472 267 451 362 471 375 456 460 358 479 281 460 248 439 221 452 165 442 122 397 103 337 114 279 115 215 279 226 327 259 355 244 311 150 329 93 360 87</string>
+                <key>verticesUV</key>
+                <string>1576 1031 1448 1038 1436 1100 1341 1079 1328 1099 1243 1084 1224 986 1243 909 1264 876 1251 849 1261 793 1306 750 1366 731 1424 742 1488 743 1477 907 1444 955 1459 983 1553 939 1610 957 1616 988</string>
+            </dict>
+            <key>Demon_Dying_12.png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{-72.5,-43}</string>
+                <key>spriteSize</key>
+                <string>{369,392}</string>
+                <key>spriteSourceSize</key>
+                <string>{720,480}</string>
+                <key>textureRect</key>
+                <string>{{1224,731},{369,392}}</string>
+                <key>textureRotated</key>
+                <true/>
+                <key>triangles</key>
+                <string>18 19 20 0 18 20 8 15 16 13 14 15 13 8 12 10 8 9 7 3 6 10 11 8 11 12 8 13 15 8 7 8 16 7 16 3 1 16 17 1 3 16 3 4 5 1 2 3 6 3 5 0 1 17 0 17 18</string>
+                <key>vertices</key>
+                <string>403 127 410 255 472 267 451 362 471 375 456 460 358 479 281 460 248 439 221 452 165 442 122 397 103 337 114 279 115 215 279 226 327 259 355 244 311 150 329 93 360 87</string>
+                <key>verticesUV</key>
+                <string>1576 1031 1448 1038 1436 1100 1341 1079 1328 1099 1243 1084 1224 986 1243 909 1264 876 1251 849 1261 793 1306 750 1366 731 1424 742 1488 743 1477 907 1444 955 1459 983 1553 939 1610 957 1616 988</string>
+            </dict>
+            <key>Demon_Dying_13.png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{-72.5,-43}</string>
+                <key>spriteSize</key>
+                <string>{369,392}</string>
+                <key>spriteSourceSize</key>
+                <string>{720,480}</string>
+                <key>textureRect</key>
+                <string>{{1224,731},{369,392}}</string>
+                <key>textureRotated</key>
+                <true/>
+                <key>triangles</key>
+                <string>18 19 20 0 18 20 8 15 16 13 14 15 13 8 12 10 8 9 7 3 6 10 11 8 11 12 8 13 15 8 7 8 16 7 16 3 1 16 17 1 3 16 3 4 5 1 2 3 6 3 5 0 1 17 0 17 18</string>
+                <key>vertices</key>
+                <string>403 127 410 255 472 267 451 362 471 375 456 460 358 479 281 460 248 439 221 452 165 442 122 397 103 337 114 279 115 215 279 226 327 259 355 244 311 150 329 93 360 87</string>
+                <key>verticesUV</key>
+                <string>1576 1031 1448 1038 1436 1100 1341 1079 1328 1099 1243 1084 1224 986 1243 909 1264 876 1251 849 1261 793 1306 750 1366 731 1424 742 1488 743 1477 907 1444 955 1459 983 1553 939 1610 957 1616 988</string>
+            </dict>
+            <key>Demon_Dying_14.png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{-72.5,-43}</string>
+                <key>spriteSize</key>
+                <string>{369,392}</string>
+                <key>spriteSourceSize</key>
+                <string>{720,480}</string>
+                <key>textureRect</key>
+                <string>{{1224,731},{369,392}}</string>
+                <key>textureRotated</key>
+                <true/>
+                <key>triangles</key>
+                <string>18 19 20 0 18 20 8 15 16 13 14 15 13 8 12 10 8 9 7 3 6 10 11 8 11 12 8 13 15 8 7 8 16 7 16 3 1 16 17 1 3 16 3 4 5 1 2 3 6 3 5 0 1 17 0 17 18</string>
+                <key>vertices</key>
+                <string>403 127 410 255 472 267 451 362 471 375 456 460 358 479 281 460 248 439 221 452 165 442 122 397 103 337 114 279 115 215 279 226 327 259 355 244 311 150 329 93 360 87</string>
+                <key>verticesUV</key>
+                <string>1576 1031 1448 1038 1436 1100 1341 1079 1328 1099 1243 1084 1224 986 1243 909 1264 876 1251 849 1261 793 1306 750 1366 731 1424 742 1488 743 1477 907 1444 955 1459 983 1553 939 1610 957 1616 988</string>
+            </dict>
+            <key>Demon_Dying_2.png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{80,-33.5}</string>
+                <key>spriteSize</key>
+                <string>{416,375}</string>
+                <key>spriteSourceSize</key>
+                <string>{720,480}</string>
+                <key>textureRect</key>
+                <string>{{424,366},{416,375}}</string>
+                <key>textureRotated</key>
+                <false/>
+                <key>triangles</key>
+                <string>18 21 22 18 20 21 18 19 20 2 3 18 17 15 16 17 13 15 17 18 3 13 14 15 10 11 13 11 12 13 3 10 13 8 4 5 8 5 6 4 8 9 8 6 7 4 9 10 3 4 10 17 3 13 2 18 22 0 1 2 22 0 2</string>
+                <key>vertices</key>
+                <string>455 105 508 90 489 260 466 296 493 319 570 250 632 253 648 278 618 334 511 370 490 386 456 434 394 461 365 435 279 451 269 417 241 403 232 323 275 219 265 199 272 147 326 95 401 86</string>
+                <key>verticesUV</key>
+                <string>647 385 700 370 681 540 658 576 685 599 762 530 824 533 840 558 810 614 703 650 682 666 648 714 586 741 557 715 471 731 461 697 433 683 424 603 467 499 457 479 464 427 518 375 593 366</string>
+            </dict>
+            <key>Demon_Dying_3.png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{76.5,-25}</string>
+                <key>spriteSize</key>
+                <string>{421,374}</string>
+                <key>spriteSourceSize</key>
+                <string>{720,480}</string>
+                <key>textureRect</key>
+                <string>{{1,366},{421,374}}</string>
+                <key>textureRotated</key>
+                <false/>
+                <key>triangles</key>
+                <string>0 16 17 14 15 16 14 0 1 13 1 10 0 17 18 12 10 11 10 12 13 10 8 9 8 10 1 6 2 3 2 6 7 6 3 5 5 3 4 8 1 2 8 2 7 1 13 14 0 14 16</string>
+                <key>vertices</key>
+                <string>488 264 469 296 496 317 566 246 633 247 647 274 618 328 512 370 454 428 386 452 373 422 286 449 226 348 254 294 275 149 328 91 406 84 477 112 516 78</string>
+                <key>verticesUV</key>
+                <string>263 552 244 584 271 605 341 534 408 535 422 562 393 616 287 658 229 716 161 740 148 710 61 737 1 636 29 582 50 437 103 379 181 372 252 400 291 366</string>
+            </dict>
+            <key>Demon_Dying_4.png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{70.5,-22}</string>
+                <key>spriteSize</key>
+                <string>{385,382}</string>
+                <key>spriteSourceSize</key>
+                <string>{720,480}</string>
+                <key>textureRect</key>
+                <string>{{1259,347},{385,382}}</string>
+                <key>textureRotated</key>
+                <false/>
+                <key>triangles</key>
+                <string>17 20 21 17 19 20 17 18 19 11 12 13 16 17 3 15 16 13 15 13 14 13 3 4 13 4 11 16 3 13 5 7 8 5 8 9 5 6 7 4 5 9 4 9 10 11 4 10 0 3 17 0 2 3 0 1 2 0 17 21</string>
+                <key>vertices</key>
+                <string>438 93 453 73 470 77 472 269 481 281 540 189 613 169 623 197 606 269 545 294 500 345 471 397 415 432 368 420 314 453 238 385 247 261 260 232 241 197 249 141 293 91 368 71</string>
+                <key>verticesUV</key>
+                <string>1459 369 1474 349 1491 353 1493 545 1502 557 1561 465 1634 445 1644 473 1627 545 1566 570 1521 621 1492 673 1436 708 1389 696 1335 729 1259 661 1268 537 1281 508 1262 473 1270 417 1314 367 1389 347</string>
+            </dict>
+            <key>Demon_Dying_5.png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{37,-12}</string>
+                <key>spriteSize</key>
+                <string>{372,400}</string>
+                <key>spriteSourceSize</key>
+                <string>{720,480}</string>
+                <key>textureRect</key>
+                <string>{{857,347},{372,400}}</string>
+                <key>textureRotated</key>
+                <true/>
+                <key>triangles</key>
+                <string>13 15 16 13 14 15 0 16 17 13 0 12 13 16 0 11 12 9 11 9 10 9 7 8 7 9 0 5 1 2 1 5 6 5 2 3 5 3 4 7 1 6 7 0 1 12 0 9</string>
+                <key>vertices</key>
+                <string>457 237 473 241 497 145 531 111 583 109 583 193 510 268 485 364 433 414 402 392 342 452 251 404 235 289 211 170 251 93 323 71 358 74 426 52</string>
+                <key>verticesUV</key>
+                <string>1072 593 1068 609 1164 633 1198 667 1200 719 1116 719 1041 646 945 621 895 569 917 538 857 478 905 387 1020 371 1139 347 1216 387 1238 459 1235 494 1257 562</string>
+            </dict>
+            <key>Demon_Dying_6.png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{7,-0.5}</string>
+                <key>spriteSize</key>
+                <string>{358,411}</string>
+                <key>spriteSourceSize</key>
+                <string>{720,480}</string>
+                <key>textureRect</key>
+                <string>{{404,743},{358,411}}</string>
+                <key>textureRotated</key>
+                <true/>
+                <key>triangles</key>
+                <string>18 1 14 17 14 16 17 18 14 19 0 1 14 15 16 14 1 13 12 13 10 18 19 1 12 10 11 8 9 10 2 7 8 7 2 3 7 3 6 6 3 5 5 3 4 2 8 10 1 2 10 13 1 10 0 19 20</string>
+                <key>vertices</key>
+                <string>389 75 426 190 450 209 449 100 493 59 522 67 546 124 501 210 492 333 456 389 415 372 370 446 269 423 229 305 220 248 198 237 188 180 213 112 280 76 338 71 381 35</string>
+                <key>verticesUV</key>
+                <string>775 944 660 981 641 1005 750 1004 791 1048 783 1077 726 1101 640 1056 517 1047 461 1011 478 970 404 925 427 824 545 784 602 775 613 753 670 743 738 768 774 835 779 893 815 936</string>
+            </dict>
+            <key>Demon_Dying_7.png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{-36.5,3}</string>
+                <key>spriteSize</key>
+                <string>{333,418}</string>
+                <key>spriteSourceSize</key>
+                <string>{720,480}</string>
+                <key>textureRect</key>
+                <string>{{1295,1},{333,418}}</string>
+                <key>textureRotated</key>
+                <true/>
+                <key>triangles</key>
+                <string>17 18 19 16 0 1 13 14 15 12 13 15 12 8 10 4 15 16 10 11 12 12 15 8 8 9 10 7 8 15 6 4 5 6 7 4 16 1 2 4 7 15 4 16 2 4 2 3 16 17 0 0 17 19</string>
+                <key>vertices</key>
+                <string>466 76 458 181 490 294 466 364 425 381 405 446 302 445 234 358 205 295 179 289 157 242 160 161 218 110 285 89 294 40 388 185 405 187 370 88 394 31 427 28</string>
+                <key>verticesUV</key>
+                <string>1665 310 1560 302 1447 334 1377 310 1360 269 1295 249 1296 146 1383 78 1446 49 1452 23 1499 1 1580 4 1631 62 1652 129 1701 138 1556 232 1554 249 1653 214 1710 238 1713 271</string>
+            </dict>
+            <key>Demon_Dying_8.png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{-61,-7}</string>
+                <key>spriteSize</key>
+                <string>{344,436}</string>
+                <key>spriteSourceSize</key>
+                <string>{720,480}</string>
+                <key>textureRect</key>
+                <string>{{857,1},{344,436}}</string>
+                <key>textureRotated</key>
+                <true/>
+                <key>triangles</key>
+                <string>17 18 19 1 16 17 13 14 15 12 13 15 8 12 15 10 11 8 11 12 8 6 4 5 10 8 9 7 8 15 6 7 4 7 15 4 2 4 15 2 3 4 16 1 2 2 15 16 0 1 17 0 17 19</string>
+                <key>vertices</key>
+                <string>373 58 404 155 471 255 471 342 447 345 437 437 343 465 248 403 202 348 175 350 139 310 127 243 151 185 223 112 219 80 349 194 358 186 289 104 292 43 320 29</string>
+                <key>verticesUV</key>
+                <string>1264 247 1167 278 1067 345 980 345 977 321 885 311 857 217 919 122 974 76 972 49 1012 13 1079 1 1137 25 1210 97 1242 93 1128 223 1136 232 1218 163 1279 166 1293 194</string>
+            </dict>
+            <key>Demon_Dying_9.png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{-67,-31.5}</string>
+                <key>spriteSize</key>
+                <string>{358,405}</string>
+                <key>spriteSourceSize</key>
+                <string>{720,480}</string>
+                <key>textureRect</key>
+                <string>{{817,743},{358,405}}</string>
+                <key>textureRotated</key>
+                <true/>
+                <key>triangles</key>
+                <string>19 20 21 0 1 18 15 16 17 11 15 17 11 14 15 13 14 11 13 11 12 10 11 17 7 8 9 6 9 10 6 10 17 17 1 2 6 7 9 1 17 18 17 3 6 3 4 5 6 3 5 17 2 3 0 18 19 0 19 21</string>
+                <key>vertices</key>
+                <string>282 80 343 157 407 202 430 236 451 236 472 314 442 334 459 362 466 431 388 474 281 446 218 405 190 413 136 381 114 315 120 261 175 150 308 212 301 195 218 154 199 92 220 69</string>
+                <key>verticesUV</key>
+                <string>1211 911 1134 972 1089 1036 1055 1059 1055 1080 977 1101 957 1071 929 1088 860 1095 817 1017 845 910 886 847 878 819 910 765 976 743 1030 749 1141 804 1079 937 1096 930 1137 847 1199 828 1222 849</string>
+            </dict>
+        </dict>
+        <key>metadata</key>
+        <dict>
+            <key>format</key>
+            <integer>3</integer>
+            <key>pixelFormat</key>
+            <string>RGBA8888</string>
+            <key>premultiplyAlpha</key>
+            <false/>
+            <key>realTextureFileName</key>
+            <string>Demon_Dying.png</string>
+            <key>size</key>
+            <string>{1714,1102}</string>
+            <key>smartupdate</key>
+            <string>$TexturePacker:SmartUpdate:164fd77bbfaf5583be824f5637c818d6:ea6bd55f737e87fd2101aab603009880:473127958fb80813d689a593bc2b1aef$</string>
+            <key>textureFileName</key>
+            <string>Demon_Dying.png</string>
+        </dict>
+    </dict>
+</plist>

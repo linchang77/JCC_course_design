@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+    <dict>
+        <key>frames</key>
+        <dict>
+            <key>Attacking_000.png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{24.5,-11.5}</string>
+                <key>spriteSize</key>
+                <string>{275,271}</string>
+                <key>spriteSourceSize</key>
+                <string>{480,360}</string>
+                <key>textureRect</key>
+                <string>{{285,494},{275,271}}</string>
+                <key>textureRotated</key>
+                <false/>
+                <key>triangles</key>
+                <string>1 12 13 11 9 10 11 12 9 1 9 12 8 9 6 8 6 7 4 5 6 9 1 4 1 2 3 1 3 4 9 4 6 0 1 13</string>
+                <key>vertices</key>
+                <string>315 74 350 141 372 80 402 133 331 302 268 327 248 314 222 327 177 286 181 230 143 212 127 120 204 70 252 56</string>
+                <key>verticesUV</key>
+                <string>473 512 508 579 530 518 560 571 489 740 426 765 406 752 380 765 335 724 339 668 301 650 285 558 362 508 410 494</string>
+            </dict>
+            <key>Attacking_001.png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{1.5,-10}</string>
+                <key>spriteSize</key>
+                <string>{241,276}</string>
+                <key>spriteSourceSize</key>
+                <string>{480,360}</string>
+                <key>textureRect</key>
+                <string>{{1,1},{241,276}}</string>
+                <key>textureRotated</key>
+                <true/>
+                <key>triangles</key>
+                <string>7 9 10 7 8 9 6 4 5 6 7 4 7 2 4 2 3 4 7 1 2 1 7 10 0 1 10</string>
+                <key>vertices</key>
+                <string>340 71 362 104 345 279 270 328 250 315 222 328 175 287 173 222 141 217 121 125 218 52</string>
+                <key>verticesUV</key>
+                <string>258 220 225 242 50 225 1 150 14 130 1 102 42 55 107 53 112 21 204 1 277 98</string>
+            </dict>
+            <key>Attacking_002.png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{-2,-14.5}</string>
+                <key>spriteSize</key>
+                <string>{246,281}</string>
+                <key>spriteSourceSize</key>
+                <string>{480,360}</string>
+                <key>textureRect</key>
+                <string>{{283,246},{246,281}}</string>
+                <key>textureRotated</key>
+                <true/>
+                <key>triangles</key>
+                <string>0 10 11 9 7 8 9 10 7 10 0 1 6 7 4 6 4 5 1 4 7 4 1 2 4 2 3 10 1 7</string>
+                <key>vertices</key>
+                <string>323 95 331 183 361 243 284 330 238 314 223 335 170 285 174 240 132 215 115 128 198 59 294 54</string>
+                <key>verticesUV</key>
+                <string>523 454 435 462 375 492 288 415 304 369 283 354 333 301 378 305 403 263 490 246 559 329 564 425</string>
+            </dict>
+            <key>Attacking_003.png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{-11,-14}</string>
+                <key>spriteSize</key>
+                <string>{242,278}</string>
+                <key>spriteSourceSize</key>
+                <string>{480,360}</string>
+                <key>textureRect</key>
+                <string>{{279,1},{242,278}}</string>
+                <key>textureRotated</key>
+                <true/>
+                <key>triangles</key>
+                <string>0 12 13 8 11 12 10 8 9 10 11 8 8 1 3 7 8 5 7 5 6 3 4 5 3 5 8 1 2 3 8 0 1 0 8 12</string>
+                <key>vertices</key>
+                <string>311 87 350 230 334 264 294 285 278 333 249 314 222 327 164 281 173 231 138 223 108 134 174 72 219 56 269 55</string>
+                <key>verticesUV</key>
+                <string>525 204 382 243 348 227 327 187 279 171 298 142 285 115 331 57 381 66 389 31 478 1 540 67 556 112 557 162</string>
+            </dict>
+            <key>Attacking_004.png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{-12.5,-11}</string>
+                <key>spriteSize</key>
+                <string>{243,284}</string>
+                <key>spriteSourceSize</key>
+                <string>{480,360}</string>
+                <key>textureRect</key>
+                <string>{{559,1},{243,284}}</string>
+                <key>textureRotated</key>
+                <true/>
+                <key>triangles</key>
+                <string>0 12 13 11 9 10 11 12 9 7 8 9 4 6 9 6 7 9 4 5 6 9 2 4 2 3 4 9 1 2 0 1 9 0 9 12</string>
+                <key>vertices</key>
+                <string>275 61 308 85 349 223 336 262 294 284 279 333 249 314 222 327 157 279 182 232 137 224 106 137 178 69 229 49</string>
+                <key>verticesUV</key>
+                <string>831 170 807 203 669 244 630 231 608 189 559 174 578 144 565 117 613 52 660 77 668 32 755 1 823 73 843 124</string>
+            </dict>
+            <key>Attacking_005.png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{-13,-13}</string>
+                <key>spriteSize</key>
+                <string>{244,280}</string>
+                <key>spriteSourceSize</key>
+                <string>{480,360}</string>
+                <key>textureRect</key>
+                <string>{{1,245},{244,280}}</string>
+                <key>textureRotated</key>
+                <true/>
+                <key>triangles</key>
+                <string>9 12 13 11 9 10 11 12 9 4 6 9 8 9 6 8 6 7 4 5 6 9 2 4 2 3 4 9 1 2 1 9 13 0 1 13</string>
+                <key>vertices</key>
+                <string>271 56 307 91 349 224 334 261 294 284 279 333 249 314 222 327 161 280 174 233 136 224 105 140 176 67 225 53</string>
+                <key>verticesUV</key>
+                <string>278 411 243 447 110 489 73 474 50 434 1 419 20 389 7 362 54 301 101 314 110 276 194 245 267 316 281 365</string>
+            </dict>
+            <key>Attacking_006.png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{-18,-11.5}</string>
+                <key>spriteSize</key>
+                <string>{250,287}</string>
+                <key>spriteSourceSize</key>
+                <string>{480,360}</string>
+                <key>textureRect</key>
+                <string>{{566,246},{250,287}}</string>
+                <key>textureRotated</key>
+                <true/>
+                <key>triangles</key>
+                <string>0 12 13 11 9 10 11 12 9 9 1 3 8 9 5 8 5 7 5 6 7 3 4 5 3 5 9 1 2 3 9 0 1 0 9 12</string>
+                <key>vertices</key>
+                <string>303 84 347 222 335 258 291 287 283 330 238 314 223 335 216 321 165 285 166 236 137 226 97 143 181 61 256 48</string>
+                <key>verticesUV</key>
+                <string>817 452 679 496 643 484 614 440 571 432 587 387 566 372 580 365 616 314 665 315 675 286 758 246 840 330 853 405</string>
+            </dict>
+            <key>Attacking_007.png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{15.5,-14}</string>
+                <key>spriteSize</key>
+                <string>{253,282}</string>
+                <key>spriteSourceSize</key>
+                <string>{480,360}</string>
+                <key>textureRect</key>
+                <string>{{1,494},{253,282}}</string>
+                <key>textureRotated</key>
+                <true/>
+                <key>triangles</key>
+                <string>9 12 13 11 9 10 11 12 9 2 3 9 8 9 5 8 5 7 5 6 7 3 5 9 3 4 5 1 2 9 1 9 13 0 1 13</string>
+                <key>vertices</key>
+                <string>366 69 382 109 347 277 303 298 274 327 238 314 223 335 216 321 160 272 179 224 145 208 129 117 211 60 279 53</string>
+                <key>verticesUV</key>
+                <string>267 731 227 747 59 712 38 668 9 639 22 603 1 588 15 581 64 525 112 544 128 510 219 494 276 576 283 644</string>
+            </dict>
+            <key>Attacking_008.png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{75,-15}</string>
+                <key>spriteSize</key>
+                <string>{314,268}</string>
+                <key>spriteSourceSize</key>
+                <string>{480,360}</string>
+                <key>textureRect</key>
+                <string>{{562,498},{314,268}}</string>
+                <key>textureRotated</key>
+                <false/>
+                <key>triangles</key>
+                <string>11 13 14 11 12 13 8 9 10 3 7 11 8 10 11 7 8 11 6 3 4 6 4 5 3 6 7 2 3 11 2 11 14 0 1 2 0 2 14</string>
+                <key>vertices</key>
+                <string>307 63 345 86 366 128 359 232 457 180 472 195 457 235 288 326 237 320 219 329 159 255 197 214 158 193 160 97 247 61</string>
+                <key>verticesUV</key>
+                <string>711 500 749 523 770 565 763 669 861 617 876 632 861 672 692 763 641 757 623 766 563 692 601 651 562 630 564 534 651 498</string>
+            </dict>
+            <key>Attacking_009.png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{77,-16}</string>
+                <key>spriteSize</key>
+                <string>{316,268}</string>
+                <key>spriteSourceSize</key>
+                <string>{480,360}</string>
+                <key>textureRect</key>
+                <string>{{1,767},{316,268}}</string>
+                <key>textureRotated</key>
+                <false/>
+                <key>triangles</key>
+                <string>11 13 14 11 12 13 9 10 11 3 4 8 8 9 11 7 4 5 7 5 6 4 7 8 3 8 11 2 3 11 2 11 14 0 1 2 0 2 14</string>
+                <key>vertices</key>
+                <string>310 65 360 96 367 147 353 235 357 255 463 229 475 241 457 279 255 330 216 323 163 262 187 215 159 187 164 96 251 62</string>
+                <key>verticesUV</key>
+                <string>152 770 202 801 209 852 195 940 199 960 305 934 317 946 299 984 97 1035 58 1028 5 967 29 920 1 892 6 801 93 767</string>
+            </dict>
+            <key>Attacking_010.png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{66.5,-19}</string>
+                <key>spriteSize</key>
+                <string>{309,272}</string>
+                <key>spriteSourceSize</key>
+                <string>{480,360}</string>
+                <key>textureRect</key>
+                <string>{{628,768},{309,272}}</string>
+                <key>textureRotated</key>
+                <false/>
+                <key>triangles</key>
+                <string>1 14 15 11 13 14 11 12 13 14 1 2 10 11 8 10 8 9 8 11 2 6 3 4 6 4 5 3 6 7 2 3 7 8 2 7 14 2 11 0 1 15</string>
+                <key>vertices</key>
+                <string>343 89 361 133 345 212 359 231 446 179 461 194 448 236 283 330 238 314 223 335 167 271 186 213 152 198 153 103 237 63 302 63</string>
+                <key>verticesUV</key>
+                <string>819 794 837 838 821 917 835 936 922 884 937 899 924 941 759 1035 714 1019 699 1040 643 976 662 918 628 903 629 808 713 768 778 768</string>
+            </dict>
+            <key>Attacking_011.png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{53.5,-12.5}</string>
+                <key>spriteSize</key>
+                <string>{307,271}</string>
+                <key>spriteSourceSize</key>
+                <string>{480,360}</string>
+                <key>textureRect</key>
+                <string>{{319,768},{307,271}}</string>
+                <key>textureRotated</key>
+                <false/>
+                <key>triangles</key>
+                <string>10 12 13 10 11 12 7 8 9 5 6 7 7 9 10 5 7 10 2 5 10 2 3 4 2 4 5 0 2 10 0 1 2 0 10 13</string>
+                <key>vertices</key>
+                <string>298 66 342 91 358 198 420 129 447 171 332 295 289 326 237 320 221 328 169 274 191 225 149 203 140 111 237 57</string>
+                <key>verticesUV</key>
+                <string>477 777 521 802 537 909 599 840 626 882 511 1006 468 1037 416 1031 400 1039 348 985 370 936 328 914 319 822 416 768</string>
+            </dict>
+        </dict>
+        <key>metadata</key>
+        <dict>
+            <key>format</key>
+            <integer>3</integer>
+            <key>pixelFormat</key>
+            <string>RGBA8888</string>
+            <key>premultiplyAlpha</key>
+            <false/>
+            <key>realTextureFileName</key>
+            <string>Pirate_03_Attacking.png</string>
+            <key>size</key>
+            <string>{938,1041}</string>
+            <key>smartupdate</key>
+            <string>$TexturePacker:SmartUpdate:6ab1e009e2775da5f834e91b17bcefaa:b7cf4cd19704081c9db2ad0b9b9e5f10:fe52b35cbafbbdf83503201ff71902d6$</string>
+            <key>textureFileName</key>
+            <string>Pirate_03_Attacking.png</string>
+        </dict>
+    </dict>
+</plist>

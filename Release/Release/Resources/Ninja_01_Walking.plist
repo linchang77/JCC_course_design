@@ -1,0 +1,404 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+    <dict>
+        <key>frames</key>
+        <dict>
+            <key>Ninja_01_Walking (1).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{33.5,-5}</string>
+                <key>spriteSize</key>
+                <string>{253,292}</string>
+                <key>spriteSourceSize</key>
+                <string>{440,320}</string>
+                <key>textureRect</key>
+                <string>{{283,1},{253,292}}</string>
+                <key>textureRotated</key>
+                <true/>
+                <key>triangles</key>
+                <string>0 10 11 8 9 10 8 0 7 1 4 7 6 7 4 6 4 5 1 2 3 1 3 4 0 1 7 8 10 0</string>
+                <key>vertices</key>
+                <string>295 51 328 94 345 67 380 86 285 250 218 311 138 246 144 183 127 110 148 57 180 34 247 19</string>
+                <key>verticesUV</key>
+                <string>543 169 500 202 527 219 508 254 344 159 283 92 348 12 411 18 484 1 537 22 560 54 575 121</string>
+            </dict>
+            <key>Ninja_01_Walking (10).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{47.5,-3.5}</string>
+                <key>spriteSize</key>
+                <string>{283,275}</string>
+                <key>spriteSourceSize</key>
+                <string>{440,320}</string>
+                <key>textureRect</key>
+                <string>{{565,531},{283,275}}</string>
+                <key>textureRotated</key>
+                <false/>
+                <key>triangles</key>
+                <string>13 14 15 12 13 15 1 12 15 5 6 7 10 11 8 10 8 9 5 7 8 5 8 11 2 5 11 2 3 4 2 4 5 1 2 11 1 11 12 0 1 15</string>
+                <key>vertices</key>
+                <string>269 29 321 81 324 178 399 139 409 181 267 254 266 289 246 299 213 283 195 301 174 290 172 211 140 170 126 110 149 50 202 26</string>
+                <key>verticesUV</key>
+                <string>708 534 760 586 763 683 838 644 848 686 706 759 705 794 685 804 652 788 634 806 613 795 611 716 579 675 565 615 588 555 641 531</string>
+            </dict>
+            <key>Ninja_01_Walking (11).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{46,-0.5}</string>
+                <key>spriteSize</key>
+                <string>{272,281}</string>
+                <key>spriteSourceSize</key>
+                <string>{440,320}</string>
+                <key>textureRect</key>
+                <string>{{1,525},{272,281}}</string>
+                <key>textureRotated</key>
+                <true/>
+                <key>triangles</key>
+                <string>0 11 12 9 10 11 9 0 8 7 5 6 7 8 5 2 5 8 2 3 4 2 4 5 0 2 8 0 1 2 9 11 0</string>
+                <key>vertices</key>
+                <string>280 39 322 78 325 174 402 130 402 177 269 253 263 297 176 301 168 205 130 154 132 78 174 36 233 20</string>
+                <key>verticesUV</key>
+                <string>263 675 224 717 128 720 172 797 125 797 49 664 5 658 1 571 97 563 148 525 224 527 266 569 282 628</string>
+            </dict>
+            <key>Ninja_01_Walking (12).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{43.5,0.5}</string>
+                <key>spriteSize</key>
+                <string>{273,279}</string>
+                <key>spriteSourceSize</key>
+                <string>{440,320}</string>
+                <key>textureRect</key>
+                <string>{{284,525},{273,279}}</string>
+                <key>textureRotated</key>
+                <true/>
+                <key>triangles</key>
+                <string>8 10 11 8 9 10 1 8 11 6 4 5 6 7 4 1 4 7 1 2 3 1 3 4 1 7 8 0 1 11</string>
+                <key>vertices</key>
+                <string>320 70 323 166 400 127 400 171 270 250 259 299 180 299 157 200 127 139 133 69 178 30 253 20</string>
+                <key>verticesUV</key>
+                <string>513 718 417 721 456 798 412 798 333 668 284 657 284 578 383 555 444 525 514 531 553 576 563 651</string>
+            </dict>
+            <key>Ninja_01_Walking (13).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{41.5,-4.5}</string>
+                <key>spriteSize</key>
+                <string>{281,283}</string>
+                <key>spriteSourceSize</key>
+                <string>{440,320}</string>
+                <key>textureRect</key>
+                <string>{{584,808},{281,283}}</string>
+                <key>textureRotated</key>
+                <true/>
+                <key>triangles</key>
+                <string>14 15 16 13 14 16 2 13 16 8 10 11 11 12 8 8 9 10 7 8 12 3 7 12 6 3 4 6 4 5 3 6 7 2 3 12 2 12 13 0 1 2 0 2 16</string>
+                <key>vertices</key>
+                <string>255 26 302 56 316 107 317 168 388 122 402 141 391 169 308 223 272 261 255 296 194 306 165 275 166 205 136 169 121 113 142 44 202 23</string>
+                <key>verticesUV</key>
+                <string>864 942 834 989 783 1003 722 1004 768 1075 749 1089 721 1078 667 995 629 959 594 942 584 881 615 852 685 853 721 823 777 808 846 829 867 889</string>
+            </dict>
+            <key>Ninja_01_Walking (14).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{38.5,1}</string>
+                <key>spriteSize</key>
+                <string>{285,280}</string>
+                <key>spriteSourceSize</key>
+                <string>{440,320}</string>
+                <key>textureRect</key>
+                <string>{{1,1078},{285,280}}</string>
+                <key>textureRotated</key>
+                <false/>
+                <key>triangles</key>
+                <string>0 13 14 11 12 13 10 11 13 13 0 1 5 7 8 8 9 5 5 6 7 2 5 9 2 3 4 2 4 5 1 2 9 13 1 9 13 9 10</string>
+                <key>vertices</key>
+                <string>284 46 311 88 318 164 401 105 395 160 274 244 251 299 188 298 159 250 159 198 133 171 116 112 137 50 182 27 239 19</string>
+                <key>verticesUV</key>
+                <string>169 1105 196 1147 203 1223 286 1164 280 1219 159 1303 136 1358 73 1357 44 1309 44 1257 18 1230 1 1171 22 1109 67 1086 124 1078</string>
+            </dict>
+            <key>Ninja_01_Walking (15).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{35,-3.5}</string>
+                <key>spriteSize</key>
+                <string>{280,289}</string>
+                <key>spriteSourceSize</key>
+                <string>{440,320}</string>
+                <key>textureRect</key>
+                <string>{{575,1091},{280,289}}</string>
+                <key>textureRotated</key>
+                <true/>
+                <key>triangles</key>
+                <string>1 12 13 10 11 12 1 10 12 6 7 9 7 8 9 10 2 6 5 2 3 5 3 4 2 5 6 10 1 2 10 6 9 0 1 13</string>
+                <key>vertices</key>
+                <string>290 46 308 100 317 160 377 110 395 119 392 150 275 244 250 297 197 308 156 254 115 118 128 55 175 28 230 19</string>
+                <key>verticesUV</key>
+                <string>837 1266 783 1284 723 1293 773 1353 764 1371 733 1368 639 1251 586 1226 575 1173 629 1132 765 1091 828 1104 855 1151 864 1206</string>
+            </dict>
+            <key>Ninja_01_Walking (16).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{38,-1}</string>
+                <key>spriteSize</key>
+                <string>{290,276}</string>
+                <key>spriteSourceSize</key>
+                <string>{440,320}</string>
+                <key>textureRect</key>
+                <string>{{292,808},{290,276}}</string>
+                <key>textureRotated</key>
+                <false/>
+                <key>triangles</key>
+                <string>10 11 12 2 10 12 5 6 7 5 7 8 5 8 9 2 5 9 2 3 4 2 4 5 2 9 10 0 1 2 0 2 12</string>
+                <key>vertices</key>
+                <string>255 25 312 82 308 144 376 99 403 126 280 242 245 298 194 299 150 250 150 213 113 121 126 55 188 23</string>
+                <key>verticesUV</key>
+                <string>434 810 491 867 487 929 555 884 582 911 459 1027 424 1083 373 1084 329 1035 329 998 292 906 305 840 367 808</string>
+            </dict>
+            <key>Ninja_01_Walking (17).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{27.5,-6}</string>
+                <key>spriteSize</key>
+                <string>{267,292}</string>
+                <key>spriteSourceSize</key>
+                <string>{440,320}</string>
+                <key>textureRect</key>
+                <string>{{280,256},{267,292}}</string>
+                <key>textureRotated</key>
+                <true/>
+                <key>triangles</key>
+                <string>9 10 11 1 2 9 2 6 8 6 7 8 5 2 3 5 3 4 2 5 6 2 8 9 0 1 9 0 9 11</string>
+                <key>vertices</key>
+                <string>263 33 297 60 327 130 361 91 381 95 381 130 242 296 211 312 148 249 114 97 155 37 222 20</string>
+                <key>verticesUV</key>
+                <string>559 405 532 439 462 469 501 503 497 523 462 523 296 384 280 353 343 290 495 256 555 297 572 364</string>
+            </dict>
+            <key>Ninja_01_Walking (18).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{31,-4.5}</string>
+                <key>spriteSize</key>
+                <string>{256,289}</string>
+                <key>spriteSourceSize</key>
+                <string>{440,320}</string>
+                <key>textureRect</key>
+                <string>{{577,1},{256,289}}</string>
+                <key>textureRotated</key>
+                <true/>
+                <key>triangles</key>
+                <string>0 12 13 10 11 12 0 10 12 7 5 6 7 8 9 7 9 5 2 5 9 2 3 4 2 4 5 10 0 2 0 1 2 10 2 9</string>
+                <key>vertices</key>
+                <string>270 36 306 61 323 115 368 67 379 114 274 260 224 309 186 289 141 244 149 209 123 120 136 64 172 35 222 20</string>
+                <key>verticesUV</key>
+                <string>850 148 825 184 771 201 819 246 772 257 626 152 577 102 597 64 642 19 677 27 766 1 822 14 851 50 866 100</string>
+            </dict>
+            <key>Ninja_01_Walking (2).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{35.5,0}</string>
+                <key>spriteSize</key>
+                <string>{251,280}</string>
+                <key>spriteSourceSize</key>
+                <string>{440,320}</string>
+                <key>textureRect</key>
+                <string>{{1,1},{251,280}}</string>
+                <key>textureRotated</key>
+                <true/>
+                <key>triangles</key>
+                <string>0 11 12 10 0 9 10 11 0 6 7 8 5 6 8 4 5 8 1 4 8 1 2 3 1 3 4 9 0 1 9 1 8</string>
+                <key>vertices</key>
+                <string>285 34 332 103 361 68 381 110 282 249 236 297 204 300 136 245 156 205 130 134 133 86 153 50 197 20</string>
+                <key>verticesUV</key>
+                <string>267 156 198 203 233 232 191 252 52 153 4 107 1 75 56 7 96 27 167 1 215 4 251 24 281 68</string>
+            </dict>
+            <key>Ninja_01_Walking (3).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{34.5,0.5}</string>
+                <key>spriteSize</key>
+                <string>{263,277}</string>
+                <key>spriteSourceSize</key>
+                <string>{440,320}</string>
+                <key>textureRect</key>
+                <string>{{1,254},{263,277}}</string>
+                <key>textureRotated</key>
+                <true/>
+                <key>triangles</key>
+                <string>8 9 10 1 8 10 1 5 7 5 6 7 4 1 2 4 2 3 1 4 5 1 7 8 0 1 10</string>
+                <key>vertices</key>
+                <string>283 34 337 114 362 88 386 96 378 131 240 298 199 298 147 252 123 91 162 39 216 21</string>
+                <key>verticesUV</key>
+                <string>265 414 185 468 211 493 203 517 168 509 1 371 1 330 47 278 208 254 260 293 278 347</string>
+            </dict>
+            <key>Ninja_01_Walking (4).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{35,0}</string>
+                <key>spriteSize</key>
+                <string>{270,276}</string>
+                <key>spriteSourceSize</key>
+                <string>{440,320}</string>
+                <key>textureRect</key>
+                <string>{{574,259},{270,276}}</string>
+                <key>textureRotated</key>
+                <true/>
+                <key>triangles</key>
+                <string>11 12 13 1 11 13 1 2 10 8 6 7 8 9 6 10 2 6 5 2 3 5 3 4 2 5 6 10 6 9 1 10 11 0 1 13</string>
+                <key>vertices</key>
+                <string>294 47 315 98 318 139 370 97 390 107 385 138 278 246 244 298 196 298 151 253 120 104 140 59 174 28 240 22</string>
+                <key>verticesUV</key>
+                <string>825 433 774 454 733 457 775 509 765 529 734 524 626 417 574 383 574 335 619 290 768 259 813 279 844 313 850 379</string>
+            </dict>
+            <key>Ninja_01_Walking (5).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{35,4.5}</string>
+                <key>spriteSize</key>
+                <string>{280,285}</string>
+                <key>spriteSourceSize</key>
+                <string>{440,320}</string>
+                <key>textureRect</key>
+                <string>{{288,1086},{280,285}}</string>
+                <key>textureRotated</key>
+                <true/>
+                <key>triangles</key>
+                <string>10 11 12 1 10 12 8 6 7 8 9 6 2 6 9 5 2 3 5 3 4 2 5 6 10 1 2 10 2 9 0 1 12</string>
+                <key>vertices</key>
+                <string>290 45 310 96 313 161 375 109 395 117 390 150 276 244 248 298 186 298 154 250 115 111 142 42 217 13</string>
+                <key>verticesUV</key>
+                <string>541 1261 490 1281 425 1284 477 1346 469 1366 436 1361 342 1247 288 1219 288 1157 336 1125 475 1086 544 1113 573 1188</string>
+            </dict>
+            <key>Ninja_01_Walking (6).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{34.5,-0.5}</string>
+                <key>spriteSize</key>
+                <string>{283,283}</string>
+                <key>spriteSourceSize</key>
+                <string>{440,320}</string>
+                <key>textureRect</key>
+                <string>{{1,1360},{283,283}}</string>
+                <key>textureRotated</key>
+                <false/>
+                <key>triangles</key>
+                <string>11 12 13 10 11 13 9 10 13 7 5 6 8 9 5 8 5 7 2 5 9 2 3 4 2 4 5 1 2 9 1 9 13 0 1 13</string>
+                <key>vertices</key>
+                <string>281 39 311 98 307 167 396 106 396 156 273 246 252 297 195 302 152 259 162 203 123 164 113 86 152 33 222 19</string>
+                <key>verticesUV</key>
+                <string>169 1380 199 1439 195 1508 284 1447 284 1497 161 1587 140 1638 83 1643 40 1600 50 1544 11 1505 1 1427 40 1374 110 1360</string>
+            </dict>
+            <key>Ninja_01_Walking (7).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{41.5,-1}</string>
+                <key>spriteSize</key>
+                <string>{289,276}</string>
+                <key>spriteSourceSize</key>
+                <string>{440,320}</string>
+                <key>textureRect</key>
+                <string>{{1,800},{289,276}}</string>
+                <key>textureRotated</key>
+                <false/>
+                <key>triangles</key>
+                <string>9 10 11 8 9 11 7 5 6 7 8 5 2 5 8 2 3 4 2 4 5 1 2 8 1 8 11 0 1 11</string>
+                <key>vertices</key>
+                <string>255 25 311 81 310 174 394 117 406 160 271 249 255 299 184 299 117 134 120 81 144 44 194 23</string>
+                <key>verticesUV</key>
+                <string>139 802 195 858 194 951 278 894 290 937 155 1026 139 1076 68 1076 1 911 4 858 28 821 78 800</string>
+            </dict>
+            <key>Ninja_01_Walking (8).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{39.5,0.5}</string>
+                <key>spriteSize</key>
+                <string>{287,287}</string>
+                <key>spriteSourceSize</key>
+                <string>{440,320}</string>
+                <key>textureRect</key>
+                <string>{{286,1368},{287,287}}</string>
+                <key>textureRotated</key>
+                <false/>
+                <key>triangles</key>
+                <string>0 14 15 12 13 14 12 0 1 7 8 9 9 10 11 7 9 11 2 3 7 6 3 4 6 4 5 3 6 7 2 7 11 11 12 1 11 1 2 0 12 14</string>
+                <key>vertices</key>
+                <string>278 40 312 86 312 158 321 172 386 129 403 142 394 173 270 252 259 296 223 303 176 296 166 205 135 173 116 108 146 44 220 16</string>
+                <key>verticesUV</key>
+                <string>448 1392 482 1438 482 1510 491 1524 556 1481 573 1494 564 1525 440 1604 429 1648 393 1655 346 1648 336 1557 305 1525 286 1460 316 1396 390 1368</string>
+            </dict>
+            <key>Ninja_01_Walking (9).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{47,1}</string>
+                <key>spriteSize</key>
+                <string>{292,282}</string>
+                <key>spriteSourceSize</key>
+                <string>{440,320}</string>
+                <key>textureRect</key>
+                <string>{{575,1373},{292,282}}</string>
+                <key>textureRotated</key>
+                <false/>
+                <key>triangles</key>
+                <string>0 13 14 11 12 13 11 2 10 7 8 10 8 9 10 2 7 10 6 3 4 6 4 5 3 6 7 2 3 7 13 0 2 0 1 2 11 13 2</string>
+                <key>vertices</key>
+                <string>272 36 317 81 317 161 328 171 390 136 413 154 388 184 286 241 258 297 178 300 169 223 121 140 133 65 171 38 217 18</string>
+                <key>verticesUV</key>
+                <string>726 1391 771 1436 771 1516 782 1526 844 1491 867 1509 842 1539 740 1596 712 1652 632 1655 623 1578 575 1495 587 1420 625 1393 671 1373</string>
+            </dict>
+        </dict>
+        <key>metadata</key>
+        <dict>
+            <key>format</key>
+            <integer>3</integer>
+            <key>pixelFormat</key>
+            <string>RGBA8888</string>
+            <key>premultiplyAlpha</key>
+            <false/>
+            <key>realTextureFileName</key>
+            <string>Ninja_01_Walking.png</string>
+            <key>size</key>
+            <string>{868,1656}</string>
+            <key>smartupdate</key>
+            <string>$TexturePacker:SmartUpdate:811e0948819aa1e54d79d4b2752dee3e:e941238544a056005c4aa10861dad7c2:c26e6a16af07e6c5600a7f4f7d857b96$</string>
+            <key>textureFileName</key>
+            <string>Ninja_01_Walking.png</string>
+        </dict>
+    </dict>
+</plist>

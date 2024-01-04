@@ -1,0 +1,404 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+    <dict>
+        <key>frames</key>
+        <dict>
+            <key>Mummy_03_Walking_000.png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{34.5,17.5}</string>
+                <key>spriteSize</key>
+                <string>{285,267}</string>
+                <key>spriteSourceSize</key>
+                <string>{520,420}</string>
+                <key>textureRect</key>
+                <string>{{582,1100},{285,267}}</string>
+                <key>textureRotated</key>
+                <false/>
+                <key>triangles</key>
+                <string>7 10 11 7 9 10 7 8 9 3 7 11 5 6 7 5 7 3 5 3 4 0 2 3 0 1 2 0 3 11</string>
+                <key>vertices</key>
+                <string>402 150 429 150 437 199 361 256 301 326 244 322 189 290 181 236 152 214 161 134 221 60 330 59</string>
+                <key>verticesUV</key>
+                <string>832 1191 859 1191 867 1240 791 1297 731 1367 674 1363 619 1331 611 1277 582 1255 591 1175 651 1101 760 1100</string>
+            </dict>
+            <key>Mummy_03_Walking_001.png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{33,20.5}</string>
+                <key>spriteSize</key>
+                <string>{290,273}</string>
+                <key>spriteSourceSize</key>
+                <string>{520,420}</string>
+                <key>textureRect</key>
+                <string>{{1,1099},{290,273}}</string>
+                <key>textureRotated</key>
+                <false/>
+                <key>triangles</key>
+                <string>8 1 4 8 9 10 5 6 8 6 7 8 4 5 8 8 10 1 1 3 4 1 2 3 0 1 10 0 10 11</string>
+                <key>vertices</key>
+                <string>343 69 391 152 431 155 438 210 379 236 296 326 240 324 193 291 183 236 148 207 169 120 234 53</string>
+                <key>verticesUV</key>
+                <string>196 1115 244 1198 284 1201 291 1256 232 1282 149 1372 93 1370 46 1337 36 1282 1 1253 22 1166 87 1099</string>
+            </dict>
+            <key>Mummy_03_Walking_002.png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{30,17.5}</string>
+                <key>spriteSize</key>
+                <string>{286,267}</string>
+                <key>spriteSourceSize</key>
+                <string>{520,420}</string>
+                <key>textureRect</key>
+                <string>{{581,1372},{286,267}}</string>
+                <key>textureRotated</key>
+                <false/>
+                <key>triangles</key>
+                <string>11 12 13 9 11 13 9 10 11 1 5 9 8 9 6 8 6 7 5 6 9 1 3 4 1 4 5 1 2 3 1 9 13 0 1 13</string>
+                <key>vertices</key>
+                <string>345 76 393 158 433 158 433 202 410 226 385 231 292 324 238 326 199 293 190 247 147 204 162 140 206 60 302 59</string>
+                <key>verticesUV</key>
+                <string>779 1389 827 1471 867 1471 867 1515 844 1539 819 1544 726 1637 672 1639 633 1606 624 1560 581 1517 596 1453 640 1373 736 1372</string>
+            </dict>
+            <key>Mummy_03_Walking_003.png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{30.5,20.5}</string>
+                <key>spriteSize</key>
+                <string>{287,267}</string>
+                <key>spriteSourceSize</key>
+                <string>{520,420}</string>
+                <key>textureRect</key>
+                <string>{{292,1374},{287,267}}</string>
+                <key>textureRotated</key>
+                <false/>
+                <key>triangles</key>
+                <string>2 11 12 9 10 11 8 6 7 8 9 6 5 6 9 2 5 9 2 4 5 2 3 4 2 9 11 1 2 12 0 1 12</string>
+                <key>vertices</key>
+                <string>326 58 367 118 374 161 434 162 434 216 366 250 291 323 221 323 204 289 203 255 147 213 152 133 213 56</string>
+                <key>verticesUV</key>
+                <string>471 1376 512 1436 519 1479 579 1480 579 1534 511 1568 436 1641 366 1641 349 1607 348 1573 292 1531 297 1451 358 1374</string>
+            </dict>
+            <key>Mummy_03_Walking_004.png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{31.5,21}</string>
+                <key>spriteSize</key>
+                <string>{291,270}</string>
+                <key>spriteSourceSize</key>
+                <string>{520,420}</string>
+                <key>textureRect</key>
+                <string>{{610,276},{291,270}}</string>
+                <key>textureRotated</key>
+                <false/>
+                <key>triangles</key>
+                <string>12 13 14 10 12 14 10 11 12 9 7 8 9 10 7 6 7 10 2 6 10 2 4 5 2 3 4 2 5 6 1 2 10 1 10 14 0 1 14</string>
+                <key>vertices</key>
+                <string>328 67 360 113 376 178 397 158 437 172 432 223 363 253 305 304 295 323 220 324 199 253 147 220 146 148 194 58 291 54</string>
+                <key>verticesUV</key>
+                <string>792 289 824 335 840 400 861 380 901 394 896 445 827 475 769 526 759 545 684 546 663 475 611 442 610 370 658 280 755 276</string>
+            </dict>
+            <key>Mummy_03_Walking_005.png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{30.5,18}</string>
+                <key>spriteSize</key>
+                <string>{293,280}</string>
+                <key>spriteSourceSize</key>
+                <string>{520,420}</string>
+                <key>textureRect</key>
+                <string>{{301,818},{293,280}}</string>
+                <key>textureRotated</key>
+                <false/>
+                <key>triangles</key>
+                <string>1 9 11 9 10 11 7 8 9 6 7 9 2 6 9 5 2 3 5 3 4 2 5 6 1 2 9 1 11 12 0 1 12</string>
+                <key>vertices</key>
+                <string>312 55 355 105 375 187 397 170 437 178 437 231 363 257 285 332 221 321 208 267 145 221 144 135 203 52</string>
+                <key>verticesUV</key>
+                <string>469 821 512 871 532 953 554 936 594 944 594 997 520 1023 442 1098 378 1087 365 1033 302 987 301 901 360 818</string>
+            </dict>
+            <key>Mummy_03_Walking_006.png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{35.5,22}</string>
+                <key>spriteSize</key>
+                <string>{305,272}</string>
+                <key>spriteSourceSize</key>
+                <string>{520,420}</string>
+                <key>textureRect</key>
+                <string>{{1,1},{305,272}}</string>
+                <key>textureRotated</key>
+                <false/>
+                <key>triangles</key>
+                <string>12 13 14 9 12 14 9 11 12 9 10 11 8 6 7 8 9 6 5 6 9 2 5 9 2 3 4 2 4 5 1 2 9 1 9 14 0 1 14</string>
+                <key>vertices</key>
+                <string>315 59 361 113 372 185 448 185 433 246 352 272 308 303 301 324 218 323 210 257 148 225 143 176 156 121 194 60 269 52</string>
+                <key>verticesUV</key>
+                <string>173 8 219 62 230 134 306 134 291 195 210 221 166 252 159 273 76 272 68 206 6 174 1 125 14 70 52 9 127 1</string>
+            </dict>
+            <key>Mummy_03_Walking_007.png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{38,21.5}</string>
+                <key>spriteSize</key>
+                <string>{298,273}</string>
+                <key>spriteSourceSize</key>
+                <string>{520,420}</string>
+                <key>textureRect</key>
+                <string>{{1,547},{298,273}}</string>
+                <key>textureRotated</key>
+                <false/>
+                <key>triangles</key>
+                <string>12 13 14 1 12 14 9 11 12 9 10 11 6 7 9 7 8 9 2 6 9 3 4 5 2 3 5 2 5 6 1 2 9 1 9 12 0 1 14</string>
+                <key>vertices</key>
+                <string>334 69 363 119 378 198 415 198 447 209 437 259 352 280 292 325 217 324 209 259 149 220 149 165 164 117 203 60 285 52</string>
+                <key>verticesUV</key>
+                <string>186 564 215 614 230 693 267 693 299 704 289 754 204 775 144 820 69 819 61 754 1 715 1 660 16 612 55 555 137 547</string>
+            </dict>
+            <key>Mummy_03_Walking_008.png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{35,19}</string>
+                <key>spriteSize</key>
+                <string>{304,270}</string>
+                <key>spriteSourceSize</key>
+                <string>{520,420}</string>
+                <key>textureRect</key>
+                <string>{{308,1},{304,270}}</string>
+                <key>textureRotated</key>
+                <false/>
+                <key>triangles</key>
+                <string>2 10 12 10 11 12 8 9 10 7 8 10 3 7 10 3 6 7 3 4 5 3 5 6 2 3 10 0 2 12 0 1 2 0 12 13</string>
+                <key>vertices</key>
+                <string>310 60 345 77 373 131 381 215 434 206 447 238 430 278 366 279 290 326 210 323 217 261 143 212 164 123 217 56</string>
+                <key>verticesUV</key>
+                <string>475 5 510 22 538 76 546 160 599 151 612 183 595 223 531 224 455 271 375 268 382 206 308 157 329 68 382 1</string>
+            </dict>
+            <key>Mummy_03_Walking_009.png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{36,19}</string>
+                <key>spriteSize</key>
+                <string>{300,270}</string>
+                <key>spriteSourceSize</key>
+                <string>{520,420}</string>
+                <key>textureRect</key>
+                <string>{{1,275},{300,270}}</string>
+                <key>textureRotated</key>
+                <false/>
+                <key>triangles</key>
+                <string>11 12 13 1 11 13 9 10 11 6 7 9 7 8 9 2 6 9 2 5 6 2 3 4 2 4 5 1 2 9 1 9 11 0 1 13</string>
+                <key>vertices</key>
+                <string>339 67 376 127 387 223 436 224 446 254 427 294 362 288 287 326 211 323 211 262 146 210 165 139 202 75 236 56</string>
+                <key>verticesUV</key>
+                <string>194 286 231 346 242 442 291 443 301 473 282 513 217 507 142 545 66 542 66 481 1 429 20 358 57 294 91 275</string>
+            </dict>
+            <key>Mummy_03_Walking_010.png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{38,18.5}</string>
+                <key>spriteSize</key>
+                <string>{298,269}</string>
+                <key>spriteSourceSize</key>
+                <string>{520,420}</string>
+                <key>textureRect</key>
+                <string>{{301,547},{298,269}}</string>
+                <key>textureRotated</key>
+                <false/>
+                <key>triangles</key>
+                <string>13 14 15 11 13 15 11 12 13 8 9 11 9 10 11 2 7 8 2 8 11 2 6 7 2 4 5 2 3 4 2 5 6 1 2 11 1 11 15 0 1 15</string>
+                <key>vertices</key>
+                <string>344 76 377 132 381 222 431 206 447 240 436 268 401 282 362 282 324 297 296 324 212 326 211 261 149 210 164 127 218 64 292 57</string>
+                <key>verticesUV</key>
+                <string>496 566 529 622 533 712 583 696 599 730 588 758 553 772 514 772 476 787 448 814 364 816 363 751 301 700 316 617 370 554 444 547</string>
+            </dict>
+            <key>Mummy_03_Walking_011.png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{40,18}</string>
+                <key>spriteSize</key>
+                <string>{298,264}</string>
+                <key>spriteSourceSize</key>
+                <string>{520,420}</string>
+                <key>textureRect</key>
+                <string>{{601,548},{298,264}}</string>
+                <key>textureRotated</key>
+                <false/>
+                <key>triangles</key>
+                <string>0 2 13 10 12 13 10 11 12 7 8 10 8 9 10 3 7 10 3 6 7 4 5 6 3 4 6 2 3 10 2 10 13 0 1 2 0 13 14</string>
+                <key>vertices</key>
+                <string>311 61 349 80 374 130 381 213 410 197 449 213 432 266 372 271 293 324 217 324 202 250 151 220 152 173 169 119 218 60</string>
+                <key>verticesUV</key>
+                <string>761 549 799 568 824 618 831 701 860 685 899 701 882 754 822 759 743 812 667 812 652 738 601 708 602 661 619 607 668 548</string>
+            </dict>
+            <key>Mummy_03_Walking_012.png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{38,20}</string>
+                <key>spriteSize</key>
+                <string>{300,272}</string>
+                <key>spriteSourceSize</key>
+                <string>{520,420}</string>
+                <key>textureRect</key>
+                <string>{{308,273},{300,272}}</string>
+                <key>textureRotated</key>
+                <false/>
+                <key>triangles</key>
+                <string>12 13 14 9 12 14 9 11 12 9 10 11 6 7 9 7 8 9 2 6 9 3 4 5 2 3 5 2 5 6 2 9 14 1 2 14 0 1 14</string>
+                <key>vertices</key>
+                <string>329 67 370 124 371 179 432 192 448 214 429 252 367 264 296 323 218 326 207 256 148 219 148 172 171 103 209 63 275 54</string>
+                <key>verticesUV</key>
+                <string>489 286 530 343 531 398 592 411 608 433 589 471 527 483 456 542 378 545 367 475 308 438 308 391 331 322 369 282 435 273</string>
+            </dict>
+            <key>Mummy_03_Walking_013.png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{33.5,17}</string>
+                <key>spriteSize</key>
+                <string>{295,280}</string>
+                <key>spriteSourceSize</key>
+                <string>{520,420}</string>
+                <key>textureRect</key>
+                <string>{{601,814},{295,280}}</string>
+                <key>textureRotated</key>
+                <false/>
+                <key>triangles</key>
+                <string>12 13 14 10 12 14 10 11 12 9 7 8 9 10 7 2 6 7 2 7 10 5 2 3 5 3 4 2 5 6 1 2 10 1 10 14 0 1 14</string>
+                <key>vertices</key>
+                <string>313 59 358 102 375 191 397 173 441 179 435 235 365 257 311 298 293 333 220 321 200 251 147 229 146 143 194 63 264 53</string>
+                <key>verticesUV</key>
+                <string>768 820 813 863 830 952 852 934 896 940 890 996 820 1018 766 1059 748 1094 675 1082 655 1012 602 990 601 904 649 824 719 814</string>
+            </dict>
+            <key>Mummy_03_Walking_014.png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{29,24.5}</string>
+                <key>spriteSize</key>
+                <string>{290,275}</string>
+                <key>spriteSourceSize</key>
+                <string>{520,420}</string>
+                <key>textureRect</key>
+                <string>{{1,822},{290,275}}</string>
+                <key>textureRotated</key>
+                <false/>
+                <key>triangles</key>
+                <string>0 10 11 0 9 10 7 8 9 1 4 7 5 6 7 4 5 7 1 2 3 1 3 4 0 1 7 0 7 9</string>
+                <key>vertices</key>
+                <string>345 93 375 164 434 167 434 220 362 256 294 323 225 323 198 256 144 225 145 141 190 61 300 48</string>
+                <key>verticesUV</key>
+                <string>202 867 232 938 291 941 291 994 219 1030 151 1097 82 1097 55 1030 1 999 2 915 47 835 157 822</string>
+            </dict>
+            <key>Mummy_03_Walking_015.png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{30,22.5}</string>
+                <key>spriteSize</key>
+                <string>{288,273}</string>
+                <key>spriteSourceSize</key>
+                <string>{520,420}</string>
+                <key>textureRect</key>
+                <string>{{614,1},{288,273}}</string>
+                <key>textureRotated</key>
+                <false/>
+                <key>triangles</key>
+                <string>12 13 14 10 12 14 10 11 12 7 8 10 8 9 10 2 7 10 2 6 7 2 4 5 2 3 4 2 5 6 1 2 10 1 10 14 0 1 14</string>
+                <key>vertices</key>
+                <string>312 58 353 105 373 172 409 150 434 175 434 207 408 230 379 238 291 323 222 324 183 244 146 225 146 138 191 63 260 51</string>
+                <key>verticesUV</key>
+                <string>780 8 821 55 841 122 877 100 902 125 902 157 876 180 847 188 759 273 690 274 651 194 614 175 614 88 659 13 728 1</string>
+            </dict>
+            <key>Mummy_03_Walking_016.png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{29.5,21}</string>
+                <key>spriteSize</key>
+                <string>{287,270}</string>
+                <key>spriteSourceSize</key>
+                <string>{520,420}</string>
+                <key>textureRect</key>
+                <string>{{293,1100},{287,270}}</string>
+                <key>textureRotated</key>
+                <false/>
+                <key>triangles</key>
+                <string>13 14 15 11 13 15 11 12 13 2 7 8 10 11 8 10 8 9 2 8 11 2 6 7 3 4 5 2 5 6 3 5 2 2 11 15 1 2 15 0 1 15</string>
+                <key>vertices</key>
+                <string>315 59 359 100 375 175 395 155 433 162 433 202 408 227 388 230 291 324 233 324 199 290 188 245 149 223 146 143 201 61 266 54</string>
+                <key>verticesUV</key>
+                <string>462 1105 506 1146 522 1221 542 1201 580 1208 580 1248 555 1273 535 1276 438 1370 380 1370 346 1336 335 1291 296 1269 293 1189 348 1107 413 1100</string>
+            </dict>
+            <key>Mummy_03_Walking_017.png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{31.5,19.5}</string>
+                <key>spriteSize</key>
+                <string>{289,267}</string>
+                <key>spriteSourceSize</key>
+                <string>{520,420}</string>
+                <key>textureRect</key>
+                <string>{{1,1374},{289,267}}</string>
+                <key>textureRotated</key>
+                <false/>
+                <key>triangles</key>
+                <string>1 13 14 12 2 10 10 11 12 7 8 10 8 9 10 6 7 10 2 6 10 2 4 5 2 5 6 2 3 4 12 1 2 12 13 1 0 1 14</string>
+                <key>vertices</key>
+                <string>319 58 357 96 380 157 431 149 436 196 410 222 383 232 297 324 239 324 195 291 183 241 147 216 156 146 189 81 223 57</string>
+                <key>verticesUV</key>
+                <string>173 1375 211 1413 234 1474 285 1466 290 1513 264 1539 237 1549 151 1641 93 1641 49 1608 37 1558 1 1533 10 1463 43 1398 77 1374</string>
+            </dict>
+        </dict>
+        <key>metadata</key>
+        <dict>
+            <key>format</key>
+            <integer>3</integer>
+            <key>pixelFormat</key>
+            <string>RGBA8888</string>
+            <key>premultiplyAlpha</key>
+            <false/>
+            <key>realTextureFileName</key>
+            <string>Mummy_03_Walking.png</string>
+            <key>size</key>
+            <string>{903,1642}</string>
+            <key>smartupdate</key>
+            <string>$TexturePacker:SmartUpdate:6c12d319dec4b943c519f2fb76ce3b66:ba4985d32fef940500f4797bd61c31b5:2e4a608d566e381a292b4a6bc548e57c$</string>
+            <key>textureFileName</key>
+            <string>Mummy_03_Walking.png</string>
+        </dict>
+    </dict>
+</plist>

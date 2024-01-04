@@ -1,0 +1,971 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+    <dict>
+        <key>frames</key>
+        <dict>
+            <key>Wizard_01_Attacking (1).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{21.5,18}</string>
+                <key>spriteSize</key>
+                <string>{243,278}</string>
+                <key>spriteSourceSize</key>
+                <string>{400,360}</string>
+                <key>textureRect</key>
+                <string>{{1,460},{243,278}}</string>
+                <key>textureRotated</key>
+                <true/>
+                <key>triangles</key>
+                <string>8 9 10 0 8 10 5 6 7 3 4 5 3 5 7 7 0 1 1 2 3 7 1 3 0 7 8</string>
+                <key>vertices</key>
+                <string>245 35 343 182 343 221 290 255 262 298 210 301 140 295 169 233 100 156 118 48 199 23</string>
+                <key>verticesUV</key>
+                <string>267 605 120 703 81 703 47 650 4 622 1 570 7 500 69 529 146 460 254 478 279 559</string>
+            </dict>
+            <key>Wizard_01_Attacking (10).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{53,16}</string>
+                <key>spriteSize</key>
+                <string>{252,278}</string>
+                <key>spriteSourceSize</key>
+                <string>{400,360}</string>
+                <key>textureRect</key>
+                <string>{{1703,474},{252,278}}</string>
+                <key>textureRotated</key>
+                <true/>
+                <key>triangles</key>
+                <string>9 10 11 3 6 7 7 8 9 3 7 9 1 2 3 3 4 5 3 5 6 1 3 9 1 9 11 0 1 11 0 11 12</string>
+                <key>vertices</key>
+                <string>277 26 308 68 348 181 287 237 379 223 379 276 279 286 254 303 143 292 163 189 127 125 162 89 168 25</string>
+                <key>verticesUV</key>
+                <string>1980 624 1938 655 1825 695 1769 634 1783 726 1730 726 1720 626 1703 601 1714 490 1817 510 1881 474 1917 509 1981 515</string>
+            </dict>
+            <key>Wizard_01_Attacking (11).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{52,16}</string>
+                <key>spriteSize</key>
+                <string>{250,272}</string>
+                <key>spriteSourceSize</key>
+                <string>{400,360}</string>
+                <key>textureRect</key>
+                <string>{{854,468},{250,272}}</string>
+                <key>textureRotated</key>
+                <true/>
+                <key>triangles</key>
+                <string>14 15 16 0 2 14 12 13 14 2 12 14 11 9 10 11 12 9 9 12 2 9 7 8 6 3 4 6 4 5 3 6 7 2 3 7 9 2 7 0 1 2 0 14 16</string>
+                <key>vertices</key>
+                <string>314 81 347 189 299 222 308 234 355 211 377 231 363 266 268 290 261 300 211 300 149 287 149 246 162 189 127 119 172 92 172 28 285 28</string>
+                <key>verticesUV</key>
+                <string>1073 655 965 688 932 640 920 649 943 696 923 718 888 704 864 609 854 602 854 552 867 490 908 490 965 503 1035 468 1062 513 1126 513 1126 626</string>
+            </dict>
+            <key>Wizard_01_Attacking (12).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{35.5,15}</string>
+                <key>spriteSize</key>
+                <string>{251,288}</string>
+                <key>spriteSourceSize</key>
+                <string>{400,360}</string>
+                <key>textureRect</key>
+                <string>{{1413,469},{251,288}}</string>
+                <key>textureRotated</key>
+                <true/>
+                <key>triangles</key>
+                <string>10 11 12 8 9 10 8 0 2 6 2 5 6 7 8 6 8 2 2 3 4 2 4 5 8 10 0 0 1 2 0 10 12</string>
+                <key>vertices</key>
+                <string>284 59 339 168 306 210 361 182 361 242 302 266 244 309 149 291 154 197 110 133 145 105 146 37 246 21</string>
+                <key>verticesUV</key>
+                <string>1663 643 1554 698 1512 665 1540 720 1480 720 1456 661 1413 603 1431 508 1525 513 1589 469 1617 504 1685 505 1701 605</string>
+            </dict>
+            <key>Wizard_01_Attacking (2).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{7.5,16}</string>
+                <key>spriteSize</key>
+                <string>{235,276}</string>
+                <key>spriteSourceSize</key>
+                <string>{400,360}</string>
+                <key>textureRect</key>
+                <string>{{589,229},{235,276}}</string>
+                <key>textureRotated</key>
+                <true/>
+                <key>triangles</key>
+                <string>8 10 11 8 9 10 0 8 11 6 7 8 4 5 6 2 3 6 3 4 6 1 2 6 8 0 1 8 1 6</string>
+                <key>vertices</key>
+                <string>325 155 292 220 291 253 263 296 204 302 140 297 169 237 90 157 125 113 98 56 179 26 229 26</string>
+                <key>verticesUV</key>
+                <string>736 464 671 431 638 430 595 402 589 343 594 279 654 308 734 229 778 264 835 237 865 318 865 368</string>
+            </dict>
+            <key>Wizard_01_Attacking (3).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{-1.5,16.5}</string>
+                <key>spriteSize</key>
+                <string>{227,285}</string>
+                <key>spriteSourceSize</key>
+                <string>{400,360}</string>
+                <key>textureRect</key>
+                <string>{{1152,1},{227,285}}</string>
+                <key>textureRotated</key>
+                <true/>
+                <key>triangles</key>
+                <string>9 10 11 7 8 9 0 2 9 5 6 7 4 5 7 3 4 7 2 3 7 2 7 9 0 1 2 0 9 11</string>
+                <key>vertices</key>
+                <string>229 40 312 141 288 174 297 234 261 299 155 306 148 282 166 243 85 162 109 128 91 57 182 21</string>
+                <key>verticesUV</key>
+                <string>1418 145 1317 228 1284 204 1224 213 1159 177 1152 71 1176 64 1215 82 1296 1 1330 25 1401 7 1437 98</string>
+            </dict>
+            <key>Wizard_01_Attacking (4).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{-8,17}</string>
+                <key>spriteSize</key>
+                <string>{226,278}</string>
+                <key>spriteSourceSize</key>
+                <string>{400,360}</string>
+                <key>textureRect</key>
+                <string>{{563,1},{226,278}}</string>
+                <key>textureRotated</key>
+                <true/>
+                <key>triangles</key>
+                <string>9 12 13 9 11 12 9 10 11 7 1 3 7 8 9 5 6 7 3 4 5 3 5 7 7 9 1 1 2 3 1 9 13 0 1 13</string>
+                <key>vertices</key>
+                <string>305 135 281 181 296 211 268 224 268 288 228 302 140 300 166 245 79 170 113 112 79 78 95 55 157 29 204 24</string>
+                <key>verticesUV</key>
+                <string>730 227 684 203 654 218 641 190 577 190 563 150 565 62 620 88 695 1 753 35 787 1 810 17 836 79 841 126</string>
+            </dict>
+            <key>Wizard_01_Attacking (5).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{-16.5,15}</string>
+                <key>spriteSize</key>
+                <string>{233,284}</string>
+                <key>spriteSourceSize</key>
+                <string>{400,360}</string>
+                <key>textureRect</key>
+                <string>{{303,229},{233,284}}</string>
+                <key>textureRotated</key>
+                <true/>
+                <key>triangles</key>
+                <string>7 9 10 7 8 9 5 0 1 5 6 7 3 4 5 2 3 5 1 2 5 5 7 0 0 7 10</string>
+                <key>vertices</key>
+                <string>300 128 284 204 262 236 273 295 141 307 163 237 76 172 109 115 67 73 147 30 195 23</string>
+                <key>verticesUV</key>
+                <string>482 462 406 446 374 424 315 435 303 303 373 325 438 238 495 271 537 229 580 309 587 357</string>
+            </dict>
+            <key>Wizard_01_Attacking (6).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{-16.5,17}</string>
+                <key>spriteSize</key>
+                <string>{227,282}</string>
+                <key>spriteSourceSize</key>
+                <string>{400,360}</string>
+                <key>textureRect</key>
+                <string>{{1439,1},{227,282}}</string>
+                <key>textureRotated</key>
+                <true/>
+                <key>triangles</key>
+                <string>7 9 10 7 8 9 0 7 10 5 6 7 3 4 5 1 2 3 1 3 5 0 1 5 0 5 7</string>
+                <key>vertices</key>
+                <string>297 124 268 257 268 289 223 300 138 304 166 240 76 176 98 130 70 74 136 32 189 22</string>
+                <key>verticesUV</key>
+                <string>1619 228 1486 199 1454 199 1443 154 1439 69 1503 97 1567 7 1613 29 1669 1 1711 67 1721 120</string>
+            </dict>
+            <key>Wizard_01_Attacking (7).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{-23,13}</string>
+                <key>spriteSize</key>
+                <string>{236,288}</string>
+                <key>spriteSourceSize</key>
+                <string>{400,360}</string>
+                <key>textureRect</key>
+                <string>{{867,230},{236,288}}</string>
+                <key>textureRotated</key>
+                <true/>
+                <key>triangles</key>
+                <string>8 9 10 8 3 6 6 7 8 4 5 6 3 4 6 8 0 1 8 1 2 8 2 3 0 8 10</string>
+                <key>vertices</key>
+                <string>199 35 295 120 276 198 259 216 271 292 138 311 164 239 73 179 101 120 59 78 149 23</string>
+                <key>verticesUV</key>
+                <string>1143 370 1058 466 980 447 962 430 886 442 867 309 939 335 999 244 1058 272 1100 230 1155 320</string>
+            </dict>
+            <key>Wizard_01_Attacking (8).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{-5,20.5}</string>
+                <key>spriteSize</key>
+                <string>{224,283}</string>
+                <key>spriteSourceSize</key>
+                <string>{400,360}</string>
+                <key>textureRect</key>
+                <string>{{278,1},{224,283}}</string>
+                <key>textureRotated</key>
+                <true/>
+                <key>triangles</key>
+                <string>7 9 10 7 8 9 0 7 10 5 6 7 3 4 5 2 3 5 5 1 2 5 0 1 0 5 7</string>
+                <key>vertices</key>
+                <string>307 126 295 229 267 256 267 301 137 298 166 231 83 164 112 122 83 63 159 25 207 18</string>
+                <key>verticesUV</key>
+                <string>453 225 350 213 323 185 278 185 281 55 348 84 415 1 457 30 516 1 554 77 561 125</string>
+            </dict>
+            <key>Wizard_01_Attacking (9).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{29,18.5}</string>
+                <key>spriteSize</key>
+                <string>{254,287}</string>
+                <key>spriteSourceSize</key>
+                <string>{400,360}</string>
+                <key>textureRect</key>
+                <string>{{845,721},{254,287}}</string>
+                <key>textureRotated</key>
+                <true/>
+                <key>triangles</key>
+                <string>8 9 10 6 7 8 1 2 8 3 4 6 4 5 6 2 3 6 2 6 8 0 1 8 0 8 10</string>
+                <key>vertices</key>
+                <string>246 27 279 64 297 99 356 155 264 305 145 292 161 212 102 143 140 104 122 41 210 18</string>
+                <key>verticesUV</key>
+                <string>1123 865 1086 898 1051 916 995 975 845 883 858 764 938 780 1007 721 1046 759 1109 741 1132 829</string>
+            </dict>
+            <key>Wizard_01_Dying (1).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{25,24.5}</string>
+                <key>spriteSize</key>
+                <string>{250,283}</string>
+                <key>spriteSourceSize</key>
+                <string>{400,360}</string>
+                <key>textureRect</key>
+                <string>{{1128,469},{250,283}}</string>
+                <key>textureRotated</key>
+                <true/>
+                <key>triangles</key>
+                <string>7 8 9 0 7 9 5 6 7 3 4 5 2 3 5 1 2 5 0 1 5 0 5 7</string>
+                <key>vertices</key>
+                <string>268 57 350 189 273 275 264 297 139 297 173 234 100 143 135 81 116 43 225 14</string>
+                <key>verticesUV</key>
+                <string>1368 637 1236 719 1150 642 1128 633 1128 508 1191 542 1282 469 1344 504 1382 485 1411 594</string>
+            </dict>
+            <key>Wizard_01_Dying (10).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{-61.5,-56.5}</string>
+                <key>spriteSize</key>
+                <string>{275,221}</string>
+                <key>spriteSourceSize</key>
+                <string>{400,360}</string>
+                <key>textureRect</key>
+                <string>{{1,1},{275,221}}</string>
+                <key>textureRotated</key>
+                <false/>
+                <key>triangles</key>
+                <string>8 11 12 8 10 11 8 9 10 6 8 12 6 7 8 1 5 6 3 4 5 5 1 2 5 2 3 1 6 12 0 1 12</string>
+                <key>vertices</key>
+                <string>205 134 228 183 271 214 276 261 264 347 198 292 145 306 67 314 51 256 2 245 1 225 31 135 93 126</string>
+                <key>verticesUV</key>
+                <string>205 9 228 58 271 89 276 136 264 222 198 167 145 181 67 189 51 131 2 120 1 100 31 10 93 1</string>
+            </dict>
+            <key>Wizard_01_Dying (11).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{-62,-46.5}</string>
+                <key>spriteSize</key>
+                <string>{274,237}</string>
+                <key>spriteSourceSize</key>
+                <string>{400,360}</string>
+                <key>textureRect</key>
+                <string>{{1157,230},{274,237}}</string>
+                <key>textureRotated</key>
+                <false/>
+                <key>triangles</key>
+                <string>7 10 11 9 7 8 1 5 11 9 10 7 7 5 6 7 11 5 1 3 5 1 2 3 5 3 4 0 1 11 0 11 12</string>
+                <key>vertices</key>
+                <string>226 140 239 192 271 215 275 263 265 342 210 302 92 345 48 289 1 309 6 185 57 158 132 143 202 108</string>
+                <key>verticesUV</key>
+                <string>1382 262 1395 314 1427 337 1431 385 1421 464 1366 424 1248 467 1204 411 1157 431 1162 307 1213 280 1288 265 1358 230</string>
+            </dict>
+            <key>Wizard_01_Dying (12).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{-62.5,-61.5}</string>
+                <key>spriteSize</key>
+                <string>{275,237}</string>
+                <key>spriteSourceSize</key>
+                <string>{400,360}</string>
+                <key>textureRect</key>
+                <string>{{1433,230},{275,237}}</string>
+                <key>textureRotated</key>
+                <false/>
+                <key>triangles</key>
+                <string>0 11 12 5 9 10 5 8 9 7 5 6 7 8 5 3 5 10 3 4 5 3 1 2 3 10 1 0 1 10 0 10 11</string>
+                <key>vertices</key>
+                <string>267 141 275 263 266 341 209 304 112 360 70 319 14 332 0 234 25 193 147 135 215 195 219 129 242 123</string>
+                <key>verticesUV</key>
+                <string>1700 248 1708 370 1699 448 1642 411 1545 467 1503 426 1447 439 1433 341 1458 300 1580 242 1648 302 1652 236 1675 230</string>
+            </dict>
+            <key>Wizard_01_Dying (13).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{-62.5,-61.5}</string>
+                <key>spriteSize</key>
+                <string>{275,237}</string>
+                <key>spriteSourceSize</key>
+                <string>{400,360}</string>
+                <key>textureRect</key>
+                <string>{{1433,230},{275,237}}</string>
+                <key>textureRotated</key>
+                <false/>
+                <key>triangles</key>
+                <string>0 11 12 5 9 10 5 8 9 7 5 6 7 8 5 3 5 10 3 4 5 3 1 2 3 10 1 0 1 10 0 10 11</string>
+                <key>vertices</key>
+                <string>267 141 275 263 266 341 209 304 112 360 70 319 14 332 0 234 25 193 147 135 215 195 219 129 242 123</string>
+                <key>verticesUV</key>
+                <string>1700 248 1708 370 1699 448 1642 411 1545 467 1503 426 1447 439 1433 341 1458 300 1580 242 1648 302 1652 236 1675 230</string>
+            </dict>
+            <key>Wizard_01_Dying (14).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{-62.5,-61.5}</string>
+                <key>spriteSize</key>
+                <string>{275,237}</string>
+                <key>spriteSourceSize</key>
+                <string>{400,360}</string>
+                <key>textureRect</key>
+                <string>{{1433,230},{275,237}}</string>
+                <key>textureRotated</key>
+                <false/>
+                <key>triangles</key>
+                <string>0 11 12 5 9 10 5 8 9 7 5 6 7 8 5 3 5 10 3 4 5 3 1 2 3 10 1 0 1 10 0 10 11</string>
+                <key>vertices</key>
+                <string>267 141 275 263 266 341 209 304 112 360 70 319 14 332 0 234 25 193 147 135 215 195 219 129 242 123</string>
+                <key>verticesUV</key>
+                <string>1700 248 1708 370 1699 448 1642 411 1545 467 1503 426 1447 439 1433 341 1458 300 1580 242 1648 302 1652 236 1675 230</string>
+            </dict>
+            <key>Wizard_01_Dying (15).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{-62.5,-61.5}</string>
+                <key>spriteSize</key>
+                <string>{275,237}</string>
+                <key>spriteSourceSize</key>
+                <string>{400,360}</string>
+                <key>textureRect</key>
+                <string>{{1433,230},{275,237}}</string>
+                <key>textureRotated</key>
+                <false/>
+                <key>triangles</key>
+                <string>0 11 12 5 9 10 5 8 9 7 5 6 7 8 5 3 5 10 3 4 5 3 1 2 3 10 1 0 1 10 0 10 11</string>
+                <key>vertices</key>
+                <string>267 141 275 263 266 341 209 304 112 360 70 319 14 332 0 234 25 193 147 135 215 195 219 129 242 123</string>
+                <key>verticesUV</key>
+                <string>1700 248 1708 370 1699 448 1642 411 1545 467 1503 426 1447 439 1433 341 1458 300 1580 242 1648 302 1652 236 1675 230</string>
+            </dict>
+            <key>Wizard_01_Dying (2).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{21.5,18}</string>
+                <key>spriteSize</key>
+                <string>{243,278}</string>
+                <key>spriteSourceSize</key>
+                <string>{400,360}</string>
+                <key>textureRect</key>
+                <string>{{281,464},{243,278}}</string>
+                <key>textureRotated</key>
+                <true/>
+                <key>triangles</key>
+                <string>8 9 10 0 8 10 5 6 7 3 4 5 3 5 7 7 0 1 1 2 3 7 1 3 0 7 8</string>
+                <key>vertices</key>
+                <string>245 35 343 182 343 221 290 255 262 298 210 301 140 295 169 233 100 156 118 48 199 23</string>
+                <key>verticesUV</key>
+                <string>547 609 400 707 361 707 327 654 284 626 281 574 287 504 349 533 426 464 534 482 559 563</string>
+            </dict>
+            <key>Wizard_01_Dying (3).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{20.5,27}</string>
+                <key>spriteSize</key>
+                <string>{241,282}</string>
+                <key>spriteSourceSize</key>
+                <string>{400,360}</string>
+                <key>textureRect</key>
+                <string>{{1710,231},{241,282}}</string>
+                <key>textureRotated</key>
+                <true/>
+                <key>triangles</key>
+                <string>7 8 9 5 6 7 0 7 9 3 4 5 1 2 5 2 3 5 0 1 5 0 5 7</string>
+                <key>vertices</key>
+                <string>282 61 341 174 271 285 225 294 142 294 174 233 100 129 133 104 134 33 233 12</string>
+                <key>verticesUV</key>
+                <string>1943 413 1830 472 1719 402 1710 356 1710 273 1771 305 1875 231 1900 264 1971 265 1992 364</string>
+            </dict>
+            <key>Wizard_01_Dying (4).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{18,25.5}</string>
+                <key>spriteSize</key>
+                <string>{228,285}</string>
+                <key>spriteSourceSize</key>
+                <string>{400,360}</string>
+                <key>textureRect</key>
+                <string>{{1723,1},{228,285}}</string>
+                <key>textureRotated</key>
+                <true/>
+                <key>triangles</key>
+                <string>7 8 9 5 6 7 0 7 9 3 4 5 1 2 5 2 3 5 7 0 1 7 1 5</string>
+                <key>vertices</key>
+                <string>277 42 332 162 267 285 167 297 151 281 174 232 104 120 153 81 135 27 238 12</string>
+                <key>verticesUV</key>
+                <string>1978 174 1858 229 1735 164 1723 64 1739 48 1788 71 1900 1 1939 50 1993 32 2008 135</string>
+            </dict>
+            <key>Wizard_01_Dying (5).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{-1.5,24}</string>
+                <key>spriteSize</key>
+                <string>{231,300}</string>
+                <key>spriteSourceSize</key>
+                <string>{400,360}</string>
+                <key>textureRect</key>
+                <string>{{1,227},{231,300}}</string>
+                <key>textureRotated</key>
+                <true/>
+                <key>triangles</key>
+                <string>8 9 10 0 2 8 6 7 8 3 4 6 4 5 6 2 3 6 2 6 8 0 1 2 0 8 10</string>
+                <key>vertices</key>
+                <string>255 54 314 146 291 165 287 261 241 283 161 306 170 233 83 141 123 93 96 40 206 6</string>
+                <key>verticesUV</key>
+                <string>253 399 161 458 142 435 46 431 24 385 1 305 74 314 166 227 214 267 267 240 301 350</string>
+            </dict>
+            <key>Wizard_01_Dying (6).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{-18,17.5}</string>
+                <key>spriteSize</key>
+                <string>{226,307}</string>
+                <key>spriteSourceSize</key>
+                <string>{400,360}</string>
+                <key>textureRect</key>
+                <string>{{843,1},{226,307}}</string>
+                <key>textureRotated</key>
+                <true/>
+                <key>triangles</key>
+                <string>8 10 11 8 9 10 2 6 8 6 7 8 4 5 6 3 4 6 2 3 6 0 2 8 0 1 2 0 8 11</string>
+                <key>vertices</key>
+                <string>216 46 295 127 278 147 290 237 267 267 175 316 178 249 69 167 100 103 70 84 72 59 162 9</string>
+                <key>verticesUV</key>
+                <string>1113 148 1032 227 1012 210 922 222 892 199 843 107 910 110 992 1 1056 32 1075 2 1100 4 1150 94</string>
+            </dict>
+            <key>Wizard_01_Dying (7).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{-42.5,4.5}</string>
+                <key>spriteSize</key>
+                <string>{257,291}</string>
+                <key>spriteSourceSize</key>
+                <string>{400,360}</string>
+                <key>textureRect</key>
+                <string>{{1,966},{257,291}}</string>
+                <key>textureRotated</key>
+                <true/>
+                <key>triangles</key>
+                <string>10 11 12 8 9 10 2 7 8 2 8 10 5 6 7 4 5 7 7 2 3 7 3 4 0 2 10 0 1 2 0 10 12</string>
+                <key>vertices</key>
+                <string>166 42 268 105 268 163 279 183 286 235 254 274 197 321 181 248 124 228 57 197 80 136 29 101 115 30</string>
+                <key>verticesUV</key>
+                <string>280 1103 217 1205 159 1205 139 1216 87 1223 48 1191 1 1134 74 1118 94 1061 125 994 186 1017 221 966 292 1052</string>
+            </dict>
+            <key>Wizard_01_Dying (8).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{-55.5,-14}</string>
+                <key>spriteSize</key>
+                <string>{281,274}</string>
+                <key>spriteSourceSize</key>
+                <string>{400,360}</string>
+                <key>textureRect</key>
+                <string>{{1421,1248},{281,274}}</string>
+                <key>textureRotated</key>
+                <false/>
+                <key>triangles</key>
+                <string>6 8 9 6 7 8 0 4 6 4 5 6 2 3 4 1 2 4 0 1 4 0 6 9</string>
+                <key>vertices</key>
+                <string>245 113 285 223 256 286 217 331 183 267 53 238 64 174 4 143 76 69 123 57</string>
+                <key>verticesUV</key>
+                <string>1662 1304 1702 1414 1673 1477 1634 1522 1600 1458 1470 1429 1481 1365 1421 1334 1493 1260 1540 1248</string>
+            </dict>
+            <key>Wizard_01_Dying (9).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{-59,-35.5}</string>
+                <key>spriteSize</key>
+                <string>{276,253}</string>
+                <key>spriteSourceSize</key>
+                <string>{400,360}</string>
+                <key>textureRect</key>
+                <string>{{1,705},{276,253}}</string>
+                <key>textureRotated</key>
+                <false/>
+                <key>triangles</key>
+                <string>8 11 12 10 8 9 10 11 8 1 5 6 6 7 8 1 6 8 3 4 5 2 3 5 1 2 5 0 1 8 0 8 12</string>
+                <key>vertices</key>
+                <string>221 116 246 171 279 218 270 265 240 342 186 275 137 281 57 274 52 202 19 202 3 186 46 106 91 89</string>
+                <key>verticesUV</key>
+                <string>219 732 244 787 277 834 268 881 238 958 184 891 135 897 55 890 50 818 17 818 1 802 44 722 89 705</string>
+            </dict>
+            <key>Wizard_01_Walking (1).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{21.5,19}</string>
+                <key>spriteSize</key>
+                <string>{255,278}</string>
+                <key>spriteSourceSize</key>
+                <string>{400,360}</string>
+                <key>textureRect</key>
+                <string>{{279,709},{255,278}}</string>
+                <key>textureRotated</key>
+                <true/>
+                <key>triangles</key>
+                <string>7 8 9 0 7 9 5 6 7 4 2 3 4 5 2 1 2 5 0 1 5 0 5 7</string>
+                <key>vertices</key>
+                <string>247 36 349 191 270 282 261 300 150 300 150 208 94 152 133 103 106 50 201 22</string>
+                <key>verticesUV</key>
+                <string>543 862 388 964 297 885 279 876 279 765 371 765 427 709 476 748 529 721 557 816</string>
+            </dict>
+            <key>Wizard_01_Walking (10).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{20,22}</string>
+                <key>spriteSize</key>
+                <string>{252,284}</string>
+                <key>spriteSourceSize</key>
+                <string>{400,360}</string>
+                <key>textureRect</key>
+                <string>{{559,713},{252,284}}</string>
+                <key>textureRotated</key>
+                <true/>
+                <key>triangles</key>
+                <string>11 12 13 10 11 13 0 2 10 8 9 10 6 7 8 5 6 8 2 5 8 2 3 4 2 4 5 2 8 10 0 1 2 0 10 13</string>
+                <key>vertices</key>
+                <string>260 59 323 151 266 232 346 217 346 270 269 285 261 300 124 300 178 241 94 151 130 105 121 78 95 52 217 16</string>
+                <key>verticesUV</key>
+                <string>800 879 708 942 627 885 642 965 589 965 574 888 559 880 559 743 618 797 708 713 754 749 781 740 807 714 843 836</string>
+            </dict>
+            <key>Wizard_01_Walking (11).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{21,19.5}</string>
+                <key>spriteSize</key>
+                <string>{258,285}</string>
+                <key>spriteSourceSize</key>
+                <string>{400,360}</string>
+                <key>textureRect</key>
+                <string>{{577,977},{258,285}}</string>
+                <key>textureRotated</key>
+                <true/>
+                <key>triangles</key>
+                <string>12 13 14 10 11 12 0 12 14 8 9 10 7 8 10 2 7 10 6 3 4 6 4 5 3 6 7 2 3 7 12 1 2 12 0 1 12 2 10</string>
+                <key>vertices</key>
+                <string>256 47 324 155 269 232 281 236 328 214 350 229 340 264 248 299 162 303 139 280 178 236 92 150 133 106 112 49 211 18</string>
+                <key>verticesUV</key>
+                <string>833 1141 725 1209 648 1154 644 1166 666 1213 651 1235 616 1225 581 1133 577 1047 600 1024 644 1063 730 977 774 1018 831 997 862 1096</string>
+            </dict>
+            <key>Wizard_01_Walking (12).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{19,19}</string>
+                <key>spriteSize</key>
+                <string>{254,282}</string>
+                <key>spriteSourceSize</key>
+                <string>{400,360}</string>
+                <key>textureRect</key>
+                <string>{{1134,722},{254,282}}</string>
+                <key>textureRotated</key>
+                <true/>
+                <key>triangles</key>
+                <string>10 11 12 0 2 10 8 9 10 6 7 8 5 6 8 2 5 8 2 3 4 2 4 5 2 8 10 0 1 2 0 10 12</string>
+                <key>vertices</key>
+                <string>254 47 325 153 275 222 346 203 346 266 277 275 257 302 133 301 173 232 92 151 132 106 110 43 213 20</string>
+                <key>verticesUV</key>
+                <string>1389 884 1283 955 1214 905 1233 976 1170 976 1161 907 1134 887 1135 763 1204 803 1285 722 1330 762 1393 740 1416 843</string>
+            </dict>
+            <key>Wizard_01_Walking (13).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{22,21}</string>
+                <key>spriteSize</key>
+                <string>{262,286}</string>
+                <key>spriteSourceSize</key>
+                <string>{400,360}</string>
+                <key>textureRect</key>
+                <string>{{1,1225},{262,286}}</string>
+                <key>textureRotated</key>
+                <true/>
+                <key>triangles</key>
+                <string>12 13 14 0 2 12 10 11 12 8 9 10 8 6 7 2 6 8 2 8 10 5 2 3 5 3 4 2 5 6 2 10 12 0 1 2 0 12 14</string>
+                <key>vertices</key>
+                <string>266 70 319 148 268 228 341 197 353 247 316 264 272 271 266 295 211 302 134 299 174 236 91 153 129 108 101 52 212 16</string>
+                <key>verticesUV</key>
+                <string>233 1400 155 1453 75 1402 106 1475 56 1487 39 1450 32 1406 8 1400 1 1345 4 1268 67 1308 150 1225 195 1263 251 1235 287 1346</string>
+            </dict>
+            <key>Wizard_01_Walking (14).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{18.5,15}</string>
+                <key>spriteSize</key>
+                <string>{261,280}</string>
+                <key>spriteSourceSize</key>
+                <string>{400,360}</string>
+                <key>textureRect</key>
+                <string>{{1721,985},{261,280}}</string>
+                <key>textureRotated</key>
+                <true/>
+                <key>triangles</key>
+                <string>14 15 16 3 12 14 12 13 14 10 11 12 9 10 12 3 8 9 3 9 12 7 4 5 7 5 6 4 7 8 3 4 8 2 3 14 0 2 14 0 1 2 0 14 16</string>
+                <key>vertices</key>
+                <string>226 26 314 142 294 183 257 226 272 226 329 197 349 217 338 251 275 275 261 296 172 305 141 292 170 239 88 162 118 104 95 59 160 25</string>
+                <key>verticesUV</key>
+                <string>2000 1123 1884 1211 1843 1191 1800 1154 1800 1169 1829 1226 1809 1246 1775 1235 1751 1172 1730 1158 1721 1069 1734 1038 1787 1067 1864 985 1922 1015 1967 992 2001 1057</string>
+            </dict>
+            <key>Wizard_01_Walking (15).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{14,21}</string>
+                <key>spriteSize</key>
+                <string>{260,290}</string>
+                <key>spriteSourceSize</key>
+                <string>{400,360}</string>
+                <key>textureRect</key>
+                <string>{{864,978},{260,290}}</string>
+                <key>textureRotated</key>
+                <true/>
+                <key>triangles</key>
+                <string>14 15 16 0 2 3 12 13 14 10 11 12 3 9 12 9 10 12 7 4 5 7 5 6 4 7 8 3 4 8 3 8 9 3 12 14 0 3 14 0 1 2 0 14 16</string>
+                <key>vertices</key>
+                <string>243 55 312 137 284 195 256 221 282 223 318 193 344 200 344 241 276 273 261 296 173 304 140 293 170 240 84 163 116 118 88 61 194 14</string>
+                <key>verticesUV</key>
+                <string>1113 1137 1031 1206 973 1178 947 1150 945 1176 975 1212 968 1238 927 1238 895 1170 872 1155 864 1067 875 1034 928 1064 1005 978 1050 1010 1107 982 1154 1088</string>
+            </dict>
+            <key>Wizard_01_Walking (16).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{13.5,19}</string>
+                <key>spriteSize</key>
+                <string>{267,280}</string>
+                <key>spriteSourceSize</key>
+                <string>{400,360}</string>
+                <key>textureRect</key>
+                <string>{{1139,1242},{267,280}}</string>
+                <key>textureRotated</key>
+                <true/>
+                <key>triangles</key>
+                <string>11 13 14 11 12 13 0 1 11 9 10 11 5 6 7 7 8 9 1 5 7 1 7 9 1 3 4 1 2 3 1 4 5 1 9 11 0 11 14</string>
+                <key>vertices</key>
+                <string>315 129 267 211 330 176 347 203 340 235 268 274 267 297 205 301 146 297 159 224 80 167 117 115 82 63 158 28 205 21</string>
+                <key>verticesUV</key>
+                <string>1311 1477 1229 1429 1264 1492 1237 1509 1205 1502 1166 1430 1143 1429 1139 1367 1143 1308 1216 1321 1273 1242 1325 1279 1377 1244 1412 1320 1419 1367</string>
+            </dict>
+            <key>Wizard_01_Walking (17).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{13.5,19.5}</string>
+                <key>spriteSize</key>
+                <string>{257,281}</string>
+                <key>spriteSourceSize</key>
+                <string>{400,360}</string>
+                <key>textureRect</key>
+                <string>{{294,967},{257,281}}</string>
+                <key>textureRotated</key>
+                <true/>
+                <key>triangles</key>
+                <string>11 12 13 9 10 11 0 2 11 7 8 9 6 7 9 2 6 9 5 2 3 5 3 4 2 5 6 2 9 11 0 1 2 0 11 13</string>
+                <key>vertices</key>
+                <string>229 36 320 144 283 199 317 176 342 183 342 224 273 271 263 300 138 301 169 235 85 163 119 117 91 60 182 20</string>
+                <key>verticesUV</key>
+                <string>559 1111 451 1202 396 1165 419 1199 412 1224 371 1224 324 1155 295 1145 294 1020 360 1051 432 967 478 1001 535 973 575 1064</string>
+            </dict>
+            <key>Wizard_01_Walking (18).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{21,19}</string>
+                <key>spriteSize</key>
+                <string>{260,284}</string>
+                <key>spriteSourceSize</key>
+                <string>{400,360}</string>
+                <key>textureRect</key>
+                <string>{{1156,980},{260,284}}</string>
+                <key>textureRotated</key>
+                <true/>
+                <key>triangles</key>
+                <string>11 12 13 9 10 11 0 2 11 5 6 7 7 8 9 5 7 9 2 4 5 2 5 9 2 3 4 2 9 11 0 1 2 0 11 13</string>
+                <key>vertices</key>
+                <string>239 38 319 144 305 171 351 171 338 218 276 265 265 294 225 303 146 299 157 221 91 155 126 110 98 54 190 19</string>
+                <key>verticesUV</key>
+                <string>1421 1128 1315 1208 1288 1194 1288 1240 1241 1227 1194 1165 1165 1154 1156 1114 1160 1035 1238 1046 1304 980 1349 1015 1405 987 1440 1079</string>
+            </dict>
+            <key>Wizard_01_Walking (2).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{17.5,17.5}</string>
+                <key>spriteSize</key>
+                <string>{245,291}</string>
+                <key>spriteSourceSize</key>
+                <string>{400,360}</string>
+                <key>textureRect</key>
+                <string>{{561,466},{245,291}}</string>
+                <key>textureRotated</key>
+                <true/>
+                <key>triangles</key>
+                <string>8 9 10 0 8 10 6 7 8 3 4 6 4 5 6 6 1 3 6 0 1 3 1 2 0 6 8</string>
+                <key>vertices</key>
+                <string>266 62 340 181 340 215 291 253 262 296 149 308 148 207 95 149 140 98 102 48 221 17</string>
+                <key>verticesUV</key>
+                <string>807 637 688 711 654 711 616 662 573 633 561 520 662 519 720 466 771 511 821 473 852 592</string>
+            </dict>
+            <key>Wizard_01_Walking (3).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{26,16.5}</string>
+                <key>spriteSize</key>
+                <string>{256,275}</string>
+                <key>spriteSourceSize</key>
+                <string>{400,360}</string>
+                <key>textureRect</key>
+                <string>{{1418,722},{256,275}}</string>
+                <key>textureRotated</key>
+                <true/>
+                <key>triangles</key>
+                <string>0 10 11 8 10 7 8 9 10 6 3 4 4 5 6 6 7 3 0 2 3 0 1 2 0 3 7 0 7 10</string>
+                <key>vertices</key>
+                <string>256 51 354 200 332 231 277 263 263 300 138 301 163 251 139 198 98 153 118 48 173 26 223 26</string>
+                <key>verticesUV</key>
+                <string>1668 880 1519 978 1488 956 1456 901 1419 887 1418 762 1468 787 1521 763 1566 722 1671 742 1693 797 1693 847</string>
+            </dict>
+            <key>Wizard_01_Walking (4).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{18.5,21}</string>
+                <key>spriteSize</key>
+                <string>{255,286}</string>
+                <key>spriteSourceSize</key>
+                <string>{400,360}</string>
+                <key>textureRect</key>
+                <string>{{1695,728},{255,286}}</string>
+                <key>textureRotated</key>
+                <true/>
+                <key>triangles</key>
+                <string>13 14 15 0 2 13 11 12 13 9 10 11 2 8 9 2 9 11 3 5 6 3 4 5 3 6 7 2 3 7 2 7 8 2 11 13 0 1 2 0 13 15</string>
+                <key>vertices</key>
+                <string>259 64 320 148 270 221 283 217 326 170 346 199 342 235 285 261 262 295 211 302 136 297 170 237 91 154 128 107 101 53 211 16</string>
+                <key>verticesUV</key>
+                <string>1933 896 1849 957 1776 907 1780 920 1827 963 1798 983 1762 979 1736 922 1702 899 1695 848 1700 773 1760 807 1843 728 1890 765 1944 738 1981 848</string>
+            </dict>
+            <key>Wizard_01_Walking (5).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{17.5,17}</string>
+                <key>spriteSize</key>
+                <string>{265,278}</string>
+                <key>spriteSourceSize</key>
+                <string>{400,360}</string>
+                <key>textureRect</key>
+                <string>{{859,1240},{265,278}}</string>
+                <key>textureRotated</key>
+                <true/>
+                <key>triangles</key>
+                <string>12 14 15 12 13 14 0 1 12 10 11 12 8 9 10 8 1 7 8 10 1 2 4 5 2 3 4 2 5 6 1 2 6 1 6 7 1 10 12 0 12 15</string>
+                <key>vertices</key>
+                <string>316 143 265 224 279 222 329 180 350 214 336 244 280 267 261 296 209 302 134 297 172 240 85 161 125 106 90 60 171 26 224 24</string>
+                <key>verticesUV</key>
+                <string>1018 1471 937 1420 939 1434 981 1484 947 1505 917 1491 894 1435 865 1416 859 1364 864 1289 921 1327 1000 1240 1055 1280 1101 1245 1135 1326 1137 1379</string>
+            </dict>
+            <key>Wizard_01_Walking (6).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{17,18}</string>
+                <key>spriteSize</key>
+                <string>{264,284}</string>
+                <key>spriteSourceSize</key>
+                <string>{400,360}</string>
+                <key>textureRect</key>
+                <string>{{289,1226},{264,284}}</string>
+                <key>textureRotated</key>
+                <true/>
+                <key>triangles</key>
+                <string>15 17 18 15 16 17 2 3 15 13 14 15 12 3 9 10 11 12 9 10 12 12 13 3 7 4 5 7 5 6 4 7 8 3 4 8 3 8 9 3 13 15 0 2 15 0 1 2 0 15 18</string>
+                <key>vertices</key>
+                <string>227 36 311 135 292 187 255 222 272 224 328 195 349 216 334 261 283 264 261 296 173 304 131 292 175 249 173 239 85 164 124 99 97 86 93 58 178 20</string>
+                <key>verticesUV</key>
+                <string>557 1368 458 1452 406 1433 371 1396 369 1413 398 1469 377 1490 332 1475 329 1424 297 1402 289 1314 301 1272 344 1316 354 1314 429 1226 494 1265 507 1238 535 1234 573 1319</string>
+            </dict>
+            <key>Wizard_01_Walking (7).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{18,15.5}</string>
+                <key>spriteSize</key>
+                <string>{280,277}</string>
+                <key>spriteSourceSize</key>
+                <string>{400,360}</string>
+                <key>textureRect</key>
+                <string>{{1704,1248},{280,277}}</string>
+                <key>textureRotated</key>
+                <false/>
+                <key>triangles</key>
+                <string>13 16 17 13 14 15 13 15 16 0 13 17 11 12 13 13 0 1 8 9 10 7 8 10 7 5 6 1 7 10 2 3 4 1 2 4 1 4 5 7 1 5 1 10 11 13 1 11</string>
+                <key>vertices</key>
+                <string>311 135 263 224 327 203 358 223 332 258 277 274 262 296 215 303 150 297 148 269 172 254 137 207 83 165 115 110 78 62 99 58 164 26 214 26</string>
+                <key>verticesUV</key>
+                <string>1937 1357 1889 1446 1953 1425 1984 1445 1958 1480 1903 1496 1888 1518 1841 1525 1776 1519 1774 1491 1798 1476 1763 1429 1709 1387 1741 1332 1704 1284 1725 1280 1790 1248 1840 1248</string>
+            </dict>
+            <key>Wizard_01_Walking (8).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{17.5,16.5}</string>
+                <key>spriteSize</key>
+                <string>{261,277}</string>
+                <key>spriteSourceSize</key>
+                <string>{400,360}</string>
+                <key>textureRect</key>
+                <string>{{1442,985},{261,277}}</string>
+                <key>textureRotated</key>
+                <true/>
+                <key>triangles</key>
+                <string>12 14 15 12 13 14 0 1 12 10 11 12 7 9 10 7 8 9 7 1 6 7 10 1 5 2 3 5 3 4 2 5 6 1 2 6 1 10 12 0 12 15</string>
+                <key>vertices</key>
+                <string>316 139 263 226 280 231 326 206 348 223 343 254 276 292 215 302 149 297 149 271 175 239 87 163 117 106 90 58 171 26 222 25</string>
+                <key>verticesUV</key>
+                <string>1605 1214 1518 1161 1513 1178 1538 1224 1521 1246 1490 1241 1452 1174 1442 1113 1447 1047 1473 1047 1505 1073 1581 985 1638 1015 1686 988 1718 1069 1719 1120</string>
+            </dict>
+            <key>Wizard_01_Walking (9).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{17,18}</string>
+                <key>spriteSize</key>
+                <string>{264,282}</string>
+                <key>spriteSourceSize</key>
+                <string>{400,360}</string>
+                <key>textureRect</key>
+                <string>{{575,1237},{264,282}}</string>
+                <key>textureRotated</key>
+                <true/>
+                <key>triangles</key>
+                <string>12 14 15 12 13 14 0 12 15 10 11 12 8 9 10 2 7 10 7 8 10 6 3 4 6 4 5 3 6 7 2 3 7 0 1 2 12 0 2 12 2 10</string>
+                <key>vertices</key>
+                <string>242 42 320 146 263 228 276 237 328 213 349 228 342 263 248 299 168 303 141 291 173 232 85 161 126 109 103 64 116 41 199 21</string>
+                <key>verticesUV</key>
+                <string>836 1394 732 1472 650 1415 641 1428 665 1480 650 1501 615 1494 579 1400 575 1320 587 1293 646 1325 717 1237 769 1278 814 1255 837 1268 857 1351</string>
+            </dict>
+        </dict>
+        <key>metadata</key>
+        <dict>
+            <key>format</key>
+            <integer>3</integer>
+            <key>pixelFormat</key>
+            <string>RGBA8888</string>
+            <key>premultiplyAlpha</key>
+            <false/>
+            <key>realTextureFileName</key>
+            <string>Wizard_01.png</string>
+            <key>size</key>
+            <string>{2009,1526}</string>
+            <key>smartupdate</key>
+            <string>$TexturePacker:SmartUpdate:0929e0a4b4fc399b07649ea0fa45d564:468b5c447d03162a6b038bbe013099d4:6dc2e50ca13e7a9d330f9dc091843475$</string>
+            <key>textureFileName</key>
+            <string>Wizard_01.png</string>
+        </dict>
+    </dict>
+</plist>

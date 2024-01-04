@@ -1,0 +1,404 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+    <dict>
+        <key>frames</key>
+        <dict>
+            <key>Fairy_02_Heal (1).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{20,3.5}</string>
+                <key>spriteSize</key>
+                <string>{248,263}</string>
+                <key>spriteSourceSize</key>
+                <string>{380,320}</string>
+                <key>textureRect</key>
+                <string>{{776,490},{248,263}}</string>
+                <key>textureRotated</key>
+                <true/>
+                <key>triangles</key>
+                <string>8 0 4 8 9 10 4 5 8 7 8 5 7 5 6 8 10 0 1 3 4 1 2 3 0 1 4 0 10 11</string>
+                <key>vertices</key>
+                <string>264 58 301 114 334 136 334 167 288 199 245 262 187 288 95 238 86 164 110 63 140 40 219 25</string>
+                <key>verticesUV</key>
+                <string>1006 668 950 705 928 738 897 738 865 692 802 649 776 591 826 499 900 490 1001 514 1024 544 1039 623</string>
+            </dict>
+            <key>Fairy_02_Heal (10).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{32,11.5}</string>
+                <key>spriteSize</key>
+                <string>{246,251}</string>
+                <key>spriteSourceSize</key>
+                <string>{380,320}</string>
+                <key>textureRect</key>
+                <string>{{523,489},{246,251}}</string>
+                <key>textureRotated</key>
+                <true/>
+                <key>triangles</key>
+                <string>9 11 12 9 10 11 9 4 5 5 6 8 6 7 8 5 8 9 9 1 4 1 3 4 1 2 3 1 9 12 0 1 12</string>
+                <key>vertices</key>
+                <string>234 24 301 91 329 91 345 128 311 155 259 233 217 274 157 274 121 233 99 124 105 64 127 39 181 23</string>
+                <key>verticesUV</key>
+                <string>773 624 706 691 706 719 669 735 642 701 564 649 523 607 523 547 564 511 673 489 733 495 758 517 774 571</string>
+            </dict>
+            <key>Fairy_02_Heal (11).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{32,7}</string>
+                <key>spriteSize</key>
+                <string>{250,264}</string>
+                <key>spriteSourceSize</key>
+                <string>{380,320}</string>
+                <key>textureRect</key>
+                <string>{{1305,491},{250,264}}</string>
+                <key>textureRotated</key>
+                <true/>
+                <key>triangles</key>
+                <string>9 10 11 8 1 4 4 5 8 7 8 5 7 5 6 8 9 1 1 3 4 1 2 3 1 9 11 0 1 11</string>
+                <key>vertices</key>
+                <string>246 31 296 88 347 89 338 129 308 158 240 260 188 285 131 252 108 200 97 92 111 42 196 21</string>
+                <key>verticesUV</key>
+                <string>1559 640 1502 690 1501 741 1461 732 1432 702 1330 634 1305 582 1338 525 1390 502 1498 491 1548 505 1569 590</string>
+            </dict>
+            <key>Fairy_02_Heal (12).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{31.5,11.5}</string>
+                <key>spriteSize</key>
+                <string>{243,257}</string>
+                <key>spriteSourceSize</key>
+                <string>{380,320}</string>
+                <key>textureRect</key>
+                <string>{{784,245},{243,257}}</string>
+                <key>textureRotated</key>
+                <true/>
+                <key>triangles</key>
+                <string>10 11 12 4 10 12 5 7 8 8 9 5 5 6 7 4 5 9 4 9 10 1 3 4 1 2 3 0 1 4 0 4 12</string>
+                <key>vertices</key>
+                <string>248 35 298 88 329 88 343 121 293 171 265 225 221 272 184 277 146 264 100 210 101 67 131 37 201 20</string>
+                <key>verticesUV</key>
+                <string>1026 393 973 443 973 474 940 488 890 438 836 410 789 366 784 329 797 291 851 245 994 246 1024 276 1041 346</string>
+            </dict>
+            <key>Fairy_02_Heal (13).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{27,13}</string>
+                <key>spriteSize</key>
+                <string>{242,256}</string>
+                <key>spriteSourceSize</key>
+                <string>{380,320}</string>
+                <key>textureRect</key>
+                <string>{{1318,1},{242,256}}</string>
+                <key>textureRotated</key>
+                <true/>
+                <key>triangles</key>
+                <string>9 10 11 1 4 9 7 5 6 7 8 5 4 5 8 4 8 9 4 1 2 4 2 3 1 9 11 0 1 11</string>
+                <key>vertices</key>
+                <string>241 31 283 69 338 92 338 126 304 151 261 234 217 274 162 275 96 212 100 67 126 39 193 19</string>
+                <key>verticesUV</key>
+                <string>1562 146 1524 188 1501 243 1467 243 1442 209 1359 166 1319 122 1318 67 1381 1 1526 5 1554 31 1574 98</string>
+            </dict>
+            <key>Fairy_02_Heal (14).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{31.5,9}</string>
+                <key>spriteSize</key>
+                <string>{249,262}</string>
+                <key>spriteSourceSize</key>
+                <string>{380,320}</string>
+                <key>textureRect</key>
+                <string>{{1041,491},{249,262}}</string>
+                <key>textureRotated</key>
+                <true/>
+                <key>triangles</key>
+                <string>10 11 12 4 10 12 7 5 6 8 9 5 8 5 7 4 5 9 4 9 10 1 3 4 1 2 3 0 1 4 0 4 12</string>
+                <key>vertices</key>
+                <string>241 30 295 84 346 83 337 124 299 157 266 221 213 282 171 273 130 250 104 209 97 69 126 39 194 20</string>
+                <key>verticesUV</key>
+                <string>1293 635 1239 689 1240 740 1199 731 1166 693 1102 660 1041 607 1050 565 1073 524 1114 498 1254 491 1284 520 1303 588</string>
+            </dict>
+            <key>Fairy_02_Heal (15).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{28.5,11.5}</string>
+                <key>spriteSize</key>
+                <string>{239,261}</string>
+                <key>spriteSourceSize</key>
+                <string>{380,320}</string>
+                <key>textureRect</key>
+                <string>{{264,1},{239,261}}</string>
+                <key>textureRotated</key>
+                <true/>
+                <key>triangles</key>
+                <string>9 10 11 0 4 9 7 5 6 7 8 5 9 4 5 9 5 8 1 3 4 1 2 3 0 1 4 0 9 11</string>
+                <key>vertices</key>
+                <string>241 32 302 82 338 83 338 120 293 165 271 209 217 279 147 268 111 212 99 118 105 46 196 18</string>
+                <key>verticesUV</key>
+                <string>511 143 461 204 460 240 423 240 378 195 334 173 264 119 275 49 331 13 425 1 497 7 525 98</string>
+            </dict>
+            <key>Fairy_02_Heal (16).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{31,10.5}</string>
+                <key>spriteSize</key>
+                <string>{242,261}</string>
+                <key>spriteSourceSize</key>
+                <string>{380,320}</string>
+                <key>textureRect</key>
+                <string>{{1,241},{242,261}}</string>
+                <key>textureRotated</key>
+                <true/>
+                <key>triangles</key>
+                <string>7 8 9 1 3 4 5 6 7 4 5 7 1 4 7 1 2 3 0 1 7 0 7 9</string>
+                <key>vertices</key>
+                <string>237 29 302 81 326 81 342 112 218 280 160 269 111 227 100 118 104 44 192 19</string>
+                <key>verticesUV</key>
+                <string>252 378 200 443 200 467 169 483 1 359 12 301 54 252 163 241 237 245 262 333</string>
+            </dict>
+            <key>Fairy_02_Heal (17).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{32.5,11}</string>
+                <key>spriteSize</key>
+                <string>{243,258}</string>
+                <key>spriteSourceSize</key>
+                <string>{380,320}</string>
+                <key>textureRect</key>
+                <string>{{1043,245},{243,258}}</string>
+                <key>textureRotated</key>
+                <true/>
+                <key>triangles</key>
+                <string>8 10 11 8 9 10 7 4 5 7 8 4 7 5 6 0 4 8 1 3 4 1 2 3 0 1 4 0 8 11</string>
+                <key>vertices</key>
+                <string>244 34 305 95 330 95 344 130 307 163 233 274 159 278 116 225 101 158 101 68 130 39 194 20</string>
+                <key>verticesUV</key>
+                <string>1287 388 1226 449 1226 474 1191 488 1158 451 1047 377 1043 303 1096 260 1163 245 1253 245 1282 274 1301 338</string>
+            </dict>
+            <key>Fairy_02_Heal (18).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{31,6}</string>
+                <key>spriteSize</key>
+                <string>{242,258}</string>
+                <key>spriteSourceSize</key>
+                <string>{380,320}</string>
+                <key>textureRect</key>
+                <string>{{264,242},{242,258}}</string>
+                <key>textureRotated</key>
+                <true/>
+                <key>triangles</key>
+                <string>9 10 11 4 9 11 7 5 6 7 8 5 4 5 8 4 8 9 1 3 4 1 2 3 1 4 11 0 1 11</string>
+                <key>vertices</key>
+                <string>254 38 303 110 330 111 342 146 290 192 267 231 212 283 153 272 102 217 100 70 131 39 196 25</string>
+                <key>verticesUV</key>
+                <string>509 396 437 445 436 472 401 484 355 432 316 409 264 354 275 295 330 244 477 242 508 273 522 338</string>
+            </dict>
+            <key>Fairy_02_Heal (2).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{31,9}</string>
+                <key>spriteSize</key>
+                <string>{244,256}</string>
+                <key>spriteSourceSize</key>
+                <string>{380,320}</string>
+                <key>textureRect</key>
+                <string>{{1303,245},{244,256}}</string>
+                <key>textureRotated</key>
+                <true/>
+                <key>triangles</key>
+                <string>0 11 12 9 10 11 4 5 9 8 9 5 8 5 7 7 5 6 9 0 1 1 3 4 1 2 3 9 1 4 0 9 11</string>
+                <key>vertices</key>
+                <string>262 53 306 112 330 114 343 152 311 172 253 250 212 279 163 277 103 225 99 163 103 64 139 35 221 23</string>
+                <key>verticesUV</key>
+                <string>1529 408 1470 452 1468 476 1430 489 1410 457 1332 399 1303 358 1305 309 1357 249 1419 245 1518 249 1547 285 1559 367</string>
+            </dict>
+            <key>Fairy_02_Heal (3).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{27,12}</string>
+                <key>spriteSize</key>
+                <string>{246,256}</string>
+                <key>spriteSourceSize</key>
+                <string>{380,320}</string>
+                <key>textureRect</key>
+                <string>{{265,486},{246,256}}</string>
+                <key>textureRotated</key>
+                <true/>
+                <key>triangles</key>
+                <string>0 10 11 0 5 9 5 8 9 7 8 5 7 5 6 5 0 1 1 2 3 1 3 4 5 1 4 0 9 10</string>
+                <key>vertices</key>
+                <string>262 50 297 98 340 98 340 137 307 165 266 226 217 275 170 276 115 244 94 73 136 34 219 20</string>
+                <key>verticesUV</key>
+                <string>491 654 443 689 443 732 404 732 376 699 315 658 266 609 265 562 297 507 468 486 507 528 521 611</string>
+            </dict>
+            <key>Fairy_02_Heal (4).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{29,11}</string>
+                <key>spriteSize</key>
+                <string>{244,262}</string>
+                <key>spriteSourceSize</key>
+                <string>{380,320}</string>
+                <key>textureRect</key>
+                <string>{{1,486},{244,262}}</string>
+                <key>textureRotated</key>
+                <true/>
+                <key>triangles</key>
+                <string>9 10 11 8 5 6 8 9 5 8 6 7 4 5 9 0 4 9 1 3 4 1 2 3 0 1 4 0 9 11</string>
+                <key>vertices</key>
+                <string>244 32 294 81 326 80 341 115 294 162 273 205 223 270 172 280 122 243 97 143 104 44 196 18</string>
+                <key>verticesUV</key>
+                <string>249 633 200 683 201 715 166 730 119 683 76 662 11 612 1 561 38 511 138 486 237 493 263 585</string>
+            </dict>
+            <key>Fairy_02_Heal (5).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{29,11.5}</string>
+                <key>spriteSize</key>
+                <string>{238,261}</string>
+                <key>spriteSourceSize</key>
+                <string>{380,320}</string>
+                <key>textureRect</key>
+                <string>{{1,1},{238,261}}</string>
+                <key>textureRotated</key>
+                <true/>
+                <key>triangles</key>
+                <string>10 12 13 10 11 12 0 4 10 7 5 6 7 8 9 7 9 5 10 4 5 10 5 9 1 3 4 1 2 3 0 1 4 0 10 13</string>
+                <key>vertices</key>
+                <string>243 33 301 81 338 82 338 119 291 169 273 206 217 279 167 271 126 246 107 196 100 118 104 62 128 38 199 18</string>
+                <key>verticesUV</key>
+                <string>247 144 199 202 198 239 161 239 111 192 74 174 1 118 9 68 34 27 84 8 162 1 218 5 242 29 262 100</string>
+            </dict>
+            <key>Fairy_02_Heal (6).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{27.5,13.5}</string>
+                <key>spriteSize</key>
+                <string>{241,255}</string>
+                <key>spriteSourceSize</key>
+                <string>{380,320}</string>
+                <key>textureRect</key>
+                <string>{{527,1},{241,255}}</string>
+                <key>textureRotated</key>
+                <true/>
+                <key>triangles</key>
+                <string>7 8 9 1 7 9 1 3 4 4 5 6 1 4 6 1 2 3 1 6 7 0 1 9</string>
+                <key>vertices</key>
+                <string>243 30 294 83 338 83 338 121 224 274 160 274 105 213 97 70 126 39 192 19</string>
+                <key>verticesUV</key>
+                <string>771 147 718 198 718 242 680 242 527 128 527 64 588 9 731 1 762 30 782 96</string>
+            </dict>
+            <key>Fairy_02_Heal (7).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{26.5,13}</string>
+                <key>spriteSize</key>
+                <string>{243,258}</string>
+                <key>spriteSourceSize</key>
+                <string>{380,320}</string>
+                <key>textureRect</key>
+                <string>{{524,244},{243,258}}</string>
+                <key>textureRotated</key>
+                <true/>
+                <key>triangles</key>
+                <string>9 10 11 5 7 8 8 9 5 5 6 7 4 5 9 0 4 9 1 3 4 1 2 3 0 1 4 0 9 11</string>
+                <key>vertices</key>
+                <string>240 31 302 84 338 86 338 125 301 159 260 240 214 274 164 276 97 214 95 153 106 44 194 18</string>
+                <key>verticesUV</key>
+                <string>769 389 716 451 714 487 675 487 641 450 560 409 526 363 524 313 586 246 647 244 756 255 782 343</string>
+            </dict>
+            <key>Fairy_02_Heal (8).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{32,8}</string>
+                <key>spriteSize</key>
+                <string>{242,266}</string>
+                <key>spriteSourceSize</key>
+                <string>{380,320}</string>
+                <key>textureRect</key>
+                <string>{{784,1},{242,266}}</string>
+                <key>textureRotated</key>
+                <true/>
+                <key>triangles</key>
+                <string>9 10 11 0 4 9 4 8 9 5 6 7 8 4 5 8 5 7 1 3 4 1 2 3 0 1 4 0 9 11</string>
+                <key>vertices</key>
+                <string>245 34 299 88 329 87 343 122 283 184 267 226 206 285 151 265 101 213 101 67 126 39 198 19</string>
+                <key>verticesUV</key>
+                <string>1035 145 981 199 982 229 947 243 885 183 843 167 784 106 804 51 856 1 1002 1 1030 26 1050 98</string>
+            </dict>
+            <key>Fairy_02_Heal (9).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{31,8}</string>
+                <key>spriteSize</key>
+                <string>{242,264}</string>
+                <key>spriteSourceSize</key>
+                <string>{380,320}</string>
+                <key>textureRect</key>
+                <string>{{1052,1},{242,264}}</string>
+                <key>textureRotated</key>
+                <true/>
+                <key>triangles</key>
+                <string>8 10 11 8 9 10 3 8 11 8 3 4 6 7 4 6 4 5 8 4 7 0 2 3 0 1 2 0 3 11</string>
+                <key>vertices</key>
+                <string>308 89 329 89 342 123 291 174 266 226 207 284 146 263 112 218 100 126 105 60 137 30 227 20</string>
+                <key>verticesUV</key>
+                <string>1247 209 1247 230 1213 243 1162 192 1110 167 1052 108 1073 47 1118 13 1210 1 1276 6 1306 38 1316 128</string>
+            </dict>
+        </dict>
+        <key>metadata</key>
+        <dict>
+            <key>format</key>
+            <integer>3</integer>
+            <key>pixelFormat</key>
+            <string>RGBA8888</string>
+            <key>premultiplyAlpha</key>
+            <false/>
+            <key>realTextureFileName</key>
+            <string>Fairy_02_Heal.png</string>
+            <key>size</key>
+            <string>{1575,742}</string>
+            <key>smartupdate</key>
+            <string>$TexturePacker:SmartUpdate:ff917ed6010945e0c4e4032612de76c7:ae8d05d3fe7926ab3062bffc8dd6a5df:0f728253920b426df04a2bd1f33ac03e$</string>
+            <key>textureFileName</key>
+            <string>Fairy_02_Heal.png</string>
+        </dict>
+    </dict>
+</plist>

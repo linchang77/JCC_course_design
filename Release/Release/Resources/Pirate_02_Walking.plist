@@ -1,0 +1,404 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+    <dict>
+        <key>frames</key>
+        <dict>
+            <key>Walking_000.png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{30.5,12}</string>
+                <key>spriteSize</key>
+                <string>{281,310}</string>
+                <key>spriteSourceSize</key>
+                <string>{480,360}</string>
+                <key>textureRect</key>
+                <string>{{1,1271},{281,310}}</string>
+                <key>textureRotated</key>
+                <true/>
+                <key>triangles</key>
+                <string>10 11 12 8 9 10 8 1 4 4 5 8 6 7 8 5 6 8 8 10 1 1 3 4 1 2 3 0 1 10 0 10 12</string>
+                <key>vertices</key>
+                <string>336 36 379 101 401 117 411 162 367 227 328 310 242 323 178 286 178 227 130 110 168 91 197 27 292 13</string>
+                <key>verticesUV</key>
+                <string>288 1477 223 1520 207 1542 162 1552 97 1508 14 1469 1 1383 38 1319 97 1319 214 1271 233 1309 297 1338 311 1433</string>
+            </dict>
+            <key>Walking_001.png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{39.5,8}</string>
+                <key>spriteSize</key>
+                <string>{295,302}</string>
+                <key>spriteSourceSize</key>
+                <string>{480,360}</string>
+                <key>textureRect</key>
+                <string>{{654,1},{295,302}}</string>
+                <key>textureRotated</key>
+                <true/>
+                <key>triangles</key>
+                <string>0 10 11 8 9 10 0 8 10 6 7 8 0 2 6 4 5 6 4 6 2 4 2 3 0 1 2 0 6 8</string>
+                <key>vertices</key>
+                <string>364 82 427 141 332 295 296 322 238 323 183 286 176 229 132 117 177 72 195 36 240 21 325 21</string>
+                <key>verticesUV</key>
+                <string>895 233 836 296 682 201 655 165 654 107 691 52 748 45 860 1 905 46 941 64 956 109 956 194</string>
+            </dict>
+            <key>Walking_002.png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{40,7}</string>
+                <key>spriteSize</key>
+                <string>{304,312}</string>
+                <key>spriteSourceSize</key>
+                <string>{480,360}</string>
+                <key>textureRect</key>
+                <string>{{636,1236},{304,312}}</string>
+                <key>textureRotated</key>
+                <true/>
+                <key>triangles</key>
+                <string>6 8 9 6 7 8 1 2 3 4 5 6 3 4 6 1 3 6 1 6 9 0 1 9</string>
+                <key>vertices</key>
+                <string>325 29 365 86 432 153 318 309 241 329 187 290 177 233 128 121 196 28 268 17</string>
+                <key>verticesUV</key>
+                <string>936 1433 879 1473 812 1540 656 1426 636 1349 675 1295 732 1285 844 1236 937 1304 948 1376</string>
+            </dict>
+            <key>Walking_003.png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{31.5,10.5}</string>
+                <key>spriteSize</key>
+                <string>{307,307}</string>
+                <key>spriteSourceSize</key>
+                <string>{480,360}</string>
+                <key>textureRect</key>
+                <string>{{1,1555},{307,307}}</string>
+                <key>textureRotated</key>
+                <false/>
+                <key>triangles</key>
+                <string>15 16 17 13 14 15 2 4 15 9 10 13 12 13 10 12 10 11 8 9 13 4 8 13 7 4 5 7 5 6 4 7 8 4 13 15 2 3 4 2 15 17 0 1 2 0 2 17</string>
+                <key>vertices</key>
+                <string>292 18 326 34 341 73 385 104 353 174 402 126 425 149 411 192 352 256 320 303 273 323 229 323 192 291 173 228 118 117 163 88 177 36 231 16</string>
+                <key>verticesUV</key>
+                <string>175 1557 209 1573 224 1612 268 1643 236 1713 285 1665 308 1688 294 1731 235 1795 203 1842 156 1862 112 1862 75 1830 56 1767 1 1656 46 1627 60 1575 114 1555</string>
+            </dict>
+            <key>Walking_004.png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{31.5,12.5}</string>
+                <key>spriteSize</key>
+                <string>{313,313}</string>
+                <key>spriteSourceSize</key>
+                <string>{480,360}</string>
+                <key>textureRect</key>
+                <string>{{321,943},{313,313}}</string>
+                <key>textureRotated</key>
+                <false/>
+                <key>triangles</key>
+                <string>13 14 15 4 9 10 12 13 4 4 10 11 12 4 11 8 5 6 8 6 7 5 8 9 4 5 9 1 4 13 1 3 4 1 2 3 1 13 15 0 1 15</string>
+                <key>vertices</key>
+                <string>313 21 338 78 380 91 359 142 335 179 351 197 398 143 428 129 418 192 327 293 280 324 213 323 115 123 155 88 169 29 250 11</string>
+                <key>verticesUV</key>
+                <string>519 953 544 1010 586 1023 565 1074 541 1111 557 1129 604 1075 634 1061 624 1124 533 1225 486 1256 419 1255 321 1055 361 1020 375 961 456 943</string>
+            </dict>
+            <key>Walking_005.png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{30,13.5}</string>
+                <key>spriteSize</key>
+                <string>{318,317}</string>
+                <key>spriteSourceSize</key>
+                <string>{480,360}</string>
+                <key>textureRect</key>
+                <string>{{1,325},{318,317}}</string>
+                <key>textureRotated</key>
+                <false/>
+                <key>triangles</key>
+                <string>11 0 3 11 12 13 11 13 0 10 11 3 10 3 9 7 4 5 7 5 6 4 7 8 9 3 4 9 4 8 0 2 3 0 1 2 0 13 14</string>
+                <key>vertices</key>
+                <string>335 72 376 87 354 142 333 164 346 206 407 146 429 152 420 201 289 325 219 323 111 128 155 83 159 36 218 15 298 8</string>
+                <key>verticesUV</key>
+                <string>225 389 266 404 244 459 223 481 236 523 297 463 319 469 310 518 179 642 109 640 1 445 45 400 49 353 108 332 188 325</string>
+            </dict>
+            <key>Walking_006.png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{28.5,9.5}</string>
+                <key>spriteSize</key>
+                <string>{313,323}</string>
+                <key>spriteSourceSize</key>
+                <string>{480,360}</string>
+                <key>textureRect</key>
+                <string>{{329,1},{313,323}}</string>
+                <key>textureRotated</key>
+                <true/>
+                <key>triangles</key>
+                <string>0 13 14 11 12 13 0 11 13 9 10 11 11 0 3 7 8 9 4 5 6 4 6 7 9 3 4 9 4 7 0 1 2 0 2 3 11 3 9</string>
+                <key>vertices</key>
+                <string>330 65 365 85 365 123 333 178 346 211 425 138 425 203 292 321 218 332 190 268 112 128 154 85 161 36 218 14 302 9</string>
+                <key>verticesUV</key>
+                <string>596 219 576 254 538 254 483 222 450 235 523 314 458 314 340 181 329 107 393 79 533 1 576 43 625 50 647 107 652 191</string>
+            </dict>
+            <key>Walking_007.png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{34,11.5}</string>
+                <key>spriteSize</key>
+                <string>{310,315}</string>
+                <key>spriteSourceSize</key>
+                <string>{480,360}</string>
+                <key>textureRect</key>
+                <string>{{641,924},{310,315}}</string>
+                <key>textureRotated</key>
+                <true/>
+                <key>triangles</key>
+                <string>13 15 16 13 14 15 1 4 13 11 12 13 4 9 11 9 10 11 8 5 6 8 6 7 5 8 9 4 5 9 4 11 13 1 3 4 1 2 3 1 13 16 0 1 16</string>
+                <key>vertices</key>
+                <string>318 23 341 79 379 90 365 141 338 180 357 207 410 159 429 167 421 214 286 326 212 322 188 263 119 124 164 76 167 42 202 23 255 11</string>
+                <key>verticesUV</key>
+                <string>944 1123 888 1146 877 1184 826 1170 787 1143 760 1162 808 1215 800 1234 753 1226 641 1091 645 1017 704 993 843 924 891 969 925 972 944 1007 956 1060</string>
+            </dict>
+            <key>Walking_008.png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{35.5,9.5}</string>
+                <key>spriteSize</key>
+                <string>{307,307}</string>
+                <key>spriteSourceSize</key>
+                <string>{480,360}</string>
+                <key>textureRect</key>
+                <string>{{310,1555},{307,307}}</string>
+                <key>textureRotated</key>
+                <false/>
+                <key>triangles</key>
+                <string>14 15 16 12 13 14 2 4 14 11 12 14 5 9 11 9 10 11 8 5 6 8 6 7 5 8 9 4 5 11 4 11 14 2 3 4 2 14 16 0 1 2 0 2 16</string>
+                <key>vertices</key>
+                <string>300 18 330 35 344 75 390 105 343 195 351 216 414 164 429 179 421 221 286 324 206 322 193 243 180 238 122 117 163 93 181 34 235 17</string>
+                <key>verticesUV</key>
+                <string>488 1556 518 1573 532 1613 578 1643 531 1733 539 1754 602 1702 617 1717 609 1759 474 1862 394 1860 381 1781 368 1776 310 1655 351 1631 369 1572 423 1555</string>
+            </dict>
+            <key>Walking_009.png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{40.5,11.5}</string>
+                <key>spriteSize</key>
+                <string>{313,309}</string>
+                <key>spriteSourceSize</key>
+                <string>{480,360}</string>
+                <key>textureRect</key>
+                <string>{{1,960},{313,309}}</string>
+                <key>textureRotated</key>
+                <false/>
+                <key>triangles</key>
+                <string>11 12 13 9 10 11 0 2 11 2 7 9 7 8 9 6 3 4 6 4 5 3 6 7 2 3 7 2 9 11 0 1 2 0 11 13</string>
+                <key>vertices</key>
+                <string>326 28 395 118 344 211 365 211 414 170 437 193 413 231 287 323 205 323 177 226 124 107 173 94 189 36 254 14</string>
+                <key>verticesUV</key>
+                <string>203 974 272 1064 221 1157 242 1157 291 1116 314 1139 290 1177 164 1269 82 1269 54 1172 1 1053 50 1040 66 982 131 960</string>
+            </dict>
+            <key>Walking_010.png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{41,9}</string>
+                <key>spriteSize</key>
+                <string>{306,306}</string>
+                <key>spriteSourceSize</key>
+                <string>{480,360}</string>
+                <key>textureRect</key>
+                <string>{{619,1555},{306,306}}</string>
+                <key>textureRotated</key>
+                <false/>
+                <key>triangles</key>
+                <string>12 14 15 12 13 14 10 11 12 2 12 15 9 10 12 2 7 9 7 8 9 3 5 6 3 4 5 3 6 7 2 3 7 2 9 12 0 1 2 0 2 15</string>
+                <key>vertices</key>
+                <string>327 29 394 118 350 198 361 210 419 157 434 194 412 227 288 323 207 324 193 243 180 237 128 114 175 85 189 41 223 24 273 18</string>
+                <key>verticesUV</key>
+                <string>818 1566 885 1655 841 1735 852 1747 910 1694 925 1731 903 1764 779 1860 698 1861 684 1780 671 1774 619 1651 666 1622 680 1578 714 1561 764 1555</string>
+            </dict>
+            <key>Walking_011.png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{35.5,8.5}</string>
+                <key>spriteSize</key>
+                <string>{301,311}</string>
+                <key>spriteSourceSize</key>
+                <string>{480,360}</string>
+                <key>textureRect</key>
+                <string>{{654,298},{301,311}}</string>
+                <key>textureRotated</key>
+                <false/>
+                <key>triangles</key>
+                <string>10 11 12 8 9 10 8 3 7 8 10 3 4 5 6 4 6 7 3 4 7 3 10 12 0 2 3 0 1 2 0 3 12</string>
+                <key>vertices</key>
+                <string>323 28 390 113 369 157 342 191 361 205 426 145 426 213 283 327 211 323 125 115 173 87 185 32 261 16</string>
+                <key>verticesUV</key>
+                <string>852 310 919 395 898 439 871 473 890 487 955 427 955 495 812 609 740 605 654 397 702 369 714 314 790 298</string>
+            </dict>
+            <key>Walking_012.png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{33.5,7.5}</string>
+                <key>spriteSize</key>
+                <string>{309,323}</string>
+                <key>spriteSourceSize</key>
+                <string>{480,360}</string>
+                <key>textureRect</key>
+                <string>{{329,316},{309,323}}</string>
+                <key>textureRotated</key>
+                <true/>
+                <key>triangles</key>
+                <string>12 13 14 10 11 12 10 4 9 10 12 4 8 5 6 8 6 7 5 8 9 4 5 9 1 4 12 1 3 4 1 2 3 1 12 14 0 1 14</string>
+                <key>vertices</key>
+                <string>325 28 341 74 380 100 368 146 339 185 356 204 408 154 428 160 422 208 293 320 218 334 119 116 166 91 176 38 247 11</string>
+                <key>verticesUV</key>
+                <string>635 522 589 538 563 577 517 565 478 536 459 553 509 605 503 625 455 619 343 490 329 415 547 316 572 363 625 373 652 444</string>
+            </dict>
+            <key>Walking_013.png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{29,16}</string>
+                <key>spriteSize</key>
+                <string>{314,318}</string>
+                <key>spriteSourceSize</key>
+                <string>{480,360}</string>
+                <key>textureRect</key>
+                <string>{{1,644},{314,318}}</string>
+                <key>textureRotated</key>
+                <true/>
+                <key>triangles</key>
+                <string>11 13 14 11 12 13 9 10 11 2 8 9 9 11 2 2 7 8 6 3 4 6 4 5 3 6 7 2 3 7 1 2 11 1 11 14 0 1 14</string>
+                <key>vertices</key>
+                <string>369 87 369 125 333 191 342 208 409 145 426 156 421 199 319 300 274 323 218 323 112 119 157 96 167 42 201 22 287 5</string>
+                <key>verticesUV</key>
+                <string>237 901 199 901 133 865 116 874 179 941 168 958 125 953 24 851 1 806 1 750 205 644 228 689 282 699 302 733 319 819</string>
+            </dict>
+            <key>Walking_014.png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{28,13}</string>
+                <key>spriteSize</key>
+                <string>{318,314}</string>
+                <key>spriteSourceSize</key>
+                <string>{480,360}</string>
+                <key>textureRect</key>
+                <string>{{321,627},{318,314}}</string>
+                <key>textureRotated</key>
+                <false/>
+                <key>triangles</key>
+                <string>2 13 14 11 12 13 2 11 13 9 10 11 8 2 7 8 9 2 6 3 4 6 4 5 3 6 7 2 3 7 2 9 11 1 2 14 0 1 14</string>
+                <key>vertices</key>
+                <string>365 86 365 121 336 176 350 195 408 136 427 153 415 200 294 323 214 324 143 182 109 123 149 95 163 35 223 15 289 10</string>
+                <key>verticesUV</key>
+                <string>577 703 577 738 548 793 562 812 620 753 639 770 627 817 506 940 426 941 355 799 321 740 361 712 375 652 435 632 501 627</string>
+            </dict>
+            <key>Walking_015.png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{30,9}</string>
+                <key>spriteSize</key>
+                <string>{322,326}</string>
+                <key>spriteSourceSize</key>
+                <string>{480,360}</string>
+                <key>textureRect</key>
+                <string>{{1,1},{322,326}}</string>
+                <key>textureRotated</key>
+                <true/>
+                <key>triangles</key>
+                <string>1 2 14 12 13 14 2 12 14 10 11 12 2 7 10 9 10 7 9 7 8 6 3 4 6 4 5 3 6 7 2 3 7 2 10 12 1 14 15 0 1 15</string>
+                <key>vertices</key>
+                <string>369 90 362 130 335 180 349 194 399 129 431 146 411 192 313 309 236 334 192 288 177 236 109 123 150 95 163 35 220 15 292 8</string>
+                <key>verticesUV</key>
+                <string>245 261 205 254 155 227 141 241 206 291 189 323 143 303 26 205 1 128 47 84 99 69 212 1 240 42 300 55 320 112 327 184</string>
+            </dict>
+            <key>Walking_016.png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{26.5,9.5}</string>
+                <key>spriteSize</key>
+                <string>{295,311}</string>
+                <key>spriteSourceSize</key>
+                <string>{480,360}</string>
+                <key>textureRect</key>
+                <string>{{654,611},{295,311}}</string>
+                <key>textureRotated</key>
+                <false/>
+                <key>triangles</key>
+                <string>1 13 14 11 12 13 1 11 13 9 10 11 1 5 9 7 8 9 7 9 5 7 5 6 4 1 2 4 2 3 1 4 5 1 9 11 0 1 14</string>
+                <key>vertices</key>
+                <string>381 95 358 169 395 123 414 131 414 178 322 301 282 326 231 322 187 289 179 242 119 122 163 79 169 33 233 15 301 15</string>
+                <key>verticesUV</key>
+                <string>916 691 893 765 930 719 949 727 949 774 857 897 817 922 766 918 722 885 714 838 654 718 698 675 704 629 768 611 836 611</string>
+            </dict>
+            <key>Walking_017.png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{32.5,9}</string>
+                <key>spriteSize</key>
+                <string>{295,310}</string>
+                <key>spriteSourceSize</key>
+                <string>{480,360}</string>
+                <key>textureRect</key>
+                <string>{{316,1258},{295,310}}</string>
+                <key>textureRotated</key>
+                <true/>
+                <key>triangles</key>
+                <string>9 10 11 1 9 11 7 8 9 4 5 7 5 6 7 1 3 4 1 4 7 1 2 3 1 7 9 0 1 11</string>
+                <key>vertices</key>
+                <string>320 17 353 84 397 105 420 155 323 310 243 326 183 288 176 226 125 121 168 78 183 34 236 16</string>
+                <key>verticesUV</key>
+                <string>625 1453 558 1486 537 1530 487 1553 332 1456 316 1376 354 1316 416 1309 521 1258 564 1301 608 1316 626 1369</string>
+            </dict>
+        </dict>
+        <key>metadata</key>
+        <dict>
+            <key>format</key>
+            <integer>3</integer>
+            <key>pixelFormat</key>
+            <string>RGBA8888</string>
+            <key>premultiplyAlpha</key>
+            <false/>
+            <key>realTextureFileName</key>
+            <string>Pirate_02_Walking.png</string>
+            <key>size</key>
+            <string>{957,1863}</string>
+            <key>smartupdate</key>
+            <string>$TexturePacker:SmartUpdate:2ba8a7b00b145f18efc1cda879693a58:cde792afc22249861927e0d5b2a4c1d2:6dd9c1b715f12de0ea3871f50d2174c5$</string>
+            <key>textureFileName</key>
+            <string>Pirate_02_Walking.png</string>
+        </dict>
+    </dict>
+</plist>
