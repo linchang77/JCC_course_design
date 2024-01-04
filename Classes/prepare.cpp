@@ -73,12 +73,20 @@ void prepare::removeAllLabels()
 void prepare::prepare_base(float dt)
 {
 	timef += dt;
+	auto LH = LHcontroler::getInstance();
+	if (LH->Gameover)
+	{
+		return;
+	}
 	if ((last_time == 0) && prepare_end == 1) //开始阶段
-	{ 
+	{
+		//启用商店按钮
+		dynamic_cast<Battlefield*>(Director::getInstance()->getRunningScene())->getCurrentStore()->Refresh();
+		Node* menu;
+		if ((menu = Director::getInstance()->getRunningScene()->getChildByName("menu")) != nullptr)
+			dynamic_cast<MenuItem*>(menu->getChildByName("storeItem"))->setEnabled(true);
 		threeLabelsInit();  //三个标签的初始化
-
 		this->getParent()->reorderChild(this, 2);
-
 		Isfight_l1->update_Isfight(0);  //修改战斗状态为：准备
 		prepare_end = 0;  //开始准备阶段
 		last_time = MaxTime;  //将剩余时间拉满
@@ -87,12 +95,38 @@ void prepare::prepare_base(float dt)
 	
 	if (last_time == MaxTime/2 + 1&&prepare_end==0)  //结束阶段
 	{
-		getAllHeroes();  //暂时使用的给棋子赋值位置的函数，最后删掉
+		getAllHeroes();  //使用的给棋子赋值位置的函数
 		
 		removeAllLabels();  //将它与所有标签的连接remove掉。
 
 		this->getParent()->reorderChild(this, -1);  //将prepare扔到底层。
-		
+		auto battlefield = dynamic_cast<Battlefield*>(Director::getInstance()->getRunningScene());
+		auto store = battlefield->getCurrentStore();
+		auto storeItem = dynamic_cast<MenuItem*>(battlefield->getChildByName("menu")->getChildByName("storeItem"));
+		if (store->getStatus())     //关闭商店
+		{
+			store->retain();
+			store->removeFromParent();
+			store->reverseStatus();
+		}
+		storeItem->setEnabled(false);	//禁用商店按钮
+		if (LH->GetStatus() == ONLINE)
+		{
+			auto transmission = httpTransmission::getInstance();
+			transmission->upload(dynamic_cast<Battlefield*>(Director::getInstance()->getRunningScene()));
+		}
+		//海克斯选项图层处理
+		Node* hextech;
+		if ((hextech = Director::getInstance()->getRunningScene()->getChildByName("hextechlayer")) != nullptr)	//若玩家未选择
+		{
+			//进行默认选择并移除图层
+			auto littlehero = LH->getMyLittleHero();
+			littlehero->setHextechStatus(MONEY);
+			littlehero->update_gold(15);
+			littlehero->set_message("...");
+			hextech->removeFromParent();
+		}
+
 		small_turn++;  //计算轮次
 		if (small_turn > 3)
 			small_turn = 1,

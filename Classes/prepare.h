@@ -4,6 +4,7 @@
 #include"CCVector.h"
 #include "Heroes.h"
 #include"Map.h"
+#include"httpTransmission.h"
 #include"fight.h"
 USING_NS_CC;
 class prepare:public Layer

@@ -3,10 +3,12 @@
 #include"Heroes.h"
 #include"Littlehero.h"
 #include "GeneralCreator.h"
+#include"Battlefield.h"
+#include "AudioEngine.h"
 USING_NS_CC;
 static LHcontroler* s_Sharedcontroler = nullptr;
-static int mynumber=0;
-static int Status=LOCAL;
+static int mynumber = 0;
+static int Status = LOCAL;
 int LHcontroler::get_mynumber()
 {
     return mynumber;
@@ -28,8 +30,8 @@ void LHcontroler::initlocal()
 {
     Status = LOCAL;
     //Éú³É
-   
- }
+
+}
 void LHcontroler::initonline()
 {
     Status = ONLINE;
@@ -61,12 +63,12 @@ bool LHcontroler::init()
     {
         /*´´½¨ÄãµÄ±¾µØµÄĞ¡Ğ¡Ó¢ĞÛ*/
         heros.pushBack(Littlehero::create());
-        heros.at(0)->ID = "You" ;
+        heros.at(0)->ID = "You";
         for (int i = 1; i < 4; i++)
         {
             heros.pushBack(Littlehero::create());
             heros.at(i)->ID = "AI" + StringUtils::toString(i);
-        }  
+        }
     }
     heros.at(LHcontroler::get_mynumber())->init_layer();//³õÊ¼»¯Í¼²ã´ËÍæ¼ÒµÄÑ¡ÊÖÍ¼²ã
     heros.at(LHcontroler::get_mynumber())->init_MyMap();
@@ -74,11 +76,18 @@ bool LHcontroler::init()
 }
 void Littlehero::init_layer()
 {
+
     heroslayer = Layer::create();//´´½¨Í¼²ã
+    
+    if (Status == ONLINE)
+    {
+        heroslayer->retain();
+    }
+    
     //·ÅÖÃ¹ºÂò¾­ÑéµÄ°´Å¥
     set_ExpButton();
     //·ÅÖÃ½ğ±Ò±êÇ©,ºÍÍ¼±ê
-    set_Gold(); 
+    set_Gold();
     //·ÅÖÃÏûÏ¢ÌáÊ¾Àà
     set_Messagelabel();
     //·ÅÖÃÈË¿ÚµÄÍ¼±ê
@@ -111,8 +120,8 @@ void Littlehero::init_MyMap()
 void Littlehero::set_threelabel()
 {
     auto visibleSize = Director::getInstance()->getVisibleSize();
-    Hplabel = Label::createWithTTF(  "Your Hp:"+StringUtils::toString(Hp), "fonts/Marker Felt.ttf", 24);
-    Explabel = Label::createWithTTF("Your Exp:" + StringUtils::toString(Exp) + "/" + StringUtils::toString(Level== M_LEVEL ? 0:Explevel[Level]), "fonts/Marker Felt.ttf", 24);
+    Hplabel = Label::createWithTTF("Your Hp:" + StringUtils::toString(Hp), "fonts/Marker Felt.ttf", 24);
+    Explabel = Label::createWithTTF("Your Exp:" + StringUtils::toString(Exp) + "/" + StringUtils::toString(Level == M_LEVEL ? 0 : Explevel[Level]), "fonts/Marker Felt.ttf", 24);
     Levellabel = Label::createWithTTF("Your Level:" + StringUtils::toString(Level), "fonts/Marker Felt.ttf", 24);
     Hplabel->setAnchorPoint(Vec2(0, 1));
     Explabel->setAnchorPoint(Vec2(0, 1));
@@ -122,7 +131,7 @@ void Littlehero::set_threelabel()
     Levellabel->setPosition(Vec2(5, 948 - 2 * Explabel->getContentSize().height));
     heroslayer->addChild(Hplabel, 0, "Hplabel");
     heroslayer->addChild(Explabel, 0, "Hplabel");
-    heroslayer->addChild(Levellabel, 0, "Levellabel"); 
+    heroslayer->addChild(Levellabel, 0, "Levellabel");
 }
 void Littlehero::add_Littlehero()//¼ÓÈëĞ¡Ğ¡Ó¢ĞÛ
 {
@@ -135,9 +144,9 @@ void Littlehero::set_ExpButton()//·ÅÖÃ¹ºÂò¾­ÑéµÄ°´Å¥
 {
     //·ÅÖÃÔö¼Ó¾­ÑéµÄ°´Å¥
     auto BuyexpItem = GCreator::getInstance()->createMenuItem("herolayer/BuylvlButton.png", "herolayer/BuylvlButton.png", CC_CALLBACK_0(Littlehero::Buy_exp, this), 48, 948 - 926, 0, 0);
-    BuyexpItem->setScale(BuyexpButtonSize.x / BuyexpItem->getContentSize().width);
+    BuyexpItem->setScale(0.8f*BuyexpButtonSize.x / BuyexpItem->getContentSize().width);
     auto menu = Menu::create(BuyexpItem, NULL);
-    menu->setPosition(Vec2::ZERO);
+    menu->setPosition(Vec2(1385,100));
     heroslayer->addChild(menu, 1, "Buyexpitem");
 }
 void Littlehero::set_Gold()   //·ÅÖÃ½ğ±Ò±êÇ©,ºÍÍ¼±ê
@@ -154,7 +163,7 @@ void Littlehero::set_PopulationLabel()//·ÅÖÃÈË¿ÚµÄÍ¼±ê
 {
     /*ÉèÖÃÈË¿Ú±êÇ©ºÍÍ¼±ê*/
 
-    auto PopulationLabel = Label::createWithTTF(StringUtils::toString(chequers) + "/" + StringUtils::toString(Level), "fonts/Marker Felt.ttf", 48);
+    PopulationLabel = Label::createWithTTF(StringUtils::toString(chequers) + "/" + StringUtils::toString(Level), "fonts/Marker Felt.ttf", 48);
     Population = GCreator::getInstance()->createSprite("herolayer/Population.png", 0, 0, 0, 0);
     Population->setContentSize(Size(1600.0f, 948.0f));
     Population->setOpacity(0);
@@ -167,7 +176,8 @@ void Littlehero::set_IDs()
 {
     auto visibleSize = Director::getInstance()->getVisibleSize();
     auto heros = LHcontroler::getInstance()->heros;
-    if (LHcontroler::GetStatus() == LOCAL)
+    auto LH = LHcontroler::getInstance();
+    if (LH->GetStatus() == LOCAL)
     {
         for (int i = 0; i < 4; i++)
         {
@@ -187,14 +197,15 @@ void Littlehero::set_IDs()
             heroslayer->addChild(IDlabel, 0, "IDlabel" + heros.at(i)->ID);
         }
     }
-        
+
 }
 void Littlehero::set_avatar()//ÏÔÊ¾Í·Ïñ
 {
-    if(LHcontroler::GetStatus() == LOCAL)
-    avatarimage = GCreator::getInstance()->createSprite("herolayer/AvatarLocal.png", 0, 0, 0, 0);
+    auto LH = LHcontroler::getInstance();
+    if (LH->GetStatus() == LOCAL)
+        avatarimage = GCreator::getInstance()->createSprite("herolayer/AvatarLocal.png", 0, 0, 0, 0);
     else
-    avatarimage = GCreator::getInstance()->createSprite("herolayer/AvatarOnline1.png", 0, 0, 0, 0);
+        avatarimage = GCreator::getInstance()->createSprite("herolayer/AvatarOnline1.png", 0, 0, 0, 0);
     avatarimage->setContentSize(Size(1600.0f, 948.f));
     heroslayer->addChild(avatarimage, 0, "avatarimage");
 }
@@ -207,7 +218,8 @@ void Littlehero::set_Messagelabel()
 }
 void Littlehero::set_HP_Bar()//ÏÔÊ¾ÑªÌõ
 {
-    if (LHcontroler::GetStatus() == LOCAL)
+    auto LH = LHcontroler::getInstance();
+    if (LH->GetStatus() == LOCAL)
     {
         Hpframe = GCreator::getInstance()->createSprite("herolayer/HpframeLocal.png", 0, 0, 0, 0);
         Hpframe->setContentSize(Size(1600.0f, 948.f));
@@ -229,13 +241,13 @@ void Littlehero::set_HP_Bar()//ÏÔÊ¾ÑªÌõ
         for (int i = 0; i < 2; i++)
         {
             Hpbar[i] = Sprite::create("herolayer/HpBar.png");
-            Hpbar[i] -> setAnchorPoint(Point(0, 0));
+            Hpbar[i]->setAnchorPoint(Point(0, 0));
             Hpbar[i]->setContentSize(Size(16, 66));
-            Hpbar[i]->setPosition(1505.0f   ,940.0f - (145.0f+115*i));
+            Hpbar[i]->setPosition(1505.0f, 940.0f - (145.0f + 115 * i));
             heroslayer->addChild(Hpbar[i], 0);
         }
     }
-    
+
 }
 /*¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª*/
 /*ÏÂÃæÊÇ¸üĞÂÊı¾İÏà¹ØµÄº¯Êı*/
@@ -243,11 +255,12 @@ void Littlehero::set_HP_Bar()//ÏÔÊ¾ÑªÌõ
 void Littlehero::update_Hp(int updatehp)
 {
     Hp -= updatehp;
-    Hps[0] -= 5;
     if (Hp < 0)
         Hp = 0;
+    Hps[0] = Hp;
     Hplabel->setString(StringUtils::toString(Hp));
-    if (LHcontroler::GetStatus() == LOCAL)
+    auto LH = LHcontroler::getInstance();
+    if (LH->GetStatus() == LOCAL)
         for (int i = 0; i < 4; i++)
             Hpbar[i]->setScaleY(Hps[i] / 100.0f);
     else
@@ -258,46 +271,82 @@ void Littlehero::update_Hp(int updatehp)
 }
 void Littlehero::Buy_exp()
 {
-    Exp = Exp + 4;
-    //ÅĞ¶ÏÊÇ·ñÒªÉı¼¶
-    Checklevel();
-    //¸üĞÂ±êÇ©
-    Explabel->setString("Your Exp:" + StringUtils::toString(Exp) + "/" + StringUtils::toString(Level == M_LEVEL ? 0 : Explevel[Level]));
-    Levellabel->setString("Your Level:" + StringUtils::toString(Level));
+    if (Gold >= 4 && Level !=5)
+    {
+        update_gold(-4);
+        Exp = Exp + 4;
+        //ÅĞ¶ÏÊÇ·ñÒªÉı¼¶
+        Checklevel();
+        //¸üĞÂ±êÇ©
+        Explabel->setString("Your Exp:" + StringUtils::toString(Exp) + "/" + StringUtils::toString(Level == M_LEVEL ? 0 : Explevel[Level]));
+        Levellabel->setString("Your Level:" + StringUtils::toString(Level));
+    }
+    else
+    {
+        set_message("You are out of money!");
+    }
 }
 void Littlehero::Update_exp(int exp)
 {
     if (Level == M_LEVEL)
         return;
     Exp += exp;
+    if (is_ClearMind())
+        Exp +=3 ;
+    Checklevel();
+    Explabel->setString("Your Exp:" + StringUtils::toString(Exp) + "/" + StringUtils::toString(Level == M_LEVEL ? 0 : Explevel[Level]));
+    Levellabel->setString("Your Level:" + StringUtils::toString(Level));
+
 }
 void Littlehero::Checklevel()
 {
-    while (Level <=5&&Exp - Explevel[Level] >= 0)
+    while (Level <= M_LEVEL-1 && Exp - Explevel[Level] >= 0)
     {
         Exp -= Explevel[Level];
         Level++;
     }
     if (Level == M_LEVEL)
         Exp = 0;
+    dynamic_cast<Battlefield*>(Director::getInstance()->getRunningScene())->getCurrentStore()->ChangePossibility();
     return;
+}
+/*º£¿ËË¹Ïà¹Øº¯Êı*/
+bool Littlehero::is_ClearMind()
+{
+    if (HextechStatus != CLEARMIND)
+        return false;
+    for (int i = 0; i < 9; i++)
+        if (Preparation[i] != nullptr)
+            return false;
+    return true;
 }
 void Littlehero::update_gold()//Ã¿»ØºÏ¸üĞÂ½ğ±Ò
 {
     int interest;
-    if (Gold >= 50)
+    if (VICTORY)
+        Gold++;
+    if (Gold >= 70 && HextechStatus == MONEY)
+        interest = 7;
+    else if (Gold >= 50 && HextechStatus != MONEY)
         interest = 5;
-    else 
+    else
         interest = Gold / 10;
-     Gold = Gold + Winning_Streak_Rewards * VICTORY + Gold_Per_Turn+interest;
-     Goldlabel->setString(StringUtils::toString(Gold));
-     showInterest();
+    Gold = Gold + Winning_Streak_Rewards * (WinOrLoseReword[VICTORY]+WinOrLoseReword[LOST]) + Gold_Per_Turn + interest;
+    Goldlabel->setString(StringUtils::toString(Gold));
+    showInterest();
 }
 void Littlehero::update_gold(int num)//¸üĞÂ½ğ±Ò
 {
     Gold = Gold + num;
     Goldlabel->setString(StringUtils::toString(Gold));
-   showInterest();
+    showInterest();
+}
+void Littlehero::update_WinOrLose(int Win, int Lose)
+{
+    VICTORY = Win == 0 ? 0 : VICTORY + 1;
+    VICTORY = VICTORY > 5 ? 5 : VICTORY;
+    LOST = Lose == 0 ? 0 : LOST + 1;
+    LOST = LOST > 5 ? 5 : LOST;
 }
 void Littlehero::showInterest()//ÏÔÊ¾ÀûÏ¢µÄÍ¼±ê
 {
@@ -311,11 +360,11 @@ void Littlehero::showInterest()//ÏÔÊ¾ÀûÏ¢µÄÍ¼±ê
         node->removeFromParent();
     if (interest > 0)
     {
-       Sprite* newnode = GCreator::getInstance()->createSprite("herolayer/Interest" + StringUtils::toString(interest) + ".png", 0, 0, 0, 0);
-       newnode->setContentSize(Size(1600.0f, 948.0f));
+        Sprite* newnode = GCreator::getInstance()->createSprite("herolayer/Interest" + StringUtils::toString(interest) + ".png", 0, 0, 0, 0);
+        newnode->setContentSize(Size(1600.0f, 948.0f));
         heroslayer->addChild(newnode, 0, "Interest");
     }
-   
+
 }
 /*¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª*/
 /*ÏÂÃæÊÇÊµÏÖÆå×ÓÍÏ¶¯µÄ¼¸¸öº¯Êı*/
@@ -347,7 +396,7 @@ bool Littlehero::onLeftMouseDown(EventMouse* event)
         //Á½¸öforÑ­»·±éÀú±¸Õ½Ï¯ºÍ³¡ÉÏµÄÆå×Ó
         if (location.x >= PreparationsSizeX[0] && location.x <= PreparationsSizeX[9] && location.y >= PreparationsSizeY[0] && location.y <= PreparationsSizeY[1])//µã»÷ÔÚÕ½³¡ÄÚ
         {
-         if (Preparation[getPreparationarrayposition(location)] != nullptr)
+            if (Preparation[getPreparationarrayposition(location)] != nullptr)
             {
                 Draging_hero = Preparation[getPreparationarrayposition(location)];
                 isDragging = true;
@@ -373,15 +422,19 @@ bool Littlehero::onLeftMouseDown(EventMouse* event)
 
 void Littlehero::onLeftMouseMove(EventMouse* event)
 {
-    if (event->getMouseButton() == EventMouse::MouseButton::BUTTON_LEFT&&isDragging==1)
+    if (event->getMouseButton() == EventMouse::MouseButton::BUTTON_LEFT && isDragging == 1)
     {
         //¿ªÊ¼ÒÆ¶¯¾«Áé
         Vec2 location = event->getLocationInView();
         //ÏÔÊ¾³öÊÛÇøÓò
-        if(heroslayer->getChildByName("sellarea")==nullptr)
-             heroslayer->addChild(sellarea, -1, "sellarea");
+        if (heroslayer->getChildByName("sellarea") == nullptr)
+            heroslayer->addChild(sellarea, -1, "sellarea");
         //ÏÔÊ¾ÈË¿ÚºÍ»ØÏÔ
         My_Map->setmaplines(100);
+        if (HextechStatus == POPULATION)
+            PopulationLabel->setString(StringUtils::toString(chequers) + "/" + StringUtils::toString(Level + 1));
+        else
+            PopulationLabel->setString(StringUtils::toString(chequers) + "/" + StringUtils::toString(Level));
         Population->setOpacity(100);
         heroslayer->getChildByName("PopulationLabel")->setOpacity(100);
         // ÒÆ¶¯¾«Áé
@@ -404,7 +457,7 @@ void Littlehero::onLeftMouseUp(EventMouse* event)
         Vec2 location = event->getLocationInView();
         //ÅĞ¶ÏÊó±êÌ§ÆğÎ»ÖÃÄ¿±ê
         if (location.x >= PreparationsSizeX[0] && location.x <= PreparationsSizeX[9] && location.y >= PreparationsSizeY[0]
-            && location.y <= PreparationsSizeY[1]&&Lastposition.y<=315)//µã»÷±¸Õ½Ï¯ÄÚÍÏ¶¯µÄÆğÊ¼µãÔÚ±¸Õ½Ï¯
+            && location.y <= PreparationsSizeY[1] && Lastposition.y <= 315)//µã»÷±¸Õ½Ï¯ÄÚÍÏ¶¯µÄÆğÊ¼µãÔÚ±¸Õ½Ï¯
         {
             int x = getPreparationarrayposition(location);
             int pre = getPreparationarrayposition(Lastposition);//»ñÈ¡ÒÆ¶¯Ö®Ç°µÄÊı×éÎ»ÖÃ
@@ -413,7 +466,7 @@ void Littlehero::onLeftMouseUp(EventMouse* event)
                 Draging_hero->setPosition(getmidposition(x));
                 Preparation[x]->setPosition(Lastposition);
                 Preparation[pre] = Preparation[x];
-                Preparation[x] = Draging_hero;  
+                Preparation[x] = Draging_hero;
             }
             else
             {
@@ -423,7 +476,7 @@ void Littlehero::onLeftMouseUp(EventMouse* event)
             }
         }
         else if (location.x >= MapSizeX[0] && location.x <= MapSizeX[4] && location.y >= MapSizeY[0]
-                 && location.y <= MapSizeY[4]&&Lastposition.y>=315)//µã»÷ÔÚÕ½³¡ÉÏÍÏ¶¯µÄÆğÊ¼µãÔÚÕ½³¡ÉÏ
+            && location.y <= MapSizeY[4] && Lastposition.y >= 315)//µã»÷ÔÚÕ½³¡ÉÏÍÏ¶¯µÄÆğÊ¼µãÔÚÕ½³¡ÉÏ
         {
             Vec2 vec2 = getFightarrayposition(location);
             int x = vec2.x;
@@ -436,7 +489,7 @@ void Littlehero::onLeftMouseUp(EventMouse* event)
             int prey = getFightarrayposition(Lastposition).y;//»ñÈ¡ÒÆ¶¯Ö®Ç°µÄÊı×éÎ»ÖÃ
             if (Fightfield[x][y] != nullptr)//½»»»
             {
-                Draging_hero->setPosition(getmidposition(x,y));
+                Draging_hero->setPosition(getmidposition(x, y));
                 Fightfield[x][y]->setPosition(Lastposition);
                 Fightfield[prex][prey] = Fightfield[x][y];
                 Fightfield[x][y] = Draging_hero;
@@ -444,12 +497,12 @@ void Littlehero::onLeftMouseUp(EventMouse* event)
             else
             {
                 Draging_hero->setPosition(getmidposition(x, y));
-                Fightfield[prex][prey] =nullptr;
+                Fightfield[prex][prey] = nullptr;
                 Fightfield[x][y] = Draging_hero;
             }
         }
-        else if (location.x >= PreparationsSizeX[0] && location.x <= PreparationsSizeX[9] && location.y >= PreparationsSizeY[0] 
-                 && location.y <= PreparationsSizeY[1] && Lastposition.y >= 315)//µã»÷±¸Õ½Ï¯ÄÚ£¬ÍÏ¶¯µÄÆğÊ¼µãÔÚÕ½³¡
+        else if (location.x >= PreparationsSizeX[0] && location.x <= PreparationsSizeX[9] && location.y >= PreparationsSizeY[0]
+            && location.y <= PreparationsSizeY[1] && Lastposition.y >= 315)//µã»÷±¸Õ½Ï¯ÄÚ£¬ÍÏ¶¯µÄÆğÊ¼µãÔÚÕ½³¡
         {
             int x = getPreparationarrayposition(location);
             int prex = getFightarrayposition(Lastposition).x;
@@ -460,16 +513,20 @@ void Littlehero::onLeftMouseUp(EventMouse* event)
                 Preparation[x]->setPosition(Lastposition);
                 Fightfield[prex][prey] = Preparation[x];
                 Preparation[x] = Draging_hero;
+                
             }
             else
             {
                 Draging_hero->setPosition(getmidposition(x));
                 Preparation[x] = Draging_hero;
                 Fightfield[prex][prey] = nullptr;
+                chequers--;
+                auto p1 = fightheros.find(Draging_hero);//»ñÈ¡Ö¸ÏòËüµÄÖ¸Õë
+                fightheros.erase(p1);//½«¸ÃÖ¸ÕëÉ¾È¥
             }
         }
         else if (location.x >= MapSizeX[0] && location.x <= MapSizeX[4] && location.y >= MapSizeY[0]
-            && location.y <= MapSizeY[4]&& Lastposition.y <= 315)//µã»÷ÔÚÕ½³¡ÉÏ£¬ÍÏ¶¯µÄÆğÊ¼µãÔÚ±¸Õ½Ï¯ÉÏ
+            && location.y <= MapSizeY[4] && Lastposition.y <= 315)//µã»÷ÔÚÕ½³¡ÉÏ£¬ÍÏ¶¯µÄÆğÊ¼µãÔÚ±¸Õ½Ï¯ÉÏ
         {
             Vec2 vec2 = getFightarrayposition(location);
             int x = vec2.x;
@@ -484,33 +541,49 @@ void Littlehero::onLeftMouseUp(EventMouse* event)
             }
             else
             {
-                Draging_hero->setPosition(getmidposition(x, y));
-                Preparation[pre] = nullptr;
-                Fightfield[x][y] = Draging_hero;
+                if (HextechStatus == POPULATION)
+                    MaxPeople = Level + 1;
+                else
+                    MaxPeople = Level;
+                if (chequers < MaxPeople)
+                {
+                    Draging_hero->setPosition(getmidposition(x, y));
+                    Preparation[pre] = nullptr;
+                    Fightfield[x][y] = Draging_hero;
+                    chequers++;
+                    fightheros.pushBack(Draging_hero);
+                }
+                else
+                {
+                    Messagelabel->setString("The total number of chess pieces cannot exceed the population.");
+                    Draging_hero->setPosition(Lastposition);
+                }
             }
         }
-        else if ((location.x >= 84 && location.x <= 188 && location.y >= (948-368) && location.y <= (948 - 290) || (location.x >= 1370
-            && location.x <= 1477 && location.y >= (948 - 375) && location.y <= (948 - 300))))//´Ë´¦Ìí¼Ó³öÊÛÆå×Ó
+        else if ((location.x >= 1370 && location.x <= 1477 && location.y >= (948 - 375) && location.y <= (948 - 300)))//´Ë´¦Ìí¼Ó³öÊÛÆå×Ó
         {
+            update_gold(Draging_hero->getvalue());//¸üĞÂ½ğ±Ò
             if (Lastposition.y <= 315)//Èç¹ûÊÇ±¸Õ½Ï¯
-             {
+            {
                 int pre = getPreparationarrayposition(Lastposition);
+                HerosType[Draging_hero->getID() + 9 * (Draging_hero->getStar() - 1)]--;
                 Draging_hero->removeFromParent();
                 Preparation[pre] = nullptr;
-             }
-             else //Èç¹ûÊÇÕ½³¡
-             {
+            }
+            else //Èç¹ûÊÇÕ½³¡
+            {
                 int prex = getFightarrayposition(Lastposition).x;
                 int prey = getFightarrayposition(Lastposition).y;//»ñÈ¡ÒÆ¶¯Ö®Ç°µÄÊı×éÎ»ÖÃ
+                chequers--;
                 Draging_hero->removeFromParent();
                 Fightfield[prex][prey] = nullptr;
-             }
-             update_gold(Draging_hero->getCost());//¸üĞÂ½ğ±Ò
+            }
+            
         }
         else
         {
             Messagelabel->setString("You can only place the chess on the left half of the square or on the Preparation Seat.");
-            Draging_hero->setPosition( Lastposition);
+            Draging_hero->setPosition(Lastposition);
         }
         isDragging = false;
         Lastposition = Vec2(0, 0);
@@ -566,14 +639,14 @@ Vec2 Littlehero::getmidposition(Vec2 location)
         }
         return  getmidposition(i - 1, j - 1);
     }
-    else if(location.x >= PreparationsSizeX[0] && location.x <= PreparationsSizeX[9] && location.y >= PreparationsSizeY[0] && location.y <= PreparationsSizeY[1])
+    else if (location.x >= PreparationsSizeX[0] && location.x <= PreparationsSizeX[9] && location.y >= PreparationsSizeY[0] && location.y <= PreparationsSizeY[1])
     {
         int i = 0;
         while (location.x > PreparationsSizeX[i])
         {
             i++;
         }
-        return  getmidposition(i-1);
+        return  getmidposition(i - 1);
     }
     else
     {
@@ -599,7 +672,7 @@ Vec2 Littlehero::getFightarrayposition(Vec2 location)//ÊäÈë×ø±ê·µ»Ø·µ»Ø¾àÀëÕâ¸ö¶
     {
         j++;
     }
-    return  Vec2(i-1,j-1);
+    return  Vec2(i - 1, j - 1);
 }
 int Littlehero::getPreparationarrayposition(Vec2 location)//ÊäÈëÊäÈë×ø±ê·µ»Ø·µ»Ø¾àÀëÕâ¸ö¶şÎ¬ÏòÁ¿×î½üµÄ±¸Õ½Ï¯Êı×é×ø±ê
 {
@@ -610,17 +683,94 @@ int Littlehero::getPreparationarrayposition(Vec2 location)//ÊäÈëÊäÈë×ø±ê·µ»Ø·µ»Ø
     }
     return  i - 1;
 }
+
+/*ÉıĞÇº¯Êı*/
+bool Littlehero::FindUpgradeHero(Hero*& hero1, Hero*& hero2, Hero*& hero3)//ÕÒµ½¿ÉÒÔÉıÈıĞÇµÄÓ¢ĞÛÃÇ
+{
+    int ID;
+   //ÕÒµ½¿ÉÒÔÉıĞÇµÄÀàĞÍ
+    int k = 0;
+    for (; k < 18; k++)
+    {
+        if (HerosType[k] == 3)
+        {
+            ID = k % 9;
+            Hero* temp[3] = { nullptr,nullptr,nullptr };
+            int index = 0;
+            for (int i = 0; i < 4; i++)
+                for (int j = 0; j < 4; j++)
+                {
+                    if (Fightfield[i][j] != nullptr)
+                        if (Fightfield[i][j]->getID() == ID && Fightfield[i][j]->getStar() == k / 9 + 1)//ÓÅÏÈ°ÑÕ½³¡ÉÏµÄÈËÑ¡ÎªÒ»ºÅÎ»
+                        {
+                            if (index >= 1)
+                                chequers--;
+                            temp[index] = Fightfield[i][j];
+                            Fightfield[i][j] = nullptr;
+                            index++;
+                        }
+                }
+            for (int i = 0; i < 9; i++)
+                if (Preparation[i] != nullptr)
+                    if (Preparation[i]->getID() == ID && Preparation[i]->getStar()==k/9+1)
+                    {
+                        temp[index] = Preparation[i];
+                        Preparation[i] = nullptr;
+                        index++;
+                    }
+            
+            hero1 = temp[0];
+            hero2 = temp[1];
+            hero3 = temp[2];
+            HerosType[k] = 0;
+            return true;
+        }
+    }
+    return false;
+}
+void Littlehero::CheckUpgrade(Hero* hero)
+{
+    Hero* h1;
+    Hero* h2;
+    Hero* h3;
+    LHcontroler::getInstance()->getMyLittleHero()->HerosType[hero->getID()+9*(hero->getStar()-1)]++;
+    if (LHcontroler::getInstance()->getMyLittleHero()->FindUpgradeHero(h1, h2, h3))//Èç¹ûÓĞ¿ÉÒÔ´ÓÒ»ĞÇÉıµ½Á½ĞÇµÄ»°
+    {
+        //Ö´ĞĞÉıĞÇ¶¯»­
+        auto heroTwoStart = h1->StarUp(h1, h2, h3);
+        log("yes");
+        h1->removeFromParent();
+        h2->removeFromParent();
+        h3->removeFromParent();
+        //½«Á½ĞÇÓ¢ĞÛ·Åµ½Êı×éÀïÃæ
+        if (heroTwoStart->getPosition().y > 315)//Èç¹ûÔÚÕ½³¡
+        {
+            Vec2 vec2 = getFightarrayposition(heroTwoStart->getPosition());
+            int x = vec2.x;
+            int y = vec2.y;
+            Fightfield[x][y] = heroTwoStart;
+            fightheros.pushBack(heroTwoStart);
+        }
+        else
+        {
+            Preparation[getPreparationarrayposition(heroTwoStart->getPosition())] = heroTwoStart;
+        }
+        CheckUpgrade(heroTwoStart);
+    }
+}
 /*ÓÎÏ·½ø³ÌµÄº¯Êı*/
 void LHcontroler::Godie(Node* layer)
 {
     /*Ê§°Ü¶¯»­*/
+    Gameover = 1;
     layer->removeAllChildren();
     auto Defeat = Sprite::create("Defeat.png");
+    Defeat->setScale(2);
     auto closeItem = GCreator::getInstance()->createMenuItem("closeNormal.png", "closeSelected.png", CC_CALLBACK_1(LHcontroler::menuCloseCallback, this), 0, 0, 0, 0);
     closeItem->setScale(CloseitemSize.x / closeItem->getContentSize().width);
     closeItem->setPosition(EnditemPosition);
     Defeat->setPosition(DefeatPosition);
-    auto menu = Menu::create(closeItem,NULL);
+    auto menu = Menu::create(closeItem, NULL);
     menu->setPosition(Vec2::ZERO);
     layer->addChild(menu, 1);
     layer->addChild(Defeat, 0);
@@ -632,12 +782,13 @@ void LHcontroler::menuCloseCallback(Ref* pSender)
     //Close the cocos2d-x game scene and quit the application
     Director::getInstance()->end();
 }
-void LHcontroler::Govictory(Node*layer)
+void LHcontroler::Govictory(Node* layer)
 {
     /*Ê¤Àû¶¯»­*/
-
+    Gameover = 1;
     layer->removeAllChildren();
     auto Defeat = Sprite::create("Victor.png");
+    Defeat->setScale(2);
     auto closeItem = GCreator::getInstance()->createMenuItem("closeNormal.png", "closeSelected.png", CC_CALLBACK_1(LHcontroler::menuCloseCallback, this), 0, 0, 0, 0);
     closeItem->setScale(CloseitemSize.x / closeItem->getContentSize().width);
     closeItem->setPosition(EnditemPosition);
@@ -646,4 +797,5 @@ void LHcontroler::Govictory(Node*layer)
     menu->setPosition(Vec2::ZERO);
     layer->addChild(menu, 1);
     layer->addChild(Defeat, 0);
+    int audioId = AudioEngine::play2d("victory.mp3", false);
 }

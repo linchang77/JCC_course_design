@@ -1,0 +1,971 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+    <dict>
+        <key>frames</key>
+        <dict>
+            <key>King_01_Attacking (1).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{-7.5,8.5}</string>
+                <key>spriteSize</key>
+                <string>{217,323}</string>
+                <key>spriteSourceSize</key>
+                <string>{480,342}</string>
+                <key>textureRect</key>
+                <string>{{319,1},{217,323}}</string>
+                <key>textureRotated</key>
+                <true/>
+                <key>triangles</key>
+                <string>0 16 17 13 14 15 12 13 15 0 15 16 12 3 11 8 10 11 8 6 7 8 9 10 8 11 6 4 5 6 4 6 11 15 0 3 11 3 4 0 2 3 0 1 2 12 15 3</string>
+                <key>vertices</key>
+                <string>293 49 313 32 341 46 331 125 337 195 334 268 297 288 296 314 242 324 186 303 177 275 190 236 161 199 124 72 139 45 191 65 222 10 243 1</string>
+                <key>verticesUV</key>
+                <string>594 170 611 190 597 218 518 208 448 214 375 211 355 174 329 173 319 119 340 63 368 54 407 67 444 38 571 1 598 16 578 68 633 99 642 120</string>
+            </dict>
+            <key>King_01_Attacking (10).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{80.5,6}</string>
+                <key>spriteSize</key>
+                <string>{305,308}</string>
+                <key>spriteSourceSize</key>
+                <string>{480,342}</string>
+                <key>textureRect</key>
+                <string>{{622,988},{305,308}}</string>
+                <key>textureRotated</key>
+                <true/>
+                <key>triangles</key>
+                <string>0 13 14 10 11 12 0 2 12 10 2 9 7 8 9 9 6 7 10 12 2 5 2 3 5 3 4 2 5 6 9 2 6 0 1 2 0 12 13</string>
+                <key>vertices</key>
+                <string>325 53 395 68 342 207 431 185 473 199 458 242 279 319 214 316 168 265 191 240 177 170 173 21 263 49 283 11 316 11</string>
+                <key>verticesUV</key>
+                <string>888 1145 873 1215 734 1162 756 1251 742 1293 699 1278 622 1099 625 1034 676 988 701 1011 771 997 920 993 892 1083 930 1103 930 1136</string>
+            </dict>
+            <key>King_01_Attacking (11).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{59,9}</string>
+                <key>spriteSize</key>
+                <string>{282,324}</string>
+                <key>spriteSourceSize</key>
+                <string>{480,342}</string>
+                <key>textureRect</key>
+                <string>{{1238,743},{282,324}}</string>
+                <key>textureRotated</key>
+                <true/>
+                <key>triangles</key>
+                <string>0 17 18 13 14 15 12 13 15 12 15 3 0 16 17 12 3 11 3 8 11 9 10 11 8 9 11 7 4 5 7 5 6 4 7 8 3 4 8 16 0 3 0 1 2 0 2 3 15 16 3</string>
+                <key>vertices</key>
+                <string>316 62 364 49 373 77 345 174 359 174 395 138 440 138 440 183 297 315 225 324 177 276 192 217 171 189 158 51 181 28 219 61 238 52 262 13 290 0</string>
+                <key>verticesUV</key>
+                <string>1500 901 1513 949 1485 958 1388 930 1388 944 1424 980 1424 1025 1379 1025 1247 882 1238 810 1286 762 1345 777 1373 756 1511 743 1534 766 1501 804 1510 823 1549 847 1562 875</string>
+            </dict>
+            <key>King_01_Attacking (12).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{29,10.5}</string>
+                <key>spriteSize</key>
+                <string>{260,317}</string>
+                <key>spriteSourceSize</key>
+                <string>{480,342}</string>
+                <key>textureRect</key>
+                <string>{{952,473},{260,317}}</string>
+                <key>textureRotated</key>
+                <true/>
+                <key>triangles</key>
+                <string>0 14 15 10 11 12 9 10 12 9 12 13 0 13 14 9 0 8 4 5 8 6 7 8 5 6 8 0 4 8 0 2 3 0 1 2 0 3 4 9 13 0</string>
+                <key>vertices</key>
+                <string>287 46 341 47 386 91 399 128 336 265 289 318 219 319 179 283 191 235 165 194 139 61 159 41 205 64 217 58 240 10 269 2</string>
+                <key>verticesUV</key>
+                <string>1225 621 1224 675 1180 720 1143 733 1006 670 953 623 952 553 988 513 1036 525 1077 499 1210 473 1230 493 1207 539 1213 551 1261 574 1269 603</string>
+            </dict>
+            <key>King_01_Attacking (2).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{-15.5,9}</string>
+                <key>spriteSize</key>
+                <string>{237,324}</string>
+                <key>spriteSourceSize</key>
+                <string>{480,342}</string>
+                <key>textureRect</key>
+                <string>{{315,220},{237,324}}</string>
+                <key>textureRotated</key>
+                <true/>
+                <key>triangles</key>
+                <string>0 13 14 10 11 12 9 10 12 12 0 2 9 12 2 6 7 8 4 5 6 4 6 8 2 4 8 2 3 4 0 1 2 0 12 13 2 8 9</string>
+                <key>vertices</key>
+                <string>252 39 323 25 323 179 343 255 299 252 296 314 241 324 169 296 183 245 156 198 106 71 130 56 173 69 203 8 233 0</string>
+                <key>verticesUV</key>
+                <string>600 366 614 437 460 437 384 457 387 413 325 410 315 355 343 283 394 297 441 270 568 220 583 244 570 287 631 317 639 347</string>
+            </dict>
+            <key>King_01_Attacking (3).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{-25,9}</string>
+                <key>spriteSize</key>
+                <string>{236,324}</string>
+                <key>spriteSourceSize</key>
+                <string>{480,342}</string>
+                <key>textureRect</key>
+                <string>{{1287,1},{236,324}}</string>
+                <key>textureRotated</key>
+                <true/>
+                <key>triangles</key>
+                <string>0 13 14 10 11 12 9 10 12 12 0 3 5 6 7 8 9 5 8 5 7 12 3 9 9 3 5 5 3 4 0 2 3 0 1 2 0 12 13</string>
+                <key>vertices</key>
+                <string>252 46 292 8 311 50 311 143 333 217 300 232 296 314 241 324 181 303 151 200 97 91 106 58 159 76 185 10 210 0</string>
+                <key>verticesUV</key>
+                <string>1565 156 1603 196 1561 215 1468 215 1394 237 1379 204 1297 200 1287 145 1308 85 1411 55 1520 1 1553 10 1535 63 1601 89 1611 114</string>
+            </dict>
+            <key>King_01_Attacking (4).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{-27.5,9}</string>
+                <key>spriteSize</key>
+                <string>{239,324}</string>
+                <key>spriteSourceSize</key>
+                <string>{480,342}</string>
+                <key>textureRect</key>
+                <string>{{958,232},{239,324}}</string>
+                <key>textureRotated</key>
+                <true/>
+                <key>triangles</key>
+                <string>11 12 13 10 11 13 13 1 3 8 9 10 7 8 10 5 6 7 5 7 10 10 13 3 3 4 5 10 3 5 1 2 3 0 1 13 0 13 14</string>
+                <key>vertices</key>
+                <string>211 9 236 33 307 16 310 143 332 215 300 231 296 314 241 324 190 305 172 276 176 253 93 86 109 67 165 69 181 0</string>
+                <key>verticesUV</key>
+                <string>1273 350 1249 375 1266 446 1139 449 1067 471 1051 439 968 435 958 380 977 329 1006 311 1029 315 1196 232 1215 248 1213 304 1282 320</string>
+            </dict>
+            <key>King_01_Attacking (5).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{-31,8.5}</string>
+                <key>spriteSize</key>
+                <string>{236,323}</string>
+                <key>spriteSourceSize</key>
+                <string>{480,342}</string>
+                <key>textureRect</key>
+                <string>{{1613,1},{236,323}}</string>
+                <key>textureRotated</key>
+                <true/>
+                <key>triangles</key>
+                <string>0 15 16 12 13 14 11 12 14 0 3 14 11 14 3 8 9 10 5 6 7 7 8 10 5 7 10 4 5 10 3 4 10 11 3 10 0 2 3 0 1 2 0 14 15</string>
+                <key>vertices</key>
+                <string>245 44 266 24 301 22 316 171 327 201 297 280 296 314 241 324 184 302 170 273 183 239 152 208 91 90 105 69 158 68 178 12 200 1</string>
+                <key>verticesUV</key>
+                <string>1893 155 1913 176 1915 211 1766 226 1736 237 1657 207 1623 206 1613 151 1635 94 1664 80 1698 93 1729 62 1847 1 1868 15 1869 68 1925 88 1936 110</string>
+            </dict>
+            <key>King_01_Attacking (6).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{-36,7}</string>
+                <key>spriteSize</key>
+                <string>{244,320}</string>
+                <key>spriteSourceSize</key>
+                <string>{480,342}</string>
+                <key>textureRect</key>
+                <string>{{1,459},{244,320}}</string>
+                <key>textureRotated</key>
+                <true/>
+                <key>triangles</key>
+                <string>0 13 14 10 11 12 9 10 12 0 2 12 7 8 9 4 5 6 6 7 9 4 6 9 3 4 9 2 3 9 2 9 12 0 1 2 0 12 13</string>
+                <key>vertices</key>
+                <string>242 37 298 6 309 145 326 201 297 280 296 314 241 324 185 303 170 271 175 251 82 78 117 69 151 80 176 11 199 4</string>
+                <key>verticesUV</key>
+                <string>288 619 319 675 180 686 124 703 45 674 11 673 1 618 22 562 54 547 74 552 247 459 256 494 245 528 314 553 321 576</string>
+            </dict>
+            <key>King_01_Attacking (7).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{-3,6}</string>
+                <key>spriteSize</key>
+                <string>{218,324}</string>
+                <key>spriteSourceSize</key>
+                <string>{480,342}</string>
+                <key>textureRect</key>
+                <string>{{644,1},{218,324}}</string>
+                <key>textureRotated</key>
+                <true/>
+                <key>triangles</key>
+                <string>0 13 14 10 11 12 9 10 12 0 12 13 9 2 8 6 7 8 6 4 5 6 8 4 3 4 8 2 3 8 0 1 2 9 12 2 12 0 2</string>
+                <key>vertices</key>
+                <string>275 37 346 36 342 76 342 261 298 287 296 314 228 327 160 266 191 236 163 193 128 63 145 43 202 56 229 3 259 3</string>
+                <key>verticesUV</key>
+                <string>934 148 935 219 895 215 710 215 684 171 657 169 644 101 705 33 735 64 778 36 908 1 928 18 915 75 968 102 968 132</string>
+            </dict>
+            <key>King_01_Attacking (8).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{80.5,9}</string>
+                <key>spriteSize</key>
+                <string>{311,314}</string>
+                <key>spriteSourceSize</key>
+                <string>{480,342}</string>
+                <key>textureRect</key>
+                <string>{{645,1613},{311,314}}</string>
+                <key>textureRotated</key>
+                <true/>
+                <key>triangles</key>
+                <string>0 16 17 13 14 15 12 13 15 0 15 16 12 2 11 9 10 11 15 0 2 8 9 11 7 3 4 7 4 6 6 4 5 3 7 8 2 3 8 2 8 11 0 1 2 12 15 2</string>
+                <key>vertices</key>
+                <string>323 52 396 62 343 206 355 217 434 179 471 191 476 205 459 238 279 319 214 316 165 256 200 217 175 176 176 32 205 31 243 53 283 11 315 5</string>
+                <key>verticesUV</key>
+                <string>912 1771 902 1844 758 1791 747 1803 785 1882 773 1919 759 1924 726 1907 645 1727 648 1662 708 1613 747 1648 788 1623 932 1624 933 1653 911 1691 953 1731 959 1763</string>
+            </dict>
+            <key>King_01_Attacking (9).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{85.5,3.5}</string>
+                <key>spriteSize</key>
+                <string>{307,313}</string>
+                <key>spriteSourceSize</key>
+                <string>{480,342}</string>
+                <key>textureRect</key>
+                <string>{{621,1295},{307,313}}</string>
+                <key>textureRotated</key>
+                <false/>
+                <key>triangles</key>
+                <string>13 14 15 12 13 15 1 15 16 12 4 11 4 5 11 9 10 11 8 5 6 8 6 7 5 8 9 5 9 11 15 1 4 1 2 3 1 3 4 12 15 4 0 1 16</string>
+                <key>vertices</key>
+                <string>336 20 338 60 394 75 404 99 351 192 344 249 449 235 479 265 461 299 221 324 172 265 191 207 183 168 193 21 230 29 249 58 310 11</string>
+                <key>verticesUV</key>
+                <string>785 1304 787 1344 843 1359 853 1383 800 1476 793 1533 898 1519 928 1549 910 1583 670 1608 621 1549 640 1491 632 1452 642 1305 679 1313 698 1342 759 1295</string>
+            </dict>
+            <key>King_01_Dying (1).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{29,10.5}</string>
+                <key>spriteSize</key>
+                <string>{260,317}</string>
+                <key>spriteSourceSize</key>
+                <string>{480,342}</string>
+                <key>textureRect</key>
+                <string>{{1271,481},{260,317}}</string>
+                <key>textureRotated</key>
+                <true/>
+                <key>triangles</key>
+                <string>0 14 15 10 11 12 9 10 12 9 12 13 0 13 14 9 0 8 4 5 8 6 7 8 5 6 8 0 4 8 0 2 3 0 1 2 0 3 4 9 13 0</string>
+                <key>vertices</key>
+                <string>287 46 341 47 386 91 399 128 336 265 289 318 219 319 179 283 191 235 165 194 139 61 159 41 205 64 217 58 240 10 269 2</string>
+                <key>verticesUV</key>
+                <string>1544 629 1543 683 1499 728 1462 741 1325 678 1272 631 1271 561 1307 521 1355 533 1396 507 1529 481 1549 501 1526 547 1532 559 1580 582 1588 611</string>
+            </dict>
+            <key>King_01_Dying (10).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{-87.5,-44.5}</string>
+                <key>spriteSize</key>
+                <string>{297,239}</string>
+                <key>spriteSourceSize</key>
+                <string>{480,342}</string>
+                <key>textureRect</key>
+                <string>{{1284,239},{297,239}}</string>
+                <key>textureRotated</key>
+                <false/>
+                <key>triangles</key>
+                <string>8 9 10 5 7 8 5 6 7 2 8 10 2 5 8 3 4 5 2 3 5 0 1 2 0 2 10</string>
+                <key>vertices</key>
+                <string>301 230 301 312 143 335 11 299 4 273 42 227 4 173 29 156 65 158 94 97 160 96</string>
+                <key>verticesUV</key>
+                <string>1581 373 1581 455 1423 478 1291 442 1284 416 1322 370 1284 316 1309 299 1345 301 1374 240 1440 239</string>
+            </dict>
+            <key>King_01_Dying (11).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{-88,-33}</string>
+                <key>spriteSize</key>
+                <string>{300,272}</string>
+                <key>spriteSourceSize</key>
+                <string>{480,342}</string>
+                <key>textureRect</key>
+                <string>{{936,735},{300,272}}</string>
+                <key>textureRotated</key>
+                <false/>
+                <key>triangles</key>
+                <string>0 13 14 10 11 12 8 9 10 7 10 12 7 8 10 1 12 13 4 7 12 4 6 7 4 5 6 1 3 4 1 4 12 1 2 3 0 1 13 0 14 15</string>
+                <key>vertices</key>
+                <string>210 84 286 226 302 237 302 310 155 340 5 327 16 294 40 251 4 215 2 181 48 183 71 109 157 158 173 152 155 114 164 68</string>
+                <key>verticesUV</key>
+                <string>1144 751 1220 893 1236 904 1236 977 1089 1007 939 994 950 961 974 918 938 882 936 848 982 850 1005 776 1091 825 1107 819 1089 781 1098 735</string>
+            </dict>
+            <key>King_01_Dying (12).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{-89,-27}</string>
+                <key>spriteSize</key>
+                <string>{302,288}</string>
+                <key>spriteSourceSize</key>
+                <string>{480,342}</string>
+                <key>textureRect</key>
+                <string>{{1,972},{302,288}}</string>
+                <key>textureRotated</key>
+                <false/>
+                <key>triangles</key>
+                <string>0 17 18 13 14 15 10 13 15 10 12 13 10 11 12 6 10 15 8 9 10 7 8 10 6 7 10 5 6 15 1 5 15 2 3 4 1 2 5 1 15 16 2 4 5 0 1 16 0 16 17</string>
+                <key>vertices</key>
+                <string>249 89 282 209 302 253 302 309 282 329 199 329 161 342 82 334 42 341 8 336 37 257 0 233 1 204 49 178 56 119 197 172 202 148 188 106 209 54</string>
+                <key>verticesUV</key>
+                <string>250 1007 283 1127 303 1171 303 1227 283 1247 200 1247 162 1260 83 1252 43 1259 9 1254 38 1175 1 1151 2 1122 50 1096 57 1037 198 1090 203 1066 189 1024 210 972</string>
+            </dict>
+            <key>King_01_Dying (13).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{-89,-27}</string>
+                <key>spriteSize</key>
+                <string>{302,288}</string>
+                <key>spriteSourceSize</key>
+                <string>{480,342}</string>
+                <key>textureRect</key>
+                <string>{{1,972},{302,288}}</string>
+                <key>textureRotated</key>
+                <false/>
+                <key>triangles</key>
+                <string>0 17 18 13 14 15 10 13 15 10 12 13 10 11 12 6 10 15 8 9 10 7 8 10 6 7 10 5 6 15 1 5 15 2 3 4 1 2 5 1 15 16 2 4 5 0 1 16 0 16 17</string>
+                <key>vertices</key>
+                <string>249 89 282 209 302 253 302 309 282 329 199 329 161 342 82 334 42 341 8 336 37 257 0 233 1 204 49 178 56 119 197 172 202 148 188 106 209 54</string>
+                <key>verticesUV</key>
+                <string>250 1007 283 1127 303 1171 303 1227 283 1247 200 1247 162 1260 83 1252 43 1259 9 1254 38 1175 1 1151 2 1122 50 1096 57 1037 198 1090 203 1066 189 1024 210 972</string>
+            </dict>
+            <key>King_01_Dying (14).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{-89,-27}</string>
+                <key>spriteSize</key>
+                <string>{302,288}</string>
+                <key>spriteSourceSize</key>
+                <string>{480,342}</string>
+                <key>textureRect</key>
+                <string>{{1,972},{302,288}}</string>
+                <key>textureRotated</key>
+                <false/>
+                <key>triangles</key>
+                <string>0 17 18 13 14 15 10 13 15 10 12 13 10 11 12 6 10 15 8 9 10 7 8 10 6 7 10 5 6 15 1 5 15 2 3 4 1 2 5 1 15 16 2 4 5 0 1 16 0 16 17</string>
+                <key>vertices</key>
+                <string>249 89 282 209 302 253 302 309 282 329 199 329 161 342 82 334 42 341 8 336 37 257 0 233 1 204 49 178 56 119 197 172 202 148 188 106 209 54</string>
+                <key>verticesUV</key>
+                <string>250 1007 283 1127 303 1171 303 1227 283 1247 200 1247 162 1260 83 1252 43 1259 9 1254 38 1175 1 1151 2 1122 50 1096 57 1037 198 1090 203 1066 189 1024 210 972</string>
+            </dict>
+            <key>King_01_Dying (15).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{-89,-27}</string>
+                <key>spriteSize</key>
+                <string>{302,288}</string>
+                <key>spriteSourceSize</key>
+                <string>{480,342}</string>
+                <key>textureRect</key>
+                <string>{{1,972},{302,288}}</string>
+                <key>textureRotated</key>
+                <false/>
+                <key>triangles</key>
+                <string>0 17 18 13 14 15 10 13 15 10 12 13 10 11 12 6 10 15 8 9 10 7 8 10 6 7 10 5 6 15 1 5 15 2 3 4 1 2 5 1 15 16 2 4 5 0 1 16 0 16 17</string>
+                <key>vertices</key>
+                <string>249 89 282 209 302 253 302 309 282 329 199 329 161 342 82 334 42 341 8 336 37 257 0 233 1 204 49 178 56 119 197 172 202 148 188 106 209 54</string>
+                <key>verticesUV</key>
+                <string>250 1007 283 1127 303 1171 303 1227 283 1247 200 1247 162 1260 83 1252 43 1259 9 1254 38 1175 1 1151 2 1122 50 1096 57 1037 198 1090 203 1066 189 1024 210 972</string>
+            </dict>
+            <key>King_01_Dying (2).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{39.5,8.5}</string>
+                <key>spriteSize</key>
+                <string>{257,311}</string>
+                <key>spriteSourceSize</key>
+                <string>{480,342}</string>
+                <key>textureRect</key>
+                <string>{{639,460},{257,311}}</string>
+                <key>textureRotated</key>
+                <true/>
+                <key>triangles</key>
+                <string>12 13 14 9 10 11 8 9 11 8 11 0 0 12 14 8 0 7 0 3 7 5 6 7 4 5 7 3 4 7 0 1 2 0 2 3 11 12 0</string>
+                <key>vertices</key>
+                <string>313 65 347 42 408 116 333 271 284 318 215 316 185 282 193 231 168 188 151 48 177 33 217 60 236 50 256 7 287 7</string>
+                <key>verticesUV</key>
+                <string>892 622 915 656 841 717 686 642 639 593 641 524 675 494 726 502 769 477 909 460 924 486 897 526 907 545 950 565 950 596</string>
+            </dict>
+            <key>King_01_Dying (3).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{45,10.5}</string>
+                <key>spriteSize</key>
+                <string>{240,319}</string>
+                <key>spriteSourceSize</key>
+                <string>{480,342}</string>
+                <key>textureRect</key>
+                <string>{{1583,239},{240,319}}</string>
+                <key>textureRotated</key>
+                <true/>
+                <key>triangles</key>
+                <string>10 11 12 9 10 12 0 1 12 8 9 12 4 5 8 6 7 8 5 6 8 1 4 8 1 2 3 1 3 4 1 8 12 0 12 13</string>
+                <key>vertices</key>
+                <string>305 14 318 54 381 60 405 131 330 275 287 313 244 320 191 308 191 212 167 177 165 36 193 25 228 56 280 1</string>
+                <key>verticesUV</key>
+                <string>1889 379 1849 392 1843 455 1772 479 1628 404 1590 361 1583 318 1595 265 1691 265 1726 241 1867 239 1878 267 1847 302 1902 354</string>
+            </dict>
+            <key>King_01_Dying (4).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{50.5,6}</string>
+                <key>spriteSize</key>
+                <string>{237,312}</string>
+                <key>spriteSourceSize</key>
+                <string>{480,342}</string>
+                <key>textureRect</key>
+                <string>{{1,219},{237,312}}</string>
+                <key>textureRotated</key>
+                <true/>
+                <key>triangles</key>
+                <string>11 12 13 10 11 13 1 13 14 8 10 13 8 9 10 1 4 8 7 8 5 7 5 6 4 5 8 1 2 3 1 3 4 1 8 13 0 1 14</string>
+                <key>vertices</key>
+                <string>318 10 334 53 383 69 409 128 333 269 290 310 227 321 197 291 197 218 172 169 180 111 181 34 201 19 245 47 291 9</string>
+                <key>verticesUV</key>
+                <string>312 365 269 381 253 430 194 456 53 380 12 337 1 274 31 244 104 244 153 219 211 227 288 228 303 248 275 292 313 338</string>
+            </dict>
+            <key>King_01_Dying (5).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{21.5,12.5}</string>
+                <key>spriteSize</key>
+                <string>{229,315}</string>
+                <key>spriteSourceSize</key>
+                <string>{480,342}</string>
+                <key>textureRect</key>
+                <string>{{970,1},{229,315}}</string>
+                <key>textureRotated</key>
+                <true/>
+                <key>triangles</key>
+                <string>8 9 10 7 4 5 7 8 10 7 5 6 1 4 7 1 7 10 1 2 3 1 3 4 1 10 11 0 1 11</string>
+                <key>vertices</key>
+                <string>287 3 306 46 357 52 376 96 337 241 296 306 217 316 184 214 160 180 147 15 226 47 259 1</string>
+                <key>verticesUV</key>
+                <string>1283 141 1240 160 1234 211 1190 230 1045 191 980 150 970 71 1072 38 1106 14 1271 1 1239 80 1285 113</string>
+            </dict>
+            <key>King_01_Dying (6).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{-12,13}</string>
+                <key>spriteSize</key>
+                <string>{216,316}</string>
+                <key>spriteSourceSize</key>
+                <string>{480,342}</string>
+                <key>textureRect</key>
+                <string>{{1,1},{216,316}}</string>
+                <key>textureRotated</key>
+                <true/>
+                <key>triangles</key>
+                <string>0 12 13 8 10 11 8 9 10 7 8 11 0 11 12 6 7 11 3 4 6 4 5 6 11 0 2 0 1 2 6 2 3 11 2 6</string>
+                <key>vertices</key>
+                <string>271 41 336 41 336 175 318 270 288 300 228 316 174 220 147 191 133 92 120 52 140 33 193 53 226 1 256 0</string>
+                <key>verticesUV</key>
+                <string>276 152 276 217 142 217 47 199 17 169 1 109 97 55 126 28 225 14 265 1 284 21 264 74 316 107 317 137</string>
+            </dict>
+            <key>King_01_Dying (7).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{-34.5,10.5}</string>
+                <key>spriteSize</key>
+                <string>{237,315}</string>
+                <key>spriteSourceSize</key>
+                <string>{480,342}</string>
+                <key>textureRect</key>
+                <string>{{641,221},{237,315}}</string>
+                <key>textureRotated</key>
+                <true/>
+                <key>triangles</key>
+                <string>9 10 11 8 9 11 3 11 12 8 3 7 3 8 11 5 6 7 4 5 7 3 4 7 1 3 12 1 2 3 1 12 13 0 1 13</string>
+                <key>vertices</key>
+                <string>223 4 238 32 309 35 309 136 324 214 309 283 235 318 208 273 136 201 87 53 127 51 158 67 170 57 192 3</string>
+                <key>verticesUV</key>
+                <string>955 357 927 372 924 443 823 443 745 458 676 443 641 369 686 342 758 270 906 221 908 261 892 292 902 304 956 326</string>
+            </dict>
+            <key>King_01_Dying (8).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{-67,2}</string>
+                <key>spriteSize</key>
+                <string>{284,286}</string>
+                <key>spriteSourceSize</key>
+                <string>{480,342}</string>
+                <key>textureRect</key>
+                <string>{{1564,744},{284,286}}</string>
+                <key>textureRotated</key>
+                <true/>
+                <key>triangles</key>
+                <string>0 12 13 7 9 10 7 8 9 2 6 7 11 0 2 11 2 10 3 4 5 3 5 6 2 7 10 6 2 3 0 1 2 0 11 12</string>
+                <key>vertices</key>
+                <string>171 56 234 28 295 165 315 252 289 312 237 307 205 280 123 246 31 119 64 106 105 107 116 91 115 41 140 26</string>
+                <key>verticesUV</key>
+                <string>1820 884 1848 947 1711 1008 1624 1028 1564 1002 1569 950 1596 918 1630 836 1757 744 1770 777 1769 818 1785 829 1835 828 1850 853</string>
+            </dict>
+            <key>King_01_Dying (9).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{-84,-11.5}</string>
+                <key>spriteSize</key>
+                <string>{302,265}</string>
+                <key>spriteSourceSize</key>
+                <string>{480,342}</string>
+                <key>textureRect</key>
+                <string>{{1,705},{302,265}}</string>
+                <key>textureRotated</key>
+                <false/>
+                <key>triangles</key>
+                <string>10 11 12 9 10 12 7 8 9 6 7 9 5 6 9 2 3 4 5 9 12 1 2 4 1 4 5 1 5 12 0 1 12 0 12 13</string>
+                <key>vertices</key>
+                <string>202 73 294 206 307 254 290 305 255 315 168 294 128 292 19 216 5 185 64 167 53 99 72 82 122 97 154 50</string>
+                <key>verticesUV</key>
+                <string>198 728 290 861 303 909 286 960 251 970 164 949 124 947 15 871 1 840 60 822 49 754 68 737 118 752 150 705</string>
+            </dict>
+            <key>King_01_Walking (1).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{50.5,9}</string>
+                <key>spriteSize</key>
+                <string>{247,314}</string>
+                <key>spriteSourceSize</key>
+                <string>{480,342}</string>
+                <key>textureRect</key>
+                <string>{{323,459},{247,314}}</string>
+                <key>textureRotated</key>
+                <true/>
+                <key>triangles</key>
+                <string>0 15 16 11 12 13 10 11 13 9 13 0 9 10 13 8 0 3 9 0 8 8 5 6 6 7 8 13 14 0 8 4 5 0 2 3 0 1 2 8 3 4 0 14 15</string>
+                <key>vertices</key>
+                <string>327 64 368 57 406 105 414 145 327 291 273 319 233 317 176 280 197 225 176 183 176 92 167 51 188 27 235 58 256 48 274 14 303 5</string>
+                <key>verticesUV</key>
+                <string>578 619 585 660 537 698 497 706 351 619 323 565 325 525 362 468 417 489 459 468 550 468 591 459 615 480 584 527 594 548 628 566 637 595</string>
+            </dict>
+            <key>King_01_Walking (10).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{72.5,5.5}</string>
+                <key>spriteSize</key>
+                <string>{293,315}</string>
+                <key>spriteSourceSize</key>
+                <string>{480,342}</string>
+                <key>textureRect</key>
+                <string>{{1250,1030},{293,315}}</string>
+                <key>textureRotated</key>
+                <true/>
+                <key>triangles</key>
+                <string>12 14 15 12 13 14 4 12 15 0 1 15 15 1 4 9 10 11 8 5 6 8 6 7 5 8 9 4 5 9 4 9 11 1 2 3 1 3 4 4 11 12 0 15 16</string>
+                <key>vertices</key>
+                <string>302 9 333 68 354 50 383 69 344 202 364 206 411 186 459 198 438 245 270 323 206 314 206 236 176 186 166 40 192 33 250 50 271 8</string>
+                <key>verticesUV</key>
+                <string>1564 1166 1505 1197 1523 1218 1504 1247 1371 1208 1367 1228 1387 1275 1375 1323 1328 1302 1250 1134 1259 1070 1337 1070 1387 1040 1533 1030 1540 1056 1523 1114 1565 1135</string>
+            </dict>
+            <key>King_01_Walking (11).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{71.5,10}</string>
+                <key>spriteSize</key>
+                <string>{299,314}</string>
+                <key>spriteSourceSize</key>
+                <string>{480,342}</string>
+                <key>textureRect</key>
+                <string>{{1250,1325},{299,314}}</string>
+                <key>textureRotated</key>
+                <true/>
+                <key>triangles</key>
+                <string>12 14 15 12 13 14 15 16 1 12 4 11 15 1 4 5 9 11 9 10 11 8 5 6 8 6 7 5 8 9 4 5 11 12 15 4 1 2 3 1 3 4 0 1 16 0 16 17</string>
+                <key>vertices</key>
+                <string>302 13 329 64 361 53 382 72 346 178 356 206 407 177 461 187 436 234 283 318 207 318 207 243 175 185 162 27 199 37 230 59 251 49 274 4</string>
+                <key>verticesUV</key>
+                <string>1555 1465 1504 1492 1515 1524 1496 1545 1390 1509 1362 1519 1391 1570 1381 1624 1334 1599 1250 1446 1250 1370 1325 1370 1383 1338 1541 1325 1531 1362 1509 1393 1519 1414 1564 1437</string>
+            </dict>
+            <key>King_01_Walking (12).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{65.5,6}</string>
+                <key>spriteSize</key>
+                <string>{295,318}</string>
+                <key>spriteSourceSize</key>
+                <string>{480,342}</string>
+                <key>textureRect</key>
+                <string>{{1567,1030},{295,318}}</string>
+                <key>textureRotated</key>
+                <true/>
+                <key>triangles</key>
+                <string>13 15 16 13 14 15 1 3 16 13 3 12 8 10 12 12 10 11 4 8 12 8 9 10 3 4 12 7 4 5 7 5 6 4 7 8 13 16 3 1 16 17 1 2 3 1 17 18 0 1 18</string>
+                <key>vertices</key>
+                <string>298 8 311 53 382 55 342 180 348 201 402 165 453 171 436 221 303 298 296 314 246 324 208 312 200 227 172 187 158 30 193 37 225 59 244 49 266 6</string>
+                <key>verticesUV</key>
+                <string>1883 1170 1838 1183 1836 1254 1711 1214 1690 1220 1726 1274 1720 1325 1670 1308 1593 1175 1577 1168 1567 1118 1579 1080 1664 1072 1704 1044 1861 1030 1854 1065 1832 1097 1842 1116 1885 1138</string>
+            </dict>
+            <key>King_01_Walking (13).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{57.5,10}</string>
+                <key>spriteSize</key>
+                <string>{297,318}</string>
+                <key>spriteSourceSize</key>
+                <string>{480,342}</string>
+                <key>textureRect</key>
+                <string>{{930,1314},{297,318}}</string>
+                <key>textureRotated</key>
+                <true/>
+                <key>triangles</key>
+                <string>0 15 16 12 13 14 11 12 14 15 0 1 11 3 10 7 8 10 8 9 10 3 7 10 6 3 4 6 4 5 3 6 7 14 1 3 1 2 3 11 14 3 15 1 14</string>
+                <key>vertices</key>
+                <string>287 12 302 47 371 47 335 189 409 147 446 161 436 205 315 290 288 317 211 320 197 233 168 185 149 44 175 35 221 55 253 8 273 2</string>
+                <key>verticesUV</key>
+                <string>1238 1452 1203 1467 1203 1536 1061 1500 1103 1574 1089 1611 1045 1601 960 1480 933 1453 930 1376 1017 1362 1065 1333 1206 1314 1215 1340 1195 1386 1242 1418 1248 1438</string>
+            </dict>
+            <key>King_01_Walking (14).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{48.5,11}</string>
+                <key>spriteSize</key>
+                <string>{297,316}</string>
+                <key>spriteSourceSize</key>
+                <string>{480,342}</string>
+                <key>textureRect</key>
+                <string>{{322,1270},{297,316}}</string>
+                <key>textureRotated</key>
+                <false/>
+                <key>triangles</key>
+                <string>0 14 15 11 12 13 10 11 13 0 13 14 10 2 9 6 7 9 7 8 9 2 6 9 3 4 5 2 3 5 2 5 6 13 0 2 0 1 2 10 13 2</string>
+                <key>vertices</key>
+                <string>294 45 361 37 332 182 391 144 437 144 437 188 327 278 288 317 213 318 188 217 166 193 140 60 152 34 206 51 245 3 271 2</string>
+                <key>verticesUV</key>
+                <string>476 1313 543 1305 514 1450 573 1412 619 1412 619 1456 509 1546 470 1585 395 1586 370 1485 348 1461 322 1328 334 1302 388 1319 427 1271 453 1270</string>
+            </dict>
+            <key>King_01_Walking (15).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{47.5,10.5}</string>
+                <key>spriteSize</key>
+                <string>{311,317}</string>
+                <key>spriteSourceSize</key>
+                <string>{480,342}</string>
+                <key>textureRect</key>
+                <string>{{961,1626},{311,317}}</string>
+                <key>textureRotated</key>
+                <true/>
+                <key>triangles</key>
+                <string>0 16 17 12 14 15 12 13 14 11 12 15 0 15 16 11 3 10 3 7 10 9 10 7 9 7 8 6 3 4 6 4 5 3 6 7 11 2 3 0 1 2 11 15 2 15 0 2</string>
+                <key>vertices</key>
+                <string>288 47 354 23 336 133 339 182 383 135 428 130 443 168 285 319 217 316 199 280 194 239 163 187 143 85 132 67 143 39 208 51 235 2 264 2</string>
+                <key>verticesUV</key>
+                <string>1233 1782 1257 1848 1147 1830 1098 1833 1145 1877 1150 1922 1112 1937 961 1779 964 1711 1000 1693 1041 1688 1093 1657 1195 1637 1213 1626 1241 1637 1229 1702 1278 1729 1278 1758</string>
+            </dict>
+            <key>King_01_Walking (16).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{38,8.5}</string>
+                <key>spriteSize</key>
+                <string>{304,321}</string>
+                <key>spriteSourceSize</key>
+                <string>{480,342}</string>
+                <key>textureRect</key>
+                <string>{{322,1610},{304,321}}</string>
+                <key>textureRotated</key>
+                <true/>
+                <key>triangles</key>
+                <string>14 15 16 10 12 13 10 11 12 10 2 9 0 14 16 10 13 2 2 6 9 8 9 6 8 6 7 5 2 3 5 3 4 2 5 6 13 0 2 0 1 2 13 14 0</string>
+                <key>vertices</key>
+                <string>285 46 350 23 332 171 382 124 430 125 426 173 292 316 224 323 193 281 195 225 164 194 126 46 162 46 195 61 223 39 225 2 260 2</string>
+                <key>verticesUV</key>
+                <string>599 1769 622 1834 474 1816 521 1866 520 1914 472 1910 329 1776 322 1708 364 1677 420 1679 451 1648 599 1610 599 1646 584 1679 606 1707 643 1709 643 1744</string>
+            </dict>
+            <key>King_01_Walking (17).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{46,11.5}</string>
+                <key>spriteSize</key>
+                <string>{292,315}</string>
+                <key>spriteSourceSize</key>
+                <string>{480,342}</string>
+                <key>textureRect</key>
+                <string>{{305,976},{292,315}}</string>
+                <key>textureRotated</key>
+                <true/>
+                <key>triangles</key>
+                <string>1 18 19 14 15 16 13 14 16 3 16 17 1 3 17 13 3 12 8 9 12 10 11 12 9 10 12 12 3 4 7 4 5 7 5 6 4 7 8 12 4 8 3 13 16 1 2 3 1 17 18 0 1 19</string>
+                <key>vertices</key>
+                <string>275 7 289 41 362 42 341 138 348 157 373 120 417 115 432 153 352 252 282 317 225 317 189 281 195 235 168 189 140 56 161 36 207 60 219 54 242 6 258 2</string>
+                <key>verticesUV</key>
+                <string>615 1111 581 1125 580 1198 484 1177 465 1184 502 1209 507 1253 469 1268 370 1188 305 1118 305 1061 341 1025 387 1031 433 1004 566 976 586 997 562 1043 568 1055 616 1078 620 1094</string>
+            </dict>
+            <key>King_01_Walking (18).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{45,8.5}</string>
+                <key>spriteSize</key>
+                <string>{266,315}</string>
+                <key>spriteSourceSize</key>
+                <string>{480,342}</string>
+                <key>textureRect</key>
+                <string>{{305,708},{266,315}}</string>
+                <key>textureRotated</key>
+                <true/>
+                <key>triangles</key>
+                <string>0 17 18 13 14 15 12 13 15 3 15 16 0 16 17 12 3 11 3 12 15 9 10 11 8 9 11 7 8 11 4 5 6 4 6 7 3 4 7 1 2 3 0 1 3 11 3 7 3 16 0</string>
+                <key>vertices</key>
+                <string>308 50 356 50 373 67 355 105 366 114 418 107 418 156 338 271 278 320 228 317 184 280 195 233 172 187 152 45 181 36 221 58 234 52 257 6 287 5</string>
+                <key>verticesUV</key>
+                <string>575 864 575 912 558 929 520 911 511 922 518 974 469 974 354 894 305 834 308 784 345 740 392 751 438 728 580 708 589 737 567 777 573 790 619 813 620 843</string>
+            </dict>
+            <key>King_01_Walking (2).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{55.5,9}</string>
+                <key>spriteSize</key>
+                <string>{261,316}</string>
+                <key>spriteSourceSize</key>
+                <string>{480,342}</string>
+                <key>textureRect</key>
+                <string>{{1590,481},{261,316}}</string>
+                <key>textureRotated</key>
+                <true/>
+                <key>triangles</key>
+                <string>0 15 16 11 12 13 10 11 13 13 2 9 13 0 2 9 10 13 9 6 7 7 8 9 13 14 0 9 5 6 2 3 4 2 4 5 0 1 2 9 2 5 0 14 15</string>
+                <key>vertices</key>
+                <string>324 53 378 60 380 106 410 109 426 143 331 281 276 320 229 317 183 281 198 220 175 187 165 41 194 31 230 59 251 49 269 13 298 4</string>
+                <key>verticesUV</key>
+                <string>1857 640 1850 694 1804 696 1801 726 1767 742 1629 647 1590 592 1593 545 1629 499 1690 514 1723 491 1869 481 1879 510 1851 546 1861 567 1897 585 1906 614</string>
+            </dict>
+            <key>King_01_Walking (3).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{48.5,10}</string>
+                <key>spriteSize</key>
+                <string>{267,312}</string>
+                <key>spriteSourceSize</key>
+                <string>{480,342}</string>
+                <key>textureRect</key>
+                <string>{{622,719},{267,312}}</string>
+                <key>textureRotated</key>
+                <true/>
+                <key>triangles</key>
+                <string>11 13 14 11 12 13 1 14 15 10 11 14 6 7 10 8 9 10 7 8 10 3 6 10 3 4 5 3 5 6 14 1 3 1 2 3 14 3 10 0 1 15</string>
+                <key>vertices</key>
+                <string>297 7 310 52 383 51 362 122 422 113 422 163 341 264 282 317 226 317 190 286 191 212 172 187 155 30 193 37 221 58 268 5</string>
+                <key>verticesUV</key>
+                <string>932 861 887 874 888 947 817 926 826 986 776 986 675 905 622 846 622 790 653 754 727 755 752 736 909 719 902 757 881 785 934 832</string>
+            </dict>
+            <key>King_01_Walking (4).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{49.5,11}</string>
+                <key>spriteSize</key>
+                <string>{285,316}</string>
+                <key>spriteSourceSize</key>
+                <string>{480,342}</string>
+                <key>textureRect</key>
+                <string>{{932,1027},{285,316}}</string>
+                <key>textureRotated</key>
+                <true/>
+                <key>triangles</key>
+                <string>0 1 18 14 15 16 13 14 16 3 16 17 1 3 17 13 3 12 8 9 12 11 12 9 11 9 10 4 8 12 7 4 5 7 5 6 4 7 8 3 4 12 3 13 16 1 2 3 1 17 18 0 18 19</string>
+                <key>vertices</key>
+                <string>284 8 299 45 370 45 345 141 352 154 382 122 424 122 432 166 346 258 284 317 220 318 192 280 196 232 170 188 147 52 170 29 211 58 230 48 251 7 270 2</string>
+                <key>verticesUV</key>
+                <string>1242 1164 1205 1179 1205 1250 1109 1225 1096 1232 1128 1262 1128 1304 1084 1312 992 1226 933 1164 932 1100 970 1072 1018 1076 1062 1050 1198 1027 1221 1050 1192 1091 1202 1110 1243 1131 1248 1150</string>
+            </dict>
+            <key>King_01_Walking (5).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{45,11.5}</string>
+                <key>spriteSize</key>
+                <string>{296,319}</string>
+                <key>spriteSourceSize</key>
+                <string>{480,342}</string>
+                <key>textureRect</key>
+                <string>{{1,1270},{296,319}}</string>
+                <key>textureRotated</key>
+                <true/>
+                <key>triangles</key>
+                <string>13 14 15 12 13 15 4 15 16 0 1 16 12 4 11 4 8 11 10 11 8 10 8 9 7 4 5 7 5 6 4 7 8 16 1 4 1 2 3 1 3 4 4 12 15 0 16 17</string>
+                <key>vertices</key>
+                <string>269 1 297 53 344 29 354 59 332 169 399 122 433 134 429 179 284 319 218 317 198 282 194 235 165 189 137 54 158 34 204 58 216 52 240 0</string>
+                <key>verticesUV</key>
+                <string>319 1402 267 1430 291 1477 261 1487 151 1465 198 1532 186 1566 141 1562 1 1417 3 1351 38 1331 85 1327 131 1298 266 1270 286 1291 262 1337 268 1349 320 1373</string>
+            </dict>
+            <key>King_01_Walking (6).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{47,12.5}</string>
+                <key>spriteSize</key>
+                <string>{314,317}</string>
+                <key>spriteSourceSize</key>
+                <string>{480,342}</string>
+                <key>textureRect</key>
+                <string>{{1280,1631},{314,317}}</string>
+                <key>textureRotated</key>
+                <true/>
+                <key>triangles</key>
+                <string>15 16 17 12 13 14 11 12 14 11 14 3 0 15 17 11 3 10 9 7 8 9 10 7 3 7 10 6 3 4 6 4 5 3 6 7 14 0 3 0 2 3 0 1 2 14 15 0</string>
+                <key>vertices</key>
+                <string>290 49 326 31 350 45 331 177 398 136 434 142 444 179 304 297 290 317 208 317 194 223 167 195 130 68 147 34 196 58 210 49 233 0 262 0</string>
+                <key>verticesUV</key>
+                <string>1548 1791 1566 1827 1552 1851 1420 1832 1461 1899 1455 1935 1418 1945 1300 1805 1280 1791 1280 1709 1374 1695 1402 1668 1529 1631 1563 1648 1539 1697 1548 1711 1597 1734 1597 1763</string>
+            </dict>
+            <key>King_01_Walking (7).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{51,11}</string>
+                <key>spriteSize</key>
+                <string>{316,320}</string>
+                <key>spriteSourceSize</key>
+                <string>{480,342}</string>
+                <key>textureRect</key>
+                <string>{{1599,1631},{316,320}}</string>
+                <key>textureRotated</key>
+                <true/>
+                <key>triangles</key>
+                <string>0 16 17 13 14 15 12 13 15 0 15 16 12 2 11 8 9 11 9 10 11 2 8 11 7 3 4 7 4 5 7 5 6 3 7 8 2 3 8 15 0 2 0 1 2 12 15 2</string>
+                <key>vertices</key>
+                <string>291 46 355 24 334 182 355 182 394 153 436 153 449 177 432 205 312 293 288 317 211 320 199 239 166 189 133 55 155 38 202 57 237 0 264 0</string>
+                <key>verticesUV</key>
+                <string>1873 1789 1895 1853 1737 1832 1737 1853 1766 1892 1766 1934 1742 1947 1714 1930 1626 1810 1602 1786 1599 1709 1680 1697 1730 1664 1864 1631 1881 1653 1862 1700 1919 1735 1919 1762</string>
+            </dict>
+            <key>King_01_Walking (8).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{52.5,11.5}</string>
+                <key>spriteSize</key>
+                <string>{307,319}</string>
+                <key>spriteSourceSize</key>
+                <string>{480,342}</string>
+                <key>textureRect</key>
+                <string>{{1,1568},{307,319}}</string>
+                <key>textureRotated</key>
+                <true/>
+                <key>triangles</key>
+                <string>16 17 18 13 14 15 12 13 15 15 3 11 0 16 18 11 12 15 10 4 8 10 11 4 8 9 10 7 4 5 7 5 6 4 7 8 3 4 11 0 2 3 0 1 2 15 16 0 15 0 3</string>
+                <key>vertices</key>
+                <string>301 52 342 38 362 56 343 139 344 203 398 164 446 167 446 210 284 318 207 319 209 275 193 215 170 192 139 34 178 41 204 60 232 43 243 5 276 0</string>
+                <key>verticesUV</key>
+                <string>268 1730 282 1771 264 1791 181 1772 117 1773 156 1827 153 1875 110 1875 2 1713 1 1636 45 1638 105 1622 128 1599 286 1568 279 1607 260 1633 277 1661 315 1672 320 1705</string>
+            </dict>
+            <key>King_01_Walking (9).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{65,7}</string>
+                <key>spriteSize</key>
+                <string>{302,318}</string>
+                <key>spriteSourceSize</key>
+                <string>{480,342}</string>
+                <key>textureRect</key>
+                <string>{{1566,1327},{302,318}}</string>
+                <key>textureRotated</key>
+                <true/>
+                <key>triangles</key>
+                <string>0 15 16 12 13 14 11 12 14 0 14 15 11 2 10 10 3 7 8 9 10 7 8 10 6 3 4 6 4 5 3 6 7 10 2 3 14 0 2 0 1 2 11 14 2</string>
+                <key>vertices</key>
+                <string>308 50 377 50 342 171 355 205 406 175 456 183 438 231 331 285 279 323 206 316 206 244 172 186 154 54 173 28 224 56 260 5 291 5</string>
+                <key>verticesUV</key>
+                <string>1839 1481 1839 1550 1718 1515 1684 1528 1714 1579 1706 1629 1658 1611 1604 1504 1566 1452 1573 1379 1645 1379 1703 1345 1835 1327 1861 1346 1833 1397 1884 1433 1884 1464</string>
+            </dict>
+        </dict>
+        <key>metadata</key>
+        <dict>
+            <key>format</key>
+            <integer>3</integer>
+            <key>pixelFormat</key>
+            <string>RGBA8888</string>
+            <key>premultiplyAlpha</key>
+            <false/>
+            <key>realTextureFileName</key>
+            <string>King_01.png</string>
+            <key>size</key>
+            <string>{1937,1948}</string>
+            <key>smartupdate</key>
+            <string>$TexturePacker:SmartUpdate:68b81da5b812786a774206569be0fcfb:669404662fe30fcef2c10c25f8b0ae58:e85272cf079c694ad635850aa2cbc73e$</string>
+            <key>textureFileName</key>
+            <string>King_01.png</string>
+        </dict>
+    </dict>
+</plist>

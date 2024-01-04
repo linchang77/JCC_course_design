@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+    <dict>
+        <key>frames</key>
+        <dict>
+            <key>Mummy_02_Attacking_000.png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{20,9.5}</string>
+                <key>spriteSize</key>
+                <string>{260,247}</string>
+                <key>spriteSourceSize</key>
+                <string>{520,420}</string>
+                <key>textureRect</key>
+                <string>{{281,470},{260,247}}</string>
+                <key>textureRotated</key>
+                <false/>
+                <key>triangles</key>
+                <string>2 10 11 8 9 10 7 8 10 2 7 10 5 6 7 4 5 7 4 7 2 4 2 3 1 2 11 0 1 11</string>
+                <key>vertices</key>
+                <string>410 150 397 185 353 232 327 305 291 324 224 323 186 290 180 220 150 163 150 114 232 79 356 77</string>
+                <key>verticesUV</key>
+                <string>541 543 528 578 484 625 458 698 422 717 355 716 317 683 311 613 281 556 281 507 363 472 487 470</string>
+            </dict>
+            <key>Mummy_02_Attacking_001.png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{-1,9}</string>
+                <key>spriteSize</key>
+                <string>{234,260}</string>
+                <key>spriteSourceSize</key>
+                <string>{520,420}</string>
+                <key>textureRect</key>
+                <string>{{552,235},{234,260}}</string>
+                <key>textureRotated</key>
+                <true/>
+                <key>triangles</key>
+                <string>1 11 12 9 10 11 8 9 11 8 11 1 7 8 3 7 3 6 3 4 5 6 3 5 1 2 3 8 1 3 0 1 12</string>
+                <key>vertices</key>
+                <string>376 111 345 203 344 281 304 283 304 320 251 331 214 316 185 287 177 223 142 164 142 121 222 79 344 71</string>
+                <key>verticesUV</key>
+                <string>772 469 680 438 602 437 600 397 563 397 552 344 567 307 596 278 660 270 719 235 762 235 804 315 812 437</string>
+            </dict>
+            <key>Mummy_02_Attacking_002.png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{-10,11.5}</string>
+                <key>spriteSize</key>
+                <string>{232,265}</string>
+                <key>spriteSourceSize</key>
+                <string>{520,420}</string>
+                <key>textureRect</key>
+                <string>{{1,1},{232,265}}</string>
+                <key>textureRotated</key>
+                <true/>
+                <key>triangles</key>
+                <string>0 1 11 10 1 7 8 9 10 7 8 10 10 11 1 6 7 3 3 4 5 6 3 5 1 2 3 1 3 7 0 11 12</string>
+                <key>vertices</key>
+                <string>366 102 341 193 354 255 304 277 304 320 251 331 185 307 174 225 135 168 134 129 195 91 250 73 335 66</string>
+                <key>verticesUV</key>
+                <string>230 233 139 208 77 221 55 171 12 171 1 118 25 52 107 41 164 2 203 1 241 62 259 117 266 202</string>
+            </dict>
+            <key>Mummy_02_Attacking_003.png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{-17,15}</string>
+                <key>spriteSize</key>
+                <string>{232,272}</string>
+                <key>spriteSourceSize</key>
+                <string>{520,420}</string>
+                <key>textureRect</key>
+                <string>{{268,1},{232,272}}</string>
+                <key>textureRotated</key>
+                <true/>
+                <key>triangles</key>
+                <string>1 11 12 9 10 11 8 9 11 1 8 11 7 8 3 7 3 6 3 4 5 6 3 5 1 2 3 1 3 8 0 1 12</string>
+                <key>vertices</key>
+                <string>358 95 337 184 359 240 307 242 304 320 251 331 211 315 182 286 172 229 127 169 127 128 208 80 322 59</string>
+                <key>verticesUV</key>
+                <string>504 232 415 211 359 233 357 181 279 178 268 125 284 85 313 56 370 46 430 1 471 1 519 82 540 196</string>
+            </dict>
+            <key>Mummy_02_Attacking_004.png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{-19.5,15}</string>
+                <key>spriteSize</key>
+                <string>{233,272}</string>
+                <key>spriteSourceSize</key>
+                <string>{520,420}</string>
+                <key>textureRect</key>
+                <string>{{1,235},{233,272}}</string>
+                <key>textureRotated</key>
+                <true/>
+                <key>triangles</key>
+                <string>1 10 11 8 9 10 7 8 10 1 7 10 6 7 3 3 4 5 6 3 5 1 2 3 1 3 7 0 1 11</string>
+                <key>vertices</key>
+                <string>357 93 335 171 355 238 306 242 304 320 251 331 183 305 170 226 136 184 124 136 197 82 320 59</string>
+                <key>verticesUV</key>
+                <string>239 468 161 446 94 466 90 417 12 415 1 362 27 294 106 281 148 247 196 235 250 308 273 431</string>
+            </dict>
+            <key>Mummy_02_Attacking_005.png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{-21,18.5}</string>
+                <key>spriteSize</key>
+                <string>{232,279}</string>
+                <key>spriteSourceSize</key>
+                <string>{520,420}</string>
+                <key>textureRect</key>
+                <string>{{542,1},{232,279}}</string>
+                <key>textureRotated</key>
+                <true/>
+                <key>triangles</key>
+                <string>1 10 11 8 9 10 7 8 10 1 7 10 6 7 3 6 3 5 5 3 4 1 2 3 1 3 7 0 1 11</string>
+                <key>vertices</key>
+                <string>355 91 334 170 353 230 307 250 304 320 251 331 182 305 171 228 135 183 123 136 187 87 314 52</string>
+                <key>verticesUV</key>
+                <string>782 233 703 212 643 231 623 185 553 182 542 129 568 60 645 49 690 13 737 1 786 65 821 192</string>
+            </dict>
+            <key>Mummy_02_Attacking_006.png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{-20.5,16.5}</string>
+                <key>spriteSize</key>
+                <string>{233,275}</string>
+                <key>spriteSourceSize</key>
+                <string>{520,420}</string>
+                <key>textureRect</key>
+                <string>{{275,235},{233,275}}</string>
+                <key>textureRotated</key>
+                <true/>
+                <key>triangles</key>
+                <string>1 11 12 9 10 11 8 9 11 1 8 11 7 8 3 3 5 6 3 4 5 3 6 7 1 2 3 1 3 8 0 1 12</string>
+                <key>vertices</key>
+                <string>353 89 333 169 356 237 307 238 304 320 251 331 211 315 181 285 161 216 124 169 123 135 196 80 317 56</string>
+                <key>verticesUV</key>
+                <string>517 465 437 445 369 468 368 419 286 416 275 363 291 323 321 293 390 273 437 236 471 235 526 308 550 429</string>
+            </dict>
+            <key>Mummy_02_Attacking_007.png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{11.5,14}</string>
+                <key>spriteSize</key>
+                <string>{247,258}</string>
+                <key>spriteSourceSize</key>
+                <string>{520,420}</string>
+                <key>textureRect</key>
+                <string>{{543,471},{247,258}}</string>
+                <key>textureRotated</key>
+                <true/>
+                <key>triangles</key>
+                <string>2 11 12 9 11 8 9 10 11 2 8 11 7 8 4 7 4 6 6 4 5 4 8 2 4 2 3 1 2 12 0 1 12</string>
+                <key>vertices</key>
+                <string>395 126 378 171 354 196 342 285 307 299 302 323 226 325 177 274 180 217 148 159 149 117 222 80 350 67</string>
+                <key>verticesUV</key>
+                <string>742 718 697 701 672 677 583 665 569 630 545 625 543 549 594 500 651 503 709 471 751 472 788 545 801 673</string>
+            </dict>
+            <key>Mummy_02_Attacking_008.png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{55,9}</string>
+                <key>spriteSize</key>
+                <string>{278,246}</string>
+                <key>spriteSourceSize</key>
+                <string>{520,420}</string>
+                <key>textureRect</key>
+                <string>{{1,470},{278,246}}</string>
+                <key>textureRotated</key>
+                <false/>
+                <key>triangles</key>
+                <string>12 13 14 11 12 14 2 7 8 9 10 11 8 9 11 2 8 11 2 6 7 4 5 6 3 4 6 2 3 6 2 11 14 1 2 14 0 1 14</string>
+                <key>vertices</key>
+                <string>408 98 408 144 375 214 404 202 454 214 454 286 406 292 362 286 291 324 221 323 176 261 193 208 176 158 177 97 276 78</string>
+                <key>verticesUV</key>
+                <string>233 490 233 536 200 606 229 594 279 606 279 678 231 684 187 678 116 716 46 715 1 653 18 600 1 550 2 489 101 470</string>
+            </dict>
+            <key>Mummy_02_Attacking_009.png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{56,5.5}</string>
+                <key>spriteSize</key>
+                <string>{274,251}</string>
+                <key>spriteSourceSize</key>
+                <string>{520,420}</string>
+                <key>textureRect</key>
+                <string>{{564,720},{274,251}}</string>
+                <key>textureRotated</key>
+                <false/>
+                <key>triangles</key>
+                <string>12 13 14 11 12 14 8 2 7 10 11 8 10 8 9 8 11 2 6 3 4 6 4 5 2 3 6 2 6 7 2 11 14 1 2 14 0 1 14</string>
+                <key>vertices</key>
+                <string>402 105 422 151 348 262 396 235 453 254 453 323 400 327 350 309 261 330 221 321 179 255 197 198 186 153 190 98 283 79</string>
+                <key>verticesUV</key>
+                <string>787 746 807 792 733 903 781 876 838 895 838 964 785 968 735 950 646 971 606 962 564 896 582 839 571 794 575 739 668 720</string>
+            </dict>
+            <key>Mummy_02_Attacking_010.png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{56.5,9.5}</string>
+                <key>spriteSize</key>
+                <string>{281,247}</string>
+                <key>spriteSourceSize</key>
+                <string>{520,420}</string>
+                <key>textureRect</key>
+                <string>{{1,719},{281,247}}</string>
+                <key>textureRotated</key>
+                <false/>
+                <key>triangles</key>
+                <string>12 13 14 11 12 14 7 8 11 9 10 11 8 9 11 2 7 11 6 2 4 2 6 7 6 4 5 2 3 4 2 11 14 0 1 2 0 2 14</string>
+                <key>vertices</key>
+                <string>389 96 411 140 383 203 437 197 457 243 443 278 407 286 368 280 291 324 221 323 179 268 192 206 176 157 178 103 265 77</string>
+                <key>verticesUV</key>
+                <string>214 738 236 782 208 845 262 839 282 885 268 920 232 928 193 922 116 966 46 965 4 910 17 848 1 799 3 745 90 719</string>
+            </dict>
+            <key>Mummy_02_Attacking_011.png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{43,5}</string>
+                <key>spriteSize</key>
+                <string>{278,248}</string>
+                <key>spriteSourceSize</key>
+                <string>{520,420}</string>
+                <key>textureRect</key>
+                <string>{{284,720},{278,248}}</string>
+                <key>textureRotated</key>
+                <false/>
+                <key>triangles</key>
+                <string>2 10 11 8 9 10 7 8 10 2 7 10 5 6 7 4 5 7 3 4 7 2 3 7 0 1 2 0 2 11</string>
+                <key>vertices</key>
+                <string>442 192 431 232 363 257 302 321 260 329 221 320 181 276 186 213 164 161 164 105 248 81 370 81</string>
+                <key>verticesUV</key>
+                <string>562 831 551 871 483 896 422 960 380 968 341 959 301 915 306 852 284 800 284 744 368 720 490 720</string>
+            </dict>
+        </dict>
+        <key>metadata</key>
+        <dict>
+            <key>format</key>
+            <integer>3</integer>
+            <key>pixelFormat</key>
+            <string>RGBA8888</string>
+            <key>premultiplyAlpha</key>
+            <false/>
+            <key>realTextureFileName</key>
+            <string>Mummy_02_Attacking.png</string>
+            <key>size</key>
+            <string>{839,972}</string>
+            <key>smartupdate</key>
+            <string>$TexturePacker:SmartUpdate:9f707cd8394a251e854c5b15e13d2ba8:858d2f87294e521f4d288e63c16c6a69:cdbf24cb287d5d161e3f873a4de3f311$</string>
+            <key>textureFileName</key>
+            <string>Mummy_02_Attacking.png</string>
+        </dict>
+    </dict>
+</plist>

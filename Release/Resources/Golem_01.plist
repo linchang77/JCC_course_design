@@ -1,0 +1,971 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+    <dict>
+        <key>frames</key>
+        <dict>
+            <key>Golem_01_Attacking (1).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{69.5,-33}</string>
+                <key>spriteSize</key>
+                <string>{435,358}</string>
+                <key>spriteSourceSize</key>
+                <string>{720,480}</string>
+                <key>textureRect</key>
+                <string>{{1489,374},{435,358}}</string>
+                <key>textureRotated</key>
+                <false/>
+                <key>triangles</key>
+                <string>16 17 18 2 3 16 15 13 14 15 16 13 11 3 4 11 12 13 3 11 13 5 7 8 5 8 9 5 6 7 4 5 9 4 9 10 11 4 10 3 13 16 2 16 18 1 2 18 0 1 18</string>
+                <key>vertices</key>
+                <string>473 106 494 161 485 250 459 302 478 332 582 269 626 252 647 290 633 325 513 377 483 396 442 452 272 451 261 414 222 409 212 374 268 230 284 112 379 94</string>
+                <key>verticesUV</key>
+                <string>1750 386 1771 441 1762 530 1736 582 1755 612 1859 549 1903 532 1924 570 1910 605 1790 657 1760 676 1719 732 1549 731 1538 694 1499 689 1489 654 1545 510 1561 392 1656 374</string>
+            </dict>
+            <key>Golem_01_Attacking (10).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{73,-36}</string>
+                <key>spriteSize</key>
+                <string>{528,352}</string>
+                <key>spriteSourceSize</key>
+                <string>{720,480}</string>
+                <key>textureRect</key>
+                <string>{{552,1},{528,352}}</string>
+                <key>textureRotated</key>
+                <false/>
+                <key>triangles</key>
+                <string>0 16 17 12 14 15 12 13 14 3 9 10 12 15 3 10 11 12 12 3 10 5 7 8 5 6 7 4 5 8 4 8 9 3 4 9 0 3 15 3 0 1 3 1 2 0 15 16</string>
+                <key>vertices</key>
+                <string>444 109 522 143 558 188 503 324 534 358 639 332 690 332 697 378 667 402 508 419 440 451 268 452 269 403 169 335 199 295 307 207 363 110 395 100</string>
+                <key>verticesUV</key>
+                <string>827 10 905 44 941 89 886 225 917 259 1022 233 1073 233 1080 279 1050 303 891 320 823 352 651 353 652 304 552 236 582 196 690 108 746 11 778 1</string>
+            </dict>
+            <key>Golem_01_Attacking (11).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{74,-36}</string>
+                <key>spriteSize</key>
+                <string>{502,352}</string>
+                <key>spriteSourceSize</key>
+                <string>{720,480}</string>
+                <key>textureRect</key>
+                <string>{{1082,1},{502,352}}</string>
+                <key>textureRotated</key>
+                <false/>
+                <key>triangles</key>
+                <string>12 14 15 12 13 14 3 9 10 12 15 3 10 11 12 12 3 10 5 7 8 5 6 7 4 5 8 4 8 9 3 4 9 0 3 15 3 0 1 3 1 2 0 15 16</string>
+                <key>vertices</key>
+                <string>414 101 507 130 543 178 489 319 517 350 619 312 673 305 685 351 654 379 512 405 439 452 268 452 269 407 183 363 198 323 304 203 336 100</string>
+                <key>verticesUV</key>
+                <string>1313 2 1406 31 1442 79 1388 220 1416 251 1518 213 1572 206 1584 252 1553 280 1411 306 1338 353 1167 353 1168 308 1082 264 1097 224 1203 104 1235 1</string>
+            </dict>
+            <key>Golem_01_Attacking (12).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{73,-33}</string>
+                <key>spriteSize</key>
+                <string>{478,358}</string>
+                <key>spriteSourceSize</key>
+                <string>{720,480}</string>
+                <key>textureRect</key>
+                <string>{{552,355},{478,358}}</string>
+                <key>textureRotated</key>
+                <false/>
+                <key>triangles</key>
+                <string>16 17 18 15 16 18 3 9 10 12 14 15 12 13 14 3 10 12 10 11 12 3 12 15 8 5 6 8 6 7 4 5 8 4 8 9 3 4 9 2 3 15 2 15 18 1 2 18 0 1 18</string>
+                <key>vertices</key>
+                <string>493 120 517 161 502 248 476 310 503 340 604 290 648 281 672 305 657 349 499 400 441 451 268 452 269 411 194 387 205 345 291 199 300 133 326 104 396 94</string>
+                <key>verticesUV</key>
+                <string>851 381 875 422 860 509 834 571 861 601 962 551 1006 542 1030 566 1015 610 857 661 799 712 626 713 627 672 552 648 563 606 649 460 658 394 684 365 754 355</string>
+            </dict>
+            <key>Golem_01_Attacking (2).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{52,-29}</string>
+                <key>spriteSize</key>
+                <string>{410,364}</string>
+                <key>spriteSourceSize</key>
+                <string>{720,480}</string>
+                <key>textureRect</key>
+                <string>{{835,2128},{410,364}}</string>
+                <key>textureRotated</key>
+                <false/>
+                <key>triangles</key>
+                <string>17 1 2 17 18 19 14 11 12 16 14 15 16 17 14 14 17 11 12 13 14 10 11 17 2 10 17 10 2 3 3 7 8 6 3 4 3 6 7 6 4 5 10 3 8 10 8 9 17 19 1 1 19 20 0 1 20</string>
+                <key>vertices</key>
+                <string>459 111 473 155 475 263 508 264 559 113 611 137 617 183 561 275 534 364 499 380 467 374 445 406 445 451 268 451 269 417 207 412 207 364 261 228 253 126 314 96 422 87</string>
+                <key>verticesUV</key>
+                <string>1087 2152 1101 2196 1103 2304 1136 2305 1187 2154 1239 2178 1245 2224 1189 2316 1162 2405 1127 2421 1095 2415 1073 2447 1073 2492 896 2492 897 2458 835 2453 835 2405 889 2269 881 2167 942 2137 1050 2128</string>
+            </dict>
+            <key>Golem_01_Attacking (3).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{25,-1.5}</string>
+                <key>spriteSize</key>
+                <string>{374,421}</string>
+                <key>spriteSourceSize</key>
+                <string>{720,480}</string>
+                <key>textureRect</key>
+                <string>{{437,1433},{374,421}}</string>
+                <key>textureRotated</key>
+                <true/>
+                <key>triangles</key>
+                <string>0 19 20 16 17 18 13 16 18 13 15 16 13 14 15 13 5 10 4 18 19 12 10 11 10 12 13 10 7 9 7 8 9 5 6 7 10 5 7 13 18 5 4 5 18 2 3 4 1 4 19 1 2 4 0 1 19 0 20 21</string>
+                <key>vertices</key>
+                <string>515 53 541 200 572 255 544 298 490 286 443 291 469 357 445 427 445 452 273 452 257 415 199 415 198 367 247 232 236 129 287 97 376 81 438 90 471 213 485 209 436 45 484 31</string>
+                <key>verticesUV</key>
+                <string>836 1750 689 1776 634 1807 591 1779 603 1725 598 1678 532 1704 462 1680 437 1680 437 1508 474 1492 474 1434 522 1433 657 1482 760 1471 792 1522 808 1611 799 1673 676 1706 680 1720 844 1671 858 1719</string>
+            </dict>
+            <key>Golem_01_Attacking (4).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{7.5,5}</string>
+                <key>spriteSize</key>
+                <string>{359,434}</string>
+                <key>spriteSourceSize</key>
+                <string>{720,480}</string>
+                <key>textureRect</key>
+                <string>{{1,1081},{359,434}}</string>
+                <key>textureRotated</key>
+                <true/>
+                <key>triangles</key>
+                <string>0 15 16 12 13 14 12 5 9 11 9 10 8 6 7 11 12 9 5 6 8 5 8 9 4 5 12 4 12 14 1 4 14 4 1 2 4 2 3 0 1 14 0 14 15</string>
+                <key>vertices</key>
+                <string>371 23 445 97 522 142 547 182 437 258 438 281 466 348 444 452 276 451 239 421 190 417 188 374 236 238 212 137 305 76 303 47 325 18</string>
+                <key>verticesUV</key>
+                <string>430 1264 356 1338 311 1415 271 1440 195 1330 172 1331 105 1359 1 1337 2 1169 32 1132 36 1083 79 1081 215 1129 316 1105 377 1198 406 1196 435 1218</string>
+            </dict>
+            <key>Golem_01_Attacking (5).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{1.5,6.5}</string>
+                <key>spriteSize</key>
+                <string>{349,437}</string>
+                <key>spriteSourceSize</key>
+                <string>{720,480}</string>
+                <key>textureRect</key>
+                <string>{{1,730},{349,437}}</string>
+                <key>textureRotated</key>
+                <true/>
+                <key>triangles</key>
+                <string>13 14 15 11 12 13 11 3 4 8 5 7 10 8 9 10 11 8 8 11 4 8 4 5 7 5 6 11 13 3 0 3 13 3 0 1 3 1 2 0 13 15</string>
+                <key>vertices</key>
+                <string>466 110 513 130 536 169 444 246 437 291 465 346 445 452 274 452 250 418 188 421 187 371 234 238 211 144 284 76 281 38 327 15</string>
+                <key>verticesUV</key>
+                <string>343 1009 323 1056 284 1079 207 987 162 980 107 1008 1 988 1 817 35 793 32 731 82 730 215 777 309 754 377 827 415 824 438 870</string>
+            </dict>
+            <key>Golem_01_Attacking (6).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{-6,-1.5}</string>
+                <key>spriteSize</key>
+                <string>{340,421}</string>
+                <key>spriteSourceSize</key>
+                <string>{720,480}</string>
+                <key>textureRect</key>
+                <string>{{1,1442},{340,421}}</string>
+                <key>textureRotated</key>
+                <true/>
+                <key>triangles</key>
+                <string>14 15 16 12 13 14 0 3 4 6 8 9 11 9 10 11 12 9 4 6 9 6 7 8 4 9 12 4 5 6 4 12 14 0 4 14 3 0 1 3 1 2 0 14 16</string>
+                <key>vertices</key>
+                <string>419 87 504 121 524 161 468 211 427 264 466 349 446 385 445 451 274 452 247 418 188 418 184 376 231 245 210 138 267 88 268 34 325 31</string>
+                <key>verticesUV</key>
+                <string>366 1677 332 1762 292 1782 242 1726 189 1685 104 1724 68 1704 2 1703 1 1532 35 1505 35 1446 77 1442 208 1489 315 1468 365 1525 419 1526 422 1583</string>
+            </dict>
+            <key>Golem_01_Attacking (7).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{-13.5,-4}</string>
+                <key>spriteSize</key>
+                <string>{325,416}</string>
+                <key>spriteSourceSize</key>
+                <string>{720,480}</string>
+                <key>textureRect</key>
+                <string>{{860,1460},{325,416}}</string>
+                <key>textureRotated</key>
+                <true/>
+                <key>triangles</key>
+                <string>11 12 13 0 11 13 7 9 10 0 3 10 7 8 9 4 5 7 5 6 7 3 4 7 3 7 10 0 2 3 0 1 2 0 10 11</string>
+                <key>vertices</key>
+                <string>422 93 509 114 509 154 425 261 465 345 445 452 272 451 263 419 185 417 184 369 232 242 209 155 265 42 306 36</string>
+                <key>verticesUV</key>
+                <string>1219 1698 1198 1785 1158 1785 1051 1701 967 1741 860 1721 861 1548 893 1539 895 1461 943 1460 1070 1508 1157 1485 1270 1541 1276 1582</string>
+            </dict>
+            <key>Golem_01_Attacking (8).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{13,-1.5}</string>
+                <key>spriteSize</key>
+                <string>{412,419}</string>
+                <key>spriteSourceSize</key>
+                <string>{720,480}</string>
+                <key>textureRect</key>
+                <string>{{1310,1109},{412,419}}</string>
+                <key>textureRotated</key>
+                <true/>
+                <key>triangles</key>
+                <string>0 21 22 17 18 19 16 17 19 13 16 19 14 15 16 13 14 16 13 5 10 4 19 20 12 10 11 10 12 13 10 7 9 7 8 9 5 6 7 10 5 7 13 19 5 4 5 19 4 2 3 4 20 2 20 1 2 0 1 20 0 20 21</string>
+                <key>vertices</key>
+                <string>561 62 563 192 579 264 559 303 494 287 451 294 472 369 445 423 445 451 272 451 260 406 183 386 167 353 266 223 266 139 279 99 375 85 435 92 472 113 491 211 507 206 484 34 538 32</string>
+                <key>verticesUV</key>
+                <string>1699 1503 1569 1505 1497 1521 1458 1501 1474 1436 1467 1393 1392 1414 1338 1387 1310 1387 1310 1214 1355 1202 1375 1125 1408 1109 1538 1208 1622 1208 1662 1221 1676 1317 1669 1377 1648 1414 1550 1433 1555 1449 1727 1426 1729 1480</string>
+            </dict>
+            <key>Golem_01_Attacking (9).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{81.5,-32}</string>
+                <key>spriteSize</key>
+                <string>{549,360}</string>
+                <key>spriteSourceSize</key>
+                <string>{720,480}</string>
+                <key>textureRect</key>
+                <string>{{1,1},{549,360}}</string>
+                <key>textureRotated</key>
+                <false/>
+                <key>triangles</key>
+                <string>15 16 17 13 14 15 12 13 15 2 9 15 9 10 12 10 11 12 9 12 15 9 2 3 6 3 4 6 4 5 3 6 7 3 7 8 9 3 8 0 2 15 0 1 2 0 15 17</string>
+                <key>vertices</key>
+                <string>486 120 546 155 506 295 550 322 690 237 716 289 693 323 561 379 517 415 467 408 442 452 270 451 267 398 179 346 167 313 300 211 337 107 392 92</string>
+                <key>verticesUV</key>
+                <string>320 29 380 64 340 204 384 231 524 146 550 198 527 232 395 288 351 324 301 317 276 361 104 360 101 307 13 255 1 222 134 120 171 16 226 1</string>
+            </dict>
+            <key>Golem_01_Dying (1).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{69.5,-33}</string>
+                <key>spriteSize</key>
+                <string>{435,358}</string>
+                <key>spriteSourceSize</key>
+                <string>{720,480}</string>
+                <key>textureRect</key>
+                <string>{{922,727},{435,358}}</string>
+                <key>textureRotated</key>
+                <false/>
+                <key>triangles</key>
+                <string>16 17 18 2 3 16 15 13 14 15 16 13 11 3 4 11 12 13 3 11 13 5 7 8 5 8 9 5 6 7 4 5 9 4 9 10 11 4 10 3 13 16 2 16 18 1 2 18 0 1 18</string>
+                <key>vertices</key>
+                <string>473 106 494 161 485 250 459 302 478 332 582 269 626 252 647 290 633 325 513 377 483 396 442 452 272 451 261 414 222 409 212 374 268 230 284 112 379 94</string>
+                <key>verticesUV</key>
+                <string>1183 739 1204 794 1195 883 1169 935 1188 965 1292 902 1336 885 1357 923 1343 958 1223 1010 1193 1029 1152 1085 982 1084 971 1047 932 1042 922 1007 978 863 994 745 1089 727</string>
+            </dict>
+            <key>Golem_01_Dying (10).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{-71,-29}</string>
+                <key>spriteSize</key>
+                <string>{366,410}</string>
+                <key>spriteSourceSize</key>
+                <string>{720,480}</string>
+                <key>textureRect</key>
+                <string>{{1,2152},{366,410}}</string>
+                <key>textureRotated</key>
+                <true/>
+                <key>triangles</key>
+                <string>18 20 21 18 19 20 0 17 18 13 15 16 13 14 15 11 13 16 10 5 8 11 12 13 10 11 16 8 9 10 10 16 5 8 5 6 5 16 17 8 6 7 17 0 1 17 1 2 5 3 4 5 2 3 17 2 5 0 18 21</string>
+                <key>vertices</key>
+                <string>366 176 406 201 433 239 453 243 472 315 442 329 459 363 466 431 413 453 390 474 260 439 121 361 106 305 150 217 180 178 220 171 302 212 315 208 230 146 188 104 217 71 247 64</string>
+                <key>verticesUV</key>
+                <string>299 2412 274 2452 236 2479 232 2499 160 2518 146 2488 112 2505 44 2512 22 2459 1 2436 36 2306 114 2167 170 2152 258 2196 297 2226 304 2266 263 2348 267 2361 329 2276 371 2234 404 2263 411 2293</string>
+            </dict>
+            <key>Golem_01_Dying (11).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{-72.5,-31}</string>
+                <key>spriteSize</key>
+                <string>{357,404}</string>
+                <key>spriteSourceSize</key>
+                <string>{720,480}</string>
+                <key>textureRect</key>
+                <string>{{413,2185},{357,404}}</string>
+                <key>textureRotated</key>
+                <true/>
+                <key>triangles</key>
+                <string>0 17 18 9 15 16 14 11 12 12 13 14 14 15 11 9 11 15 9 7 8 9 10 11 4 7 9 4 9 16 5 6 7 4 5 7 2 4 16 17 1 2 2 3 4 2 16 17 0 1 17 0 18 19</string>
+                <key>vertices</key>
+                <string>334 84 395 216 422 249 465 260 461 365 466 377 462 444 413 456 395 473 283 452 122 402 109 341 129 240 160 208 200 202 277 221 328 250 342 241 255 95 298 69</string>
+                <key>verticesUV</key>
+                <string>802 2410 670 2471 637 2498 626 2541 521 2537 509 2542 442 2538 430 2489 413 2471 434 2359 484 2198 545 2185 646 2205 678 2236 684 2276 665 2353 636 2404 645 2418 791 2331 817 2374</string>
+            </dict>
+            <key>Golem_01_Dying (12).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{-70,-38.5}</string>
+                <key>spriteSize</key>
+                <string>{360,387}</string>
+                <key>spriteSourceSize</key>
+                <string>{720,480}</string>
+                <key>textureRect</key>
+                <string>{{1,2890},{360,387}}</string>
+                <key>textureRotated</key>
+                <true/>
+                <key>triangles</key>
+                <string>16 1 15 9 13 14 10 12 13 10 11 12 9 10 13 7 3 6 9 7 8 9 14 7 7 14 3 15 1 3 3 14 15 3 4 5 6 3 5 1 2 3 16 0 1 0 16 17</string>
+                <key>vertices</key>
+                <string>383 87 415 258 470 275 453 367 470 382 457 452 393 472 287 461 125 424 110 360 116 286 134 229 188 217 275 230 314 261 356 248 321 144 315 85</string>
+                <key>verticesUV</key>
+                <string>386 3163 215 3195 198 3250 106 3233 91 3250 21 3237 1 3173 12 3067 49 2905 113 2890 187 2896 244 2914 256 2968 243 3055 212 3094 225 3136 329 3101 388 3095</string>
+            </dict>
+            <key>Golem_01_Dying (13).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{-70,-38.5}</string>
+                <key>spriteSize</key>
+                <string>{360,387}</string>
+                <key>spriteSourceSize</key>
+                <string>{720,480}</string>
+                <key>textureRect</key>
+                <string>{{1,2890},{360,387}}</string>
+                <key>textureRotated</key>
+                <true/>
+                <key>triangles</key>
+                <string>16 1 15 9 13 14 10 12 13 10 11 12 9 10 13 7 3 6 9 7 8 9 14 7 7 14 3 15 1 3 3 14 15 3 4 5 6 3 5 1 2 3 16 0 1 0 16 17</string>
+                <key>vertices</key>
+                <string>383 87 415 258 470 275 453 367 470 382 457 452 393 472 287 461 125 424 110 360 116 286 134 229 188 217 275 230 314 261 356 248 321 144 315 85</string>
+                <key>verticesUV</key>
+                <string>386 3163 215 3195 198 3250 106 3233 91 3250 21 3237 1 3173 12 3067 49 2905 113 2890 187 2896 244 2914 256 2968 243 3055 212 3094 225 3136 329 3101 388 3095</string>
+            </dict>
+            <key>Golem_01_Dying (14).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{-70,-38.5}</string>
+                <key>spriteSize</key>
+                <string>{360,387}</string>
+                <key>spriteSourceSize</key>
+                <string>{720,480}</string>
+                <key>textureRect</key>
+                <string>{{1,2890},{360,387}}</string>
+                <key>textureRotated</key>
+                <true/>
+                <key>triangles</key>
+                <string>16 1 15 9 13 14 10 12 13 10 11 12 9 10 13 7 3 6 9 7 8 9 14 7 7 14 3 15 1 3 3 14 15 3 4 5 6 3 5 1 2 3 16 0 1 0 16 17</string>
+                <key>vertices</key>
+                <string>383 87 415 258 470 275 453 367 470 382 457 452 393 472 287 461 125 424 110 360 116 286 134 229 188 217 275 230 314 261 356 248 321 144 315 85</string>
+                <key>verticesUV</key>
+                <string>386 3163 215 3195 198 3250 106 3233 91 3250 21 3237 1 3173 12 3067 49 2905 113 2890 187 2896 244 2914 256 2968 243 3055 212 3094 225 3136 329 3101 388 3095</string>
+            </dict>
+            <key>Golem_01_Dying (15).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{-70,-38.5}</string>
+                <key>spriteSize</key>
+                <string>{360,387}</string>
+                <key>spriteSourceSize</key>
+                <string>{720,480}</string>
+                <key>textureRect</key>
+                <string>{{1,2890},{360,387}}</string>
+                <key>textureRotated</key>
+                <true/>
+                <key>triangles</key>
+                <string>16 1 15 9 13 14 10 12 13 10 11 12 9 10 13 7 3 6 9 7 8 9 14 7 7 14 3 15 1 3 3 14 15 3 4 5 6 3 5 1 2 3 16 0 1 0 16 17</string>
+                <key>vertices</key>
+                <string>383 87 415 258 470 275 453 367 470 382 457 452 393 472 287 461 125 424 110 360 116 286 134 229 188 217 275 230 314 261 356 248 321 144 315 85</string>
+                <key>verticesUV</key>
+                <string>386 3163 215 3195 198 3250 106 3233 91 3250 21 3237 1 3173 12 3067 49 2905 113 2890 187 2896 244 2914 256 2968 243 3055 212 3094 225 3136 329 3101 388 3095</string>
+            </dict>
+            <key>Golem_01_Dying (2).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{77.5,-32.5}</string>
+                <key>spriteSize</key>
+                <string>{441,361}</string>
+                <key>spriteSourceSize</key>
+                <string>{720,480}</string>
+                <key>textureRect</key>
+                <string>{{479,715},{441,361}}</string>
+                <key>textureRotated</key>
+                <false/>
+                <key>triangles</key>
+                <string>14 15 16 0 4 14 12 13 14 5 9 10 10 11 12 4 10 12 6 7 8 5 6 8 5 8 9 4 5 10 4 12 14 0 2 3 0 3 4 0 1 2 0 14 16</string>
+                <key>vertices</key>
+                <string>430 97 483 115 497 170 484 259 455 290 475 323 615 244 658 269 628 321 493 383 441 453 273 450 270 427 217 396 271 215 287 112 348 92</string>
+                <key>verticesUV</key>
+                <string>692 720 745 738 759 793 746 882 717 913 737 946 877 867 920 892 890 944 755 1006 703 1076 535 1073 532 1050 479 1019 533 838 549 735 610 715</string>
+            </dict>
+            <key>Golem_01_Dying (3).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{78,-31}</string>
+                <key>spriteSize</key>
+                <string>{420,366}</string>
+                <key>spriteSourceSize</key>
+                <string>{720,480}</string>
+                <key>textureRect</key>
+                <string>{{1,1784},{420,366}}</string>
+                <key>textureRotated</key>
+                <false/>
+                <key>triangles</key>
+                <string>17 4 14 14 15 17 15 16 17 17 18 4 11 12 13 11 13 14 4 11 14 6 8 9 6 7 8 6 9 10 5 6 10 5 10 11 4 5 11 4 18 19 2 3 4 0 2 4 0 1 2 0 4 19</string>
+                <key>vertices</key>
+                <string>435 97 492 115 501 184 482 267 455 286 490 322 571 264 625 238 648 276 632 312 509 374 453 425 453 437 378 454 369 416 348 437 283 451 228 381 294 109 343 88</string>
+                <key>verticesUV</key>
+                <string>208 1793 265 1811 274 1880 255 1963 228 1982 263 2018 344 1960 398 1934 421 1972 405 2008 282 2070 226 2121 226 2133 151 2150 142 2112 121 2133 56 2147 1 2077 67 1805 116 1784</string>
+            </dict>
+            <key>Golem_01_Dying (4).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{77.5,-28}</string>
+                <key>spriteSize</key>
+                <string>{415,370}</string>
+                <key>spriteSourceSize</key>
+                <string>{720,480}</string>
+                <key>textureRect</key>
+                <string>{{1278,1523},{415,370}}</string>
+                <key>textureRotated</key>
+                <false/>
+                <key>triangles</key>
+                <string>15 16 17 2 3 15 14 15 3 12 13 14 14 11 12 11 4 9 9 10 11 5 6 7 4 5 7 4 7 8 4 8 9 11 3 4 14 3 11 2 15 17 1 2 17 0 1 17</string>
+                <key>vertices</key>
+                <string>492 113 502 158 493 238 463 296 478 320 605 238 645 238 645 301 499 375 454 428 385 453 372 423 286 449 230 355 249 319 260 254 301 95 387 83</string>
+                <key>verticesUV</key>
+                <string>1540 1553 1550 1598 1541 1678 1511 1736 1526 1760 1653 1678 1693 1678 1693 1741 1547 1815 1502 1868 1433 1893 1420 1863 1334 1889 1278 1795 1297 1759 1308 1694 1349 1535 1435 1523</string>
+            </dict>
+            <key>Golem_01_Dying (5).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{71,-24.5}</string>
+                <key>spriteSize</key>
+                <string>{386,377}</string>
+                <key>spriteSourceSize</key>
+                <string>{720,480}</string>
+                <key>textureRect</key>
+                <string>{{1213,2635},{386,377}}</string>
+                <key>textureRotated</key>
+                <false/>
+                <key>triangles</key>
+                <string>14 15 16 1 2 14 13 14 2 11 12 13 9 10 11 2 9 11 4 6 7 4 5 6 3 4 7 3 7 8 2 3 8 2 8 9 13 2 11 1 14 16 0 1 16</string>
+                <key>vertices</key>
+                <string>458 100 476 148 462 271 480 280 555 190 591 163 624 192 615 235 507 332 474 395 415 432 368 420 314 453 238 382 254 124 293 85 401 76</string>
+                <key>verticesUV</key>
+                <string>1433 2659 1451 2707 1437 2830 1455 2839 1530 2749 1566 2722 1599 2751 1590 2794 1482 2891 1449 2954 1390 2991 1343 2979 1289 3012 1213 2941 1229 2683 1268 2644 1376 2635</string>
+            </dict>
+            <key>Golem_01_Dying (6).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{53,-21.5}</string>
+                <key>spriteSize</key>
+                <string>{380,379}</string>
+                <key>spriteSourceSize</key>
+                <string>{720,480}</string>
+                <key>textureRect</key>
+                <string>{{1601,2658},{380,379}}</string>
+                <key>textureRotated</key>
+                <false/>
+                <key>triangles</key>
+                <string>1 15 16 12 14 15 12 13 14 2 9 12 11 12 9 11 9 10 7 8 9 2 7 9 3 4 5 3 5 6 3 6 7 2 3 7 15 1 2 15 2 12 0 1 16</string>
+                <key>vertices</key>
+                <string>426 92 444 152 445 241 465 245 532 96 603 133 513 274 481 367 434 413 399 395 343 451 250 400 236 291 223 119 267 87 320 74 390 72</string>
+                <key>verticesUV</key>
+                <string>1804 2678 1822 2738 1823 2827 1843 2831 1910 2682 1981 2719 1891 2860 1859 2953 1812 2999 1777 2981 1721 3037 1628 2986 1614 2877 1601 2705 1645 2673 1698 2660 1768 2658</string>
+            </dict>
+            <key>Golem_01_Dying (7).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{2,-10}</string>
+                <key>spriteSize</key>
+                <string>{348,392}</string>
+                <key>spriteSourceSize</key>
+                <string>{720,480}</string>
+                <key>textureRect</key>
+                <string>{{1695,1523},{348,392}}</string>
+                <key>textureRotated</key>
+                <false/>
+                <key>triangles</key>
+                <string>14 1 2 11 12 13 10 11 13 8 10 13 8 9 10 5 8 13 5 3 4 7 5 6 5 7 8 5 13 3 13 2 3 13 14 2 14 15 1 0 1 15 0 15 16</string>
+                <key>vertices</key>
+                <string>523 66 536 105 493 239 493 331 458 384 403 391 371 446 264 415 219 276 188 133 238 95 330 65 395 80 432 219 448 210 460 106 477 54</string>
+                <key>verticesUV</key>
+                <string>2030 1535 2043 1574 2000 1708 2000 1800 1965 1853 1910 1860 1878 1915 1771 1884 1726 1745 1695 1602 1745 1564 1837 1534 1902 1549 1939 1688 1955 1679 1967 1575 1984 1523</string>
+            </dict>
+            <key>Golem_01_Dying (8).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{-44.5,4.5}</string>
+                <key>spriteSize</key>
+                <string>{339,415}</string>
+                <key>spriteSourceSize</key>
+                <string>{720,480}</string>
+                <key>textureRect</key>
+                <string>{{860,1787},{339,415}}</string>
+                <key>textureRotated</key>
+                <true/>
+                <key>triangles</key>
+                <string>0 14 15 2 3 4 10 11 12 9 10 12 8 9 12 7 8 12 6 4 5 6 7 4 2 4 12 4 7 12 1 2 12 1 12 13 0 1 13 0 13 14</string>
+                <key>vertices</key>
+                <string>450 45 462 164 485 300 467 362 424 387 405 443 300 443 227 350 146 201 171 147 254 94 320 80 391 191 397 152 372 33 424 28</string>
+                <key>verticesUV</key>
+                <string>1258 2091 1139 2103 1003 2126 941 2108 916 2065 860 2046 860 1941 953 1868 1102 1787 1156 1812 1209 1895 1223 1961 1112 2032 1151 2038 1270 2013 1275 2065</string>
+            </dict>
+            <key>Golem_01_Dying (9).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{-65.5,-7.5}</string>
+                <key>spriteSize</key>
+                <string>{353,435}</string>
+                <key>spriteSourceSize</key>
+                <string>{720,480}</string>
+                <key>textureRect</key>
+                <string>{{440,1078},{353,435}}</string>
+                <key>textureRotated</key>
+                <true/>
+                <key>triangles</key>
+                <string>0 15 16 11 13 14 11 12 13 8 11 14 8 10 11 8 9 10 7 5 6 7 8 5 5 8 14 14 3 5 14 1 2 1 14 15 14 2 3 5 3 4 0 1 15 0 16 17</string>
+                <key>vertices</key>
+                <string>347 31 423 187 442 211 471 269 471 340 446 352 437 437 343 465 238 396 118 273 129 229 162 178 222 119 270 128 348 192 345 165 277 64 294 30</string>
+                <key>verticesUV</key>
+                <string>874 1307 718 1383 694 1402 636 1431 565 1431 553 1406 468 1397 440 1303 509 1198 632 1078 676 1089 727 1122 786 1182 777 1230 713 1308 740 1305 841 1237 875 1254</string>
+            </dict>
+            <key>Golem_01_Walking (1).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{55,-39.5}</string>
+                <key>spriteSize</key>
+                <string>{476,365}</string>
+                <key>spriteSourceSize</key>
+                <string>{720,480}</string>
+                <key>textureRect</key>
+                <string>{{1,363},{476,365}}</string>
+                <key>textureRotated</key>
+                <false/>
+                <key>triangles</key>
+                <string>18 19 20 13 3 11 17 15 16 17 18 15 15 18 3 15 13 14 11 12 13 15 3 13 3 10 11 8 4 5 8 5 7 4 8 9 7 5 6 3 4 9 3 9 10 2 3 18 2 18 20 0 1 2 0 2 20</string>
+                <key>vertices</key>
+                <string>464 105 505 144 498 234 476 296 510 310 589 220 624 205 653 236 641 276 525 372 492 411 428 429 415 462 372 443 315 461 277 416 191 383 177 356 277 224 298 104 376 97</string>
+                <key>verticesUV</key>
+                <string>288 371 329 410 322 500 300 562 334 576 413 486 448 471 477 502 465 542 349 638 316 677 252 695 239 728 196 709 139 727 101 682 15 649 1 622 101 490 122 370 200 363</string>
+            </dict>
+            <key>Golem_01_Walking (10).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{60.5,-40}</string>
+                <key>spriteSize</key>
+                <string>{355,366}</string>
+                <key>spriteSourceSize</key>
+                <string>{720,480}</string>
+                <key>textureRect</key>
+                <string>{{1692,1917},{355,366}}</string>
+                <key>textureRotated</key>
+                <false/>
+                <key>triangles</key>
+                <string>16 17 18 4 5 11 15 16 12 14 15 12 14 12 13 12 16 4 9 10 11 5 9 11 6 7 8 5 6 8 5 8 9 12 4 11 3 4 16 3 16 18 2 3 18 0 1 2 0 2 18</string>
+                <key>vertices</key>
+                <string>438 103 499 124 504 192 488 263 459 313 465 351 598 364 593 414 561 430 478 430 411 463 395 435 329 436 315 463 243 434 244 366 274 254 297 104 374 97</string>
+                <key>verticesUV</key>
+                <string>1887 1923 1948 1944 1953 2012 1937 2083 1908 2133 1914 2171 2047 2184 2042 2234 2010 2250 1927 2250 1860 2283 1844 2255 1778 2256 1764 2283 1692 2254 1693 2186 1723 2074 1746 1924 1823 1917</string>
+            </dict>
+            <key>Golem_01_Walking (11).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{69.5,-38}</string>
+                <key>spriteSize</key>
+                <string>{371,374}</string>
+                <key>spriteSourceSize</key>
+                <string>{720,480}</string>
+                <key>textureRect</key>
+                <string>{{1513,3039},{371,374}}</string>
+                <key>textureRotated</key>
+                <true/>
+                <key>triangles</key>
+                <string>16 17 18 15 16 18 14 4 11 14 12 13 14 15 4 14 11 12 11 9 10 6 7 8 6 8 9 5 6 9 11 5 9 4 5 11 3 4 15 2 3 15 0 2 15 0 1 2 0 15 18</string>
+                <key>vertices</key>
+                <string>449 106 501 129 501 204 486 264 457 314 463 349 589 341 615 367 594 415 498 417 404 465 386 426 317 459 244 435 244 367 281 221 283 166 307 105 364 91</string>
+                <key>verticesUV</key>
+                <string>1872 3244 1849 3296 1774 3296 1714 3281 1664 3252 1629 3258 1637 3384 1611 3410 1563 3389 1561 3293 1513 3199 1552 3181 1519 3112 1543 3039 1611 3039 1757 3076 1812 3078 1873 3102 1887 3159</string>
+            </dict>
+            <key>Golem_01_Walking (12).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{69,-37}</string>
+                <key>spriteSize</key>
+                <string>{376,370}</string>
+                <key>spriteSourceSize</key>
+                <string>{720,480}</string>
+                <key>textureRect</key>
+                <string>{{769,3236},{376,370}}</string>
+                <key>textureRotated</key>
+                <false/>
+                <key>triangles</key>
+                <string>18 19 20 4 18 20 12 4 5 15 16 17 12 15 17 13 14 15 12 13 15 9 10 11 12 5 9 9 11 12 8 5 6 8 6 7 5 8 9 12 17 4 4 17 18 2 3 4 2 4 20 0 1 2 0 2 20</string>
+                <key>vertices</key>
+                <string>471 109 496 139 500 192 483 266 454 296 461 344 611 314 617 368 590 395 466 404 466 438 395 462 372 428 324 458 255 445 255 392 241 378 261 292 292 117 322 99 385 92</string>
+                <key>verticesUV</key>
+                <string>999 3253 1024 3283 1028 3336 1011 3410 982 3440 989 3488 1139 3458 1145 3512 1118 3539 994 3548 994 3582 923 3606 900 3572 852 3602 783 3589 783 3536 769 3522 789 3436 820 3261 850 3243 913 3236</string>
+            </dict>
+            <key>Golem_01_Walking (13).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{73.5,-34.5}</string>
+                <key>spriteSize</key>
+                <string>{385,369}</string>
+                <key>spriteSourceSize</key>
+                <string>{720,480}</string>
+                <key>textureRect</key>
+                <string>{{792,2865},{385,369}}</string>
+                <key>textureRotated</key>
+                <false/>
+                <key>triangles</key>
+                <string>19 20 21 18 19 21 13 4 5 16 17 18 16 18 4 14 15 16 16 13 14 10 11 12 10 12 13 16 4 13 6 8 9 6 7 8 5 6 9 5 9 10 13 5 10 4 18 21 2 3 4 2 4 21 0 1 2 0 2 21</string>
+                <key>vertices</key>
+                <string>440 98 483 118 492 172 480 262 450 286 470 336 570 304 615 299 626 341 609 370 459 396 459 444 391 459 361 432 331 457 256 448 265 402 241 378 268 235 280 128 306 102 358 90</string>
+                <key>verticesUV</key>
+                <string>991 2873 1034 2893 1043 2947 1031 3037 1001 3061 1021 3111 1121 3079 1166 3074 1177 3116 1160 3145 1010 3171 1010 3219 942 3234 912 3207 882 3232 807 3223 816 3177 792 3153 819 3010 831 2903 857 2877 909 2865</string>
+            </dict>
+            <key>Golem_01_Walking (14).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{77,-31.5}</string>
+                <key>spriteSize</key>
+                <string>{392,369}</string>
+                <key>spriteSourceSize</key>
+                <string>{720,480}</string>
+                <key>textureRect</key>
+                <string>{{819,2494},{392,369}}</string>
+                <key>textureRotated</key>
+                <false/>
+                <key>triangles</key>
+                <string>17 18 19 3 17 19 15 16 17 15 17 12 13 14 15 15 12 13 10 11 12 9 10 12 12 3 4 5 7 8 5 6 7 4 5 8 4 8 9 12 4 9 3 12 17 2 3 19 1 2 19 0 1 19</string>
+                <key>vertices</key>
+                <string>465 99 479 139 486 225 453 292 469 329 568 284 618 274 633 317 607 348 466 388 451 449 377 456 366 440 336 454 264 451 265 403 241 379 259 266 268 105 377 87</string>
+                <key>verticesUV</key>
+                <string>1043 2506 1057 2546 1064 2632 1031 2699 1047 2736 1146 2691 1196 2681 1211 2724 1185 2755 1044 2795 1029 2856 955 2863 944 2847 914 2861 842 2858 843 2810 819 2786 837 2673 846 2512 955 2494</string>
+            </dict>
+            <key>Golem_01_Walking (15).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{78.5,-30}</string>
+                <key>spriteSize</key>
+                <string>{391,366}</string>
+                <key>spriteSourceSize</key>
+                <string>{720,480}</string>
+                <key>textureRect</key>
+                <string>{{399,2544},{391,366}}</string>
+                <key>textureRotated</key>
+                <false/>
+                <key>triangles</key>
+                <string>1 17 18 15 16 17 14 4 11 13 11 12 13 14 11 14 15 3 6 8 9 6 7 8 5 6 9 5 9 10 4 5 10 4 10 11 14 3 4 1 3 15 1 2 3 1 15 17 0 1 18</string>
+                <key>vertices</key>
+                <string>465 113 479 154 476 245 447 275 459 316 489 317 567 269 634 248 634 298 614 328 476 380 445 427 445 452 274 453 243 379 264 188 262 122 322 90 432 87</string>
+                <key>verticesUV</key>
+                <string>621 2570 635 2611 632 2702 603 2732 615 2773 645 2774 723 2726 790 2705 790 2755 770 2785 632 2837 601 2884 601 2909 430 2910 399 2836 420 2645 418 2579 478 2547 588 2544</string>
+            </dict>
+            <key>Golem_01_Walking (16).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{78,-32}</string>
+                <key>spriteSize</key>
+                <string>{410,374}</string>
+                <key>spriteSourceSize</key>
+                <string>{720,480}</string>
+                <key>textureRect</key>
+                <string>{{423,1809},{410,374}}</string>
+                <key>textureRotated</key>
+                <false/>
+                <key>triangles</key>
+                <string>17 2 3 17 18 19 1 2 17 16 14 15 16 17 3 16 3 14 12 13 14 10 11 12 3 10 12 5 7 8 5 6 7 4 5 8 4 8 9 4 9 10 3 4 10 14 3 12 1 17 19 1 19 20 0 1 20</string>
+                <key>vertices</key>
+                <string>465 112 478 152 478 237 456 292 483 321 580 255 621 240 643 280 623 316 490 378 441 428 440 456 329 450 283 459 271 426 243 414 233 379 265 210 263 120 328 92 423 85</string>
+                <key>verticesUV</key>
+                <string>655 1836 668 1876 668 1961 646 2016 673 2045 770 1979 811 1964 833 2004 813 2040 680 2102 631 2152 630 2180 519 2174 473 2183 461 2150 433 2138 423 2103 455 1934 453 1844 518 1816 613 1809</string>
+            </dict>
+            <key>Golem_01_Walking (17).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{71.5,-35.5}</string>
+                <key>spriteSize</key>
+                <string>{431,373}</string>
+                <key>spriteSourceSize</key>
+                <string>{720,480}</string>
+                <key>textureRect</key>
+                <string>{{1359,734},{431,373}}</string>
+                <key>textureRotated</key>
+                <false/>
+                <key>triangles</key>
+                <string>19 21 22 19 20 21 4 14 16 18 16 17 18 19 16 16 19 4 14 15 16 12 13 14 4 12 14 12 4 5 9 6 7 9 7 8 6 9 10 5 6 10 5 10 11 12 5 11 4 19 22 2 3 4 2 4 22 0 1 2 0 2 22</string>
+                <key>vertices</key>
+                <string>445 99 481 120 488 210 477 258 452 279 475 315 491 319 617 217 647 266 631 302 496 381 476 405 438 423 431 457 336 449 290 462 280 419 225 409 216 370 269 225 272 123 311 101 388 89</string>
+                <key>verticesUV</key>
+                <string>1588 744 1624 765 1631 855 1620 903 1595 924 1618 960 1634 964 1760 862 1790 911 1774 947 1639 1026 1619 1050 1581 1068 1574 1102 1479 1094 1433 1107 1423 1064 1368 1054 1359 1015 1412 870 1415 768 1454 746 1531 734</string>
+            </dict>
+            <key>Golem_01_Walking (18).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{64.5,-38}</string>
+                <key>spriteSize</key>
+                <string>{455,370}</string>
+                <key>spriteSourceSize</key>
+                <string>{720,480}</string>
+                <key>textureRect</key>
+                <string>{{1032,355},{455,370}}</string>
+                <key>textureRotated</key>
+                <false/>
+                <key>triangles</key>
+                <string>18 19 20 13 3 11 15 17 18 15 16 17 15 18 3 13 14 15 11 12 13 15 3 13 11 3 4 5 7 8 5 6 7 4 5 8 4 8 9 4 9 10 11 4 10 2 3 18 2 18 20 0 1 2 0 2 20</string>
+                <key>vertices</key>
+                <string>461 102 498 141 486 247 468 291 496 317 574 245 629 213 652 259 634 292 514 371 482 410 440 420 423 459 342 445 303 463 281 421 197 397 207 351 271 225 286 105 377 93</string>
+                <key>verticesUV</key>
+                <string>1296 364 1333 403 1321 509 1303 553 1331 579 1409 507 1464 475 1487 521 1469 554 1349 633 1317 672 1275 682 1258 721 1177 707 1138 725 1116 683 1032 659 1042 613 1106 487 1121 367 1212 355</string>
+            </dict>
+            <key>Golem_01_Walking (2).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{65.5,-37.5}</string>
+                <key>spriteSize</key>
+                <string>{459,371}</string>
+                <key>spriteSourceSize</key>
+                <string>{720,480}</string>
+                <key>textureRect</key>
+                <string>{{1586,1},{459,371}}</string>
+                <key>textureRotated</key>
+                <false/>
+                <key>triangles</key>
+                <string>17 18 19 14 16 17 10 11 12 14 15 16 14 17 3 14 12 13 3 10 12 10 3 4 14 3 12 5 6 7 4 5 7 4 7 8 4 8 9 10 4 9 2 3 17 0 2 17 0 1 2 0 17 19</string>
+                <key>vertices</key>
+                <string>445 103 501 131 501 218 473 299 488 319 613 210 655 241 634 293 538 352 478 412 444 414 420 461 351 441 305 463 275 414 196 395 203 352 278 215 298 116 341 92</string>
+                <key>verticesUV</key>
+                <string>1835 12 1891 40 1891 127 1863 208 1878 228 2003 119 2045 150 2024 202 1928 261 1868 321 1834 323 1810 370 1741 350 1695 372 1665 323 1586 304 1593 261 1668 124 1688 25 1731 1</string>
+            </dict>
+            <key>Golem_01_Walking (3).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{71.5,-37.5}</string>
+                <key>spriteSize</key>
+                <string>{431,371}</string>
+                <key>spriteSourceSize</key>
+                <string>{720,480}</string>
+                <key>textureRect</key>
+                <string>{{877,1087},{431,371}}</string>
+                <key>textureRotated</key>
+                <false/>
+                <key>triangles</key>
+                <string>18 19 20 3 4 18 17 15 16 17 18 15 15 18 4 13 14 15 13 5 12 10 6 7 10 7 9 6 10 11 9 7 8 5 6 11 5 11 12 13 4 5 15 4 13 0 3 18 0 2 3 0 1 2 0 18 20</string>
+                <key>vertices</key>
+                <string>432 100 491 121 500 179 485 253 466 301 478 317 505 307 598 231 626 231 647 263 632 303 522 361 425 458 350 443 294 463 278 417 219 409 216 361 270 214 296 108 355 92</string>
+                <key>verticesUV</key>
+                <string>1093 1095 1152 1116 1161 1174 1146 1248 1127 1296 1139 1312 1166 1302 1259 1226 1287 1226 1308 1258 1293 1298 1183 1356 1086 1453 1011 1438 955 1458 939 1412 880 1404 877 1356 931 1209 957 1103 1016 1087</string>
+            </dict>
+            <key>Golem_01_Walking (4).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{77.5,-35.5}</string>
+                <key>spriteSize</key>
+                <string>{413,367}</string>
+                <key>spriteSourceSize</key>
+                <string>{720,480}</string>
+                <key>textureRect</key>
+                <string>{{1277,1895},{413,367}}</string>
+                <key>textureRotated</key>
+                <false/>
+                <key>triangles</key>
+                <string>2 3 17 16 3 15 16 17 3 13 14 15 13 15 3 11 12 13 9 10 11 3 9 11 7 4 5 7 5 6 4 7 8 4 8 9 3 4 9 13 3 11 1 2 17 1 17 18 0 1 18</string>
+                <key>vertices</key>
+                <string>482 118 491 176 481 254 455 293 485 320 617 226 644 280 624 314 521 363 467 401 434 457 344 447 285 459 272 423 240 413 231 380 284 112 336 94 425 92</string>
+                <key>verticesUV</key>
+                <string>1528 1921 1537 1979 1527 2057 1501 2096 1531 2123 1663 2029 1690 2083 1670 2117 1567 2166 1513 2204 1480 2260 1390 2250 1331 2262 1318 2226 1286 2216 1277 2183 1330 1915 1382 1897 1471 1895</string>
+            </dict>
+            <key>Golem_01_Walking (5).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{81,-31}</string>
+                <key>spriteSize</key>
+                <string>{396,368}</string>
+                <key>spriteSourceSize</key>
+                <string>{720,480}</string>
+                <key>textureRect</key>
+                <string>{{1,2520},{396,368}}</string>
+                <key>textureRotated</key>
+                <false/>
+                <key>triangles</key>
+                <string>15 17 18 15 16 17 4 13 14 10 12 13 4 10 13 10 11 12 14 15 4 10 4 5 8 5 6 8 6 7 5 8 9 10 5 9 4 15 18 2 3 4 2 4 18 0 1 2 0 2 18</string>
+                <key>vertices</key>
+                <string>436 95 473 114 482 171 477 255 447 275 468 325 615 240 639 290 617 325 479 380 444 415 444 452 276 455 243 379 255 269 264 228 269 118 309 99 377 87</string>
+                <key>verticesUV</key>
+                <string>194 2528 231 2547 240 2604 235 2688 205 2708 226 2758 373 2673 397 2723 375 2758 237 2813 202 2848 202 2885 34 2888 1 2812 13 2702 22 2661 27 2551 67 2532 135 2520</string>
+            </dict>
+            <key>Golem_01_Walking (6).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{77.5,-30.5}</string>
+                <key>spriteSize</key>
+                <string>{395,369}</string>
+                <key>spriteSourceSize</key>
+                <string>{720,480}</string>
+                <key>textureRect</key>
+                <string>{{1247,2264},{395,369}}</string>
+                <key>textureRotated</key>
+                <false/>
+                <key>triangles</key>
+                <string>1 19 20 17 18 19 1 2 17 2 16 17 14 15 16 11 14 16 12 13 14 11 12 14 2 8 11 9 10 11 4 6 7 4 5 6 3 4 7 3 7 8 2 3 8 11 8 9 2 11 16 1 17 19 0 1 20</string>
+                <key>vertices</key>
+                <string>480 126 476 240 449 287 473 327 566 282 615 269 635 295 623 342 468 383 449 451 379 455 359 431 340 454 266 452 265 417 240 375 247 351 264 215 262 114 322 92 431 86</string>
+                <key>verticesUV</key>
+                <string>1487 2304 1483 2418 1456 2465 1480 2505 1573 2460 1622 2447 1642 2473 1630 2520 1475 2561 1456 2629 1386 2633 1366 2609 1347 2632 1273 2630 1272 2595 1247 2553 1254 2529 1271 2393 1269 2292 1329 2270 1438 2264</string>
+            </dict>
+            <key>Golem_01_Walking (7).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{79,-32.5}</string>
+                <key>spriteSize</key>
+                <string>{394,371}</string>
+                <key>spriteSourceSize</key>
+                <string>{720,480}</string>
+                <key>textureRect</key>
+                <string>{{1644,2285},{394,371}}</string>
+                <key>textureRotated</key>
+                <false/>
+                <key>triangles</key>
+                <string>1 19 20 17 18 19 1 2 17 16 12 15 16 17 2 13 14 15 12 13 15 12 2 3 9 10 11 9 11 12 7 4 5 7 5 6 4 7 8 3 4 8 3 8 9 12 3 9 16 2 12 1 17 19 0 1 20</string>
+                <key>vertices</key>
+                <string>472 116 484 221 453 299 465 335 568 301 614 296 636 330 598 368 494 386 453 408 461 445 389 458 361 432 330 458 261 447 261 409 242 377 265 209 265 115 339 93 428 87</string>
+                <key>verticesUV</key>
+                <string>1874 2314 1886 2419 1855 2497 1867 2533 1970 2499 2016 2494 2038 2528 2000 2566 1896 2584 1855 2606 1863 2643 1791 2656 1763 2630 1732 2656 1663 2645 1663 2607 1644 2575 1667 2407 1667 2313 1741 2291 1830 2285</string>
+            </dict>
+            <key>Golem_01_Walking (8).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{70.5,-35}</string>
+                <key>spriteSize</key>
+                <string>{377,370}</string>
+                <key>spriteSourceSize</key>
+                <string>{720,480}</string>
+                <key>textureRect</key>
+                <string>{{390,3236},{377,370}}</string>
+                <key>textureRotated</key>
+                <false/>
+                <key>triangles</key>
+                <string>18 20 21 18 19 20 14 4 5 17 15 16 17 18 4 17 14 15 12 13 14 5 11 12 5 12 14 6 8 9 6 7 8 6 9 10 5 6 10 5 10 11 17 4 14 4 18 21 2 3 4 2 4 21 1 2 21 0 1 21</string>
+                <key>vertices</key>
+                <string>463 100 481 132 488 184 481 255 451 282 461 343 565 320 613 322 619 366 588 391 531 394 481 411 462 440 398 460 370 436 323 458 258 446 242 373 271 227 270 128 305 103 380 90</string>
+                <key>verticesUV</key>
+                <string>611 3246 629 3278 636 3330 629 3401 599 3428 609 3489 713 3466 761 3468 767 3512 736 3537 679 3540 629 3557 610 3586 546 3606 518 3582 471 3604 406 3592 390 3519 419 3373 418 3274 453 3249 528 3236</string>
+            </dict>
+            <key>Golem_01_Walking (9).png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{64,-37.5}</string>
+                <key>spriteSize</key>
+                <string>{364,369}</string>
+                <key>spriteSourceSize</key>
+                <string>{720,480}</string>
+                <key>textureRect</key>
+                <string>{{1147,3236},{364,369}}</string>
+                <key>textureRotated</key>
+                <false/>
+                <key>triangles</key>
+                <string>16 18 19 16 17 18 2 3 16 15 16 3 13 14 15 15 12 13 10 11 12 12 3 4 5 7 8 5 6 7 5 8 9 4 5 9 4 9 10 12 4 10 15 3 12 2 16 19 1 2 19 0 1 19</string>
+                <key>vertices</key>
+                <string>476 106 492 147 492 250 454 297 464 349 558 341 606 347 606 391 573 413 495 407 466 435 406 462 374 427 315 461 242 435 244 367 279 185 282 118 325 100 385 93</string>
+                <key>verticesUV</key>
+                <string>1381 3249 1397 3290 1397 3393 1359 3440 1369 3492 1463 3484 1511 3490 1511 3534 1478 3556 1400 3550 1371 3578 1311 3605 1279 3570 1220 3604 1147 3578 1149 3510 1184 3328 1187 3261 1230 3243 1290 3236</string>
+            </dict>
+        </dict>
+        <key>metadata</key>
+        <dict>
+            <key>format</key>
+            <integer>3</integer>
+            <key>pixelFormat</key>
+            <string>RGBA8888</string>
+            <key>premultiplyAlpha</key>
+            <false/>
+            <key>realTextureFileName</key>
+            <string>Golem_01.png</string>
+            <key>size</key>
+            <string>{2048,3607}</string>
+            <key>smartupdate</key>
+            <string>$TexturePacker:SmartUpdate:0a191cc469e34b6ea31555f8b3dade75:a25e8d9df473aa63b6a9438d5d452f17:c46313961ed97818eb3c2c0389551930$</string>
+            <key>textureFileName</key>
+            <string>Golem_01.png</string>
+        </dict>
+    </dict>
+</plist>
